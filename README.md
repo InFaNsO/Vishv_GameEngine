@@ -18,8 +18,8 @@ This is the first Demo Project made using the ECS it spawns a sample area with a
   * Steering Behaviours 
   * Finite State Machine
  * Graphics
-  * Model Animation
-  * Model rendering
+  	* Model Animation
+  	* Model rendering
 * Physics
   * Collision Detection
 
