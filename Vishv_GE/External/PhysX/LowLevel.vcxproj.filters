@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\lowlevel\api\src\px_globals.cpp">
+      <Filter>API Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcContactCache.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcContactMethodImpl.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcMaterialHeightField.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcMaterialMesh.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcMaterialMethodImpl.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcMaterialShape.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcNpBatch.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcNpCacheStreamPair.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcNpContactPrepShared.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcNpMemBlockPool.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\common\src\pipeline\PxcNpThreadContext.cpp">
+      <Filter>Common Source\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsCCD.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsContactManager.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsContext.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsDefaultMemoryManager.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsIslandSim.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsMaterialCombiner.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsNphaseImplementationContext.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevel\software\src\PxsSimpleIslandManager.cpp">
+      <Filter>Software Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\lowlevel\api\include\PxsMaterialCore.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\api\include\PxsMaterialManager.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\api\include\PxvConfig.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\api\include\PxvDynamics.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\api\include\PxvGeometry.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\api\include\PxvGlobals.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\api\include\PxvManager.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\api\include\PxvSimStats.h">
+      <Filter>API Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\collision\PxcContactMethodImpl.h">
+      <Filter>Common Includes\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcConstraintBlockStream.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcContactCache.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcMaterialMethodImpl.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcNpBatch.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcNpCache.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcNpCacheStreamPair.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcNpContactPrepShared.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcNpMemBlockPool.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcNpThreadContext.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\pipeline\PxcNpWorkUnit.h">
+      <Filter>Common Includes\pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\utils\PxcScratchAllocator.h">
+      <Filter>Common Includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\common\include\utils\PxcThreadCoherentCache.h">
+      <Filter>Common Includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsBodySim.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsCCD.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsContactManager.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsContactManagerState.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsContext.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsDefaultMemoryManager.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsHeapMemoryAllocator.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsIncrementalConstraintPartitioning.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsIslandManagerTypes.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsIslandNodeIndex.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsIslandSim.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsKernelWrangler.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsMaterialCombiner.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsMemoryManager.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsNphaseImplementationContext.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsRigidBody.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsShapeSim.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsSimpleIslandManager.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsSimulationController.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxsTransformCache.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevel\software\include\PxvNphaseImplementationContext.h">
+      <Filter>Software Includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="API Includes">
+      <UniqueIdentifier>{2EF841B2-5092-3181-87E9-5A34EDA36867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API Source">
+      <UniqueIdentifier>{DB810FCC-41CB-339A-B2F3-09074F6F166E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Includes">
+      <UniqueIdentifier>{060F4B9C-F330-32A6-B927-C50F1C93597D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Includes\collision">
+      <UniqueIdentifier>{FBF7B646-1B40-3B44-B974-A69B440A2380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Includes\pipeline">
+      <UniqueIdentifier>{9F9DD510-34EA-3467-B3F4-ABD140BDD953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Includes\utils">
+      <UniqueIdentifier>{91844393-C078-307D-88F2-F124DA29375D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Source">
+      <UniqueIdentifier>{3399D777-8739-3BD1-9F6D-88307EC15379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Source\pipeline">
+      <UniqueIdentifier>{466AAAFD-4572-3456-8A73-2C19620EE8D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Software Includes">
+      <UniqueIdentifier>{97CF356B-7EF7-3259-AB24-FBE1C0C91179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Software Source">
+      <UniqueIdentifier>{EE00EAE7-CDA6-35B3-B631-58CB4838666D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="source\compiler\cmake\CMakeLists.txt" />
+  </ItemGroup>
+</Project>

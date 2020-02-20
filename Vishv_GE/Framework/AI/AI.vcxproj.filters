@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Inc">
+      <UniqueIdentifier>{991b6d9b-0159-46d7-9dd7-d42c142060fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{6cb2954b-b024-48a7-a731-386c84648ae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\SteeringBehaviour">
+      <UniqueIdentifier>{09bd8a8f-cbfb-4676-84bb-6db31e3518bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\PathFinding">
+      <UniqueIdentifier>{59903db4-d071-4902-9602-a7efb77d3dd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Perception">
+      <UniqueIdentifier>{8d116921-0d78-493b-a1ca-44b21ecaf6e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\PathFinding">
+      <UniqueIdentifier>{173a80e5-60bc-45f8-a884-1afc574fcd4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Perception">
+      <UniqueIdentifier>{16d09874-8cfb-4a49-9102-9e582acdadfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Steering">
+      <UniqueIdentifier>{8f9155cd-32b2-486e-aad9-bab6cc594ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\FiniteStateMachine">
+      <UniqueIdentifier>{697c9692-feea-4542-a4f2-d9bfb60a55cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\World">
+      <UniqueIdentifier>{60b8f6b0-b4e7-45a0-b210-21de7675ea2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\AI.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Common.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Precompiled.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour.h">
+      <Filter>Inc\SteeringBehaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringModule.h">
+      <Filter>Inc\SteeringBehaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Graph.h">
+      <Filter>Inc\PathFinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GraphSearch.h">
+      <Filter>Inc\PathFinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\StateMachine.h">
+      <Filter>Inc\FiniteStateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\State.h">
+      <Filter>Inc\FiniteStateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\World.h">
+      <Filter>Inc\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MetaRegistration.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Precompiled.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Graph.cpp">
+      <Filter>Src\PathFinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GraphSearch.cpp">
+      <Filter>Src\PathFinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MetaRegistration.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

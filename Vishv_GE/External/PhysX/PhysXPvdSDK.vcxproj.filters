@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="source\filebuf\include\PsAsciiConversion.h">
+      <Filter>filebuf\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\filebuf\include\PsFileBuffer.h">
+      <Filter>filebuf\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\filebuf\include\PsIOStream.h">
+      <Filter>filebuf\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\filebuf\include\PsMemoryBuffer.h">
+      <Filter>filebuf\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pvd\PxPvd.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pvd\PxPvdTransport.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PsPvd.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxProfileAllocatorWrapper.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxPvdClient.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxPvdDataStream.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxPvdDataStreamHelpers.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxPvdErrorCodes.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxPvdObjectModelBaseTypes.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxPvdRenderBuffer.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\include\PxPvdUserRenderer.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileContextProvider.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileContextProviderImpl.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileDataBuffer.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileDataParsing.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventBuffer.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventBufferAtomic.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventBufferClient.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventBufferClientManager.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventId.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventMutex.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventNames.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEvents.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventSender.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileEventSerialization.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileMemory.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileMemoryBuffer.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileMemoryEventBuffer.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileMemoryEvents.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileScopedEvent.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileScopedMutexLock.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileZoneImpl.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileZoneManager.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxProfileZoneManagerImpl.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdBits.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdByteStreams.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdCommStreamEvents.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdCommStreamEventSink.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdCommStreamTypes.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdDefaultFileTransport.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdDefaultSocketTransport.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdFoundation.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdImpl.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdInternalByteStreams.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdMarshalling.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdMemClient.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdObjectModelInternalTypeDefs.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdObjectModelInternalTypes.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdObjectModelMetaData.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdObjectRegistrar.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdProfileZone.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdProfileZoneClient.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdUserRenderImpl.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pvd\src\PxPvdUserRenderTypes.h">
+      <Filter>src\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="filebuf">
+      <UniqueIdentifier>{BF57AF9F-9679-362A-9D5D-D9B2817C6972}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filebuf\include">
+      <UniqueIdentifier>{44E6D7E8-52B7-39BD-9C89-B016A4E74FCF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{A0922166-2826-34AC-8E46-F8E7EDE0ADEC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{F423DFA2-0E1A-364C-B2B5-6F220EA1F85F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\include">
+      <UniqueIdentifier>{BFA30B5B-EF87-37C7-9AD1-DB6AD94239D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\src">
+      <UniqueIdentifier>{63B2AA56-8ACF-3E56-AB1C-F79C0C1B51AF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\filebuf\include\PsAsciiConversion.inl">
+      <Filter>filebuf\include</Filter>
+    </None>
+    <None Include="source\filebuf\include\PsIOStream.inl">
+      <Filter>filebuf\include</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\pvd\src\PxProfileEventImpl.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvd.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdDataStream.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdDefaultFileTransport.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdDefaultSocketTransport.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdImpl.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdMemClient.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdObjectModelMetaData.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdObjectRegistrar.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdProfileZoneClient.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pvd\src\PxPvdUserRenderer.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="source\compiler\cmake\CMakeLists.txt" />
+  </ItemGroup>
+</Project>

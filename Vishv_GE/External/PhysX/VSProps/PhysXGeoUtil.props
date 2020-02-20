@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project = "$(SolutionDir)External\PhysX\VSProps\PhysXFrameworkBase.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\PhysX\source\geomutils\include;$(SolutionDir)External\PhysX\source\geomutils\src;$(SolutionDir)External\PhysX\source\geomutils\src\ccd;$(SolutionDir)External\PhysX\source\geomutils\src\common;$(SolutionDir)External\PhysX\source\geomutils\src\contact;$(SolutionDir)External\PhysX\source\geomutils\src\convex;$(SolutionDir)External\PhysX\source\geomutils\src\distance;$(SolutionDir)External\PhysX\source\geomutils\src\gjk;$(SolutionDir)External\PhysX\source\geomutils\src\hf;$(SolutionDir)External\PhysX\source\geomutils\src\intersection;$(SolutionDir)External\PhysX\source\geomutils\src\mesh;$(SolutionDir)External\PhysX\source\geomutils\src\pcm;$(SolutionDir)External\PhysX\source\geomutils\src\sweep;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy /y "$(SolutionDir)External\assimp-5.0.0\Bin\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

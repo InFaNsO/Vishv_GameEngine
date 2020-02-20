@@ -1,0 +1,28 @@
+NumObj: 3
+Transform: 
+Position: 0.000000 0.000000 0.000000
+Mesh: 
+Shape: 1
+Lengths: 1688.000000 10.000000 1020.000000
+Material:
+Diffuse: grass.jpg
+Normal: empty
+Specular: empty
+Transform: 
+Position: 0.000000 91.000000 0.000000
+Mesh: 
+Shape: 1
+Lengths: 518.000000 176.000000 37.000000
+Material:
+Diffuse: brickwork.jpg
+Normal: empty
+Specular: empty
+Transform: 
+Position: 0.000000 82.000000 153.000000
+Mesh: 
+Shape: 1
+Lengths: 50.000000 156.000000 273.000000
+Material:
+Diffuse: brickwork.jpg
+Normal: empty
+Specular: empty

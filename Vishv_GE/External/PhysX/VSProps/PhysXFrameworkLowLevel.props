@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project = "$(SolutionDir)External\PhysX\VSProps\PhysXGeoUtil.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\PhysX\source\lowlevel\api\include;
+      $(SolutionDir)External\PhysX\source\lowlevel\common\include\collision;
+      $(SolutionDir)External\PhysX\source\lowlevel\common\include\pipeline;
+      $(SolutionDir)External\PhysX\source\lowlevel\common\include\pipeline\windows;
+      $(SolutionDir)External\PhysX\source\lowlevel\common\include\utils;
+      $(SolutionDir)External\PhysX\source\lowlevel\software\include;
+      $(SolutionDir)External\PhysX\source\lowlevel\software\include\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy /y "$(SolutionDir)External\PhysX\Bin\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

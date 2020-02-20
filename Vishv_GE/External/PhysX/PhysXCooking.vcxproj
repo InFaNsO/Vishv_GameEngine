@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|x64">
+      <Configuration>debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="checked|x64">
+      <Configuration>checked</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile|x64">
+      <Configuration>profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release|x64">
+      <Configuration>release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E743EE29-1BE7-3580-8FCF-97414654DD59}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>PhysXCooking</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='checked|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <Import Project="VSProps\PhysXFrameworkPhysXCooking.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <Import Project="VSProps\PhysXFrameworkPhysXCooking.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <Import Project="VSProps\PhysXFrameworkPhysXCooking.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='checked|x64'">
+    <Import Project="VSProps\PhysXFrameworkPhysXCooking.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='debug|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='debug|x64'">PhysXCooking.dir\debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='debug|x64'">PhysXCooking_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='checked|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='checked|x64'">PhysXCooking.dir\checked\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='checked|x64'">PhysXCooking_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='checked|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='checked|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='checked|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">PhysXCooking.dir\profile\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile|x64'">PhysXCooking_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='profile|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='profile|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='release|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='release|x64'">PhysXCooking.dir\release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='release|x64'">PhysXCooking_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_DEBUG=1;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="debug";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysXCooking_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_DEBUG=1;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR=\"debug\";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/debug/PhysXCooking_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/debug/PhysXCooking_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='checked|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="checked";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysXCooking_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR=\"checked\";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/checked/PhysXCooking_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/checked/PhysXCooking_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PROFILE=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="profile";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysXCooking_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PROFILE=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR=\"profile\";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/profile/PhysXCooking_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/profile/PhysXCooking_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_SUPPORT_PVD=0;CMAKE_INTDIR="release";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysXCooking_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_COOKING;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_COMMON_EXPORTS;PX_PHYSX_COOKING_EXPORTS;PX_PHYSX_LOADER_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_SUPPORT_PVD=0;CMAKE_INTDIR=\"release\";PhysXCooking_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/release/PhysXCooking_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/release/PhysXCooking_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="source\compiler\cmake\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='debug|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='debug|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='debug|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='checked|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='checked|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='checked|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='checked|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='checked|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='profile|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='profile|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='release|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='release|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='release|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='release|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\physxcooking\src\Adjacencies.cpp" />
+    <ClCompile Include="source\physxcooking\src\BVHStructureBuilder.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\BigConvexDataBuilder.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\ConvexHullBuilder.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\ConvexHullLib.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\ConvexHullUtils.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\ConvexMeshBuilder.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\ConvexPolygonsBuilder.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\QuickHullConvexHullLib.cpp" />
+    <ClCompile Include="source\physxcooking\src\convex\VolumeIntegration.cpp" />
+    <ClCompile Include="source\physxcooking\src\Cooking.cpp" />
+    <ClCompile Include="source\physxcooking\src\CookingUtils.cpp" />
+    <ClCompile Include="source\physxcooking\src\EdgeList.cpp" />
+    <ClCompile Include="source\physxcooking\src\MeshCleaner.cpp" />
+    <ClCompile Include="source\physxcooking\src\mesh\GrbTriangleMeshCooking.cpp" />
+    <ClCompile Include="source\physxcooking\src\mesh\HeightFieldCooking.cpp" />
+    <ClCompile Include="source\physxcooking\src\mesh\MeshBuilder.cpp" />
+    <ClCompile Include="source\physxcooking\src\mesh\RTreeCooking.cpp" />
+    <ClCompile Include="source\physxcooking\src\mesh\TriangleMeshBuilder.cpp" />
+    <ClCompile Include="source\physxcooking\src\Quantizer.cpp" />
+    <ClCompile Include="source\physxcooking\src\windows\WindowsCookingDelayLoadHook.cpp" />
+    <ClInclude Include="include\cooking\PxBVH33MidphaseDesc.h" />
+    <ClInclude Include="include\cooking\PxBVH34MidphaseDesc.h" />
+    <ClInclude Include="include\cooking\PxBVHStructureDesc.h" />
+    <ClInclude Include="include\cooking\Pxc.h" />
+    <ClInclude Include="include\cooking\PxConvexMeshDesc.h" />
+    <ClInclude Include="include\cooking\PxCooking.h" />
+    <ClInclude Include="include\cooking\PxMidphaseDesc.h" />
+    <ClInclude Include="include\cooking\PxTriangleMeshDesc.h" />
+    <ClInclude Include="source\physxcooking\src\Adjacencies.h" />
+    <ClInclude Include="source\physxcooking\src\BVHStructureBuilder.h" />
+    <ClInclude Include="source\physxcooking\src\convex\BigConvexDataBuilder.h" />
+    <ClInclude Include="source\physxcooking\src\convex\ConvexHullBuilder.h" />
+    <ClInclude Include="source\physxcooking\src\convex\ConvexHullLib.h" />
+    <ClInclude Include="source\physxcooking\src\convex\ConvexHullUtils.h" />
+    <ClInclude Include="source\physxcooking\src\convex\ConvexMeshBuilder.h" />
+    <ClInclude Include="source\physxcooking\src\convex\ConvexPolygonsBuilder.h" />
+    <ClInclude Include="source\physxcooking\src\convex\QuickHullConvexHullLib.h" />
+    <ClInclude Include="source\physxcooking\src\convex\VolumeIntegration.h" />
+    <ClInclude Include="source\physxcooking\src\Cooking.h" />
+    <ClInclude Include="source\physxcooking\src\CookingUtils.h" />
+    <ClInclude Include="source\physxcooking\src\EdgeList.h" />
+    <ClInclude Include="source\physxcooking\src\MeshCleaner.h" />
+    <ClInclude Include="source\physxcooking\src\mesh\GrbTriangleMeshCooking.h" />
+    <ClInclude Include="source\physxcooking\src\mesh\HeightFieldCooking.h" />
+    <ClInclude Include="source\physxcooking\src\mesh\MeshBuilder.h" />
+    <ClInclude Include="source\physxcooking\src\mesh\QuickSelect.h" />
+    <ClInclude Include="source\physxcooking\src\mesh\RTreeCooking.h" />
+    <ClInclude Include="source\physxcooking\src\mesh\TriangleMeshBuilder.h" />
+    <ClInclude Include="source\physxcooking\src\Quantizer.h" />
+    <ResourceCompile Include="source\compiler\resource_x64\PhysXCooking.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\ZERO_CHECK.vcxproj">
+      <Project>{CAA83830-2971-31F9-891B-33CBD5840D2D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\PhysXCommon.vcxproj">
+      <Project>{56301F55-9EAA-3483-BABF-163C1BB48A98}</Project>
+      <Name>PhysXCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\PhysXFoundation.vcxproj">
+      <Project>{5A4D1B8D-EE2D-34FE-B0DF-CD4528114D10}</Project>
+      <Name>PhysXFoundation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{c3deabc8-ddf3-4b7a-83d7-27d5608c868c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AniamtionSet_Guice.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletonUI.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateAnimBlending.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimationSet_Gui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeleton_Gui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateAnimBlending.h" />
+  </ItemGroup>
+</Project>

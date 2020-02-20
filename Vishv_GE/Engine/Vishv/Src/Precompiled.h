@@ -1,0 +1,6 @@
+#ifndef INCLUDED_VISHV_PRECOMPILED_H
+#define INCLUDED_VISHV_PRECOMPILED_H
+
+#include "Common.h"
+
+#endif //! defined INCLUDED_VISHV_PRECOMPILED_H

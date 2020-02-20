@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="source\lowlevelaabb\include\BpAABBManager.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\include\BpAABBManagerTasks.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\include\BpBroadPhase.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\include\BpBroadPhaseUpdate.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpBroadPhaseABP.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpBroadPhaseMBP.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpBroadPhaseMBPCommon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpBroadPhaseSap.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpBroadPhaseSapAux.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpBroadPhaseShared.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpMBPTasks.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lowlevelaabb\src\BpSAPTasks.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{CDEDE048-FD9E-375E-A720-75F9842A15D5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{F423DFA2-0E1A-364C-B2B5-6F220EA1F85F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\lowlevelaabb\src\BpAABBManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpBroadPhase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpBroadPhaseABP.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpBroadPhaseMBP.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpBroadPhaseSap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpBroadPhaseSapAux.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpBroadPhaseShared.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpMBPTasks.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lowlevelaabb\src\BpSAPTasks.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="source\compiler\cmake\CMakeLists.txt" />
+  </ItemGroup>
+</Project>

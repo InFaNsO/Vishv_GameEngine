@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug|x64">
+      <Configuration>debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="checked|x64">
+      <Configuration>checked</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="profile|x64">
+      <Configuration>profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release|x64">
+      <Configuration>release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{836DAD6D-1598-36BD-B884-E083BA7760E6}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>PhysX</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='checked|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <Import Project="VSProps\PhysXFramework.props" />
+    <Import Project="VSProps\PhysXFrameworkPhysX.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <Import Project="VSProps\PhysXFramework.props" />
+    <Import Project="VSProps\PhysXFrameworkPhysX.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <Import Project="VSProps\PhysXFramework.props" />
+    <Import Project="VSProps\PhysXFrameworkPhysX.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='checked|x64'">
+    <Import Project="VSProps\PhysXFramework.props" />
+    <Import Project="VSProps\PhysXFrameworkPhysX.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='debug|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='debug|x64'">PhysX.dir\debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='debug|x64'">PhysX_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='checked|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='checked|x64'">PhysX.dir\checked\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='checked|x64'">PhysX_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='checked|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='checked|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='checked|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='profile|x64'">PhysX.dir\profile\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='profile|x64'">PhysX_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='profile|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='profile|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='release|x64'">D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='release|x64'">PhysX.dir\release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='release|x64'">PhysX_64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_DEBUG=1;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="debug";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysX_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_DEBUG=1;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR=\"debug\";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\LowLevel_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\LowLevelAABB_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\LowLevelDynamics_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysXTask_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\SceneQuery_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\SimulationController_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysXPvdSDK_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\debug\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/debug/PhysX_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/debug/PhysX_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='checked|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="checked";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysX_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_CHECKED=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR=\"checked\";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\LowLevel_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\LowLevelAABB_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\LowLevelDynamics_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysXTask_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\SceneQuery_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\SimulationController_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysXPvdSDK_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\checked\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/checked/PhysX_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/checked/PhysX_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='profile|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_PROFILE=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR="profile";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysX_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_PROFILE=1;PX_NVTX=0;PX_SUPPORT_PVD=1;CMAKE_INTDIR=\"profile\";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\LowLevel_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\LowLevelAABB_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\LowLevelDynamics_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysXTask_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\SceneQuery_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\SimulationController_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysXPvdSDK_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\profile\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/profile/PhysX_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/profile/PhysX_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /d2Zi+</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4514;4820;4127;4710;4711;4577;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN32;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_SUPPORT_PVD=0;CMAKE_INTDIR="release";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysX_64.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_HAS_ITERATOR_DEBUGGING=0;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;PX_PHYSX_FOUNDATION_EXPORTS;PX_PHYSX_CORE_EXPORTS;PX_PHYSX_GPU_SHARED_LIB_NAME=PhysXGpu_64.dll;PX_SUPPORT_PVD=0;CMAKE_INTDIR=\"release\";PhysX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PhysX\physx\include;D:\PhysX\physx\source\common\include;D:\PhysX\physx\source\common\src;D:\PhysX\physx\source\physx\src;D:\PhysX\physx\source\physx\src\device;D:\PhysX\physx\source\physx\src\buffering;D:\PhysX\physx\source\physxgpu\include;D:\PhysX\physx\source\geomutils\include;D:\PhysX\physx\source\geomutils\src;D:\PhysX\physx\source\geomutils\src\contact;D:\PhysX\physx\source\geomutils\src\common;D:\PhysX\physx\source\geomutils\src\convex;D:\PhysX\physx\source\geomutils\src\distance;D:\PhysX\physx\source\geomutils\src\sweep;D:\PhysX\physx\source\geomutils\src\gjk;D:\PhysX\physx\source\geomutils\src\intersection;D:\PhysX\physx\source\geomutils\src\mesh;D:\PhysX\physx\source\geomutils\src\hf;D:\PhysX\physx\source\geomutils\src\pcm;D:\PhysX\physx\source\geomutils\src\ccd;D:\PhysX\physx\source\lowlevel\api\include;D:\PhysX\physx\source\lowlevel\software\include;D:\PhysX\physx\source\lowlevel\common\include\pipeline;D:\PhysX\physx\source\lowlevelaabb\include;D:\PhysX\physx\source\lowleveldynamics\include;D:\PhysX\physx\source\simulationcontroller\include;D:\PhysX\physx\source\simulationcontroller\src;D:\PhysX\physx\source\physxcooking\src;D:\PhysX\physx\source\physxcooking\src\mesh;D:\PhysX\physx\source\physxcooking\src\convex;D:\PhysX\physx\source\scenequery\include;D:\PhysX\physx\source\physxmetadata\core\include;D:\PhysX\physx\source\immediatemode\include;D:\PhysX\physx\source\pvd\include;D:\PhysX\physx\..\pxshared\include;D:\PhysX\physx\source\foundation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\LowLevel_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\LowLevelAABB_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\LowLevelDynamics_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysXTask_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\SceneQuery_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\SimulationController_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysXPvdSDK_static_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysXCommon_64.lib;D:\PhysX\physx\bin\win.x86_64.vc142.mt\release\PhysXFoundation_64.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>PhysXFoundation_64.dll;PhysXCommon_64.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PhysX/physx/bin/win.x86_64.vc142.mt/release/PhysX_64.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PhysX/physx/bin/win.x86_64.vc142.mt/release/PhysX_64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="source\compiler\cmake\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='debug|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='debug|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='debug|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='debug|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='checked|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='checked|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='checked|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='checked|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='checked|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='profile|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='profile|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='profile|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='profile|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='release|x64'">Building Custom Rule D:/PhysX/physx/source/compiler/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='release|x64'">setlocal
+"C:\Program Files\Cmake\bin\cmake.exe" -SD:/PhysX/physx/compiler/public -BD:/PhysX/physx/compiler/vc16win64 --check-stamp-file D:/PhysX/physx/compiler/vc16win64/sdk_source_bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='release|x64'">D:\PhysX\externals\cmakemodules\GetCompilerAndPlatform.cmake;D:\PhysX\externals\cmakemodules\NvidiaBuildOptions.cmake;D:\PhysX\externals\cmakemodules\SetOutputPaths.cmake;D:\PhysX\externals\cmakemodules\template\PxIncludeTemplate.h;D:\PhysX\physx\source\compiler\cmake\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\SimulationController.cmake;D:\PhysX\physx\source\compiler\cmake\windows\CMakeLists.txt;D:\PhysX\physx\source\compiler\cmake\windows\FastXml.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevel.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelAABB.cmake;D:\PhysX\physx\source\compiler\cmake\windows\LowLevelDynamics.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysX.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCharacterKinematic.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCommon.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXCooking.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXExtensions.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXFoundation.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXPvdSDK.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXTask.cmake;D:\PhysX\physx\source\compiler\cmake\windows\PhysXVehicle.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SceneQuery.cmake;D:\PhysX\physx\source\compiler\cmake\windows\SimulationController.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='release|x64'">D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\physx\src\buffering\ScbActor.cpp" />
+    <ClCompile Include="source\physx\src\buffering\ScbAggregate.cpp" />
+    <ClCompile Include="source\physx\src\buffering\ScbBase.cpp" />
+    <ClCompile Include="source\physx\src\buffering\ScbMetaData.cpp" />
+    <ClCompile Include="source\physx\src\buffering\ScbScene.cpp" />
+    <ClCompile Include="source\physx\src\buffering\ScbScenePvdClient.cpp" />
+    <ClCompile Include="source\physx\src\buffering\ScbShape.cpp" />
+    <ClInclude Include="include\pvd\PxPvdSceneClient.h" />
+    <ClInclude Include="include\common\PxBase.h" />
+    <ClInclude Include="include\common\PxCollection.h" />
+    <ClInclude Include="include\common\PxCoreUtilityTypes.h" />
+    <ClInclude Include="include\common\PxMetaData.h" />
+    <ClInclude Include="include\common\PxMetaDataFlags.h" />
+    <ClInclude Include="include\common\PxPhysicsInsertionCallback.h" />
+    <ClInclude Include="include\common\PxPhysXCommonConfig.h" />
+    <ClInclude Include="include\common\PxProfileZone.h" />
+    <ClInclude Include="include\common\PxRenderBuffer.h" />
+    <ClInclude Include="include\common\PxSerialFramework.h" />
+    <ClInclude Include="include\common\PxSerializer.h" />
+    <ClInclude Include="include\common\PxStringTable.h" />
+    <ClInclude Include="include\common\PxTolerancesScale.h" />
+    <ClInclude Include="include\common\PxTypeInfo.h" />
+    <ClInclude Include="include\PxActor.h" />
+    <ClInclude Include="include\PxAggregate.h" />
+    <ClInclude Include="include\PxArticulation.h" />
+    <ClInclude Include="include\PxArticulationBase.h" />
+    <ClInclude Include="include\PxArticulationJoint.h" />
+    <ClInclude Include="include\PxArticulationJointReducedCoordinate.h" />
+    <ClInclude Include="include\PxArticulationLink.h" />
+    <ClInclude Include="include\PxArticulationReducedCoordinate.h" />
+    <ClInclude Include="include\PxBatchQuery.h" />
+    <ClInclude Include="include\PxBatchQueryDesc.h" />
+    <ClInclude Include="include\PxBroadPhase.h" />
+    <ClInclude Include="include\PxClient.h" />
+    <ClInclude Include="include\PxConfig.h" />
+    <ClInclude Include="include\PxConstraint.h" />
+    <ClInclude Include="include\PxConstraintDesc.h" />
+    <ClInclude Include="include\PxContact.h" />
+    <ClInclude Include="include\PxContactModifyCallback.h" />
+    <ClInclude Include="include\PxDeletionListener.h" />
+    <ClInclude Include="include\PxFiltering.h" />
+    <ClInclude Include="include\PxForceMode.h" />
+    <ClInclude Include="include\PxFoundation.h" />
+    <ClInclude Include="include\PxImmediateMode.h" />
+    <ClInclude Include="include\PxLockedData.h" />
+    <ClInclude Include="include\PxMaterial.h" />
+    <ClInclude Include="include\PxPhysics.h" />
+    <ClInclude Include="include\PxPhysicsAPI.h" />
+    <ClInclude Include="include\PxPhysicsSerialization.h" />
+    <ClInclude Include="include\PxPhysicsVersion.h" />
+    <ClInclude Include="include\PxPhysXConfig.h" />
+    <ClInclude Include="include\PxPruningStructure.h" />
+    <ClInclude Include="include\PxQueryFiltering.h" />
+    <ClInclude Include="include\PxQueryReport.h" />
+    <ClInclude Include="include\PxRigidActor.h" />
+    <ClInclude Include="include\PxRigidBody.h" />
+    <ClInclude Include="include\PxRigidDynamic.h" />
+    <ClInclude Include="include\PxRigidStatic.h" />
+    <ClInclude Include="include\PxScene.h" />
+    <ClInclude Include="include\PxSceneDesc.h" />
+    <ClInclude Include="include\PxSceneLock.h" />
+    <ClInclude Include="include\PxShape.h" />
+    <ClInclude Include="include\PxSimulationEventCallback.h" />
+    <ClInclude Include="include\PxSimulationStatistics.h" />
+    <ClInclude Include="include\PxVisualizationParameter.h" />
+    <ClInclude Include="include\solver\PxSolverDefs.h" />
+    <ClCompile Include="source\physxmetadata\core\src\PxAutoGeneratedMetaDataObjects.cpp" />
+    <ClCompile Include="source\physxmetadata\core\src\PxMetaDataObjects.cpp" />
+    <ClCompile Include="source\immediatemode\src\NpImmediateMode.cpp" />
+    <ClInclude Include="include\gpu\PxGpu.h" />
+    <ClInclude Include="include\cudamanager\PxCudaContextManager.h" />
+    <ClInclude Include="include\cudamanager\PxCudaMemoryManager.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PvdMetaDataDefineProperties.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PvdMetaDataExtensions.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PvdMetaDataPropertyVisitor.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PxAutoGeneratedMetaDataObjectNames.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PxAutoGeneratedMetaDataObjects.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PxMetaDataCompare.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PxMetaDataCppPrefix.h" />
+    <ClInclude Include="source\physxmetadata\core\include\PxMetaDataObjects.h" />
+    <ClInclude Include="source\physxmetadata\core\include\RepXMetaDataPropertyVisitor.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbActor.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbAggregate.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbArticulation.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbArticulationJoint.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbBase.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbBody.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbConstraint.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbDefs.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbNpDeps.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbRigidObject.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbRigidStatic.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbScene.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbSceneBuffer.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbScenePvdClient.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbShape.h" />
+    <ClInclude Include="source\physx\src\buffering\ScbType.h" />
+    <ClInclude Include="source\physx\src\NpActor.h" />
+    <ClInclude Include="source\physx\src\NpActorTemplate.h" />
+    <ClInclude Include="source\physx\src\NpAggregate.h" />
+    <ClInclude Include="source\physx\src\NpArticulation.h" />
+    <ClInclude Include="source\physx\src\NpArticulationJoint.h" />
+    <ClInclude Include="source\physx\src\NpArticulationJointReducedCoordinate.h" />
+    <ClInclude Include="source\physx\src\NpArticulationLink.h" />
+    <ClInclude Include="source\physx\src\NpArticulationReducedCoordinate.h" />
+    <ClInclude Include="source\physx\src\NpArticulationTemplate.h" />
+    <ClInclude Include="source\physx\src\NpBatchQuery.h" />
+    <ClInclude Include="source\physx\src\NpCast.h" />
+    <ClInclude Include="source\physx\src\NpConnector.h" />
+    <ClInclude Include="source\physx\src\NpConstraint.h" />
+    <ClInclude Include="source\physx\src\NpFactory.h" />
+    <ClInclude Include="source\physx\src\NpMaterial.h" />
+    <ClInclude Include="source\physx\src\NpMaterialManager.h" />
+    <ClInclude Include="source\physx\src\NpPhysics.h" />
+    <ClInclude Include="source\physx\src\NpPhysicsInsertionCallback.h" />
+    <ClInclude Include="source\physx\src\NpPtrTableStorageManager.h" />
+    <ClInclude Include="source\physx\src\NpPvdSceneQueryCollector.h" />
+    <ClInclude Include="source\physx\src\NpQueryShared.h" />
+    <ClInclude Include="source\physx\src\NpReadCheck.h" />
+    <ClInclude Include="source\physx\src\NpRigidActorTemplate.h" />
+    <ClInclude Include="source\physx\src\NpRigidActorTemplateInternal.h" />
+    <ClInclude Include="source\physx\src\NpRigidBodyTemplate.h" />
+    <ClInclude Include="source\physx\src\NpRigidDynamic.h" />
+    <ClInclude Include="source\physx\src\NpRigidStatic.h" />
+    <ClInclude Include="source\physx\src\NpScene.h" />
+    <ClInclude Include="source\physx\src\NpSceneAccessor.h" />
+    <ClInclude Include="source\physx\src\NpSceneQueries.h" />
+    <ClInclude Include="source\physx\src\NpShape.h" />
+    <ClInclude Include="source\physx\src\NpShapeManager.h" />
+    <ClInclude Include="source\physx\src\NpWriteCheck.h" />
+    <ClInclude Include="source\physx\src\PvdMetaDataBindingData.h" />
+    <ClInclude Include="source\physx\src\PvdMetaDataPvdBinding.h" />
+    <ClInclude Include="source\physx\src\PvdPhysicsClient.h" />
+    <ClInclude Include="source\physx\src\PvdTypeNames.h" />
+    <ResourceCompile Include="source\compiler\resource_x64\PhysX.rc" />
+    <ClInclude Include="source\compiler\resource_x64\resource.h" />
+    <ClInclude Include="include\common\windows\PxWindowsDelayLoadHook.h" />
+    <ClInclude Include="source\physx\src\device\nvPhysXtoDrv.h" />
+    <ClInclude Include="source\physx\src\device\PhysXIndicator.h" />
+    <ClCompile Include="source\physx\src\device\windows\PhysXIndicatorWindows.cpp" />
+    <ClCompile Include="source\physx\src\gpu\PxGpu.cpp" />
+    <ClCompile Include="source\physx\src\gpu\PxPhysXGpuModuleLoader.cpp" />
+    <ClCompile Include="source\physx\src\NpActor.cpp" />
+    <ClCompile Include="source\physx\src\NpAggregate.cpp" />
+    <ClCompile Include="source\physx\src\NpArticulation.cpp" />
+    <ClCompile Include="source\physx\src\NpArticulationJoint.cpp" />
+    <ClCompile Include="source\physx\src\NpArticulationJointReducedCoordinate.cpp" />
+    <ClCompile Include="source\physx\src\NpArticulationLink.cpp" />
+    <ClCompile Include="source\physx\src\NpArticulationReducedCoordinate.cpp" />
+    <ClCompile Include="source\physx\src\NpBatchQuery.cpp" />
+    <ClCompile Include="source\physx\src\NpConstraint.cpp" />
+    <ClCompile Include="source\physx\src\NpFactory.cpp" />
+    <ClCompile Include="source\physx\src\NpMaterial.cpp" />
+    <ClCompile Include="source\physx\src\NpMetaData.cpp" />
+    <ClCompile Include="source\physx\src\NpPhysics.cpp" />
+    <ClCompile Include="source\physx\src\NpPvdSceneQueryCollector.cpp" />
+    <ClCompile Include="source\physx\src\NpReadCheck.cpp" />
+    <ClCompile Include="source\physx\src\NpRigidDynamic.cpp" />
+    <ClCompile Include="source\physx\src\NpRigidStatic.cpp" />
+    <ClCompile Include="source\physx\src\NpScene.cpp" />
+    <ClCompile Include="source\physx\src\NpSceneQueries.cpp" />
+    <ClCompile Include="source\physx\src\NpSerializerAdapter.cpp" />
+    <ClCompile Include="source\physx\src\NpShape.cpp" />
+    <ClCompile Include="source\physx\src\NpShapeManager.cpp" />
+    <ClCompile Include="source\physx\src\NpWriteCheck.cpp" />
+    <ClCompile Include="source\physx\src\PvdMetaDataPvdBinding.cpp" />
+    <ClCompile Include="source\physx\src\PvdPhysicsClient.cpp" />
+    <ClCompile Include="source\physx\src\windows\NpWindowsDelayLoadHook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\ZERO_CHECK.vcxproj">
+      <Project>{CAA83830-2971-31F9-891B-33CBD5840D2D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\LowLevel.vcxproj">
+      <Project>{DBB38D53-954D-3EA2-8559-332E73CD4993}</Project>
+      <Name>LowLevel</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\LowLevelAABB.vcxproj">
+      <Project>{739DC2F5-6C94-3658-B8AA-F3D35B175B0B}</Project>
+      <Name>LowLevelAABB</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\LowLevelDynamics.vcxproj">
+      <Project>{FA090CD1-3ED3-3026-AAF2-1BA2BA5EC04B}</Project>
+      <Name>LowLevelDynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\PhysXCommon.vcxproj">
+      <Project>{56301F55-9EAA-3483-BABF-163C1BB48A98}</Project>
+      <Name>PhysXCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\PhysXFoundation.vcxproj">
+      <Project>{5A4D1B8D-EE2D-34FE-B0DF-CD4528114D10}</Project>
+      <Name>PhysXFoundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\PhysXPvdSDK.vcxproj">
+      <Project>{72030DCF-3ADF-3920-9B16-F9856D9B29CA}</Project>
+      <Name>PhysXPvdSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\PhysXTask.vcxproj">
+      <Project>{8868EFB2-81EC-3E1E-ABB7-70AA65833DE1}</Project>
+      <Name>PhysXTask</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\SceneQuery.vcxproj">
+      <Project>{CCE05965-15F5-3B50-8FA2-F54548890F93}</Project>
+      <Name>SceneQuery</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PhysX\physx\compiler\vc16win64\sdk_source_bin\SimulationController.vcxproj">
+      <Project>{D4A36D7C-C9AA-3539-BFD6-CF5A3A00DA39}</Project>
+      <Name>SimulationController</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="States">
+      <UniqueIdentifier>{7dbc0d2d-a5e1-430b-b338-848ef27d0f09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{639fe95e-aab7-4138-9e0d-70ff02bdf8a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="AIObject.h" />
+    <ClInclude Include="PathFindingTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawShapeTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="SteeringTool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="PathFindingTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawShapeTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="SteeringTool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

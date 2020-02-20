@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Inc">
+      <UniqueIdentifier>{ae471b59-0c33-4a75-95c5-5e9b434820a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{a76a52c1-28fb-4526-838b-8f7dbc4cfa07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Shape">
+      <UniqueIdentifier>{1415d518-7594-4818-9247-548ca0616107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Vector">
+      <UniqueIdentifier>{82e6411e-56b7-4cf7-b2b2-13064a0d80fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Matrix">
+      <UniqueIdentifier>{d50119d0-df94-43c2-b827-e7575bb73afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Matrix">
+      <UniqueIdentifier>{9c058151-2778-4286-a716-c5aa848a84a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Vector">
+      <UniqueIdentifier>{ecc55caf-d400-43aa-b611-eb1fea67545e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Meta">
+      <UniqueIdentifier>{dac1da10-2e07-43b2-915b-b16eff15eade}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\Common.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VishvMath.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Precompiled.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Constants.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Quaternion.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Bounds3.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Transform.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\VishvRandom.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Convert.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Sphere.h">
+      <Filter>Inc\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Shape3D.h">
+      <Filter>Inc\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Cube.h">
+      <Filter>Inc\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Cuboid.h">
+      <Filter>Inc\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Capsule.h">
+      <Filter>Inc\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Vector2.h">
+      <Filter>Inc\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Vector3.h">
+      <Filter>Inc\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Vector4.h">
+      <Filter>Inc\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Matrix2.h">
+      <Filter>Inc\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Matrix3.h">
+      <Filter>Inc\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Matrix4.h">
+      <Filter>Inc\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MetaRegistration.h">
+      <Filter>Inc\Meta</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Precompiled.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\VishvMath.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Quaternions.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Convert.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix2.cpp">
+      <Filter>Src\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix3.cpp">
+      <Filter>Src\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Matrix4.cpp">
+      <Filter>Src\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Transform.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vector3.cpp">
+      <Filter>Src\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MetaRegistration.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

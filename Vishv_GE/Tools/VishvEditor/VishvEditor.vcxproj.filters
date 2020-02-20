@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="EditState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="AniamtionSet_Guice.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateAnimBlending.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Skeleton_Gui.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EditState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationSet_Gui.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateAnimBlending.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeleton_Gui.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="State">
+      <UniqueIdentifier>{edb5ced5-3b88-41a6-94dc-7b73f94f380b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{05226cef-a632-4a52-b393-cab9769e9970}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

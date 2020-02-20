@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Inc">
+      <UniqueIdentifier>{9cbcf6b6-6a50-40f8-92b4-0adab26c79a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{7f58d225-d7e8-491a-9149-6784c919bc48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Components">
+      <UniqueIdentifier>{467d59f1-4d9c-4d09-b640-769aff35fa2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\GameObject">
+      <UniqueIdentifier>{025b1d55-9619-434b-90db-4be6f8763e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Meta">
+      <UniqueIdentifier>{8533af21-05bb-4690-9efa-72417cfbc65c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Components">
+      <UniqueIdentifier>{009bb1ea-8e8d-4715-a54c-5864848468cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\TemplateClasses">
+      <UniqueIdentifier>{90afb759-7789-4ee7-85a6-608b41348aba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\TemplateClasses\SteeringBehavours">
+      <UniqueIdentifier>{a9f64e71-0f02-4571-936d-fba18208e036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\TemplateClasses">
+      <UniqueIdentifier>{295f3268-f466-4475-8cdf-6972358af3fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\TemplateClasses\SteeringBehaviours">
+      <UniqueIdentifier>{59b455bf-c603-4e34-889e-ac36c35417c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\Common.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Vishv.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Precompiled.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\App.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AppState.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GlobalHeaders.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Scene.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\imfilebrowser.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GameObject.h">
+      <Filter>Inc\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GameObjectFactory.h">
+      <Filter>Inc\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MetaRegistration.h">
+      <Filter>Inc\Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ColliderComponent.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Component.h">
+      <Filter>Inc\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ModelAnimation.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GameWorld.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIAgent.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AISteering.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_Evade.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_Flee.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_Flocking.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_ObstacleAvoidance.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_Pursuit.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_Seek.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_Wander.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SteeringBehaviour_Arrive.h">
+      <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIStateMachine.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\TransformComponent.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MeshComponent.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ThirdPersonControllerComponent.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIPathFinding.h">
+      <Filter>Inc\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Precompiled.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\App.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Vishv.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObject.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Component.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MetaRegistration.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameObjectFactory.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ColliderComponent.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ModelAnimation.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GameWorld.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AIAgent.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AISteering.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_Arrive.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_Evade.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_Flee.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_Flocking.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_ObstacleAvoidance.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_Pursuit.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_Seek.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Steering_Wander.cpp">
+      <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AIStatemachine.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TransformComponent.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MeshComponent.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ThirdPersonControllerComponent.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AIPathFinding.cpp">
+      <Filter>Src\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

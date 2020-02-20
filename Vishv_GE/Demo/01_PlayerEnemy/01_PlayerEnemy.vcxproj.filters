@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="WinMain.cpp" />
+    <ClCompile Include="MainState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="StarteState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="WanderState.cpp">
+      <Filter>Classes\EnemyStates\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackState.cpp">
+      <Filter>Classes\EnemyStates\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ChaseState.cpp">
+      <Filter>Classes\EnemyStates\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthComponent.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaRegistration.cpp">
+      <Filter>States\Meta</Filter>
+    </ClCompile>
+    <ClCompile Include="DyingState.cpp">
+      <Filter>Classes\EnemyStates\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponComponent.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorldCreator.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="EmptyState.cpp">
+      <Filter>Classes\EnemyStates\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="States">
+      <UniqueIdentifier>{5f15316e-9d7a-4ef8-9564-07cda2369de0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{2356b1cd-f71d-463e-96ee-b864d4be855d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{5790d869-096f-4dc3-bb4c-6fe05253455b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\EnemyStates">
+      <UniqueIdentifier>{94512620-96ec-4a2a-9d7b-ac5563e1ff89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\EnemyStates\Source">
+      <UniqueIdentifier>{696b37c9-c1ea-4419-8067-61240e38975b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\EnemyStates\Header">
+      <UniqueIdentifier>{bba98905-f3fa-4213-af88-c74883076a1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Components">
+      <UniqueIdentifier>{f36078cb-ab37-4379-a5bb-2d9ff3b85f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\Meta">
+      <UniqueIdentifier>{a9e7b53c-e97f-49a2-b441-c18bfbf69a1b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="StarteState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="WanderState.h">
+      <Filter>Classes\EnemyStates\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackState.h">
+      <Filter>Classes\EnemyStates\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationStates.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ChaseState.h">
+      <Filter>Classes\EnemyStates\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyStates.h">
+      <Filter>Classes\EnemyStates</Filter>
+    </ClInclude>
+    <ClInclude Include="HealthComponent.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaRegistration.h">
+      <Filter>States\Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="DyingState.h">
+      <Filter>Classes\EnemyStates\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponComponent.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectTags.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorldCreator.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyState.h">
+      <Filter>Classes\EnemyStates\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

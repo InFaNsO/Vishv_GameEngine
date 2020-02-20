@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\foundation\src\windows\PsUWPThread.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsAtomic.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsCpu.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsFPU.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsMutex.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsPrintString.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsSList.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsSocket.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsSync.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsThread.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\windows\PsWindowsTime.cpp">
+      <Filter>src\src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\PsAllocator.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\PsAssert.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\PsFoundation.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\PsMathUtils.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\PsString.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\PsTempAllocator.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\foundation\src\PsUtilities.cpp">
+      <Filter>src\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\foundation\PxAssert.h">
+      <Filter>include\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\foundation\PxFoundationConfig.h">
+      <Filter>include\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\foundation\PxMathUtils.h">
+      <Filter>include\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PxFoundation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\windows\PxWindowsIntrinsics.h">
+      <Filter>shared\include\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\Px.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxAllocatorCallback.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxBitAndData.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxBounds3.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxErrorCallback.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxErrors.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxFlags.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxIntrinsics.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxIO.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxMat33.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxMat44.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxMath.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxMemory.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxPlane.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxPreprocessor.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxProfiler.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxQuat.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxSharedAssert.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxSimpleTypes.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxStrideIterator.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxTransform.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxUnionCast.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxVec2.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxVec3.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="pxshared\include\foundation\PxVec4.h">
+      <Filter>shared\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\windows\PsWindowsAoS.h">
+      <Filter>src\include\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\windows\PsWindowsFPU.h">
+      <Filter>src\include\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\windows\PsWindowsInclude.h">
+      <Filter>src\include\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\windows\PsWindowsInlineAoS.h">
+      <Filter>src\include\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\windows\PsWindowsIntrinsics.h">
+      <Filter>src\include\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\windows\PsWindowsTrigConstants.h">
+      <Filter>src\include\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\Ps.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsAlignedMalloc.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsAlloca.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsAllocator.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsAoS.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsArray.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsAtomic.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsBasicTemplates.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsBitUtils.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsBroadcast.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsCpu.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsFoundation.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsFPU.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsHash.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsHashInternals.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsHashMap.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsHashSet.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsInlineAllocator.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsInlineAoS.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsInlineArray.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsIntrinsics.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsMathUtils.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsMutex.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsPool.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsSList.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsSocket.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsSort.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsSortInternals.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsString.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsSync.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsTempAllocator.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsThread.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsTime.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsUserAllocated.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsUtilities.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsVecMath.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsVecMathAoSScalar.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsVecMathAoSScalarInline.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsVecMathSSE.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsVecMathUtilities.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsVecQuat.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\foundation\include\PsVecTransform.h">
+      <Filter>src\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{A0922166-2826-34AC-8E46-F8E7EDE0ADEC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\foundation">
+      <UniqueIdentifier>{54375021-97CA-326B-B5B9-EB89B9C9B8B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{52FBB387-6714-328F-9096-0E67CF7A194E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shared">
+      <UniqueIdentifier>{488E06A7-7F54-33AA-A604-3E5F9D601E4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shared\include">
+      <UniqueIdentifier>{EA0C6492-A995-353C-B7F5-1AFB8A260D6F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shared\include\windows">
+      <UniqueIdentifier>{16957103-0DBE-306C-94D7-E80BC7EE53A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{F423DFA2-0E1A-364C-B2B5-6F220EA1F85F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\include">
+      <UniqueIdentifier>{BFA30B5B-EF87-37C7-9AD1-DB6AD94239D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\include\windows">
+      <UniqueIdentifier>{BBCD4A07-33FC-3D65-BF74-7896039E836B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\src">
+      <UniqueIdentifier>{63B2AA56-8ACF-3E56-AB1C-F79C0C1B51AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\src\windows">
+      <UniqueIdentifier>{B22BD666-BB15-3A41-8405-0BA954D52BD3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="source\compiler\resource_x64\PhysXFoundation.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="source\compiler\cmake\CMakeLists.txt" />
+  </ItemGroup>
+</Project>
