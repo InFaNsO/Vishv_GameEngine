@@ -51,7 +51,7 @@ void Vishv::Math::Transform::TranslateRight(float value)
 
 void Vishv::Math::Transform::RotateUp(float angleDeg)
 {
-	if (angleDeg == 0.0f)
+	if (angleDeg == 0.0f || !angleDeg)
 		return;
 
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, mUp);

@@ -36,6 +36,6 @@ private:
 	WeaponComponent* mWeapon;
 
 	bool attacked = false;
-
+	float prvDeg = 0.0f;
 };
 

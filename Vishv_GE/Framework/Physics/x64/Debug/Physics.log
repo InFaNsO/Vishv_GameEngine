@@ -1,1 +1,7 @@
-﻿
+﻿  Precompiled.cpp
+  PhysicsWorld.cpp
+d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\framework\physics\src\physicsworld.cpp(9): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Raycast.cpp
+  ShapeCollision.cpp
+  Generating Code...
+  Physics.vcxproj -> D:\bhavCode\GithubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\Physics.lib

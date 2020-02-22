@@ -26,13 +26,14 @@ void ChaseState::Enter(Vishv::GameObject & agent)
 	mSteeringComponent->SetBehaviour(Vishv::AI::SteeringType::Arrive, true);
 	agent.GetComponent<Vishv::Components::ModelAnimation>()->ChangeAnimation((size_t)AnimationStates::Run);
 
-	mAgentComponent->MaxSpeed() = mAgentComponent->MaxSpeed() * 2.0f;
+	mAgentComponent->MaxSpeed() = mAgentComponent->MaxSpeed() * 1.0f;
 
 	//Path finding
 	mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
 	mPath.emplace_back(mPlayerTransformComponent->Position());
 	mPlayerNode = mPathFinding->GetNodeID(mPlayerTransformComponent->Position());
 	mCurrentPathNode = 0;
+	mAgentComponent->Target() = mPath[mCurrentPathNode];
 }
 
 void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
@@ -62,6 +63,7 @@ void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
 		mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
 		mCurrentPathNode = 0;
 		mPath.emplace_back(mPlayerTransformComponent->Position());
+		mAgentComponent->Target() = mPath[mCurrentPathNode];
 	}
 
 	//check if agent is close to path
@@ -82,7 +84,7 @@ void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
 
 void ChaseState::Exit(Vishv::GameObject & agent)
 {
-	mAgentComponent->MaxSpeed() = mAgentComponent->MaxSpeed() * 0.50f;
+	mAgentComponent->MaxSpeed() = mAgentComponent->MaxSpeed() * 1.0f;
 }
 
 

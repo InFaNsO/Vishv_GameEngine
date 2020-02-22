@@ -33,7 +33,8 @@ void Vishv::Components::ThirdPersonControllerComponent::Initialize()
 	mCamera = GetOwner().GetWorld().GetMainCamera();
 	mTransformComponent = GetOwner().GetComponent<Vishv::Components::TransformComponent>();
 
-	offsetCamera = { 0.0f, 200.0f, -200.0f };
+	offsetCamera = { 0.0f, 250.0f, -200.0f };
+	mCamera->transform.RotateX(-30.0f);
 }
 
 void Vishv::Components::ThirdPersonControllerComponent::Update(float deltaTime)
@@ -67,13 +68,13 @@ void Vishv::Components::ThirdPersonControllerComponent::Update(float deltaTime)
 	{
 		mTransformComponent->RotateUp(-60.0f * deltaTime);
 		float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform.Position())), mCamera->transform.Forward());
-		mCamera->transform.RotateUp(-angle * Math::Constans::RadToDeg * deltaTime);
+		mCamera->transform.RotateY(-angle * Math::Constans::RadToDeg * deltaTime);
 	}
 	else if (input->IsKeyDown(Input::KeyCode::E))
 	{
 		mTransformComponent->RotateUp(60.0f * deltaTime);
 		float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform.Position())), mCamera->transform.Forward());
-		mCamera->transform.RotateUp(angle * Math::Constans::RadToDeg * deltaTime);
+		mCamera->transform.RotateY(angle * Math::Constans::RadToDeg * deltaTime);
 		//mCamera->transform.RotateY(-60.0f * deltaTime);
 	}
 
@@ -117,7 +118,7 @@ void Vishv::Components::ThirdPersonControllerComponent::Update(float deltaTime)
 		//else if (forwardPlayer.x > forwardCam.x && forwardPlayer.y < 0.0f)
 		//	deg *= -1.0f;
 
-		mCamera->transform.RotateUp(deg * deltaTime);
+		mCamera->transform.RotateY(deg * deltaTime);
 		//mCamera->transform.RotateX(-ud);
 		//mCamera->LookAt(mTransformComponent->Position() + upRot);
 	}

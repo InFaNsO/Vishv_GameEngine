@@ -3,6 +3,8 @@
 #include "Component.h"
 #include "GameWorld.h"
 
+#include "ModelAnimation.h"
+
 using namespace Vishv;
 
 META_CLASS_BEGIN(GameObject)
@@ -46,7 +48,17 @@ void Vishv::GameObject::DebugUI()
 		return;
 
 	for (auto& component : mComponents)
-		component->DebugUI();
+	{
+		if (component->StaticGetMetaClass()->GetName() == Vishv::Components::ModelAnimation::StaticGetMetaClass()->GetName())
+		{
+			if (ImGui::CollapsingHeader(component->StaticGetMetaClass()->GetName()))
+			{
+
+			}
+		}
+		else
+			component->DebugUI();
+	}
 }
 
 void Vishv::GameObject::SimpleDraw()

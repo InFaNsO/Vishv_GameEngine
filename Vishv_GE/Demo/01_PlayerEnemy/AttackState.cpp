@@ -67,6 +67,24 @@ void AttackState::Update(Vishv::GameObject & agent, float deltaTime)
 			attacked = false;
 		}
 	}
+
+	//face the player
+	auto tar = Vishv::Math::Normalize((mTransformComponent->Position() - mPlayerTransformComponent->Position()));
+	float angle = Vishv::Math::GetAngle(tar, mTransformComponent->Forward());
+
+	if (angle)
+	{
+		float deg = angle * Vishv::Math::Constans::RadToDeg;
+
+		if (Vishv::Math::Abs(deg - prvDeg) < 0.01f)
+			return;
+
+		if (tar.x < mTransformComponent->Forward().x)
+			deg *= -1.0f;
+
+		prvDeg = deg;
+		mTransformComponent->RotateUp(deg * deltaTime);
+	}
 }
 
 void AttackState::FacePlayer(float deltaTime)
