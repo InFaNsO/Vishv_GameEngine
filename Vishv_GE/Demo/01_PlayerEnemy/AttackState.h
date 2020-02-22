@@ -31,7 +31,7 @@ private:
 	float mDetectionRange;
 	float mAttackRange;
 	float attackUp = 90.0f;
-	float detectionUp = 155.0f;
+	float detectionUp = 500.0f;
 
 	WeaponComponent* mWeapon;
 

@@ -30,6 +30,7 @@ void ChaseState::Enter(Vishv::GameObject & agent)
 
 	//Path finding
 	mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
+	mPath.emplace_back(mPlayerTransformComponent->Position());
 	mPlayerNode = mPathFinding->GetNodeID(mPlayerTransformComponent->Position());
 	mCurrentPathNode = 0;
 }
@@ -43,7 +44,7 @@ void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
 	}
 
 	float playerDisSq = Math::Abs(Math::MagnitudeSqr(mTransformComponent->Position() - mPlayerTransformComponent->Position()));
-	if (playerDisSq < mAttackRange * mAttackRange)
+	if (playerDisSq < mAttackRange * mAttackRange || mPath.size() == 0)
 	{
 		agent.GetComponent<Vishv::Components::AIStateMachine>()->ChangeState(ToString(EnemyStates::Attack));
 		return;
@@ -60,6 +61,7 @@ void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
 		mPlayerNode = pnodeId;
 		mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
 		mCurrentPathNode = 0;
+		mPath.emplace_back(mPlayerTransformComponent->Position());
 	}
 
 	//check if agent is close to path
@@ -72,6 +74,7 @@ void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
 	if ((size_t)mCurrentPathNode >= mPath.size())
 	{
 		mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
+		mPath.emplace_back(mPlayerTransformComponent->Position());
 		mCurrentPathNode = 0;
 	}
 	mAgentComponent->Target() = mPath[mCurrentPathNode];

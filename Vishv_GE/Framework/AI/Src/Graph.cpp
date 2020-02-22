@@ -149,7 +149,7 @@ Node *	Vishv::AI::Graph::GetNode(const Math::Vector3& coord)
 Node* Vishv::AI::Graph::AddNode()
 {
 	auto node = mGraph.emplace_back(std::make_unique<Node>()).get();
-	node->mID = mGraph.size() - 1;
+	node->mID = (uint32_t)mGraph.size() - 1;
 	mNumberOfNodes++;
 	return node;
 }

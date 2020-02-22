@@ -29,7 +29,7 @@ namespace Vishv::Components
 
 		bool IsNextAnim();
 
-		int CurrentrAnimation() { return mCurrentAnimationIndex; }
+		int CurrentrAnimation() { return (int)mCurrentAnimationIndex; }
 
 	private:
 		void UpdateAnimationPlayInformation(Graphics::AnimationPlayInformation & play, float deltaTime);

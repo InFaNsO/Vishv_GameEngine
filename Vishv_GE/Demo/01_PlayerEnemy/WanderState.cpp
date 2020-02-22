@@ -19,9 +19,14 @@ void WanderState::Enter(Vishv::GameObject & agent)
 
 	VISHVASSERT(mTransformComponent && mAnimationComponent && mAgentComponent && mSteeringComponent, "[Wander State] agent doesnt have necessary components");
 
-	mTarget = mPathFinding->GetRandomNodePos();
-	wanderPath = mPathFinding->RunAStar(mTransformComponent->Position(), mTarget);
-
+	wanderPath.clear();
+	
+	while (wanderPath.size() == 0)
+	{
+		mTarget = mPathFinding->GetRandomNodePos();
+		wanderPath = mPathFinding->RunAStar(mTransformComponent->Position(), mTarget);
+	}
+	mCurrentPathNode = 0;
 	//agent.ResetSteering();
 	//agent.SetSteeringBehaviour(AI::SteeringType::Arrive, true);
 	//agent.GetAiAgent().path.clear();
@@ -31,7 +36,8 @@ void WanderState::Enter(Vishv::GameObject & agent)
 	mSteeringComponent->ResetModule();
 	mSteeringComponent->SetBehaviour(Vishv::AI::SteeringType::Seek, true);
 
-	mAttackRange = mAgentComponent->CalucalteLengthValue(attackUp);
+	mCollider = agent.GetComponent<Vishv::Components::ColliderComponent>();
+	mAttackRange = mCollider->GetRange();
 	mDetectionRange = mAgentComponent->CalucalteLengthValue(detectionUp);
 	mNodeMaxDistance = mAgentComponent->CalucalteLengthValue(nodeUp);
 
@@ -46,7 +52,7 @@ void WanderState::Update(Vishv::GameObject & agent, float deltaTime)
 	{
 		mTarget = mPathFinding->GetRandomNodePos();
 		wanderPath = mPathFinding->RunAStar(mTransformComponent->Position(), mTarget);
-
+		mCurrentPathNode = 0;
 	}
 
 	if (!mHealthComponent->IsAlive())
@@ -69,6 +75,25 @@ void WanderState::Update(Vishv::GameObject & agent, float deltaTime)
 		agent.GetComponent<Vishv::Components::AIStateMachine>()->ChangeState(ToString(EnemyStates::Chase));
 		return;
 	}
+
+	//rotyate the enemy
+	auto tar = Vishv::Math::Normalize((wanderPath[mCurrentPathNode] - mTransformComponent->Position()));
+	float angle = Vishv::Math::GetAngle(tar, mTransformComponent->Forward());
+
+	if (angle)
+	{
+		float deg = angle * Vishv::Math::Constans::RadToDeg;
+
+		if (Vishv::Math::Abs(deg - prvDeg) < 0.01f)
+			return;
+
+		if (tar.x < mTransformComponent->Forward().x)
+			deg *= -1.0f;
+
+		prvDeg = deg;
+		mTransformComponent->RotateUp(deg * deltaTime);
+	}
+
 
 	//check if agent is close to path
 	float disSq = Vishv::Math::Abs(Vishv::Math::MagnitudeSqr(mTransformComponent->Position() - wanderPath[mCurrentPathNode]));

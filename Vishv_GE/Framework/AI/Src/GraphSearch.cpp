@@ -58,6 +58,8 @@ const std::vector<Math::Vector3>& Vishv::AI::GraphSearch::GetPath(bool calculate
 		current = current->parent;
 	}
 
+	std::reverse(path.begin(), path.end());
+
 	return path;
 }
 

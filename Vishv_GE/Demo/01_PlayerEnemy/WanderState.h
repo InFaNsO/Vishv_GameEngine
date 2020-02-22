@@ -24,6 +24,9 @@ private:
 	Vishv::Components::AIAgent* mAgentComponent;
 	Vishv::Components::AISteering * mSteeringComponent;
 	Vishv::Components::AIPathFinding* mPathFinding;
+	
+	Vishv::Components::ColliderComponent* mCollider;
+	
 	HealthComponent* mHealthComponent;
 	Vishv::GameWorld* mGameWorld;
 
@@ -34,9 +37,10 @@ private:
 	float mNodeMaxDistance;
 
 	float attackUp = 90.0f;
-	float detectionUp = 155.0f;
+	float detectionUp = 500.0f;
 	float nodeUp = 105.0f;
 
 	int mCurrentPathNode;
+	float prvDeg = 0.0f;
 };
 

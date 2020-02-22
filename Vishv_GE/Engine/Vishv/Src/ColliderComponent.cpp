@@ -17,6 +17,8 @@ void Vishv::Components::ColliderComponent::Initialize()
 	mTransformComponent = GetOwner().GetComponent<TransformComponent>();
 	pworld = &GetOwner().GetWorld().GetPhysicsWorld();
 	mSphereCollider.mSphere.mTransform.mPosition = mTransformComponent->Position();
+	mSphereCollider.mSphere.mRadius = 50.0f;
+	mOffset.y += 150.0f;
 }
 
 void Vishv::Components::ColliderComponent::Update(float deltaTime)
@@ -61,7 +63,7 @@ std::vector<Vishv::GameObject*> Vishv::Components::ColliderComponent::GetCollisi
 		return std::vector<Vishv::GameObject*>();
 
 	std::vector<Vishv::GameObject*> comps;
-	comps.resize(collisons.value().size());
+	comps.reserve(collisons.value().size());
 
 	for (auto& obj : collisons.value())
 	{

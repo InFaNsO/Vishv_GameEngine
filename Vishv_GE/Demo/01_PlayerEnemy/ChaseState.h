@@ -31,7 +31,7 @@ private:
 
 
 	float attackUp = 90.0f;
-	float detectionUp = 155.0f;
+	float detectionUp = 500.0f;
 	float nodeUp = 105.0f;
 
 };

@@ -49,7 +49,6 @@ void Vishv::App::Run(AppConfig config)
 	bool done = false;
 	while (!done)
 	{
-
 		mSceneCamera.ComputeMatricies();
 		done = mWindow.ProcessMessage();
 

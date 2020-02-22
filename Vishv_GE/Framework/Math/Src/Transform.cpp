@@ -51,6 +51,9 @@ void Vishv::Math::Transform::TranslateRight(float value)
 
 void Vishv::Math::Transform::RotateUp(float angleDeg)
 {
+	if (angleDeg == 0.0f)
+		return;
+
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, mUp);
 	mQuaternion *= q;
 	mQuaternion.Normalize();
@@ -60,6 +63,9 @@ void Vishv::Math::Transform::RotateUp(float angleDeg)
 
 void Vishv::Math::Transform::RotateForward(float angleDeg)
 {
+	if (angleDeg == 0.0f)
+		return;
+
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, mForward);
 	mQuaternion *= q;
 	mQuaternion.Normalize();
@@ -69,6 +75,9 @@ void Vishv::Math::Transform::RotateForward(float angleDeg)
 
 void Vishv::Math::Transform::RotateRight(float angleDeg)
 {
+	if (angleDeg == 0.0f)
+		return;
+
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, cross(mUp, mForward));
 	mQuaternion *= q;
 	mQuaternion.Normalize();
@@ -80,6 +89,8 @@ void Vishv::Math::Transform::RotateRight(float angleDeg)
 
 void Vishv::Math::Transform::RotateX(float angleDeg)
 {
+	if (angleDeg == 0.0f)
+		return;
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, { 1.0f,0.0f,0.0f });
 	mQuaternion *= q;
 	mQuaternion.Normalize();
@@ -91,6 +102,9 @@ void Vishv::Math::Transform::RotateX(float angleDeg)
 
 void Vishv::Math::Transform::RotateY(float angleDeg)
 {
+	if (angleDeg == 0.0f)
+		return;
+
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, { 0.0f,1.0f,0.0f });
 	mQuaternion *= q;
 	mQuaternion.Normalize();
@@ -102,6 +116,9 @@ void Vishv::Math::Transform::RotateY(float angleDeg)
 
 void Vishv::Math::Transform::RotateZ(float angleDeg)
 {
+	if (angleDeg == 0.0f)
+		return;
+
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, { 0.0f,0.0f,1.0f });
 	mQuaternion *= q;
 	mQuaternion.Normalize();

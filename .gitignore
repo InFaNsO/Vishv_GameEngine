@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Folders
+Vishv_GE/.vs/

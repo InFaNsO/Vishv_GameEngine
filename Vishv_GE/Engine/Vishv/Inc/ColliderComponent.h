@@ -29,6 +29,8 @@ namespace Vishv::Components
 
 		std::vector<GameObject*> GetCollisions(int tag);
 
+		float GetRange() { return mSphereCollider.mSphere.mRadius; }
+
 	private:
 		friend class GameWorld;
 
