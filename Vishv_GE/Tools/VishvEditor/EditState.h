@@ -23,5 +23,9 @@ private:
 	void MainSceneRender();
 
 	bool shouldStart = false;
+
+	Vishv::GameWorld mWorld;
+
+	std::vector<Vishv::GameObjectHandle> mGO;
 };
 

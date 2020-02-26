@@ -92,9 +92,14 @@ Physics::PhysicsWorld & Vishv::GameWorld::GetPhysicsWorld()
 
 void Vishv::GameWorld::Initialize(size_t capacity)
 {
+	VISHVASSERT(!mIsInitialized, "[GameWorld] world already initialized");
+
 	mGameObjectAllocator = std::make_unique<Vishv::GameObjectAllocator>(capacity);
 	mGameObjectHandlePool = std::make_unique<Vishv::GameObjectHandlePool>(capacity);
 	mGameObjectFactory = std::make_unique<Vishv::GameObjectFactory>(*mGameObjectAllocator);
+
+	for (auto& service : mServices)
+		service->Initialize();
 
 	mIsInitialized = true;
 }
@@ -115,6 +120,9 @@ void Vishv::GameWorld::Terminate()
 	
 	ProcessDestroyList();
 
+	for (auto& service : mServices)
+		service->Terminate();
+
 	mGameObjectFactory.reset();
 	mGameObjectAllocator.reset();
 	mGameObjectHandlePool.reset();
@@ -125,6 +133,9 @@ void Vishv::GameWorld::Terminate()
 void Vishv::GameWorld::Update(float deltaTime)
 {
 	VISHVASSERT(!mIsUpdating, "Already Updateing");
+
+	for (auto& service : mServices)
+		service->Update(deltaTime);
 
 	mIsUpdating = true;
 
@@ -171,10 +182,17 @@ void Vishv::GameWorld::DebugUI()
 		mUpdateList[inspectorID]->DebugUI();
 	}
 	ImGui::End();
+
+	//add services
+	//for (auto& service : mServices)
+	//	service->Terminate();
 }
 
 void Vishv::GameWorld::Render()
 {
+	for (auto& service : mServices)
+		service->Render();
+
 	for (auto gameObject : mUpdateList)
 		gameObject->Render();
 }

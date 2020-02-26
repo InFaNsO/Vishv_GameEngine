@@ -5,6 +5,10 @@
 
 namespace Vishv::Core::Meta
 {
+	class MetaArray;
+	class MetaClass;
+	class MetaPointer;
+
 	class MetaType
 	{
 	public:
@@ -17,7 +21,6 @@ namespace Vishv::Core::Meta
 			Class,
 			Array,
 			Pointer
-
 		};
 
 		MetaType(const char* name, Category category, size_t size, CreateFunc create, DestroyFunc destroy);
@@ -36,6 +39,10 @@ namespace Vishv::Core::Meta
 			VISHVASSERT(mDestroy, "[MetaType] no destruction available for %s", mName.c_str());
 			mDestroy(data);
 		}
+
+		const MetaArray* GetMetaArray() const;
+		const MetaClass* GetMetaClass() const;
+		const MetaPointer* GetMetaPointer() const;
 
 	private:
 		const std::string mName;

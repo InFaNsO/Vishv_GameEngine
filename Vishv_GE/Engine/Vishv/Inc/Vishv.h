@@ -23,6 +23,10 @@
 #include "MeshComponent.h"
 #include "AIPathFinding.h"
 
+
+//Services
+#include "Service.h"
+
 //template classes completed
 //Steering behaviours
 #include "SteeringBehaviour_Arrive.h"

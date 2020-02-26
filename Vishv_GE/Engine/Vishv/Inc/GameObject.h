@@ -31,6 +31,8 @@ namespace Vishv
 		void SimpleDraw();
 
 
+		Components::Component* AddComponent(const Core::Meta::MetaClass& metaClass);
+
 		template<class T, class = std::void_t<std::is_base_of<Components::Component, T>>>
 		T* AddComponent()
 		{
@@ -67,7 +69,6 @@ namespace Vishv
 
 	private:
 		friend class GameWorld;
-		using Components = std::vector<std::unique_ptr<Components::Component>>;
 
 		GameWorld* mWorld = nullptr;
 		GameObjectHandle mHandle;
@@ -76,7 +77,7 @@ namespace Vishv
 
 		bool mIsActive = true;
 
-		Components mComponents;
+		std::vector<std::unique_ptr<Components::Component>> mComponents;
 		std::string mName = "NoName";
 	};
 }

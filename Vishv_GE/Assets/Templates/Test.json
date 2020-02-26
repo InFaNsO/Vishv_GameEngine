@@ -1,0 +1,14 @@
+{
+  "GameObject": {
+    "Components": {
+      "Vishv::Components::TransformComponent": {
+        "Position": [ 0, 1, 1 ]
+      },
+      "Vishv::Components::ColliderComponent": {
+        "Offset": [ 0, 1, 1 ],
+        "Extent":  10
+      }
+
+    }
+  }
+}

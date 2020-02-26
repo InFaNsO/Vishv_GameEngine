@@ -70,6 +70,8 @@ namespace Vishv::Components
 		Vishv::Math::Vector3 mPrvRotLocal;
 
 		Math::Transform mTransform;
+
+		Math::Vector3 pos;
 	};
 }
 

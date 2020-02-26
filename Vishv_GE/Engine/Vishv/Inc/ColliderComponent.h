@@ -39,7 +39,7 @@ namespace Vishv::Components
 		TransformComponent* mTransformComponent;
 		Vishv::Physics::SphereCollider mSphereCollider;
 		Vishv::Math::Vector3 mOffset;
-
+		float extent;
 		Vishv::Physics::PhysicsWorld* pworld;
 	};
 }

@@ -70,6 +70,9 @@ static void ShowExampleMenuFile()
 void EditState::Initialize()
 {
 	shouldStart = false;
+	
+	mWorld.Initialize(10000);
+	mGO.push_back(mWorld.Create("..\\..\\Assets\\Templates\\Test.json", "TestObj"));
 }
 
 void EditState::Update(float deltaTime)
@@ -129,6 +132,7 @@ void EditState::RenderDebugUI()
 
 void EditState::DoUI()
 {
+	/*
 	ImGui::Begin("Scene Settings");
 	if (ImGui::CollapsingHeader("Options##SceneSettings"))
 	{
@@ -179,6 +183,8 @@ void EditState::DoUI()
 			mSceneCamera.transform.SetRotation(Vishv::Math::Quaternion({ 0.0f,1.0f,0.0f }, Vishv::Math::Constans::DegToRad * -90.0f));
 		}
 	}
+
+	*/
 }
 
 void EditState::MainSceneRender()

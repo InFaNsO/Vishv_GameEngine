@@ -3,10 +3,12 @@
 
 
 META_DERIVED_BEGIN(Vishv::Components::TransformComponent, Vishv::Components::Component)
-META_FIELD_BEGIN
-		//META_FIELD(mTransform, "Transform")
-		META_FIELD(mRotationWorld, "RotationWorld")
-		META_FIELD(mRotationLocal, "RotationLocal")
+	META_FIELD_BEGIN
+		META_FIELD(pos, "Position")
+		//META_FIELD(mTransform.position, "Position")
+		//META_FIELD(mTransform.position, "Position")
+		//META_FIELD(mRotationWorld, "RotationWorld")
+		//META_FIELD(mRotationLocal, "RotationLocal")
 	META_FIELD_END
 META_CLASS_END
 

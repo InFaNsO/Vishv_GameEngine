@@ -69,3 +69,12 @@ void Vishv::GameObject::SimpleDraw()
 	for (auto& component : mComponents)
 		component->SimpleDraw();
 }
+
+
+Vishv::Components::Component* Vishv::GameObject::AddComponent(const Core::Meta::MetaClass& metaClass)
+{
+	Components::Component* comp = static_cast<Components::Component*>(metaClass.Create());
+
+	mComponents.emplace_back(std::move(comp));
+	return mComponents[mComponents.size() - 1].get();
+}

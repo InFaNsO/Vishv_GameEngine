@@ -13,9 +13,6 @@
     <Filter Include="Inc\GameObject">
       <UniqueIdentifier>{025b1d55-9619-434b-90db-4be6f8763e86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Inc\Meta">
-      <UniqueIdentifier>{8533af21-05bb-4690-9efa-72417cfbc65c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Src\Components">
       <UniqueIdentifier>{009bb1ea-8e8d-4715-a54c-5864848468cc}</UniqueIdentifier>
     </Filter>
@@ -30,6 +27,15 @@
     </Filter>
     <Filter Include="Src\TemplateClasses\SteeringBehaviours">
       <UniqueIdentifier>{59b455bf-c603-4e34-889e-ac36c35417c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Service">
+      <UniqueIdentifier>{7f70bd26-ee8c-4b1f-8a22-0a43f2814582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Services">
+      <UniqueIdentifier>{3d20d843-0280-4b9a-a2e0-8511cc282092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Meta">
+      <UniqueIdentifier>{7c22547e-dd16-4bb9-a21b-81e6f4d9990e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -62,9 +68,6 @@
     </ClInclude>
     <ClInclude Include="Inc\GameObjectFactory.h">
       <Filter>Inc\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\MetaRegistration.h">
-      <Filter>Inc\Meta</Filter>
     </ClInclude>
     <ClInclude Include="Inc\ColliderComponent.h">
       <Filter>Inc\Components</Filter>
@@ -123,6 +126,12 @@
     <ClInclude Include="Inc\AIPathFinding.h">
       <Filter>Inc\Components</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\Service.h">
+      <Filter>Inc\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MetaRegistration.h">
+      <Filter>Src\Meta</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -138,9 +147,6 @@
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Src\Component.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\MetaRegistration.cpp">
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Src\GameObjectFactory.cpp">
@@ -199,6 +205,12 @@
     </ClCompile>
     <ClCompile Include="Src\AIPathFinding.cpp">
       <Filter>Src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Service.cpp">
+      <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MetaRegistration.cpp">
+      <Filter>Src\Meta</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

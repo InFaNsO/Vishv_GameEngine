@@ -7,7 +7,7 @@
 META_CLASS_BEGIN(Vishv::Components::ColliderComponent)
 	META_FIELD_BEGIN
 		META_FIELD(mOffset, "Offset")
-		//META_FIELD(mExtent, "Extent")
+		META_FIELD(extent, "Extent")
 	META_FIELD_END
 META_CLASS_END
 
