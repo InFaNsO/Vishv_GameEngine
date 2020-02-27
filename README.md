@@ -9,7 +9,7 @@ The UI
 
 ## Demo
 
-### [Player Enemy Demo](Vishv_GE/Demo/01_PlayerEnemy)
+### [Player Enemy Demo](Vishv_GE/Demo/01_PlayerEnemy/Images)
 
 This is the first Demo Project made using the ECS it spawns a sample area with a ground and 2 walls, also it spawns 2 Enemy Zombie who roam around until the player is detected and then chase and attack the player. Systems being used are:
 
@@ -22,14 +22,18 @@ This is the first Demo Project made using the ECS it spawns a sample area with a
   	* Model rendering
 * Physics
   * Collision Detection
+  
+#### Click on the demo name to see detailed images of the demo. 
 
-### [Animation belnding](Vishv_GE/VGP334_Animation/05_AnimationBlending1)
+### [Animation belnding](Vishv_GE/VGP334_Animation/05_AnimationBlending1/images)
+
+![Animation demo](Vishv_GE/VGP334_Animation/05_AnimationBlending1/images/Transition.JPG)
 
 This is the final demo project that is there to test and show animation system for Vishv, it supports adding animations and blending between them the demo showcases import of model, textures, skeleton, animations and skining shader writen for it.
 
-### [Hello Post Processing](Vishv_GE/VGP330_Real_Time_GPU_Programming/05_HelloPostProcessing)
+here the blending slider can be used to change between different animations
 
-This is the final demo project made to test the post processing pipeline for Vishv. The Demo just renders a earth & 2 red and bue light sabers rendered on a different render target which is then merged to form the final image.
+#### Click on the demo name to see detailed images of the demo. 
 
 ## Using Component System
 
