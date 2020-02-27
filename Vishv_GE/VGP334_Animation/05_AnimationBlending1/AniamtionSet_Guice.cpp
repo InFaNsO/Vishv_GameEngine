@@ -49,11 +49,11 @@ void Vishv::UI::AnimationSetUI::BoneAnimationSeting(Vishv::Graphics::BoneAnimati
 	static int KeyIndexRotation = -1;
 
 	//say key type, make a slider with key index min to max the current slider will show the key data and allow it to be edited
-	if (ImGui::SliderInt("Position Keys", &KeyIndexPos, 0, animation->animation.GetPositionKeys().size()))
+	if (ImGui::SliderInt("Position Keys", &KeyIndexPos, 0, static_cast<int>(animation->animation.GetPositionKeys().size())))
 		KeyDataPosition(animation->animation.GetPositionKeys()[KeyIndexPos]);
-	else if (ImGui::SliderInt("Rotation Keys", &KeyIndexPos, 0, animation->animation.GetRotationKeys().size()))
+	else if (ImGui::SliderInt("Rotation Keys", &KeyIndexPos, 0, static_cast<int>(animation->animation.GetRotationKeys().size())))
 		KeyDataRotation(animation->animation.GetRotationKeys()[KeyIndexPos]);
-	else if (ImGui::SliderInt("Scale Keys", &KeyIndexPos, 0, animation->animation.GetScaleKeys().size()))
+	else if (ImGui::SliderInt("Scale Keys", &KeyIndexPos, 0, static_cast<int>(animation->animation.GetScaleKeys().size())))
 		KeyDataScale(animation->animation.GetScaleKeys()[KeyIndexPos]);
 }
 

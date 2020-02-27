@@ -74,6 +74,9 @@ void GameStateAnimBlending::SetAnimations(std::filesystem::path& path)
 			continue;
 		animations.animationClips[i]->isLooping = true;
 	}
+
+	scene.sceneCamera->transform.mPosition = { 0.0, 50.0f, -200.0f };
+	scene.sceneCamera->transform.SetRotation(Vishv::Math::Quaternion());
 }
 
 
