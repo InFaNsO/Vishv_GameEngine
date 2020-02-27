@@ -61,7 +61,7 @@ void Vishv::GameWorld::Register(Physics::Collision::AABB & aabb)
 void Vishv::GameWorld::Register(Components::ColliderComponent & cc)
 {
 	mPhysicsWorld.Register(cc.mSphereCollider);
-	cc.mSphereCollider.objectID = mGameObjects.size() - 1;
+	cc.mSphereCollider.objectID = static_cast<int>(mGameObjects.size()) - 1;
 }
 
 GameObject * Vishv::GameWorld::GetGameObject(std::string & name)
@@ -95,7 +95,7 @@ void Vishv::GameWorld::Initialize(size_t capacity)
 	VISHVASSERT(!mIsInitialized, "[GameWorld] world already initialized");
 
 	mGameObjectAllocator = std::make_unique<Vishv::GameObjectAllocator>(capacity);
-	mGameObjectHandlePool = std::make_unique<Vishv::GameObjectHandlePool>(capacity);
+	mGameObjectHandlePool = std::make_unique<Vishv::GameObjectHandlePool>(static_cast<uint32_t>(capacity));
 	mGameObjectFactory = std::make_unique<Vishv::GameObjectFactory>(*mGameObjectAllocator);
 
 	for (auto& service : mServices)
@@ -168,7 +168,7 @@ void Vishv::GameWorld::DebugUI()
 	{
 		if (ImGui::Button(mUpdateList[i]->mName.c_str()))
 		{
-			inspectorID = i;
+			inspectorID = static_cast<int>(i);
 			objName = mUpdateList[i]->GetName();
 		}
 	}

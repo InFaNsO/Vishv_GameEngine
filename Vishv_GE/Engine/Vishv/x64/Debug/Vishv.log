@@ -1,41 +1,6 @@
-﻿  AIAgent.cpp
-  AISteering.cpp
-  ColliderComponent.cpp
-  MeshComponent.cpp
-  Service.cpp
-  ThirdPersonControllerComponent.cpp
-  GameObject.cpp
-  GameObjectFactory.cpp
-  GameWorld.cpp
-d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\gameworld.cpp(64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\gameworld.cpp(171): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\memory(2538): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-  d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\gameworld.cpp(98): note: see reference to function template instantiation 'std::unique_ptr<Vishv::GameObjectHandlePool,std::default_delete<_Ty>> std::make_unique<Vishv::GameObjectHandlePool,size_t&,0>(size_t &)' being compiled
-          with
-          [
-              _Ty=Vishv::GameObjectHandlePool
-          ]
-  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\filesystem(2392): note: see reference to class template instantiation 'std::chrono::time_point<std::filesystem::_File_time_clock,std::filesystem::_File_time_clock::duration>' being compiled
-  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\type_traits(616): note: see reference to class template instantiation 'std::basic_string_view<wchar_t,std::char_traits<wchar_t>>' being compiled
-  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\xstring(2122): note: see reference to class template instantiation 'std::is_convertible<const _StringViewIsh &,std::basic_string_view<wchar_t,std::char_traits<wchar_t>>>' being compiled
-          with
-          [
-              _StringViewIsh=const wchar_t *
-          ]
-  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\xstring(2122): note: see reference to variable template 'const bool conjunction_v<std::is_convertible<wchar_t const * const &,std::basic_string_view<wchar_t,std::char_traits<wchar_t> > >,std::negation<std::is_convertible<wchar_t const * const &,wchar_t const *> > >' being compiled
-  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\xstring(2281): note: see reference to alias template instantiation 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::_Is_string_view_ish<_StringViewIsh>' being compiled
-          with
-          [
-              _StringViewIsh=const wchar_t *
-          ]
-d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\framework\core\inc\typedallocator.h(14): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-  d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\framework\core\inc\typedallocator.h(12): note: while compiling class template member function 'Vishv::Core::TypedAllocator<Vishv::GameObject>::TypedAllocator(size_t)'
-  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\memory(2539): note: see reference to function template instantiation 'Vishv::Core::TypedAllocator<Vishv::GameObject>::TypedAllocator(size_t)' being compiled
-  d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\gameworld.cpp(99): note: see reference to class template instantiation 'Vishv::Core::TypedAllocator<Vishv::GameObject>' being compiled
+﻿  GameObject.cpp
   MetaRegistration.cpp
   ModelAnimation.cpp
-  Steering_Evade.cpp
-  TransformComponent.cpp
   Vishv.cpp
   Generating Code...
-  Vishv.vcxproj -> D:\bhavCode\GithubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\Vishv.lib
+  Vishv.vcxproj -> E:\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Vishv.lib

@@ -6,7 +6,7 @@ namespace Vishv::Core {
 	class BlockAllocator
 	{
 	public:
-		BlockAllocator(uint32_t blockSize, uint32_t capacity);
+		BlockAllocator(size_t blockSize, size_t capacity);
 		~BlockAllocator();
 
 		BlockAllocator(const BlockAllocator&) = delete;
@@ -17,13 +17,13 @@ namespace Vishv::Core {
 
 		void* Allocate();
 		void Free(void* ptr);
-		uint32_t GetCapacity() const { return mCapacity; }
+		size_t GetCapacity() const { return mCapacity; }
 
 	private:
 		uint8_t* mData;
-		uint32_t mBlockSize;
-		uint32_t mCapacity;
-		std::vector<uint32_t> mFreeSlots;
+		size_t mBlockSize;
+		size_t mCapacity;
+		std::vector<size_t> mFreeSlots;
 		intptr_t nextfree;//
 	};
 

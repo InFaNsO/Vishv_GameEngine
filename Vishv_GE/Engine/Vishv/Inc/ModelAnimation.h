@@ -47,7 +47,7 @@ namespace Vishv::Components
 
 		bool mShouldBlend = false;
 		bool mShouldPlay = false;
-		float mBlendTimeTotal = 0.5f;
+		float mBlendTimeTotal = 1.f;
 		float mBlendTimer = 0.0f;
 
 		size_t mCurrentAnimationIndex = 0;

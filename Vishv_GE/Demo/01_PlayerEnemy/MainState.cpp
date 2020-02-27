@@ -111,7 +111,9 @@ void MainState::Initialize()
 		animation->Set(path, modelName, mAnimationsSetEnemy);
 
 		enemy.Get()->GetComponent<Components::ColliderComponent>()->SetTag((int)ObjectTags::Enemy);
-		enemy.Get()->GetComponent<Components::TransformComponent>()->SwitchForard();
+		auto tc = enemy.Get()->GetComponent<Components::TransformComponent>();
+		tc->SwitchForard();
+		tc->TranslateZ(-80.0f);
 	}
 
 

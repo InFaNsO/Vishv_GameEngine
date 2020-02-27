@@ -20,6 +20,8 @@ private:
 
 	Vishv::Components::ColliderComponent* mColliderComponent;
 
+	Vishv::Components::AIAgent* mAgentComponent;
+
 	size_t mAttackAnimIndex;
 
 	float mAttackDuration;

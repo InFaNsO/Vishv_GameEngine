@@ -6,7 +6,7 @@
 int Vishv::Physics::PhysicsWorld::Register(SphereCollider & collider)
 {
 	mSphereColliders.emplace_back(&collider);
-	return mSphereColliders.size() - 1;
+	return static_cast<int>(mSphereColliders.size()) - 1;
 }
 
 std::optional<std::vector<Vishv::Physics::SphereCollider*>> Vishv::Physics::PhysicsWorld::IsColliding(int tag, SphereCollider& other)

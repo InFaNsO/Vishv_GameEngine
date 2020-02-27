@@ -6,14 +6,14 @@
 using namespace Vishv;
 using namespace Vishv::Core;
 
-Vishv::Core::BlockAllocator::BlockAllocator(uint32_t blockSize, uint32_t capacity)
+Vishv::Core::BlockAllocator::BlockAllocator(size_t blockSize, size_t capacity)
 	:mBlockSize(blockSize)
 	,mCapacity(capacity)
 {
 	mData = (uint8_t*)  malloc(blockSize * capacity);
 	mFreeSlots.reserve(capacity);
 
-	for (uint32_t i = 0; i < capacity; ++i)
+	for (size_t i = 0; i < capacity; ++i)
 	{
 		mFreeSlots.push_back(i);
 	}
@@ -33,11 +33,11 @@ void * Vishv::Core::BlockAllocator::Allocate()
 
 void Vishv::Core::BlockAllocator::Free(void * ptr)
 {
-	uint32_t diff = (uint8_t*)ptr - mData;
+	size_t diff = (uint8_t*)ptr - mData;
 
 	VISHVASSERT(diff % mBlockSize == 0, "[Core::BlockAllocator] Wrong pointer is provided");
 
-	uint32_t index = diff / mBlockSize;
+	size_t index = diff / mBlockSize;
 	VISHVASSERT(index < mCapacity, "[Core::BlockAllocator] pointer is out of range. Wrong pointer !!!!!!");
 	mFreeSlots.push_back(index);
 }

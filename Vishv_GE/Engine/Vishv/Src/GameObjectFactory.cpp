@@ -69,8 +69,13 @@ GameObject * Vishv::GameObjectFactory::Create(const std::filesystem::path& templ
 	if (gameObject == nullptr)
 		return gameObject;
 
+	if (templateFileName.extension() != ".json")
+		return gameObject;
+
 	FILE* file = nullptr;
-	fopen_s(&file, templateFileName.string().c_str(), "r");
+	if (fopen_s(&file, templateFileName.string().c_str(), "r") == EINVAL)
+		return gameObject;
+	
 
 	using namespace rapidjson;
 

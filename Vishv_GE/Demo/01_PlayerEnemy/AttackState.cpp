@@ -17,7 +17,7 @@ void AttackState::Enter(Vishv::GameObject & agent)
 	mPlayerTransformComponent = player->GetComponent<Vishv::Components::TransformComponent>();
 	mPlayerHealth = player->GetComponent<HealthComponent>();
 
-	auto mAgentComponent = agent.GetComponent<Vishv::Components::AIAgent>();
+	mAgentComponent = agent.GetComponent<Vishv::Components::AIAgent>();
 
 	mAttackRange = mAgentComponent->CalucalteLengthValue(attackUp);
 	mDetectionRange = mAgentComponent->CalucalteLengthValue(detectionUp);
@@ -25,10 +25,14 @@ void AttackState::Enter(Vishv::GameObject & agent)
 	mAttackAnimIndex = (size_t)AnimationStates::Attack;
 	mTimer = 0.0f;
 	mAttackDuration = mAnimation->GetAnimationDuration(mAttackAnimIndex);
+	mAgentComponent->Target() = mPlayerTransformComponent->Position() + mPlayerTransformComponent->Forward() * 60.0f;
+
 }
 
 void AttackState::Update(Vishv::GameObject & agent, float deltaTime)
 {
+	mAgentComponent->Target() = mPlayerTransformComponent->Position() + mPlayerTransformComponent->Forward() * 60.0f;
+
 	if (!mHealth->IsAlive())
 	{
 		agent.GetComponent<Vishv::Components::AIStateMachine>()->ChangeState(ToString(EnemyStates::Dying));
@@ -38,8 +42,8 @@ void AttackState::Update(Vishv::GameObject & agent, float deltaTime)
 	float playerDisSq = Vishv::Math::Abs(Vishv::Math::MagnitudeSqr(mTransformComponent->Position() - mPlayerTransformComponent->Position()));
 	if (playerDisSq > mAttackRange * mAttackRange&& playerDisSq < mDetectionRange * mDetectionRange)
 	{
-		agent.GetComponent<Vishv::Components::AIStateMachine>()->ChangeState(ToString(EnemyStates::Chase));
-		return;
+		//agent.GetComponent<Vishv::Components::AIStateMachine>()->ChangeState(ToString(EnemyStates::Chase));
+		//return;
 	}
 	else if (playerDisSq > mDetectionRange * mDetectionRange)
 	{
@@ -69,27 +73,27 @@ void AttackState::Update(Vishv::GameObject & agent, float deltaTime)
 	}
 
 	//face the player
-	auto tar = Vishv::Math::Normalize((mTransformComponent->Position() - mPlayerTransformComponent->Position()));
-	float angle = Vishv::Math::GetAngle(tar, mTransformComponent->Forward());
-
-	if (angle)
-	{
-		float deg = angle * Vishv::Math::Constans::RadToDeg;
-
-		if (Vishv::Math::Abs(deg - prvDeg) < 0.01f)
-			return;
-
-		if (tar.x < mTransformComponent->Forward().x)
-			deg *= -1.0f;
-
-		prvDeg = deg;
-		mTransformComponent->RotateUp(deg * deltaTime);
-	}
+	//auto tar = Vishv::Math::Normalize((mTransformComponent->Position() - mPlayerTransformComponent->Position()));
+	//float angle = Vishv::Math::GetAngle(tar, mTransformComponent->Forward());
+	//
+	//if (angle)
+	//{
+	//	float deg = angle * Vishv::Math::Constans::RadToDeg;
+	//
+	//	if (Vishv::Math::Abs(deg - prvDeg) < 0.01f)
+	//		return;
+	//
+	//	if (tar.x < mTransformComponent->Forward().x)
+	//		deg *= -1.0f;
+	//
+	//	prvDeg = deg;
+	//	mTransformComponent->RotateUp(-deg * deltaTime);
+	//}
 }
 
 void AttackState::FacePlayer(float deltaTime)
 {
-	mTransformComponent->RotateUp(Vishv::Math::Vector3::GetAngle(mTransformComponent->Forward(), (mTransformComponent->Position() - mPlayerTransformComponent->Position())) * deltaTime);
+	//mTransformComponent->RotateUp(Vishv::Math::Vector3::GetAngle(mTransformComponent->Forward(), (mTransformComponent->Position() - mPlayerTransformComponent->Position())) * Vishv::Math::Constans::RadToDeg * deltaTime);
 }
 
 void AttackState::Exit(Vishv::GameObject & agent)

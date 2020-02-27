@@ -34,7 +34,6 @@ void Vishv::Components::ThirdPersonControllerComponent::Initialize()
 	mTransformComponent = GetOwner().GetComponent<Vishv::Components::TransformComponent>();
 
 	offsetCamera = { 0.0f, 250.0f, -200.0f };
-	mCamera->transform.RotateX(-30.0f);
 }
 
 void Vishv::Components::ThirdPersonControllerComponent::Update(float deltaTime)

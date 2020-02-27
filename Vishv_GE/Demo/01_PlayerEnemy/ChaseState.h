@@ -34,6 +34,7 @@ private:
 	float detectionUp = 500.0f;
 	float nodeUp = 105.0f;
 
+	Vishv::Math::Vector3 mOffsetFromPlayer;
 };
 
 

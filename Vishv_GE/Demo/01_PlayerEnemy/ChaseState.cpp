@@ -17,7 +17,7 @@ void ChaseState::Enter(Vishv::GameObject & agent)
 	mPlayerTransformComponent = agent.GetWorld().Player()->GetComponent<Components::TransformComponent>();
 
 	//Set All The Ranges
-	mAttackRange = mAgentComponent->CalucalteLengthValue(attackUp);
+	mAttackRange = 70.0f;// mAgentComponent->CalucalteLengthValue(attackUp);
 	mDetectionRange = mAgentComponent->CalucalteLengthValue(detectionUp);
 	mNodeMaxDistance = mAgentComponent->CalucalteLengthValue(nodeUp);
 
@@ -30,10 +30,17 @@ void ChaseState::Enter(Vishv::GameObject & agent)
 
 	//Path finding
 	mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
-	mPath.emplace_back(mPlayerTransformComponent->Position());
+
+	mOffsetFromPlayer = mTransformComponent->Position() - mPlayerTransformComponent->Position();
+	mOffsetFromPlayer.Normalize();
+	mOffsetFromPlayer *= 50.0f;
+
+	mPath.emplace_back(mPlayerTransformComponent->Position() - mOffsetFromPlayer );
 	mPlayerNode = mPathFinding->GetNodeID(mPlayerTransformComponent->Position());
 	mCurrentPathNode = 0;
 	mAgentComponent->Target() = mPath[mCurrentPathNode];
+
+	mTransformComponent->SetRotation(mPlayerTransformComponent->Rotation().GetConjugate());
 }
 
 void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
@@ -62,7 +69,7 @@ void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
 		mPlayerNode = pnodeId;
 		mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
 		mCurrentPathNode = 0;
-		mPath.emplace_back(mPlayerTransformComponent->Position());
+		mPath.emplace_back(mPlayerTransformComponent->Position() - mOffsetFromPlayer);
 		mAgentComponent->Target() = mPath[mCurrentPathNode];
 	}
 
@@ -76,7 +83,10 @@ void ChaseState::Update(Vishv::GameObject & agent, float deltaTime)
 	if ((size_t)mCurrentPathNode >= mPath.size())
 	{
 		mPath = mPathFinding->RunAStar(mTransformComponent->Position(), mPlayerTransformComponent->Position());
-		mPath.emplace_back(mPlayerTransformComponent->Position());
+		if(mPath.size() == 0)
+			agent.GetComponent<Vishv::Components::AIStateMachine>()->ChangeState(ToString(EnemyStates::Attack));
+
+		mPath.emplace_back(mPlayerTransformComponent->Position() - mOffsetFromPlayer);
 		mCurrentPathNode = 0;
 	}
 	mAgentComponent->Target() = mPath[mCurrentPathNode];
