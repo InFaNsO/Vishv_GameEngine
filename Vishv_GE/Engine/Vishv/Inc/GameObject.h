@@ -7,7 +7,7 @@ namespace Vishv::Components
 }
 namespace Vishv
 {
-	
+	class Editor;
 	class GameWorld;
 	class GameObject;
 
@@ -69,6 +69,7 @@ namespace Vishv
 
 	private:
 		friend class GameWorld;
+		friend class Editor;
 
 		GameWorld* mWorld = nullptr;
 		GameObjectHandle mHandle;

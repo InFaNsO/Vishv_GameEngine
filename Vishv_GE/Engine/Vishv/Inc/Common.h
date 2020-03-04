@@ -1,7 +1,6 @@
 #ifndef INCLUDED_VISHV_COMMON_H
 #define INCLUDED_VISHV_COMMON_H
 
-#include <../External/ImGui/Inc/imgui.h>
 #include <../Framework/Core/Inc/Core.h>
 #include <../Framework/Graphics/Inc/Graphics.h>
 #include <../Framework/Math/Inc/VishvMath.h>

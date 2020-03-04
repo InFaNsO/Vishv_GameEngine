@@ -11,6 +11,12 @@
 #include <d3dcompiler.h>
 #include <DirectXMath.h>
 
+
+///External
+//Imgui
+#include <../External/ImGui/Inc/imgui.h>
+
+
 //DirectX Library
 //#pragma comment(lib, "d3d12.lib")
 #pragma comment(lib, "d3d11.lib")

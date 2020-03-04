@@ -186,6 +186,7 @@
     <ClInclude Include="Inc\ThirdPersonControllerComponent.h" />
     <ClInclude Include="Inc\TransformComponent.h" />
     <ClInclude Include="Inc\Vishv.h" />
+    <ClInclude Include="Inc\Editor.h" />
     <ClInclude Include="Src\Precompiled.h" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +197,7 @@
     <ClCompile Include="Src\App.cpp" />
     <ClCompile Include="Src\ColliderComponent.cpp" />
     <ClCompile Include="Src\Component.cpp" />
+    <ClCompile Include="Src\Editor.cpp" />
     <ClCompile Include="Src\MeshComponent.cpp" />
     <ClCompile Include="Src\Service.cpp" />
     <ClCompile Include="Src\ThirdPersonControllerComponent.cpp" />

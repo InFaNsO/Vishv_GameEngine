@@ -14,6 +14,8 @@ namespace Vishv::Core::Meta
 	public:
 		using CreateFunc = std::function<void*()>;
 		using DestroyFunc = std::function<void(void*)>;
+		using SerializeFunc = std::function<void(const void* instance, rapidjson::Value& jsonValue)>;
+		using DeserializeFunc = std::function<void(void* instance, const rapidjson::Value& jsonValue)>;
 
 		enum class Category
 		{
@@ -23,34 +25,35 @@ namespace Vishv::Core::Meta
 			Pointer
 		};
 
-		MetaType(const char* name, Category category, size_t size, CreateFunc create, DestroyFunc destroy);
+		MetaType(const char* name, 
+			Category category, 
+			size_t size, 
+			CreateFunc create, 
+			DestroyFunc destroy, 
+			SerializeFunc serialize = nullptr, 
+			DeserializeFunc deserialize = nullptr);
 		
 		const char* GetName() const { return mName.c_str(); }
 		Category GetCategory() const { return mCategory; }
 		size_t GetSize() const { return mSize; }
 
-		void* Create() const
-		{
-			VISHVASSERT(mCreate, "[MetaType] no creation available for %s", mName.c_str());
-			return mCreate();
-		}
-		void Destroy(void* data) const
-		{
-			VISHVASSERT(mDestroy, "[MetaType] no destruction available for %s", mName.c_str());
-			mDestroy(data);
-		}
+		void * Create() const;
+		void Destroy(void* data) const;
 
-		const MetaArray* GetMetaArray() const;
-		const MetaClass* GetMetaClass() const;
-		const MetaPointer* GetMetaPointer() const;
+		virtual void Serialize(const void* instance, rapidjson::Value& jsonValue) const;
+		virtual void Deserialize(void* instance, const rapidjson::Value& jsonValue) const;
+
 
 	private:
 		const std::string mName;
 		Category mCategory;
 		size_t mSize;
 
-		CreateFunc mCreate;
-		DestroyFunc mDestroy;
+		const CreateFunc mCreate;
+		const DestroyFunc mDestroy;
+
+		const SerializeFunc mSerialize;
+		const DeserializeFunc mDeserialize;
 	};
 }
 

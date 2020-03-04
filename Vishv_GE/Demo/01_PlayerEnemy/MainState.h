@@ -36,5 +36,7 @@ private:
 	Vishv::Graphics::AnimationSet mAnimationsSetEnemy;
 
 	bool isRunningSimulation = false;
+
+	Vishv::GameObjectHandle testLoader;
 };
 

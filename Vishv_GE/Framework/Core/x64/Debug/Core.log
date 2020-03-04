@@ -1,14 +1,11 @@
-﻿  Precompiled.cpp
-  BlockAllocator.cpp
+﻿  BlockAllocator.cpp
   MetaArray.cpp
   MetaClass.cpp
   MetaField.cpp
   MetaPointer.cpp
-  MetaRegistration.cpp
   MetaRegistry.cpp
-  MetaType.cpp
   Window.cpp
   WindowMessageHandler.cpp
-e:\github\vishv_gameengine\vishv_ge\framework\core\src\windowmessagehandler.cpp(15): warning C4244: 'argument': conversion from 'LONG_PTR' to 'LONG', possible loss of data
+d:\githubbhav\vishv_gameengine\vishv_ge\framework\core\src\windowmessagehandler.cpp(15): warning C4244: 'argument': conversion from 'LONG_PTR' to 'LONG', possible loss of data
   Generating Code...
-  Core.vcxproj -> E:\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Core.lib
+  Core.vcxproj -> D:\GitHubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\Core.lib

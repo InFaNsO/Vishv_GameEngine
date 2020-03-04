@@ -37,6 +37,12 @@
     <Filter Include="Src\Meta">
       <UniqueIdentifier>{7c22547e-dd16-4bb9-a21b-81e6f4d9990e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inc\Editor">
+      <UniqueIdentifier>{df7ce6df-458d-46d0-bbd8-99340dd2d402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Editor">
+      <UniqueIdentifier>{151d25c6-8628-42b9-96dd-659554701cf0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inc\Common.h">
@@ -132,6 +138,9 @@
     <ClInclude Include="Inc\MetaRegistration.h">
       <Filter>Src\Meta</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\Editor.h">
+      <Filter>Inc\Editor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -211,6 +220,9 @@
     </ClCompile>
     <ClCompile Include="Src\MetaRegistration.cpp">
       <Filter>Src\Meta</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Editor.cpp">
+      <Filter>Src\Editor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

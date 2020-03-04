@@ -5,31 +5,41 @@
 #include "MetaArray.h"
 #include "MetaPointer.h"
 
-Vishv::Core::Meta::MetaType::MetaType(const char * name, Category category, size_t size, CreateFunc create, DestroyFunc destroy)
+Vishv::Core::Meta::MetaType::MetaType(const char * name, Category category, size_t size, CreateFunc create, DestroyFunc destroy, SerializeFunc serialize, DeserializeFunc deserialize)
 	:mName(name)
 	, mCategory(category)
 	, mSize(size)
 	, mCreate(std::move(create))
 	, mDestroy(std::move(destroy))
+	, mSerialize(std::move(serialize))
+	, mDeserialize(std::move(deserialize))
 {
 }
 
 using namespace Vishv::Core::Meta;
 
-const MetaArray* MetaType::GetMetaArray() const
+
+void* MetaType::Create() const
 {
-	VISHVASSERT(mCategory == Category::Array, "Invalid type cast");
-	return static_cast<const MetaArray*>(this);
+	VISHVASSERT(mCreate, "[MetaType] no creation available for %s", mName.c_str());
+	return mCreate();
 }
 
-const MetaClass* MetaType::GetMetaClass() const
+void MetaType::Destroy(void* data) const
 {
-	VISHVASSERT(mCategory == Category::Class, "Invalid type cast");
-	return static_cast<const MetaClass*>(this);
+	VISHVASSERT(mDestroy, "[MetaType] no destruction available for %s", mName.c_str());
+	mDestroy(data);
 }
 
-const MetaPointer* MetaType::GetMetaPointer() const
+void Vishv::Core::Meta::MetaType::Serialize(const void * instance, rapidjson::Value & jsonValue) const
 {
-	VISHVASSERT(mCategory == Category::Pointer, "Invalid type cast");
-	return static_cast<const MetaPointer*>(this);
+	VISHVASSERT(mSerialize, "[MetaType] no serialize available for %s", mName.c_str());
+	mSerialize(instance, jsonValue);
 }
+
+void Vishv::Core::Meta::MetaType::Deserialize(void * instance, const rapidjson::Value & jsonValue) const 
+{
+	VISHVASSERT(mDeserialize, "[MetaType] no deserialize available for %s", mName.c_str());
+	mDeserialize(instance, jsonValue);
+}
+

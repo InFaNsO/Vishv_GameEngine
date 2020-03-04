@@ -10,6 +10,9 @@ namespace Vishv::Core::Meta
 	template <class DataType>
 	const MetaType* DeduceType();
 
+	template <class DataType>
+	void Deserialize(void* instance, const rapidjson::Value& jsonValue);
+
 	namespace Detail
 	{
 		template <class DataType>

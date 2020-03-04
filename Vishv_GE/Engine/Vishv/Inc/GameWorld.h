@@ -12,6 +12,7 @@ namespace Vishv::Components
 
 namespace Vishv
 {
+	class Editor;
 	class GameObject;
 
 	class GameWorld
@@ -90,6 +91,8 @@ namespace Vishv
 		}
 
 	private:
+		friend class Editor;
+
 		void DestroyInternal(GameObject* gameObject);
 		void ProcessDestroyList();
 

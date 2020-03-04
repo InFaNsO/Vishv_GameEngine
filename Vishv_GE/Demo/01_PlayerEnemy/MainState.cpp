@@ -77,49 +77,51 @@ void MainState::Initialize()
 
 	mGameWorld.Initialize(150);
 
-	mGameWorld.Register(*scene.sceneCamera);
-	InitEnemies();
-	InitAnimEnemy();
+	//mGameWorld.Register(*scene.sceneCamera);
+	//InitEnemies();
+	//InitAnimEnemy();
+	//
+	//mCreator.SetWorld(mGameWorld);
+	//
+	//mPlayerManager.Initialize(&mGameWorld);
+	//
+	//
+	//std::filesystem::path path = "..\\..\\Assets\\3D_Models\\VishMesh\\Brute";
+	//std::string modelName = "Brute";
+	//mPathFinding = mGameWorld.Create(path, "PathFinding");
+	//mPathFinding.Get()->AddComponent<Components::AIPathFinding>();
+	//mPathFinding.Get()->Initialize();
+	//mGameWorld.Register(*mPathFinding.Get());
+	//
+	//path = "..\\..\\Assets\\3D_Models\\VishMesh\\Zombie";
+	//modelName = "Zombie";
+	//
+	//for (auto& enemy : mEnemies)
+	//{
+	//	enemy.Get()->Initialize();
+	//
+	//	auto stateMachine = enemy.Get()->GetComponent<Components::AIStateMachine>();
+	//	stateMachine->AddState<EmptyState>(std::move(ToString(EnemyStates::Empty)));
+	//	stateMachine->AddState<WanderState>(std::move(ToString(EnemyStates::Wander)));
+	//	stateMachine->AddState<ChaseState>(std::move(ToString(EnemyStates::Chase)));
+	//	stateMachine->AddState<AttackState>(std::move(ToString(EnemyStates::Attack)));
+	//	stateMachine->AddState<DyingState>(std::move(ToString(EnemyStates::Dying)));
+	//
+	//	auto animation = enemy.Get()->GetComponent<Components::ModelAnimation>();
+	//	animation->Set(path, modelName, mAnimationsSetEnemy);
+	//
+	//	enemy.Get()->GetComponent<Components::ColliderComponent>()->SetTag((int)ObjectTags::Enemy);
+	//	auto tc = enemy.Get()->GetComponent<Components::TransformComponent>();
+	//	tc->SwitchForard();
+	//	tc->TranslateZ(-80.0f);
+	//}
+	//
+	//
+	//scene.sceneCamera->transform.mPosition = mPlayerManager.mTransform->Position();
+	//scene.sceneCamera->transform.mPosition += mPlayerManager.mTransform->Forward()* -1.0f * 100.0f;
+	//scene.sceneCamera->LookAt(mPlayerManager.mTransform->Position());
 
-	mCreator.SetWorld(mGameWorld);
-
-	mPlayerManager.Initialize(&mGameWorld);
-
-
-	std::filesystem::path path = "..\\..\\Assets\\3D_Models\\VishMesh\\Brute";
-	std::string modelName = "Brute";
-	mPathFinding = mGameWorld.Create(path, "PathFinding");
-	mPathFinding.Get()->AddComponent<Components::AIPathFinding>();
-	mPathFinding.Get()->Initialize();
-	mGameWorld.Register(*mPathFinding.Get());
-
-	path = "..\\..\\Assets\\3D_Models\\VishMesh\\Zombie";
-	modelName = "Zombie";
-
-	for (auto& enemy : mEnemies)
-	{
-		enemy.Get()->Initialize();
-
-		auto stateMachine = enemy.Get()->GetComponent<Components::AIStateMachine>();
-		stateMachine->AddState<EmptyState>(std::move(ToString(EnemyStates::Empty)));
-		stateMachine->AddState<WanderState>(std::move(ToString(EnemyStates::Wander)));
-		stateMachine->AddState<ChaseState>(std::move(ToString(EnemyStates::Chase)));
-		stateMachine->AddState<AttackState>(std::move(ToString(EnemyStates::Attack)));
-		stateMachine->AddState<DyingState>(std::move(ToString(EnemyStates::Dying)));
-
-		auto animation = enemy.Get()->GetComponent<Components::ModelAnimation>();
-		animation->Set(path, modelName, mAnimationsSetEnemy);
-
-		enemy.Get()->GetComponent<Components::ColliderComponent>()->SetTag((int)ObjectTags::Enemy);
-		auto tc = enemy.Get()->GetComponent<Components::TransformComponent>();
-		tc->SwitchForard();
-		tc->TranslateZ(-80.0f);
-	}
-
-
-	scene.sceneCamera->transform.mPosition = mPlayerManager.mTransform->Position();
-	scene.sceneCamera->transform.mPosition += mPlayerManager.mTransform->Forward()* -1.0f * 100.0f;
-	scene.sceneCamera->LookAt(mPlayerManager.mTransform->Position());
+	testLoader = mGameWorld.Create("..\\..\\Assets\\Templates\\Test.json", "Test");
 }
 
 void MainState::Update(float deltaTime)

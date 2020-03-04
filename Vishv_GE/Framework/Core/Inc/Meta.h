@@ -21,7 +21,9 @@
 			MetaType::Category::Primitive,\
 			sizeof(Type),\
 			[] {return new Type; },\
-			[](void* ptr) {delete static_cast<Type*>(ptr); });\
+			[](void* ptr) {delete static_cast<Type*>(ptr); },\
+			nullptr,\
+			Vishv::Core::Meta::Deserialize<Type>);\
 		return &sMetaType;\
 	}
 

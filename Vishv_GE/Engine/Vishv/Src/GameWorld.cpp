@@ -6,6 +6,8 @@
 #include "ColliderComponent.h"
 #include "AIPathFinding.h"
 
+#include "Editor.h"
+
 using namespace Vishv;
 
 void Vishv::GameWorld::Register(GameObject & gameObject, bool isPlayer)
@@ -81,13 +83,6 @@ Physics::PhysicsWorld & Vishv::GameWorld::GetPhysicsWorld()
 	return mPhysicsWorld;
 }
 
-
-
-
-
-
-
-
 ////////////////////////////////////////////////////////////////////////////
 
 void Vishv::GameWorld::Initialize(size_t capacity)
@@ -159,29 +154,7 @@ void Vishv::GameWorld::SimpleDraw()
 
 void Vishv::GameWorld::DebugUI()
 {
-	static int inspectorID = -1;
-	static std::string objName;
-	static char name[128]{};
 
-	ImGui::Begin("SceneObjects");
-	for (size_t i = 0; i < mUpdateList.size(); ++i)
-	{
-		if (ImGui::Button(mUpdateList[i]->mName.c_str()))
-		{
-			inspectorID = static_cast<int>(i);
-			objName = mUpdateList[i]->GetName();
-		}
-	}
-	ImGui::End();
-	ImGui::Begin("Inspector");
-	if (inspectorID >= 0)
-	{
-		if (ImGui::InputText("Name: ", objName.data(), objName.size() + 10))
-			mUpdateList[inspectorID]->SetName(objName.c_str());
-		ImGui::Checkbox("Active", &mUpdateList[inspectorID]->mIsActive);
-		mUpdateList[inspectorID]->DebugUI();
-	}
-	ImGui::End();
 
 	//add services
 	//for (auto& service : mServices)

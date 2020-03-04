@@ -8,8 +8,8 @@ size_t invalidIndexAinm = (size_t)UINT64_MAX;
 
 META_DERIVED_BEGIN(Vishv::Components::ModelAnimation, Vishv::Components::Component)
 META_FIELD_BEGIN
-META_FIELD(mBoneTransforms, "BoneTransforms")
-META_FIELD(mTPosToParents, "ToParent")
+//META_FIELD(mBoneTransforms, "BoneTransforms")
+//META_FIELD(mTPosToParents, "ToParent")
 META_FIELD(mBlendTimeTotal , "BlendTimer")
 		//META_FIELD(mModel, "RiggedModel")
 	META_FIELD_END

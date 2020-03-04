@@ -21,10 +21,6 @@ META_TYPE_DECLARE(Vishv::Math::Vector2)
 META_TYPE_DECLARE(Vishv::Math::Vector3)
 META_TYPE_DECLARE(Vishv::Math::Vector4)
 
-META_TYPE_DECLARE(Vishv::Math::Matrix2)
-META_TYPE_DECLARE(Vishv::Math::Matrix3)
-META_TYPE_DECLARE(Vishv::Math::Matrix4)
-
 META_TYPE_DECLARE(Vishv::Math::Quaternion)
 
 namespace Vishv::Math

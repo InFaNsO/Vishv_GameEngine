@@ -5,6 +5,8 @@
 
 #include "ModelAnimation.h"
 
+#include "Editor.h"
+
 using namespace Vishv;
 
 META_CLASS_BEGIN(GameObject)

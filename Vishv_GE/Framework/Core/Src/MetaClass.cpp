@@ -3,6 +3,11 @@
 #include "MetaField.h"
 #include "MetaRegistry.h"
 
+namespace
+{
+	
+}
+
 using namespace Vishv::Core::Meta;
 
 Vishv::Core::Meta::MetaClass::MetaClass(const char * name, size_t size, MetaType::CreateFunc create,
@@ -47,4 +52,23 @@ size_t Vishv::Core::Meta::MetaClass::GetFieldCount() const
 {
 	return mParent ? GetParentFieldCount() + mFields.size() : mFields.size();
 }
+
+
+void Vishv::Core::Meta::MetaClass::Serialize(const void * instance, rapidjson::Value & jsonValue) const 
+{
+}
+
+void Vishv::Core::Meta::MetaClass::Deserialize(void * instance, const rapidjson::Value & jsonValue) const
+{
+	for (auto& prop : jsonValue.GetObjectW())
+	{
+		auto metaField = FindField(prop.name.GetString());
+		auto metaType = metaField->GetMetaType();
+		auto instanceField = static_cast<uint8_t*>(instance) + metaField->GetOffset();
+		
+		metaType->Deserialize(instanceField, prop.value);
+	}
+}
+
+
 

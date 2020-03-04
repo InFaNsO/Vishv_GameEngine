@@ -166,6 +166,7 @@
     <ClInclude Include="Inc\MetaRegistry.h" />
     <ClInclude Include="Inc\MetaType.h" />
     <ClInclude Include="Inc\MetaUtil.h" />
+    <ClInclude Include="Inc\OctTree.h" />
     <ClInclude Include="Inc\TypedAllocator.h" />
     <ClInclude Include="Inc\Window.h" />
     <ClInclude Include="Inc\WindowMessageHandler.h" />

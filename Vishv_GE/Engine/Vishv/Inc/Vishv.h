@@ -39,6 +39,9 @@
 #include "SteeringBehaviour_Wander.h"
 
 
+//Editor
+#include "Editor.h"
+
 namespace VishvApp
 {
 	Vishv::App& GetApp();
