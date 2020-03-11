@@ -38,6 +38,9 @@
 #include "SteeringBehaviour_Seek.h"
 #include "SteeringBehaviour_Wander.h"
 
+//terrain
+#include "QuadTree.h"
+
 
 //Editor
 #include "Editor.h"

@@ -1,2 +1,11 @@
-﻿  EditState.cpp
+﻿  AniamtionSet_Guice.cpp
+d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\tools\vishveditor\aniamtionset_guice.cpp(52): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\tools\vishveditor\aniamtionset_guice.cpp(54): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\tools\vishveditor\aniamtionset_guice.cpp(56): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  EditState.cpp
+  GameStateAnimBlending.cpp
+  PlayState.cpp
+  Skeleton_Gui.cpp
+  WinMain.cpp
+  Generating Code...
   VishvEditor.vcxproj -> D:\bhavCode\GithubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\VishvEditor.exe

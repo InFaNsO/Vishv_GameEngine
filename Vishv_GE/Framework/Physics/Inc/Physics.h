@@ -10,6 +10,8 @@
 
 #include "PhysicsWorld.h"
 
+#include "Ray.h"
+
 //#include "Particle.h"		will readd them later
 //#include "World.h"		will readd them later
 

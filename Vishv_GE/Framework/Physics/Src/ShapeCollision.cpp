@@ -202,13 +202,29 @@ bool Vishv::Physics::Collision::Collider::IsCollision(Math::Shapes::Sphere & sph
 	return false;
 }
 
-bool Vishv::Physics::Collision::Collider::IsCollision(AABB & aabb, AABB & aabb2)
+bool Vishv::Physics::Collision::Collider::IsCollision(const AABB & aabb, const AABB & aabb2)
 {
 	if (aabb.GetMinX() <= aabb2.GetMaxX() && aabb.GetMaxX() >= aabb2.GetMinX())
 		if (aabb.GetMinY() <= aabb2.GetMaxY() && aabb.GetMaxY() >= aabb2.GetMinY())
 			if (aabb.GetMinZ() <= aabb2.GetMaxZ() && aabb.GetMaxZ() >= aabb2.GetMinZ())
 				return true;
 
+	return false;
+}
+
+bool Vishv::Physics::Collision::Collider::IsCollision(const Ray & ray, const AABB & aabb, float maxDistance)
+{
+	if (maxDistance > 0.0f)
+		return isRayBoxDistanceCollision(ray, aabb, maxDistance);
+
+	// https://web.archive.org/web/20090803054252/http://tog.acm.org/resources/GraphicsGems/gems/RayBox.c
+
+	return false;
+}
+
+
+bool Vishv::Physics::Collision::Collider::isRayBoxDistanceCollision(const Ray & ray, const AABB & aabb, float distance)
+{
 	return false;
 }
 

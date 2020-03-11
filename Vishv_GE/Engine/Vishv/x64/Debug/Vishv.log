@@ -11,24 +11,24 @@ d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\editor.cpp(63)
 d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\editor.cpp(68): warning C4302: 'type cast': truncation from 'Vishv::Components::Component *' to 'uint8_t'
 d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\editor.cpp(73): warning C4302: 'type cast': truncation from 'Vishv::Components::Component *' to 'uint8_t'
 d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\engine\vishv\src\editor.cpp(78): warning C4302: 'type cast': truncation from 'Vishv::Components::Component *' to 'uint8_t'
-  MeshComponent.cpp
-  Service.cpp
-  ThirdPersonControllerComponent.cpp
   GameObject.cpp
   GameObjectFactory.cpp
   GameWorld.cpp
+  MeshComponent.cpp
   MetaRegistration.cpp
   ModelAnimation.cpp
+  Service.cpp
   Steering_Arrive.cpp
   Steering_Evade.cpp
   Steering_Flee.cpp
   Steering_Flocking.cpp
+  Steering_ObstacleAvoidance.cpp
   Generating Code...
   Compiling...
-  Steering_ObstacleAvoidance.cpp
   Steering_Pursuit.cpp
   Steering_Seek.cpp
   Steering_Wander.cpp
+  ThirdPersonControllerComponent.cpp
   TransformComponent.cpp
   Vishv.cpp
   Generating Code...

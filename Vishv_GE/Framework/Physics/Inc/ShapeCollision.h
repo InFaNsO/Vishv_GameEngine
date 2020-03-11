@@ -5,6 +5,7 @@
 
 namespace Vishv::Physics::Collision
 {
+	struct Ray;
 	struct CollisionData
 	{
 		size_t mIndex;	//used for ID
@@ -28,7 +29,10 @@ namespace Vishv::Physics::Collision
 		//return bool
 		static bool IsCollision(Math::Shapes::Sphere& sphere, Math::Shapes::Sphere& sphere2);
 		static bool IsCollision(Math::Shapes::Sphere& sphere, AABB& aabb);
-		static bool IsCollision(AABB& aabb, AABB& aabb2);
+		static bool IsCollision(const AABB& aabb, const AABB& aabb2);
+
+		static bool IsCollision(const Ray& ray, const AABB& aabb, float maxDistance = 0.0f);
+
 
 	private:
 		std::vector<Math::Shapes::Cube*> mCube;
@@ -37,6 +41,8 @@ namespace Vishv::Physics::Collision
 		std::vector<Math::Shapes::Capsule*> mCapsule;
 
 		std::vector<std::unique_ptr<CollisionData>> mCollisionData;
+
+		static bool isRayBoxDistanceCollision(const Ray& ray, const AABB& aabb, float distance);
 	};
 	
 }
