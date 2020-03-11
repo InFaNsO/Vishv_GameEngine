@@ -1,1 +1,15 @@
-﻿  01_PlayerEnemy.vcxproj -> D:\GitHubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\01_PlayerEnemy.exe
+﻿  AttackState.cpp
+  ChaseState.cpp
+  DyingState.cpp
+  EmptyState.cpp
+  GameWorldCreator.cpp
+  HealthComponent.cpp
+  MainState.cpp
+  MetaRegistration.cpp
+  PlayerManager.cpp
+  StarteState.cpp
+  WanderState.cpp
+  WeaponComponent.cpp
+  WinMain.cpp
+  Generating Code...
+  01_PlayerEnemy.vcxproj -> D:\bhavCode\GithubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\01_PlayerEnemy.exe

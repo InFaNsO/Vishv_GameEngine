@@ -1,2 +1,10 @@
-﻿  MetaRegistration.cpp
-  Math.vcxproj -> D:\GitHubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\Math.lib
+﻿  Convert.cpp
+  Matrix2.cpp
+  Matrix3.cpp
+  Matrix4.cpp
+  MetaRegistration.cpp
+  Quaternions.cpp
+  Transform.cpp
+  Vector3.cpp
+  Generating Code...
+  Math.vcxproj -> D:\bhavCode\GithubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\Math.lib
