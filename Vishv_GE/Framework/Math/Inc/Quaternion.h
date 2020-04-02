@@ -35,8 +35,8 @@ struct Quaternion
 	constexpr Quaternion(float x, float y, float z)					noexcept : x(x), y(y), z(z), w(0.0f) {}
 	constexpr Quaternion(float x, float y, float z, float w)		noexcept : x(x), y(y), z(z), w(w) {}
 	constexpr Quaternion(const Quaternion& q)						noexcept : w(q.w), x(q.x), y(q.y), z(q.z) {}
-	constexpr Quaternion(const Vector4& v)							noexcept : w(v.w), x(v.x), y(v.y), z(v.z) {}
-	constexpr Quaternion(const Vector3& v)							noexcept :w(0.0f), x(v.x), y(v.y), z(v.z) {}
+	explicit constexpr Quaternion(const Vector4& v)							noexcept : w(v.w), x(v.x), y(v.y), z(v.z) {}
+	explicit constexpr Quaternion(const Vector3& v)							noexcept :w(0.0f), x(v.x), y(v.y), z(v.z) {}
 	constexpr Quaternion(const float a, const Vector3& v)			noexcept :w(a), x(v.x), y(v.y), z(v.z) {}
 	Quaternion(const Vector3& v, float angleRad)
 		:x(0.0f)

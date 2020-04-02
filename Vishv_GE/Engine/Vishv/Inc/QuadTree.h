@@ -11,7 +11,7 @@ namespace Vishv
 		{
 			std::array<std::unique_ptr<Node>, 4> children;
 			std::vector<size_t> indecies;
-			Physics::Collision::AABB aabb;
+			Physics::AABB aabb;
 			bool isLeaf = false;
 
 		};

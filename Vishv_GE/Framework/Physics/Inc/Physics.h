@@ -3,14 +3,22 @@
 
 #include "Common.h"
 
-#include "AxisAlignedBoundingBox.h"
 #include "ShapeCollision.h"
 #include "RayCast.h"
-#include "SphereCollider.h"
 
 #include "PhysicsWorld.h"
 
 #include "Ray.h"
+
+
+#include "Octree.h"
+#include "RigidBody.h"
+
+#include "Collider.h"
+#include "AxisAlignedBoundingBox.h"
+#include "SphereCollider.h"
+#include "OrientedBoundingBox.h"
+
 
 //#include "Particle.h"		will readd them later
 //#include "World.h"		will readd them later

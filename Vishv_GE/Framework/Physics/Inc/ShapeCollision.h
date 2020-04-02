@@ -18,7 +18,7 @@ namespace Vishv::Physics::Collision
 		float distanceSqr = 1.0f;
 	};
 
-	class Collider
+	class ColliderCheck
 	{
 	public:
 		//returns collision data

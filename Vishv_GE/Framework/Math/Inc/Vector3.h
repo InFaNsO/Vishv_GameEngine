@@ -23,7 +23,7 @@ struct Vector3
 
 	//Operators
 	constexpr Vector3 operator- ()							{ return { -x,-y, -z }; }
-	constexpr Vector3 operator- (const Vector3& other) const		{ return { x - other.x, y - other.y, z - other.z }; }
+	constexpr Vector3 operator- (const Vector3& other) const { return { x - other.x, y - other.y, z - other.z }; }
 	constexpr Vector3 operator+ (const Vector3& other) const		{ return { x + other.x, y + other.y, z + other.z }; }
 	Vector3 operator* (const Vector3& other) const		{ return { x * other.x, y * other.y, z * other.z }; }
 	Vector3 operator* (float f)							{ return { x * f, y *f, z * f }; }
@@ -42,6 +42,12 @@ struct Vector3
 		x /= len;
 		y /= len;
 		z /= len;
+	}
+
+	inline Vector3 Normalized() const
+	{
+		float len = 1 / Magnitude();
+		return Vector3(x * len, y * len, z * len);
 	}
 
 	void Rotate(const Quaternion& quat);
