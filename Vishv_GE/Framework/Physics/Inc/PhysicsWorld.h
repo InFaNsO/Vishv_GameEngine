@@ -1,20 +1,24 @@
 #ifndef INCLUDED_VISHV_PHYSICS_PHYSICS_WORLD
 #define INCLUDED_VISHV_PHYSICS_PHYSICS_WORLD
 
-#include "SphereCollider.h"
+#include "Octree.h"
 
 namespace Vishv::Physics
 {
+	class RigidBody;
+
 	class PhysicsWorld
 	{
 	public:
-		int Register(SphereCollider& collider);
-		std::optional<std::vector<SphereCollider*>> IsColliding(int tag, SphereCollider& other);
+		void Initialize(int maxObjects = 100000, int maxObjInLeaf = 10);
+		//void SetGravity(const Math::Vector3& gravity) { mGravity = gravity; }
 
+		void Register(RigidBody& body);
 		void Update(float deltaTime);
 
+		//static Math::Vector3 mGravity;
 	private:
-		std::vector<SphereCollider*> mSphereColliders;
+		Octree mTree;
 	};
 }
 

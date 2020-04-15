@@ -1,34 +1,87 @@
 #include "Precompiled.h"
 #include "PhysicsWorld.h"
 
-#include "ShapeCollision.h"
+#include "RigidBody.h"
 
-int Vishv::Physics::PhysicsWorld::Register(SphereCollider & collider)
+#include <thread>
+
+using namespace Vishv;
+using namespace Physics;
+
+
+namespace
 {
-	mSphereColliders.emplace_back(&collider);
-	return static_cast<int>(mSphereColliders.size()) - 1;
+	void HandleChunk(Octree::Node* node)
+	{
+		int index = 0;
+		for (auto obj : node->objects)
+		{
+			int otherInd = 0;
+			for (auto other : node->objects)
+			{
+				if (otherInd <= index)
+				{
+					otherInd++;
+					continue;
+				}
+				obj->HandleCollision(other);
+				++otherInd;
+			}
+			++index;
+		}
+	
+		LOG("figure out std::thread and how to capture");
+
+//		for (auto obj : node->objects)
+//		{
+//			//apply other forces 
+//			if (obj->Gravity)
+//				obj->ApplyForce(*obj->Gravity);
+//			else
+//				obj->ApplyForce(PhysicsWorld::mGravity);
+//
+//			obj->Update(0.33f);	//make it use dt
+//		}
+	}
 }
 
-std::optional<std::vector<Vishv::Physics::SphereCollider*>> Vishv::Physics::PhysicsWorld::IsColliding(int tag, SphereCollider& other)
+void Vishv::Physics::PhysicsWorld::Initialize(int maxObjects, int maxObjInLeaf)
 {
-	std::vector<SphereCollider*> collisions;
+	float worldLength = 10000.0f;
+	float worldBreath = 10000.0f;
+	float worldHeight = 10000.0f;
 
-	collisions.reserve(mSphereColliders.size());
+	mTree.Initialzie({ 0.0f,0.0f,0.0f }, { worldBreath, worldHeight, worldLength }, maxObjInLeaf, maxObjects);
 
-	for (SphereCollider* collider : mSphereColliders)
-	{
-		if (collider->mTag != tag && tag != -1)
-			continue;
+	//mGravity.y = -9.8f;
+}
 
-		if (Collision::Collider::IsCollision(collider->mSphere, other.mSphere))
-			collisions.emplace_back(collider);
-	}
-
-	return std::move(collisions);
+void Vishv::Physics::PhysicsWorld::Register(RigidBody& body)
+{
+	mTree.Add(body);
 }
 
 void Vishv::Physics::PhysicsWorld::Update(float deltaTime)
 {
-	//move objects and resolve collisions
+	//get nodes
+	//do colision check
+	//do collision resolution
+	//call update on all of them
+
+	std::vector<std::thread> threads;
+	threads.reserve(mTree.GetChunks().size());
+
+	int count = 0;
+	for (auto it : mTree.GetChunks())
+	{
+		threads.emplace_back(std::thread(HandleChunk, it));
+	}
+	for (auto& t : threads)
+	{
+		t.join();
+	}
+
+	mTree.Update();
 }
+
 

@@ -1,147 +1,58 @@
 #include "Precompiled.h"
 #include "RigidBody.h"
 
+#include "PhysicsWorld.h"
+#include "CollisionData.h"
+#include "Collider.h"
+
 using namespace Vishv;
-using namespace Vishv::Math;
-using namespace Vishv::Physics;
+using namespace Math;
+using namespace Physics;
 
-void Vishv::Physics::RigidBody::CalculateDerivedData()
+META_DERIVED_BEGIN(RigidBody, PhysicsObject)
+	META_FIELD_BEGIN
+		META_FIELD(AngularResistance, "AngularResistance")
+	META_FIELD_END
+META_CLASS_END
+
+void RigidBody::ApplyForceOnPoint(const Math::Vector3& force, const Math::Vector3& point)
 {
-	mOrientation.Normalize();
-	mTransformation = Vishv::Math::Matrix4(mOrientation, mPosition);
-
-	TransformInertia();
+	auto vec = point - myTransform->mPosition;
+	accumilatedForce += Vector3::Project(force, vec);
+	accumilatedTorque += vec.Cross(force);
 }
 
-void Vishv::Physics::RigidBody::SetInertia(const Math::Matrix4 & inertiaTensor, bool isInv)
+void Vishv::Physics::RigidBody::Update(float deltaTime)
 {
-	mInvIntertia = isInv ? inertiaTensor : inertiaTensor.Inverse();
+	PhysicsObject::Update(deltaTime);
+
+	auto vel = AngularVelocity;
+	accumilatedTorque -= AngularResistance;
+	AngularAcceleration = accumilatedTorque * deltaTime * InvMass;
+
+	AngularVelocity = prvAngleVel + AngularAcceleration * deltaTime;
+	prvAngleVel = vel;
+
+	//apply rotation to quaternion
+	myTransform->Rotate( Quaternion::RotationQuaternion(AngularVelocity.x, XAxis)
+					* Quaternion::RotationQuaternion(AngularVelocity.y, YAxis)
+					* Quaternion::RotationQuaternion(AngularVelocity.z, ZAxis));
 }
 
-void Vishv::Physics::RigidBody::TransformInertia()
+void Vishv::Physics::RigidBody::HandleCollision(RigidBody* other)
 {
-	float t4 =	mTransformation._11 * mInvIntertia._11 + 
-				mTransformation._12 * mInvIntertia._21 + 
-				mTransformation._13 * mInvIntertia._31;
-	
-	float t9 =	mTransformation._11 * mInvIntertia._12 +
-				mTransformation._12 * mInvIntertia._22 +
-				mTransformation._13 * mInvIntertia._32;
+	float dt = 0.03f;
 
-	float t14 =	mTransformation._11 * mInvIntertia._13 +
-				mTransformation._12 * mInvIntertia._23 +
-				mTransformation._13 * mInvIntertia._33;
+	auto data = myCollider->CheckCollision(*other->myCollider);
 
-	float t28 =	mTransformation._21 * mInvIntertia._11 +
-				mTransformation._22 * mInvIntertia._21 +
-				mTransformation._23 * mInvIntertia._31;
+	if (!data.IsColliding)
+		return;
 
-	float t33 = mTransformation._21 * mInvIntertia._12 +
-				mTransformation._22 * mInvIntertia._22 +
-				mTransformation._23 * mInvIntertia._32;
+	//this part is wrong check it.
+	//add force to both of them
+	ApplyForce(Velocity.Cross(other->Velocity).Normalized() * (1.0f / InvMass) * (Velocity / dt));
+	other->ApplyForce(Velocity.Cross(Velocity).Normalized() * (1.0f / other->InvMass) * (other->Velocity / dt));
 
-	float t38 = mTransformation._21 * mInvIntertia._13 +
-				mTransformation._22 * mInvIntertia._23 +
-				mTransformation._23 * mInvIntertia._33;
-
-	float t52 = mTransformation._31 * mInvIntertia._11 +
-				mTransformation._32 * mInvIntertia._21 +
-				mTransformation._33 * mInvIntertia._31;
-
-	float t57 = mTransformation._31 * mInvIntertia._12 +
-				mTransformation._32 * mInvIntertia._22 +
-				mTransformation._33 * mInvIntertia._32;
-
-	float t62 = mTransformation._31 * mInvIntertia._13 +
-				mTransformation._32 * mInvIntertia._23 +
-				mTransformation._33 * mInvIntertia._33;
-
-	mInvIntertiaWorld.Reset();
-	mInvIntertiaWorld._11 =  t4 * mTransformation._11 +
-							 t9 * mTransformation._12 +
-							t14 * mTransformation._13;
-
-	mInvIntertiaWorld._12 =  t4 * mTransformation._21 +
-							 t9 * mTransformation._22 +
-							t14 * mTransformation._23;
-
-	mInvIntertiaWorld._13 =  t4 * mTransformation._31 +
-							 t9 * mTransformation._32 +
-							t14 * mTransformation._33;
-
-	mInvIntertiaWorld._21 =	t28 * mTransformation._11 +
-							t33 * mTransformation._12 +
-							t38 * mTransformation._13;
-
-	mInvIntertiaWorld._22 = t28 * mTransformation._21 +
-							t33 * mTransformation._22 +
-							t38 * mTransformation._23;
-
-	mInvIntertiaWorld._23 = t28 * mTransformation._31 +
-							t33 * mTransformation._32 +
-							t38 * mTransformation._33;
-
-	mInvIntertiaWorld._31 = t52 * mTransformation._11 +
-							t57 * mTransformation._12 +
-							t62 * mTransformation._13;
-
-	mInvIntertiaWorld._32 = t52 * mTransformation._21 +
-							t57 * mTransformation._22 +
-							t62 * mTransformation._23;
-
-	mInvIntertiaWorld._33 = t52 * mTransformation._31 +
-							t57 * mTransformation._32 +
-							t62 * mTransformation._33;
+	//collision Resolution
+	myTransform->mPosition += (myTransform->mPosition - other->myTransform->mPosition).Normalized() * data.distanceInsertion;
 }
-
-void Vishv::Physics::RigidBody::AddForce(const Math::Vector3 & force)
-{
-	mForceAccumilation += force;
-	mIsAwake = true;
-}
-
-void Vishv::Physics::RigidBody::ClearAccumilators()
-{
-	mForceAccumilation = Math::Vector3();
-	mTorqueAccumilation = Math::Vector3();
-}
-
-void Vishv::Physics::RigidBody::Integrate(float deltaTime)
-{
-	Vector3 accelerationPrv(mAcceleration);
-	accelerationPrv += mForceAccumilation * mInverseMass;
-
-	mInvIntertiaWorld.Translate({ mTorqueAccumilation.x, mTorqueAccumilation.y, mTorqueAccumilation.z });
-	mVelocity += accelerationPrv * deltaTime;
-	mRotation += mAngularAcceleration * deltaTime;
-
-	mVelocity *= powf(mLinearDamnping, deltaTime);
-	mRotation *= powf(mAngularDampning, deltaTime);
-
-	mPosition += mVelocity * deltaTime;
-	mOrientation += mRotation * deltaTime;
-
-	CalculateDerivedData();
-
-	ClearAccumilators();
-}
-
-void Vishv::Physics::RigidBody::AddForceAtPoint(const Math::Vector3 & force, const Math::Vector3 & point, bool isLocal)
-{
-	Math::Vector3 pt(isLocal ? ConvertToWorldCoordinates(point) : point);
-	pt -= mPosition;
-	mForceAccumilation += force;
-	mTorqueAccumilation += pt % force;
-}
-
-Vector3 Vishv::Physics::RigidBody::ConvertToWorldCoordinates(const Vector3 &point)
-{
-	return mPosition + point;
-}
-
-Vector3 Vishv::Physics::RigidBody::ConvertToLocalCoordinates(const Vector3 &point)
-{
-	return (mPosition - point) * -1.0f;
-}
-
-

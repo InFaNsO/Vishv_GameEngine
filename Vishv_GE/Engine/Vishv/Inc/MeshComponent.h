@@ -3,6 +3,11 @@
 
 #include "Component.h"
 
+namespace Vishv
+{
+	class CameraSystem;
+}
+
 namespace Vishv::Components
 {
 	class TransformComponent;
@@ -29,6 +34,8 @@ namespace Vishv::Components
 		void ImportUI();
 		void InitMesh();
 
+		CameraSystem* mCamSys;
+
 		TransformComponent* mTransformComponent;
 		int mShape = -1;
 		Vishv::Graphics::ModelBase<Vishv::Graphics::MeshPX> mModel;
@@ -39,7 +46,6 @@ namespace Vishv::Components
 		std::filesystem::path mNormalPath;
 		std::filesystem::path mSpecularPath;
 
-		Vishv::Graphics::Camera* mCamera;
 
 		bool mIsFinal = false;
 		bool shouldRender = false;

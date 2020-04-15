@@ -2,86 +2,9 @@
 #include "GameWorld.h"
 #include "GameObject.h"
 
-#include "AIAgent.h"
-#include "ColliderComponent.h"
-#include "AIPathFinding.h"
-
 #include "Editor.h"
 
 using namespace Vishv;
-
-void Vishv::GameWorld::Register(GameObject & gameObject, bool isPlayer)
-{
-	if (isPlayer)
-		mPlayer = &gameObject;
-	else
-		mGameObjects.emplace_back(&gameObject);
-	
-	auto agentComp = gameObject.GetComponent<Components::AIAgent>();
-	if (agentComp)
-		Register(*agentComp);
-
-	auto agentColliderSphere = gameObject.GetComponent<Components::ColliderComponent>();
-	if (agentColliderSphere)
-		Register(*agentColliderSphere);
-
-	auto pathFinding = gameObject.GetComponent<Components::AIPathFinding>();
-	if (pathFinding)
-		mPathFinding = &gameObject;
-
-	gameObject.mWorld = this;
-}
-
-void Vishv::GameWorld::Register(Graphics::Camera & camera)
-{
-	mGameCameras.emplace_back(&camera);
-	if (!mMainCamera)
-		mMainCamera = mGameCameras[0];
-}
-
-void Vishv::GameWorld::Register(Components::AIAgent & agent, bool isPlayer)
-{
-	if(!isPlayer)
-		mAiWorld.Register(&agent);
-	else 
-		mAiWorld.RegisterPlayer(&agent);
-}
-
-void Vishv::GameWorld::Register(Physics::Collision::AABB & aabb)
-{
-	Math::Vector3 extend = { aabb.GetLengthX(), aabb.GetLengthY(), aabb.GetLengthZ() };
-
-	Vishv::Math::Shapes::Cuboid c;
-	c.SetLengthX(extend.x);
-	c.SetLengthY(extend.y);
-	c.SetLengthZ(extend.z);
-	c.mTransform.mPosition = aabb.GetPosition();
-
-	mAiWorld.Register(c);
-}
-
-void Vishv::GameWorld::Register(Components::ColliderComponent & cc)
-{
-	mPhysicsWorld.Register(cc.mSphereCollider);
-	cc.mSphereCollider.objectID = static_cast<int>(mGameObjects.size()) - 1;
-}
-
-GameObject * Vishv::GameWorld::GetGameObject(std::string & name)
-{
-	for (auto& go : mGameObjects)
-		if (go->GetName() == name)
-			return go;
-	return nullptr;
-}
-
-AI::World<Components::AIAgent>& Vishv::GameWorld::GetAIWorld()
-{
-	return mAiWorld;
-}
-Physics::PhysicsWorld & Vishv::GameWorld::GetPhysicsWorld()
-{
-	return mPhysicsWorld;
-}
 
 ////////////////////////////////////////////////////////////////////////////
 

@@ -3,10 +3,14 @@
 
 #include "Component.h"
 
+namespace Vishv
+{
+	class AIWorld;
+}
+
 namespace Vishv::Components
 {
 	class TransformComponent;
-	//class Camera;	Camera Component
 
 	class AIAgent : public Component
 	{
@@ -19,10 +23,6 @@ namespace Vishv::Components
 		void DebugUI() override;
 		void Render() override;
 		void Terminate() override;
-
-		//void SetWorld(AI::World& world) { mWorld = &world; }
-		Vishv::AI::World<AIAgent>& GetAIWorld() { return *mWorld; }
-
 
 		bool operator== (const AIAgent& other)
 		{
@@ -54,7 +54,7 @@ namespace Vishv::Components
 
 		TransformComponent* mTransformComponent;
 		
-		Vishv::AI::World<AIAgent>* mWorld;
+		AIWorld* mWorld;
 
 		float mSafeDistance = 3.0f;
 		float mSafeDistanceIncrementValue = 0.4f;

@@ -3,10 +3,14 @@
 
 #include "Component.h"
 
+namespace Vishv
+{
+	class CameraSystem;
+}
+
 namespace Vishv::Components
 {
 	class TransformComponent;
-	//class Camera;	Camera Component
 
 	class ModelAnimation : public Component
 	{
@@ -39,6 +43,7 @@ namespace Vishv::Components
 
 		void SetUp();
 
+		CameraSystem* mCamSys;
 
 		TransformComponent* mTransformComponent;
 		Graphics::RiggedModel* mModel = nullptr;		//define these

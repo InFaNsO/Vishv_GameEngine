@@ -3,6 +3,8 @@
 #include "TransformComponent.h"
 #include "GameWorld.h"
 
+#include "CameraService.h"
+
 
 size_t invalidIndexAinm = (size_t)UINT64_MAX;
 
@@ -20,6 +22,7 @@ using namespace Vishv::Components;
 
 void Vishv::Components::ModelAnimation::Initialize()
 {
+	mCamSys = GetOwner().GetWorld().GetService<CameraSystem>();
 	mTransformComponent = GetOwner().GetComponent<TransformComponent>();
 	mNextAnimationIndex = invalidIndexAinm;
 }
@@ -86,7 +89,8 @@ void Vishv::Components::ModelAnimation::Render()
 {
 	//call the other render
 	//make a world class // change scene into world
-	Render(*GetOwner().GetWorld().GetMainCamera(), Graphics::EffectType::Skinning);
+	if(mCamSys->GetMainCamera())
+		Render(*mCamSys->GetMainCamera(), Graphics::EffectType::Skinning);
 }
 
 void Vishv::Components::ModelAnimation::Terminate()

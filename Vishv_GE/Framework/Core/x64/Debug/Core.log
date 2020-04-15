@@ -9,6 +9,6 @@
   MetaType.cpp
   Window.cpp
   WindowMessageHandler.cpp
-d:\bhavcode\githubbhav\vishv_gameengine\vishv_ge\framework\core\src\windowmessagehandler.cpp(15): warning C4244: 'argument': conversion from 'LONG_PTR' to 'LONG', possible loss of data
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Core\Src\WindowMessageHandler.cpp(15,50): warning C4244: 'argument': conversion from 'LONG_PTR' to 'LONG', possible loss of data
   Generating Code...
-  Core.vcxproj -> D:\bhavCode\GithubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\Core.lib
+  Core.vcxproj -> C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Core.lib

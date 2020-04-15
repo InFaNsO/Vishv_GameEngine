@@ -157,24 +157,31 @@
   <ItemGroup>
     <ClInclude Include="Inc\AABBInt.h" />
     <ClInclude Include="Inc\AxisAlignedBoundingBox.h" />
+    <ClInclude Include="Inc\CapsuleCollider.h" />
     <ClInclude Include="Inc\Collider.h" />
+    <ClInclude Include="Inc\CollisionData.h" />
     <ClInclude Include="Inc\Common.h" />
+    <ClInclude Include="Inc\MetaRegistrationPhysics.h" />
     <ClInclude Include="Inc\Octree.h" />
     <ClInclude Include="Inc\OrientedBoundingBox.h" />
     <ClInclude Include="Inc\Physics.h" />
+    <ClInclude Include="Inc\PhysicsObject.h" />
     <ClInclude Include="Inc\PhysicsWorld.h" />
     <ClInclude Include="Inc\Ray.h" />
     <ClInclude Include="Inc\RayCast.h" />
     <ClInclude Include="Inc\RigidBody.h" />
-    <ClInclude Include="Inc\ShapeCollision.h" />
     <ClInclude Include="Inc\SphereCollider.h" />
     <ClInclude Include="Src\Precompiled.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\AxisAlignedBoundingBox.cpp" />
+    <ClCompile Include="Src\CapsuleCollider.cpp" />
     <ClCompile Include="Src\Collider.cpp" />
+    <ClCompile Include="Src\CollisionData.cpp" />
+    <ClCompile Include="Src\MetaRegistrationPhysics.cpp" />
     <ClCompile Include="Src\Octree.cpp" />
     <ClCompile Include="Src\OrientedBoundingBox.cpp" />
+    <ClCompile Include="Src\PhysicsObject.cpp" />
     <ClCompile Include="Src\PhysicsWorld.cpp" />
     <ClCompile Include="Src\Precompiled.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -183,7 +190,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Src\Raycast.cpp" />
-    <ClCompile Include="Src\ShapeCollision.cpp" />
+    <ClCompile Include="Src\RigidBody.cpp" />
     <ClCompile Include="Src\SphereCollider.cpp" />
   </ItemGroup>
   <ItemGroup>

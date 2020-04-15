@@ -1,1 +1,14 @@
-﻿
+﻿  WinMain.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP242_3D_Graphics\04_HelloCube_3\WinMain.cpp(42,10): error C2039: 'Yaw': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP242_3D_Graphics\04_HelloCube_3\WinMain.cpp(46,10): error C2039: 'Yaw': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP242_3D_Graphics\04_HelloCube_3\WinMain.cpp(50,12): error C2039: 'Pitch': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP242_3D_Graphics\04_HelloCube_3\WinMain.cpp(54,12): error C2039: 'Pitch': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP242_3D_Graphics\04_HelloCube_3\WinMain.cpp(124,18): error C2039: 'SetDirection': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'

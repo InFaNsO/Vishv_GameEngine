@@ -18,42 +18,6 @@ namespace Vishv
 	class GameWorld
 	{
 	public:
-		void Register(GameObject& gameObject, bool isPlayer = false);
-		void Register(Graphics::Camera& camera);
-
-		GameObject* GetGameObject(std::string& name);
-		GameObject* GetGameObject(int index) { return mGameObjects[index]; }
-
-		std::vector<GameObject*>& GetGameObjects() { return mGameObjects; }
-		const std::vector<GameObject*>& GetGameObjects() const { return mGameObjects; }
-
-		Graphics::Camera* GetMainCamera() { return mMainCamera; }
-
-		AI::World<Components::AIAgent>& GetAIWorld();
-		Physics::PhysicsWorld& GetPhysicsWorld();
-
-
-		GameObject* Player() { return mPlayer; }
-		GameObject* PathFinding() { return mPathFinding; }
-
-	private:
-		void Register(Components::AIAgent& agent, bool isPlayer = false);
-		void Register(Physics::Collision::AABB& aabb);
-		void Register(Components::ColliderComponent& cc);
-
-
-		std::vector<GameObject*> mGameObjects;
-		
-		GameObject* mPlayer;
-		GameObject* mPathFinding;
-
-		std::vector<Graphics::Camera*> mGameCameras;
-		Vishv::Graphics::Camera* mMainCamera;
-
-		AI::World<Components::AIAgent> mAiWorld;
-		Physics::PhysicsWorld mPhysicsWorld;
-
-	public:
 		void Initialize(size_t capacity);
 		void Terminate();
 		void Update(float deltaTime);
@@ -74,7 +38,7 @@ namespace Vishv
 			return static_cast<T*>(newService.get());
 		}
 
-		template <class T>
+		template<class T, class = std::void_t<std::is_base_of<Components::Component, T>>>
 		const T* GetService() const
 		{
 			for (auto& service : mServices)
@@ -83,7 +47,7 @@ namespace Vishv
 			return nullptr;
 		}
 
-		template <class T>
+		template<class T, class = std::void_t<std::is_base_of<Components::Component, T>>>
 		T* GetService()
 		{
 			const GameWorld* constMe = this;

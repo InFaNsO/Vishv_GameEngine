@@ -39,8 +39,8 @@ namespace Vishv::Physics::IntData
 			return *this;
 		}
 
-		constexpr Vector3Int operator- (const Vector3Int& other) const { return { x - other.x, y - other.y, z - other.z }; }
-		constexpr Vector3Int operator+ (const Vector3Int& other) const { return { x + other.x, y + other.y, z + other.z }; }
+		Vector3Int operator- (const Vector3Int& other) const { return { x - other.x, y - other.y, z - other.z }; }
+		Vector3Int operator+ (const Vector3Int& other) const { return { x + other.x, y + other.y, z + other.z }; }
 	};
 
 	struct AABBInt

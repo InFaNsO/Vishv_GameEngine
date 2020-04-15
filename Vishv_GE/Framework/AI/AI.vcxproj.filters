@@ -63,7 +63,7 @@
     <ClInclude Include="Inc\World.h">
       <Filter>Inc\World</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\MetaRegistration.h">
+    <ClInclude Include="Inc\MetaRegistrationAI.h">
       <Filter>Inc</Filter>
     </ClInclude>
   </ItemGroup>
@@ -77,7 +77,10 @@
     <ClCompile Include="Src\GraphSearch.cpp">
       <Filter>Src\PathFinding</Filter>
     </ClCompile>
-    <ClCompile Include="Src\MetaRegistration.cpp">
+    <ClCompile Include="Src\SteeringModule.cpp">
+      <Filter>Src\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MetaRegistrationAI.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>

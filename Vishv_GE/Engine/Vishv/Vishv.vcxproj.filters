@@ -43,11 +43,32 @@
     <Filter Include="Src\Editor">
       <UniqueIdentifier>{151d25c6-8628-42b9-96dd-659554701cf0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Inc\Terrain">
-      <UniqueIdentifier>{81a9cd0b-f537-4fe3-943a-210c26d70aa1}</UniqueIdentifier>
+    <Filter Include="Inc\Services">
+      <UniqueIdentifier>{c353a5d0-3b80-4b3b-afa0-caee84e44231}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\Terrain">
-      <UniqueIdentifier>{ebf1ae38-6291-4284-a07c-e82f56e817f1}</UniqueIdentifier>
+    <Filter Include="Inc\Components\Math">
+      <UniqueIdentifier>{a35e4582-72b9-4400-837c-594aa7686f5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Components\Graphics">
+      <UniqueIdentifier>{28318fb4-2ece-462a-babd-3c91ab7c5155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Components\AI">
+      <UniqueIdentifier>{27c0261a-2284-4a7b-a89a-766758626f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Components\Physics">
+      <UniqueIdentifier>{94ca8a9d-63e3-452b-b8b1-edfc5230b01f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Components\AI">
+      <UniqueIdentifier>{afcc941b-d0e4-4b36-b445-d5baaa7c22ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Components\Graphics">
+      <UniqueIdentifier>{d4a4fd39-9251-4df4-ad85-f17f1a2dc446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Components\Math">
+      <UniqueIdentifier>{a1b7ff8e-17e2-40e1-ba45-5fb4616113cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Components\Physics">
+      <UniqueIdentifier>{d35ec185-5cb9-4be3-8a8e-b2b667b5a081}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,23 +102,11 @@
     <ClInclude Include="Inc\GameObjectFactory.h">
       <Filter>Inc\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\ColliderComponent.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\Component.h">
       <Filter>Inc\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\ModelAnimation.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\GameWorld.h">
       <Filter>Inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\AIAgent.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\AISteering.h">
-      <Filter>Inc\Components</Filter>
     </ClInclude>
     <ClInclude Include="Inc\SteeringBehaviour_Evade.h">
       <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
@@ -123,21 +132,6 @@
     <ClInclude Include="Inc\SteeringBehaviour_Arrive.h">
       <Filter>Inc\TemplateClasses\SteeringBehavours</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\AIStateMachine.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\TransformComponent.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\MeshComponent.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\ThirdPersonControllerComponent.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\AIPathFinding.h">
-      <Filter>Inc\Components</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\Service.h">
       <Filter>Inc\Service</Filter>
     </ClInclude>
@@ -147,8 +141,50 @@
     <ClInclude Include="Inc\Editor.h">
       <Filter>Inc\Editor</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\QuadTree.h">
-      <Filter>Inc\Terrain</Filter>
+    <ClInclude Include="Inc\AIWorldService.h">
+      <Filter>Inc\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIAgent.h">
+      <Filter>Inc\Components\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIPathFinding.h">
+      <Filter>Inc\Components\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AIStateMachine.h">
+      <Filter>Inc\Components\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AISteering.h">
+      <Filter>Inc\Components\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MeshComponent.h">
+      <Filter>Inc\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ModelAnimation.h">
+      <Filter>Inc\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ThirdPersonControllerComponent.h">
+      <Filter>Inc\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\TransformComponent.h">
+      <Filter>Inc\Components\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\OBBColliderComponent.h">
+      <Filter>Inc\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SphereColliderComponent.h">
+      <Filter>Inc\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\CapsuleColliderComponent.h">
+      <Filter>Inc\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\PhysicsWorldService.h">
+      <Filter>Inc\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\RigidBodyComponent.h">
+      <Filter>Inc\Components\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\CameraService.h">
+      <Filter>Inc\Services</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -170,20 +206,8 @@
     <ClCompile Include="Src\GameObjectFactory.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="Src\ColliderComponent.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\ModelAnimation.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
     <ClCompile Include="Src\GameWorld.cpp">
       <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\AIAgent.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\AISteering.cpp">
-      <Filter>Src\Components</Filter>
     </ClCompile>
     <ClCompile Include="Src\Steering_Arrive.cpp">
       <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
@@ -209,21 +233,6 @@
     <ClCompile Include="Src\Steering_Wander.cpp">
       <Filter>Src\TemplateClasses\SteeringBehaviours</Filter>
     </ClCompile>
-    <ClCompile Include="Src\AIStatemachine.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\TransformComponent.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\MeshComponent.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\ThirdPersonControllerComponent.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\AIPathFinding.cpp">
-      <Filter>Src\Components</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Service.cpp">
       <Filter>Src\Services</Filter>
     </ClCompile>
@@ -233,8 +242,53 @@
     <ClCompile Include="Src\Editor.cpp">
       <Filter>Src\Editor</Filter>
     </ClCompile>
-    <ClCompile Include="Src\QuadTree.cpp">
-      <Filter>Src\Terrain</Filter>
+    <ClCompile Include="Src\AIAgent.cpp">
+      <Filter>Src\Components\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AIPathFinding.cpp">
+      <Filter>Src\Components\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AIStatemachine.cpp">
+      <Filter>Src\Components\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AISteering.cpp">
+      <Filter>Src\Components\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MeshComponent.cpp">
+      <Filter>Src\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ThirdPersonControllerComponent.cpp">
+      <Filter>Src\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ModelAnimation.cpp">
+      <Filter>Src\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TransformComponent.cpp">
+      <Filter>Src\Components\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ColliderComponent.cpp">
+      <Filter>Src\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\OBBColliderComponent.cpp">
+      <Filter>Src\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AIWorldService.cpp">
+      <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SphereColliderComponent.cpp">
+      <Filter>Src\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CapsuleColliderComponent.cpp">
+      <Filter>Src\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PhysicsWorldService.cpp">
+      <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\RigidBodyComponent.cpp">
+      <Filter>Src\Components\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CameraService.cpp">
+      <Filter>Src\Services</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

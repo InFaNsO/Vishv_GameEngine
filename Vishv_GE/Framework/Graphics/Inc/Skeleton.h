@@ -24,7 +24,7 @@ public:			//My skeleton
 	static size_t MaxBoneCount() { return 256; }
 
 public:				//class skeleton
-	Bone* root;
+	Bone* root = nullptr;
 	std::vector<std::unique_ptr<Bone>> bones;
 
 };

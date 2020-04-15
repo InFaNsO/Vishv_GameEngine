@@ -139,3 +139,13 @@ void Vishv::Math::Transform::Rotate(const Vector3& axis, float angleDeg)
 	mForward.Normalize();
 }
 
+
+void Vishv::Math::Transform::Rotate(const Quaternion& rotateQuat)
+{
+	mQuaternion *= rotateQuat;
+	mQuaternion.Normalize();
+	mUp.Rotate(rotateQuat);
+	mForward.Rotate(rotateQuat);
+	mUp.Normalize();
+	mForward.Normalize();
+}

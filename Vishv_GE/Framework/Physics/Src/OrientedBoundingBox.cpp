@@ -1,5 +1,10 @@
 #include "Precompiled.h"
+#include "CollisionData.h"
+
 #include "OrientedBoundingBox.h"
+#include "SphereCollider.h"
+#include "CapsuleCollider.h"
+#include "RigidBody.h"
 
 using namespace Vishv;
 using namespace Vishv::Physics;
@@ -96,5 +101,54 @@ std::vector<Math::Vector3>& Vishv::Physics::OBB::Points()
 	mPoints.emplace_back((center + orExt));						//FTR
 
 	return mPoints;
-
 }
+
+CollisionData Vishv::Physics::OBB::CheckCollision(Collider& other) const
+{
+	if (other.GetMetaClass()->GetName() == SphereCollider::StaticGetMetaClass()->GetName())
+		return std::move(CollisionCheckSphere(*static_cast<SphereCollider*>(&other)));
+	else if (other.GetMetaClass()->GetName() == OBB::StaticGetMetaClass()->GetName())
+		return std::move(CollisionCheckOBB(*static_cast<OBB*>(&other)));
+
+	return std::move(CollisionData());
+}
+
+CollisionData Vishv::Physics::OBB::CollisionCheckCapsule(CapsuleCollider& other) const
+{
+	return CollisionData();
+}
+
+CollisionData Vishv::Physics::OBB::CollisionCheckSphere(SphereCollider& other) const
+{
+	CollisionData cData;
+	cData.other = other.myRigidBody;
+
+	//Find extent after orientation 
+	//multiply with unit vector of direction to sphere == "Radius"
+
+	float radiusSq = Math::Abs(((mExtent * mOrientation) * (other.myTransform->Position() - myTransform->Position()).Normalized()).MagnitudeSq());
+	float distanceSq = Math::Abs(Math::MagnitudeSqr(other.myTransform->Position() - myTransform->Position())) - ((other.mRadius * other.mRadius) + (radiusSq));
+
+	if (distanceSq > 0.0f)
+	{
+		cData.IsColliding = false;
+		return std::move(cData);
+	}
+
+	cData.distanceInsertion = sqrtf(Math::Abs(distanceSq));
+
+	return std::move(cData);
+}
+
+CollisionData Vishv::Physics::OBB::CollisionCheckOBB(OBB& other) const
+{
+	CollisionData cData;
+	cData.other = other.myRigidBody;
+
+	////do this
+	//OBB vs OBB
+
+	return std::move(cData);
+}
+
+

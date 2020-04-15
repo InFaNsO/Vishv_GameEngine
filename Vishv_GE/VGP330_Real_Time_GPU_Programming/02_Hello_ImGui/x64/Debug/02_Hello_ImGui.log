@@ -1,1 +1,18 @@
-﻿
+﻿  Winmain.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP330_Real_Time_GPU_Programming\02_Hello_ImGui\Winmain.cpp(42,10): error C2039: 'Yaw': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP330_Real_Time_GPU_Programming\02_Hello_ImGui\Winmain.cpp(46,10): error C2039: 'Yaw': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP330_Real_Time_GPU_Programming\02_Hello_ImGui\Winmain.cpp(50,12): error C2039: 'Pitch': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP330_Real_Time_GPU_Programming\02_Hello_ImGui\Winmain.cpp(54,12): error C2039: 'Pitch': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP330_Real_Time_GPU_Programming\02_Hello_ImGui\Winmain.cpp(75,18): error C2039: 'SetDirection': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP330_Real_Time_GPU_Programming\02_Hello_ImGui\Winmain.cpp(115,11): error C2039: 'Yaw': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP330_Real_Time_GPU_Programming\02_Hello_ImGui\Winmain.cpp(116,13): error C2039: 'Pitch': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'

@@ -13,19 +13,29 @@
 #include "GameWorld.h"
 
 //components
-#include "TransformComponent.h"
-#include "ModelAnimation.h"
+//AI Components
 #include "AIAgent.h"
 #include "AISteering.h"
 #include "AIStateMachine.h"
-#include "ThirdPersonControllerComponent.h"
-#include "ColliderComponent.h"
-#include "MeshComponent.h"
 #include "AIPathFinding.h"
+//Graphics Components
+#include "MeshComponent.h"
+#include "ModelAnimation.h"
+#include "ThirdPersonControllerComponent.h"
+//Math Components
+#include "TransformComponent.h"
+//Physics Components
+#include "OBBColliderComponent.h"
+#include "SphereColliderComponent.h"
+#include "CapsuleColliderComponent.h"
+#include "RigidBodyComponent.h"
 
 
 //Services
 #include "Service.h"
+#include "AIWorldService.h"
+#include "PhysicsWorldService.h"
+#include "CameraService.h"
 
 //template classes completed
 //Steering behaviours
@@ -39,7 +49,7 @@
 #include "SteeringBehaviour_Wander.h"
 
 //terrain
-#include "QuadTree.h"
+//#include "QuadTree.h"
 
 
 //Editor

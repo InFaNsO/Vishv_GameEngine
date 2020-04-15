@@ -3,7 +3,7 @@
 #include "Quaternion.h"
 #include "Matrix4.h"
 
-Vishv::Math::Vector3 Vishv::Math::Vector3::operator*(const Quaternion & quat)
+Vishv::Math::Vector3 Vishv::Math::Vector3::operator*(const Quaternion & quat) const
 {
 	Matrix4 m(quat);
 	Vector3 v = m * *this;

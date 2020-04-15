@@ -1,14 +1,10 @@
 #ifndef INCLUDED_VISHV_PHYSICS_RAY_CAST
 #define INCLUDED_VISHV_PHYSICS_RAY_CAST
 
+#include "Ray.h"
+
 namespace Vishv::Physics
 {
-	struct Ray
-	{
-		Math::Vector3 origin;
-		Math::Vector3 direction;
-	};
-
 	class Raycast
 	{
 	public:

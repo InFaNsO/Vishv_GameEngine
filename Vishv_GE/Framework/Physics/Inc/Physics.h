@@ -2,8 +2,8 @@
 #define INCLUDED_VISHV_PHYSICS_H
 
 #include "Common.h"
+#include "MetaRegistrationPhysics.h"
 
-#include "ShapeCollision.h"
 #include "RayCast.h"
 
 #include "PhysicsWorld.h"
@@ -12,13 +12,15 @@
 
 
 #include "Octree.h"
+#include "PhysicsObject.h"
 #include "RigidBody.h"
 
+#include "CollisionData.h"
 #include "Collider.h"
 #include "AxisAlignedBoundingBox.h"
-#include "SphereCollider.h"
 #include "OrientedBoundingBox.h"
-
+#include "SphereCollider.h"
+#include "CapsuleCollider.h"
 
 //#include "Particle.h"		will readd them later
 //#include "World.h"		will readd them later

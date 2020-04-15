@@ -26,9 +26,9 @@ struct Vector3
 	constexpr Vector3 operator- (const Vector3& other) const { return { x - other.x, y - other.y, z - other.z }; }
 	constexpr Vector3 operator+ (const Vector3& other) const		{ return { x + other.x, y + other.y, z + other.z }; }
 	Vector3 operator* (const Vector3& other) const		{ return { x * other.x, y * other.y, z * other.z }; }
-	Vector3 operator* (float f)							{ return { x * f, y *f, z * f }; }
+	constexpr Vector3 operator* (float f)							{ return { x * f, y *f, z * f }; }
 			  Vector3 operator/ (float f)							{ VISHVASSERT(f != 0.0f, "[Vishv::Math::Vector3] devision by zero"); float div = 1 / f; return { x * div, y * div, z* div }; }
-			  Vector3 operator* (const Quaternion& quat);
+			  Vector3 operator* (const Quaternion& quat) const;
 
 
 //	float Dot(const Vector3& other) const					{ return (x * other.x) + (y * other.y) + (z * other.z); }

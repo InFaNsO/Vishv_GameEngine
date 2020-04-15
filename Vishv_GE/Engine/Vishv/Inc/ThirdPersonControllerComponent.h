@@ -2,6 +2,10 @@
 #define INCLUDED_VISHV_COMPONENTS_THIRD_PERSON_CONTROLLER_H
 
 #include "Component.h"
+namespace Vishv
+{
+	class CameraSystem;
+}
 
 namespace Vishv::Components
 {
@@ -17,6 +21,7 @@ namespace Vishv::Components
 		void DebugUI() override;
 
 	private:
+		CameraSystem* mCamSys;
 		TransformComponent* mTransformComponent;
 
 		Vishv::Graphics::Camera* mCamera;

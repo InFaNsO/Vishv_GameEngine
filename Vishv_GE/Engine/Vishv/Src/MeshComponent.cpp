@@ -3,6 +3,8 @@
 #include "TransformComponent.h"
 #include "GameWorld.h"
 
+#include "CameraService.h"
+
 #include "imfilebrowser.h"
 
 using namespace Vishv::Components;
@@ -71,7 +73,7 @@ void MeshComponent::Initialize()
 
 	mColor = Graphics::Colors::Coral;
 
-	mCamera = GetOwner().GetWorld().GetMainCamera();
+	mCamSys = GetOwner().GetWorld().GetService<CameraSystem>();
 }
 
 void MeshComponent::SimpleDraw()
@@ -114,7 +116,9 @@ void MeshComponent::Render()
 
 	auto em = Graphics::EffectsManager::Get();
 
-	auto& camera = *mCamera;
+	if(!mCamSys->GetMainCamera())
+		return;
+	auto& camera = *mCamSys->GetMainCamera();
 	
 	auto type = Graphics::EffectType::Standard;
 	

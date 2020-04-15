@@ -4,6 +4,8 @@
 #include "GameObject.h"
 #include "GameWorld.h"
 
+#include "CameraService.h"
+
 META_DERIVED_BEGIN(Vishv::Components::ThirdPersonControllerComponent, Vishv::Components::Component)
 	META_FIELD_BEGIN
 		META_FIELD(mLookSencivity, "LookSencivity")
@@ -30,7 +32,9 @@ namespace
 
 void Vishv::Components::ThirdPersonControllerComponent::Initialize()
 {
-	mCamera = GetOwner().GetWorld().GetMainCamera();
+	mCamSys = GetOwner().GetWorld().GetService<CameraSystem>();
+	std::string name = "TP_Camera";
+	mCamera = mCamSys->SetMainCamera(name);
 	mTransformComponent = GetOwner().GetComponent<Vishv::Components::TransformComponent>();
 
 	offsetCamera = { 0.0f, 250.0f, -200.0f };

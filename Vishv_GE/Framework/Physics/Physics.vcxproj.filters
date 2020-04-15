@@ -13,9 +13,6 @@
     <Filter Include="Inc\Collision\Broad Collision">
       <UniqueIdentifier>{c1e8a4b1-2db0-4e20-96ba-a503c8b663dd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Inc\Collision\Collisders">
-      <UniqueIdentifier>{6d235380-0400-4bb4-a598-54278f82f330}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Src\Collision">
       <UniqueIdentifier>{87b0b602-1b4d-4c76-8742-2a5433ea067c}</UniqueIdentifier>
     </Filter>
@@ -25,27 +22,24 @@
     <Filter Include="Src\Collision\Colliders">
       <UniqueIdentifier>{dbfe5efb-f2b8-4408-926c-12c356cbd816}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inc\Collision\Rays">
+      <UniqueIdentifier>{ea159762-718a-4eda-badb-8a21aad1bac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inc\Collision\Colliders">
+      <UniqueIdentifier>{6d235380-0400-4bb4-a598-54278f82f330}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Precompiled.h">
       <Filter>Src</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\ShapeCollision.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\Common.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\RayCast.h">
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Inc\PhysicsWorld.h">
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Inc\Physics.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\Ray.h">
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Inc\Octree.h">
@@ -55,26 +49,41 @@
       <Filter>Inc\Collision</Filter>
     </ClInclude>
     <ClInclude Include="Inc\AxisAlignedBoundingBox.h">
-      <Filter>Inc\Collision\Collisders</Filter>
+      <Filter>Inc\Collision\Colliders</Filter>
     </ClInclude>
     <ClInclude Include="Inc\Collider.h">
-      <Filter>Inc\Collision\Collisders</Filter>
+      <Filter>Inc\Collision\Colliders</Filter>
     </ClInclude>
     <ClInclude Include="Inc\SphereCollider.h">
-      <Filter>Inc\Collision\Collisders</Filter>
+      <Filter>Inc\Collision\Colliders</Filter>
     </ClInclude>
     <ClInclude Include="Inc\AABBInt.h">
-      <Filter>Inc\Collision\Collisders</Filter>
+      <Filter>Inc\Collision\Colliders</Filter>
     </ClInclude>
     <ClInclude Include="Inc\OrientedBoundingBox.h">
-      <Filter>Inc\Collision\Collisders</Filter>
+      <Filter>Inc\Collision\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\PhysicsObject.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\CollisionData.h">
+      <Filter>Inc\Collision\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\MetaRegistrationPhysics.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Ray.h">
+      <Filter>Inc\Collision\Rays</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\RayCast.h">
+      <Filter>Inc\Collision\Rays</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\CapsuleCollider.h">
+      <Filter>Inc\Collision\Colliders</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\ShapeCollision.cpp">
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Src\Raycast.cpp">
@@ -96,6 +105,21 @@
       <Filter>Src\Collision\Broad Collision</Filter>
     </ClCompile>
     <ClCompile Include="Src\OrientedBoundingBox.cpp">
+      <Filter>Src\Collision\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PhysicsObject.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\RigidBody.cpp">
+      <Filter>Src\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CollisionData.cpp">
+      <Filter>Src\Collision\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MetaRegistrationPhysics.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CapsuleCollider.cpp">
       <Filter>Src\Collision\Colliders</Filter>
     </ClCompile>
   </ItemGroup>

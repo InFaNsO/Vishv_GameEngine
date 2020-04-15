@@ -5,9 +5,10 @@ namespace Vishv::Physics
 {
 	struct Ray
 	{
-		Vishv::Math::Vector3 mPosition;
-		Vishv::Math::Vector3 mDirection;
+		Math::Vector3 origin;
+		Math::Vector3 direction;
 	};
+
 }
 
 

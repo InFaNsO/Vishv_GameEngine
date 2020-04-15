@@ -6,6 +6,7 @@
 #include "TextureManager.h"
 #include "Texture.h"
 #include "ConstantBuffer.h"
+#include "SamplerManager.h"
 #include "Camera.h"
 
 namespace Vishv::Graphics {

@@ -8,11 +8,19 @@
 #include "AIAgent.h"
 #include "AISteering.h"
 #include "AIStateMachine.h"
-#include "ColliderComponent.h"
+#include "OBBColliderComponent.h"
+#include "SphereColliderComponent.h"
+#include "CapsuleColliderComponent.h"
+#include "RigidBodyComponent.h"
+
+#include "Service.h"
+#include "AIWorldService.h"
+#include "PhysicsWorldService.h"
 
 
 void Vishv::StaticMetaRegister()
 {
+	//Objects
 	META_REGISTER(GameObject);
 	META_REGISTER(Components::Component);
 
@@ -28,7 +36,18 @@ void Vishv::StaticMetaRegister()
 	META_REGISTER(Components::AIStateMachine);
 
 	//Physics Components
-	META_REGISTER(Components::ColliderComponent);
+	META_REGISTER(Components::OBBCollider);
+	META_REGISTER(Components::SphereCollider);
+	META_REGISTER(Components::CapsuleCollider);
+	META_REGISTER(Components::Rigidbody);
+
 
 	//Networking Components once started
+
+	//Services
+	META_REGISTER(Service);
+	META_REGISTER(AIWorld);
+	META_REGISTER(PhysicsSystem);
+
+
 }

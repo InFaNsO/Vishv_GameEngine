@@ -57,6 +57,9 @@ namespace Vishv::Components
 
 		const Vishv::Math::Quaternion& Rotation() { return mTransform.Rotation(); }
 
+		const Vishv::Math::Transform& Transform() const { return mTransform; }
+		Vishv::Math::Transform& Transform() { return mTransform; }
+
 		//Math::Vector3 mPosition;
 		//Math::Vector3 mScale;
 	private:

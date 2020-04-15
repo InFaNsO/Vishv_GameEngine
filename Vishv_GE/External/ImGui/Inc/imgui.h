@@ -1710,7 +1710,7 @@ struct ImGuiTextBuffer
     IMGUI_API static char EmptyString[1];
 
     ImGuiTextBuffer()   { }
-    inline char         operator[](int i)       { IM_ASSERT(Buf.Data != NULL); return Buf.Data[i]; }
+    inline char         operator[](int i)       { IM_ASSERT(Buf.Data != nullptr); return Buf.Data[i]; }
     const char*         begin() const           { return Buf.Data ? &Buf.front() : EmptyString; }
     const char*         end() const             { return Buf.Data ? &Buf.back() : EmptyString; }   // Buf is zero-terminated, so end() will point on the zero-terminator
     int                 size() const            { return Buf.Size ? Buf.Size - 1 : 0; }
@@ -1737,7 +1737,7 @@ struct ImGuiStorage
     struct ImGuiStoragePair
     {
         ImGuiID key;
-        union { int val_i; float val_f; void* val_p; };
+        union { int val_i; float val_f; void* val_p = nullptr; };
         ImGuiStoragePair(ImGuiID _key, int _val_i)      { key = _key; val_i = _val_i; }
         ImGuiStoragePair(ImGuiID _key, float _val_f)    { key = _key; val_f = _val_f; }
         ImGuiStoragePair(ImGuiID _key, void* _val_p)    { key = _key; val_p = _val_p; }

@@ -46,6 +46,7 @@ public:
 	void RotateUp(float angleDeg);
 	void RotateForward(float angleDeg);
 	void RotateRight(float angleDeg);
+	void Rotate(const Quaternion& rotateQuat);
 	void Rotate(const Vector3& axis, float angleDeg);
 	void SetRotation(Quaternion&& quat) { mQuaternion = std::move(quat); }
 	void SetRotation(const Quaternion& quat) { mQuaternion = quat; }

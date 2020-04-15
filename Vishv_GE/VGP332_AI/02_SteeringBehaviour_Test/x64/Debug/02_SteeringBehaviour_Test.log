@@ -1,1 +1,432 @@
-﻿
+﻿  DrawShapeTool.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\Ray.h(7,2): error C2011: 'Vishv::Physics::Ray': 'struct' type redefinition
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\RayCast.h(6): message : see declaration of 'Vishv::Physics::Ray'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator -' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator +' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(18,56): error C2039: 'Arrive': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(68): message : see reference to class template instantiation 'Vishv::AI::SteeringModule<AgentType>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(19,56): error C2039: 'Evade': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(20,56): error C2039: 'Flee': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(21,56): error C2039: 'Flocking': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(22,56): error C2039: 'ObstacleAvoidance': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(23,56): error C2039: 'Pursuit': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(24,56): error C2039: 'Seek': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(25,56): error C2039: 'Wander': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,37): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,41): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\ColliderComponent.h(32,20): error C2039: 'mSphere': is not a member of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\SphereCollider.h(9): message : see declaration of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,79): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,83): error C2061: syntax error: identifier 'AABB'
+  MainState.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\Ray.h(7,2): error C2011: 'Vishv::Physics::Ray': 'struct' type redefinition
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\RayCast.h(6): message : see declaration of 'Vishv::Physics::Ray'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator -' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator +' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(18,56): error C2039: 'Arrive': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(68): message : see reference to class template instantiation 'Vishv::AI::SteeringModule<AgentType>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(19,56): error C2039: 'Evade': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(20,56): error C2039: 'Flee': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(21,56): error C2039: 'Flocking': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(22,56): error C2039: 'ObstacleAvoidance': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(23,56): error C2039: 'Pursuit': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(24,56): error C2039: 'Seek': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(25,56): error C2039: 'Wander': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,37): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,41): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\ColliderComponent.h(32,20): error C2039: 'mSphere': is not a member of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\SphereCollider.h(9): message : see declaration of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,79): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,83): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(29,26): error C2079: 'AiObject::aiAgent' uses undefined struct 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(31,28): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(34,47): error C2977: 'Vishv::AI::FSM::StateMachine': too many template arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(11): message : see declaration of 'Vishv::AI::FSM::StateMachine'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(34,49): error C2977: 'Vishv::AI::FSM::StateMachine': too many template arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(11): message : see declaration of 'Vishv::AI::FSM::StateMachine'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(34,49): error C2955: 'Vishv::AI::FSM::StateMachine': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(11): message : see declaration of 'Vishv::AI::FSM::StateMachine'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(16,28): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(16,23): error C2064: term does not evaluate to a function taking 0 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(38,1): error C2662: 'void Vishv::AI::FSM::StateMachine<AgentType>::ChangeState(const std::string &)': cannot convert 'this' pointer from 'Vishv::AI::FSM::StateMachine' to 'Vishv::AI::FSM::StateMachine<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(38,1): message : Reason: cannot convert from 'Vishv::AI::FSM::StateMachine' to 'Vishv::AI::FSM::StateMachine<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(38,3): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(49,8): message : see declaration of 'Vishv::AI::FSM::StateMachine<AgentType>::ChangeState'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(44,1): error C2662: 'Vishv::Math::Vector3 Vishv::AI::SteeringModule<AgentType>::Calculate(void)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(44,1): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(44,22): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(53,24): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::Calculate'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(57,1): error C3536: 'proj': cannot be used before it is initialized
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(69,1): error C2664: 'bool ImGui::DragFloat3(const char *,float [],float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float []'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(439,29): message : see declaration of 'ImGui::DragFloat3'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(70,1): error C2664: 'bool ImGui::DragFloat3(const char *,float [],float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float []'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(439,29): message : see declaration of 'ImGui::DragFloat3'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(71,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(72,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(73,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(74,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(75,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(76,1): error C2660: 'ImGui::Checkbox': function does not take 1 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(416,29): message : see declaration of 'ImGui::Checkbox'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.h(26,33): error C2079: 'MainState::agentTestAgent' uses undefined struct 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.h(27,28): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.h(34,19): error C2955: 'Vishv::AI::World': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\World.h(9): message : see declaration of 'Vishv::AI::World'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(10,73): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(10,71): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(10,74): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(25,37): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(25,30): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(26,51): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::Initialize(AgentType &)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(26,51): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(26,2): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(14,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::Initialize'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(40,11): error C2663: 'Vishv::AI::World<AgentType>::Register': 3 overloads have no legal conversion for 'this' pointer
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(41,59): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::Initialize(AgentType &)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(41,59): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(41,13): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(14,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::Initialize'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(43,69): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(43,69): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(43,13): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(55,11): error C2663: 'Vishv::AI::World<AgentType>::Register': 3 overloads have no legal conversion for 'this' pointer
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(57,11): error C2663: 'Vishv::AI::World<AgentType>::Register': 3 overloads have no legal conversion for 'this' pointer
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(71,27): error C2663: 'Vishv::AI::World<AgentType>::GetObstacles': 2 overloads have no legal conversion for 'this' pointer
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(71,42): error C2530: 'obs': references must be initialized
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(71,42): error C3531: 'obs': a symbol whose type contains 'auto' must have an initializer
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(71,17): error C2143: syntax error: missing ';' before ':'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(71,42): error C2143: syntax error: missing ';' before ')'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(72,54): error C2664: 'void Vishv::Graphics::SimpleDraw::AddCapsule(const Vishv::Math::Shapes::Capsule &,const Vishv::Graphics::Color &)': cannot convert argument 1 from 'int' to 'const Vishv::Math::Shapes::Capsule &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(72,54): message : Reason: cannot convert from 'int' to 'const Vishv::Math::Shapes::Capsule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(72,54): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\SimpleDraw.h(22,7): message : see declaration of 'Vishv::Graphics::SimpleDraw::AddCapsule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(74,30): error C2663: 'Vishv::AI::World<AgentType>::GetWalls': 2 overloads have no legal conversion for 'this' pointer
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(74,41): error C2530: 'walled': references must be initialized
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(74,41): error C3531: 'walled': a symbol whose type contains 'auto' must have an initializer
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(74,20): error C2143: syntax error: missing ';' before ':'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(74,41): error C2143: syntax error: missing ';' before ')'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(75,52): error C2665: 'Vishv::Graphics::SimpleDraw::AddCuboid': none of the 2 overloads could convert all the argument types
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\SimpleDraw.h(21,7): message : could be 'void Vishv::Graphics::SimpleDraw::AddCuboid(const Vishv::Math::Shapes::Cuboid &,const Vishv::Graphics::Color &)'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(75,52): message : while trying to match the argument list '(int, Vishv::Graphics::Color)'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(108,48): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(108,76): error C2664: 'bool ImGui::DragFloat3(const char *,float [],float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float []'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(439,29): message : see declaration of 'ImGui::DragFloat3'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(109,48): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(109,65): error C2664: 'bool ImGui::DragFloat3(const char *,float [],float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float []'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(439,29): message : see declaration of 'ImGui::DragFloat3'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(110,43): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(110,54): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(111,52): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(111,74): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(112,58): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(112,82): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(113,57): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(113,81): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(114,48): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(114,63): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(115,56): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(115,72): error C2660: 'ImGui::Checkbox': function does not take 1 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(416,29): message : see declaration of 'ImGui::Checkbox'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(127,15): error C3083: 'WorldIO': the symbol to the left of a '::' must be a type
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(127,24): error C2039: 'Save': is not a member of 'Vishv::AI'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\SteeringBehaviour_Wander.h(10): message : see declaration of 'Vishv::AI'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(127,28): error C3861: 'Save': identifier not found
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(131,15): error C3083: 'WorldIO': the symbol to the left of a '::' must be a type
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(131,24): error C2039: 'Load': is not a member of 'Vishv::AI'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\SteeringBehaviour_Wander.h(10): message : see declaration of 'Vishv::AI'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.cpp(131,28): error C3861: 'Load': identifier not found
+  PathFindingTool.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\Ray.h(7,2): error C2011: 'Vishv::Physics::Ray': 'struct' type redefinition
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\RayCast.h(6): message : see declaration of 'Vishv::Physics::Ray'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator -' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator +' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(18,56): error C2039: 'Arrive': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(68): message : see reference to class template instantiation 'Vishv::AI::SteeringModule<AgentType>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(19,56): error C2039: 'Evade': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(20,56): error C2039: 'Flee': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(21,56): error C2039: 'Flocking': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(22,56): error C2039: 'ObstacleAvoidance': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(23,56): error C2039: 'Pursuit': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(24,56): error C2039: 'Seek': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(25,56): error C2039: 'Wander': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,37): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,41): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\ColliderComponent.h(32,20): error C2039: 'mSphere': is not a member of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\SphereCollider.h(9): message : see declaration of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,79): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,83): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\PathFindingTool.cpp(95,166): warning C4267: 'argument': conversion from 'size_t' to 'Vishv::AI::NodeID', possible loss of data
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\PathFindingTool.cpp(98,165): warning C4267: 'argument': conversion from 'size_t' to 'Vishv::AI::NodeID', possible loss of data
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\PathFindingTool.cpp(101,171): warning C4267: 'argument': conversion from 'size_t' to 'Vishv::AI::NodeID', possible loss of data
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\PathFindingTool.cpp(110,187): warning C4267: 'argument': conversion from 'size_t' to 'Vishv::AI::NodeID', possible loss of data
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\PathFindingTool.cpp(156,107): warning C4267: 'argument': conversion from 'size_t' to 'Vishv::AI::NodeID', possible loss of data
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\PathFindingTool.cpp(157,103): warning C4267: 'argument': conversion from 'size_t' to 'Vishv::AI::NodeID', possible loss of data
+  SteeringTool.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\Ray.h(7,2): error C2011: 'Vishv::Physics::Ray': 'struct' type redefinition
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\RayCast.h(6): message : see declaration of 'Vishv::Physics::Ray'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator -' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator +' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(18,56): error C2039: 'Arrive': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(68): message : see reference to class template instantiation 'Vishv::AI::SteeringModule<AgentType>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(19,56): error C2039: 'Evade': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(20,56): error C2039: 'Flee': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(21,56): error C2039: 'Flocking': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(22,56): error C2039: 'ObstacleAvoidance': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(23,56): error C2039: 'Pursuit': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(24,56): error C2039: 'Seek': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(25,56): error C2039: 'Wander': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,37): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,41): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\ColliderComponent.h(32,20): error C2039: 'mSphere': is not a member of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\SphereCollider.h(9): message : see declaration of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,79): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,83): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(10,73): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(10,71): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(10,74): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(25,37): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.h(25,30): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(47,98): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(47,96): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(48,1): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(51,7): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(68,17): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::Reset(void)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(68,17): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(68,2): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(47,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::Reset'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(70,61): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(70,61): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(70,2): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(84,50): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(84,50): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(84,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(86,51): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(86,51): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(86,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(91,52): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(91,52): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(91,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(93,53): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(93,53): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(93,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(98,52): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(98,52): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(98,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(100,53): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(100,53): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(100,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(105,52): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(105,52): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(105,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(107,53): error C2662: 'void Vishv::AI::SteeringModule<AgentType>::SetBehaviour(Vishv::AI::SteeringType,bool)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(107,53): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(107,4): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(34,8): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::SetBehaviour'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(125,4): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(133,4): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(147,25): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(147,52): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(147,78): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(147,99): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(147,123): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\SteeringTool.cpp(148,25): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+  WinMain.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\Ray.h(7,2): error C2011: 'Vishv::Physics::Ray': 'struct' type redefinition
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\RayCast.h(6): message : see declaration of 'Vishv::Physics::Ray'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator -' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator +' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(18,56): error C2039: 'Arrive': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(68): message : see reference to class template instantiation 'Vishv::AI::SteeringModule<AgentType>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(19,56): error C2039: 'Evade': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(20,56): error C2039: 'Flee': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(21,56): error C2039: 'Flocking': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(22,56): error C2039: 'ObstacleAvoidance': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(23,56): error C2039: 'Pursuit': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(24,56): error C2039: 'Seek': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(25,56): error C2039: 'Wander': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,37): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,41): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\ColliderComponent.h(32,20): error C2039: 'mSphere': is not a member of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\SphereCollider.h(9): message : see declaration of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,79): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,83): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(29,26): error C2079: 'AiObject::aiAgent' uses undefined struct 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(31,28): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(34,47): error C2977: 'Vishv::AI::FSM::StateMachine': too many template arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(11): message : see declaration of 'Vishv::AI::FSM::StateMachine'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(34,49): error C2977: 'Vishv::AI::FSM::StateMachine': too many template arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(11): message : see declaration of 'Vishv::AI::FSM::StateMachine'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(34,49): error C2955: 'Vishv::AI::FSM::StateMachine': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(11): message : see declaration of 'Vishv::AI::FSM::StateMachine'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(16,28): error C2027: use of undefined type 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(6): message : see declaration of 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(16,23): error C2064: term does not evaluate to a function taking 0 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(38,1): error C2662: 'void Vishv::AI::FSM::StateMachine<AgentType>::ChangeState(const std::string &)': cannot convert 'this' pointer from 'Vishv::AI::FSM::StateMachine' to 'Vishv::AI::FSM::StateMachine<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(38,1): message : Reason: cannot convert from 'Vishv::AI::FSM::StateMachine' to 'Vishv::AI::FSM::StateMachine<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(38,3): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\StateMachine.h(49,8): message : see declaration of 'Vishv::AI::FSM::StateMachine<AgentType>::ChangeState'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(44,1): error C2662: 'Vishv::Math::Vector3 Vishv::AI::SteeringModule<AgentType>::Calculate(void)': cannot convert 'this' pointer from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType> &'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(44,1): message : Reason: cannot convert from 'Vishv::AI::SteeringModule' to 'Vishv::AI::SteeringModule<AgentType>'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(44,22): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(53,24): message : see declaration of 'Vishv::AI::SteeringModule<AgentType>::Calculate'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(57,1): error C3536: 'proj': cannot be used before it is initialized
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(69,1): error C2664: 'bool ImGui::DragFloat3(const char *,float [],float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float []'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(439,29): message : see declaration of 'ImGui::DragFloat3'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(70,1): error C2664: 'bool ImGui::DragFloat3(const char *,float [],float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float []'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(439,29): message : see declaration of 'ImGui::DragFloat3'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(71,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(72,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(73,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(74,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(75,1): error C2664: 'bool ImGui::DragFloat(const char *,float *,float,float,float,const char *,float)': cannot convert argument 2 from 'float' to 'float *'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(437,29): message : see declaration of 'ImGui::DragFloat'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\AIObject.h(76,1): error C2660: 'ImGui::Checkbox': function does not take 1 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\External\ImGui\Inc\imgui.h(416,29): message : see declaration of 'ImGui::Checkbox'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.h(26,33): error C2079: 'MainState::agentTestAgent' uses undefined struct 'Vishv::AI::Agent'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.h(27,28): error C2955: 'Vishv::AI::SteeringModule': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(10): message : see declaration of 'Vishv::AI::SteeringModule'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP332_AI\02_SteeringBehaviour_Test\MainState.h(34,19): error C2955: 'Vishv::AI::World': use of class template requires template argument list
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\World.h(9): message : see declaration of 'Vishv::AI::World'
+  Generating Code...

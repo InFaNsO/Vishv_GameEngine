@@ -77,14 +77,14 @@ void Vishv::Physics::Octree::Initialzie(const Math::Vector3& center, const Math:
 
 	mLeafs.emplace_back(mRoot.get());
 
-	bounds.Set({ center.x, center.y, center.z }, { half.x, half.y, half.z });
+	bounds.Set({ static_cast<int>(center.x), static_cast<int>(center.y), static_cast<int>(center.z) }, { static_cast<int>(half.x), static_cast<int>(half.y), static_cast<int>(half.z) });
 
 	LenX = bounds.max.x - bounds.min.x;
 	LenY = bounds.max.y - bounds.min.y;
 	LenZ = bounds.max.z - bounds.min.z;
 }
 
-bool Vishv::Physics::Octree::Add(const RigidBody& object)
+bool Vishv::Physics::Octree::Add(RigidBody& object)
 {
 	if (totalObjects < mMaxObj)
 	{
@@ -95,7 +95,7 @@ bool Vishv::Physics::Octree::Add(const RigidBody& object)
 	return false;
 }
 
-void Vishv::Physics::Octree::AddRecursive(Node* node, const RigidBody& data, IntData::AABBInt& bounds)
+void Vishv::Physics::Octree::AddRecursive(Node* node, RigidBody& data, IntData::AABBInt& bounds)
 {
 	//check collisions 
 	//and insert in correct leaf
@@ -111,7 +111,8 @@ void Vishv::Physics::Octree::AddRecursive(Node* node, const RigidBody& data, Int
 		}
 
 		//add data
-		node->objects.emplace_back(data);
+		node->objects.emplace_back(&data);
+		data.myNode = node;
 
 		return;
 	}
@@ -120,9 +121,9 @@ void Vishv::Physics::Octree::AddRecursive(Node* node, const RigidBody& data, Int
 	{
 		auto bound = Bounds((Quadrant)i, bounds);
 
-		int x = data.myTransform->Position().x - bound.center.x;
-		int y = data.myTransform->Position().y - bound.center.y;
-		int z = data.myTransform->Position().z - bound.center.z;
+		int x = static_cast<int>(data.myTransform->Position().x) - bound.center.x;
+		int y = static_cast<int>(data.myTransform->Position().y) - bound.center.y;
+		int z = static_cast<int>(data.myTransform->Position().z) - bound.center.z;
 
 		if (x > bound.min.x && y > bound.min.y&& z > bound.min.z&&
 			x < bound.max.x && y < bound.max.y && z < bound.max.z)
@@ -200,9 +201,9 @@ void Vishv::Physics::Octree::Update()
 			if (obj->mIsStatic || !obj->mIsActive)
 				continue;
 
-			uint32_t x = Vishv::Math::Abs(obj->myTransform->mPosition.x - it->center.x);
-			uint32_t y = Vishv::Math::Abs(obj->myTransform->mPosition.y - it->center.y);
-			uint32_t z = Vishv::Math::Abs(obj->myTransform->mPosition.z - it->center.z);
+			uint32_t x = static_cast<uint32_t>(static_cast<int>(Vishv::Math::Abs(obj->myTransform->Position().x)) - it->center.x);
+			uint32_t y = static_cast<uint32_t>(static_cast<int>(Vishv::Math::Abs(obj->myTransform->Position().y)) - it->center.y);
+			uint32_t z = static_cast<uint32_t>(static_cast<int>(Vishv::Math::Abs(obj->myTransform->Position().z)) - it->center.z);
 
 			if (x >= (LenX >> it->level) ||
 				y >= (LenY >> it->level) ||
@@ -210,7 +211,7 @@ void Vishv::Physics::Octree::Update()
 			{
 				auto node = it->parent->parent;
 				IntData::AABBInt b;
-				b.Set(node->center, { LenX >> node->level , LenY >> node->level, LenZ >> node->level });
+				b.Set(node->center, { static_cast<int>(LenX) >> node->level , static_cast<int>(LenY) >> node->level, static_cast<int>(LenZ) >> node->level });
 				AddRecursive(it->parent->parent, *obj, b);
 
 				objIt = it->objects.erase(objIt);
@@ -220,3 +221,5 @@ void Vishv::Physics::Octree::Update()
 		}
 	}
 }
+
+

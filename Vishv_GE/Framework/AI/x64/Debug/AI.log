@@ -1,6 +1,7 @@
 ﻿  Precompiled.cpp
   Graph.cpp
   GraphSearch.cpp
-  MetaRegistration.cpp
+  MetaRegistrationAI.cpp
+  SteeringModule.cpp
   Generating Code...
-  AI.vcxproj -> D:\bhavCode\GithubBhav\Vishv_GameEngine\Vishv_GE\x64\Debug\AI.lib
+  AI.vcxproj -> C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\AI.lib

@@ -4,6 +4,8 @@
 #include "GameObject.h"
 #include "GameWorld.h"
 
+#include "AIWorldService.h"
+
 using namespace Vishv;
 using namespace Components;
 
@@ -21,7 +23,9 @@ META_CLASS_END
 void Vishv::Components::AIAgent::Initialize()
 {
 	mTransformComponent = GetOwner().GetComponent<TransformComponent>();
-	mWorld = &GetOwner().GetWorld().GetAIWorld();
+	mWorld = GetOwner().GetWorld().GetService<AIWorld>();
+	
+	mWorld->Register(GetOwner());
 }
 
 void Vishv::Components::AIAgent::Update(float deltaTime)

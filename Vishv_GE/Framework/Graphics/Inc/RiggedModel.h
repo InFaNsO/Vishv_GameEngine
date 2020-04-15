@@ -13,7 +13,7 @@ namespace Vishv::Graphics
 		Model model;
 		Skeleton skeleton;
 
-		AnimationSet* animations;
+		AnimationSet* animations = nullptr;
 
 		std::vector<AnimationPlayInformation> playAnimations;
 	};

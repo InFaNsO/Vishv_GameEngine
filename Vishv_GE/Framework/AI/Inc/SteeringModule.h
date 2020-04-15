@@ -15,14 +15,14 @@ namespace Vishv::AI
 		{
 			mAgent = &agent;
 
-			mBehaviours.emplace_back(std::make_unique<Steering::Arrive>());
-			mBehaviours.emplace_back(std::make_unique<Steering::Evade>());
-			mBehaviours.emplace_back(std::make_unique<Steering::Flee>());
-			mBehaviours.emplace_back(std::make_unique<Steering::Flocking>());
-			mBehaviours.emplace_back(std::make_unique<Steering::ObstacleAvoidance>());
-			mBehaviours.emplace_back(std::make_unique<Steering::Pursuit>());
-			mBehaviours.emplace_back(std::make_unique<Steering::Seek>());
-			mBehaviours.emplace_back(std::make_unique<Steering::Wander>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::Arrive>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::Evade>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::Flee>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::Flocking>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::ObstacleAvoidance>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::Pursuit>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::Seek>());
+			//mBehaviours.emplace_back(std::make_unique<Steering::Wander>());
 		}
 
 		template<class BehaviourType, class = std::void_t<std::is_base_of<Steering::BehaviourBase<AgentType>, BehaviourType>>>

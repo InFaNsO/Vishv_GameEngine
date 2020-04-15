@@ -1,1 +1,101 @@
-﻿
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\Core\Core.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\Engine\Vishv\Vishv.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\External\ImGui\ImGui.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\Graphics\Graphics.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\Input\Input.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\Math\Math.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\Physics\Physics.vcxproj' does not exist.
+  WinMain.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\Ray.h(7,2): error C2011: 'Vishv::Physics::Ray': 'struct' type redefinition
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\RayCast.h(6): message : see declaration of 'Vishv::Physics::Ray'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator -' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(42,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,24): error C3615: constexpr function 'Vishv::Physics::IntData::Vector3Int::operator +' cannot result in a constant expression
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : failure was caused by call of undefined function or one not declared 'constexpr'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\AABBInt.h(43,68): message : see usage of 'Vishv::Physics::IntData::Vector3Int::Vector3Int'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(18,56): error C2039: 'Arrive': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(68): message : see reference to class template instantiation 'Vishv::AI::SteeringModule<AgentType>' being compiled
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(19,56): error C2039: 'Evade': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(20,56): error C2039: 'Flee': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(21,56): error C2039: 'Flocking': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(22,56): error C2039: 'ObstacleAvoidance': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(23,56): error C2039: 'Pursuit': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(24,56): error C2039: 'Seek': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringModule.h(25,56): error C2039: 'Wander': is not a member of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\AI\Inc\SteeringBehaviour.h(22): message : see declaration of 'Vishv::AI::Steering'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,37): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\GameWorld.h(41,41): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\ColliderComponent.h(32,20): error C2039: 'mSphere': is not a member of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\SphereCollider.h(9): message : see declaration of 'Vishv::Physics::SphereCollider'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,79): error C2039: 'AABB': is not a member of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Inc\ShapeCollision.h(6): message : see declaration of 'Vishv::Physics::Collision'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Inc\QuadTree.h(32,83): error C2061: syntax error: identifier 'AABB'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(12,20): error C3646: 'mFirework': unknown override specifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(12,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(19,37): error C2653: 'Fireworks': is not a class or namespace name
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(19,37): error C2061: syntax error: identifier 'Ruleset'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(21,1): error C2679: binary '=': no operator found which takes a right-hand operand of type 'Vishv::Graphics::Mesh' (or there is no acceptable conversion)
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Mesh.h(15,1): message : could be 'Vishv::Graphics::MeshBase<Vishv::Graphics::VertexPC> &Vishv::Graphics::MeshBase<Vishv::Graphics::VertexPC>::operator =(Vishv::Graphics::MeshBase<Vishv::Graphics::VertexPC> &&)'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Mesh.h(15,1): message : or       'Vishv::Graphics::MeshBase<Vishv::Graphics::VertexPC> &Vishv::Graphics::MeshBase<Vishv::Graphics::VertexPC>::operator =(const Vishv::Graphics::MeshBase<Vishv::Graphics::VertexPC> &)'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(21,1): message : while trying to match the argument list '(Vishv::Graphics::MeshPC, Vishv::Graphics::Mesh)'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(22,3): error C2065: 'mFirework': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(22,24): error C2065: 'pyload': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(22,32): error C2065: 'rule': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(22,38): error C2065: 'position': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(30,14): error C2065: 'mFirework': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(32,37): error C2065: 'mFirework': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(56,20): error C2653: 'Fireworks': is not a class or namespace name
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(56,31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(56,20): error C2146: syntax error: missing ';' before identifier 'MakeRuleSet'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(57,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(57,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(87,21): error C2653: 'Fireworks': is not a class or namespace name
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(87,13): error C2065: 'Payload': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(87,21): error C2146: syntax error: missing ';' before identifier 'pl'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(87,21): error C2065: 'pl': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(89,19): error C3861: 'MakeRuleSet': identifier not found
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(89,35): error C2065: 'pl': undeclared identifier
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(97,18): error C2039: 'SetDirection': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(134,11): error C2039: 'Yaw': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(135,13): error C2039: 'Pitch': is not a member of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Object3D.h(10): message : see declaration of 'Vishv::Graphics::Camera'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(146,102): error C2660: 'Vishv::Graphics::Camera::GetPerspectiveMatrix': function does not take 1 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Camera.h(45,23): message : see declaration of 'Vishv::Graphics::Camera::GetPerspectiveMatrix'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(146,115): error C2660: 'FireworkParticle::Update': function does not take 2 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(28,7): message : see declaration of 'FireworkParticle::Update'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(149,72): error C2039: 'mFirework': is not a member of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(9): message : see declaration of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(149,72): error C3536: 'it': cannot be used before it is initialized
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(149,90): error C2039: 'mFirework': is not a member of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(9): message : see declaration of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(152,71): error C2039: 'mFirework': is not a member of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(9): message : see declaration of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(152,85): error C2660: 'FireworkParticle::Initialize': function does not take 1 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(19,7): message : see declaration of 'FireworkParticle::Initialize'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(163,109): error C2660: 'Vishv::Graphics::Camera::GetPerspectiveMatrix': function does not take 1 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Camera.h(45,23): message : see declaration of 'Vishv::Graphics::Camera::GetPerspectiveMatrix'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(163,122): error C2660: 'FireworkParticle::Update': function does not take 2 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(28,7): message : see declaration of 'FireworkParticle::Update'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(166,79): error C2039: 'mFirework': is not a member of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(9): message : see declaration of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(166,79): error C3536: 'it': cannot be used before it is initialized
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(166,102): error C2039: 'mFirework': is not a member of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(9): message : see declaration of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(169,78): error C2039: 'mFirework': is not a member of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(9): message : see declaration of 'FireworkParticle'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(169,92): error C2660: 'FireworkParticle::Initialize': function does not take 1 arguments
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\VGP_Physics\01_HelloFireworks\WinMain.cpp(19,7): message : see declaration of 'FireworkParticle::Initialize'
