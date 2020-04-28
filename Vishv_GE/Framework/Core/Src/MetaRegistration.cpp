@@ -39,7 +39,6 @@ namespace Vishv::Core::Meta
 
 using namespace Vishv;
 
-
 //Primitive basic defeination
 META_TYPE_DEFINE(int, Integer)
 META_TYPE_DEFINE(float, Number)

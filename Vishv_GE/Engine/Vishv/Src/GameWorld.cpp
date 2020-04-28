@@ -48,12 +48,12 @@ void Vishv::GameWorld::Terminate()
 	mIsInitialized = false;
 }
 
-void Vishv::GameWorld::Update(float deltaTime)
+void Vishv::GameWorld::Update()
 {
 	VISHVASSERT(!mIsUpdating, "Already Updateing");
 
 	for (auto& service : mServices)
-		service->Update(deltaTime);
+		service->Update();
 
 	mIsUpdating = true;
 
@@ -61,7 +61,7 @@ void Vishv::GameWorld::Update(float deltaTime)
 	{
 		auto go = mUpdateList[i];
 		if (go->mHandle.IsValid())
-			go->Update(deltaTime);
+			go->Update();
 	}
 
 	mIsUpdating = false;
@@ -77,11 +77,47 @@ void Vishv::GameWorld::SimpleDraw()
 
 void Vishv::GameWorld::DebugUI()
 {
+	ImGui::Begin("Heirarchy");
+	static Service* selectedService = nullptr;
+	static GameObject* selectedObject = nullptr;
+	if (ImGui::CollapsingHeader("Services"))
+	{
+		for (auto& service : mServices)
+		{
+			if (ImGui::Button(service.get()->GetTypeID().c_str()))
+			{
+				selectedObject = nullptr;
+				selectedService = service.get();
+			}
+		}
+	}
+	if (ImGui::CollapsingHeader("Game Objects"))
+	{
+		for (auto& go : mUpdateList)
+		{
+			if (ImGui::Button(go->mName.c_str()))
+			{
+				selectedService = nullptr;
+				selectedObject = go;
+			}
+		}
+	}
+	ImGui::End();
 
+	ImGui::Begin("Inspector");
 
-	//add services
-	//for (auto& service : mServices)
-	//	service->Terminate();
+	if (selectedService)
+	{
+		selectedService->DoUI(selectedService, *selectedService->GetMetaClass());
+		selectedService->DebugUI();
+	}
+	else if (selectedObject)
+	{
+		//do meta ui then custom ui
+		selectedObject->DebugUI();
+	}
+
+	ImGui::End();
 }
 
 void Vishv::GameWorld::Render()

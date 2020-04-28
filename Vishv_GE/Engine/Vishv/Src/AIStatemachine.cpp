@@ -13,12 +13,12 @@ void Vishv::Components::AIStateMachine::Initialize()
 	mStateMachine = std::make_unique<AI::FSM::StateMachine<GameObject>>(GetOwner());
 }
 
-void Vishv::Components::AIStateMachine::Update(float deltaTime)
+void Vishv::Components::AIStateMachine::Update()
 {
 	if (!mStateMachine->HasStates())
 		return;
 
-	mStateMachine->Update(deltaTime);
+	mStateMachine->Update(Core::Time::Get()->DeltaTime());
 }
 
 void Vishv::Components::AIStateMachine::SimpleDraw()

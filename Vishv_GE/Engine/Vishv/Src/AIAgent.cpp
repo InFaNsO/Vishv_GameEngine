@@ -28,7 +28,7 @@ void Vishv::Components::AIAgent::Initialize()
 	mWorld->Register(GetOwner());
 }
 
-void Vishv::Components::AIAgent::Update(float deltaTime)
+void Vishv::Components::AIAgent::Update()
 {
 	UpdateNearByAgents();
 	FindNearByAgents();

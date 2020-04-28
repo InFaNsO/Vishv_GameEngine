@@ -13,7 +13,7 @@ namespace Vishv::Components
 			void Initialize() override;
 		void Terminate() override;
 
-		void Update(float deltaTime) override;
+		void Update() override;
 		void SimpleDraw() override;
 		void DebugUI() override;
 

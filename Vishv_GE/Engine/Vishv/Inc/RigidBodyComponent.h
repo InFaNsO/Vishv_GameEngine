@@ -17,10 +17,6 @@ namespace Vishv::Components
 		META_CLASS_DECLARE;
 
 		void Initialize()override;
-		void Update(float deltaTime) override;
-		void DebugUI() override;
-		void SimpleDraw() override;
-
 		void SetCollider(Physics::Collider* coll);
 
 	private:

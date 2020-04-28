@@ -28,7 +28,7 @@ private:
 	GameWorldCreator mCreator;
 	size_t maxEnemies = 2;
 	Vishv::GameWorld mGameWorld;
-	
+
 	Vishv::GameObjectHandle mPathFinding;
 
 	Vishv::Graphics::RiggedModel mEnemyModel;

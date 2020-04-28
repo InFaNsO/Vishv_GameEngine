@@ -90,9 +90,6 @@
     <ClInclude Include="Inc\GlobalHeaders.h">
       <Filter>Inc</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\Scene.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\imfilebrowser.h">
       <Filter>Inc</Filter>
     </ClInclude>
@@ -185,6 +182,9 @@
     </ClInclude>
     <ClInclude Include="Inc\CameraService.h">
       <Filter>Inc\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\CameraComponent.h">
+      <Filter>Inc\Components\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -289,6 +289,12 @@
     </ClCompile>
     <ClCompile Include="Src\CameraService.cpp">
       <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CameraComponent.cpp">
+      <Filter>Src\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AppState.cpp">
+      <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

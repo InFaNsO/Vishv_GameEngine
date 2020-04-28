@@ -34,15 +34,17 @@ void Vishv::Components::ThirdPersonControllerComponent::Initialize()
 {
 	mCamSys = GetOwner().GetWorld().GetService<CameraSystem>();
 	std::string name = "TP_Camera";
-	mCamera = mCamSys->SetMainCamera(name);
+	//mCamera = mCamSys->SetMainCamera(name);
 	mTransformComponent = GetOwner().GetComponent<Vishv::Components::TransformComponent>();
 
 	offsetCamera = { 0.0f, 250.0f, -200.0f };
 }
 
-void Vishv::Components::ThirdPersonControllerComponent::Update(float deltaTime)
+void Vishv::Components::ThirdPersonControllerComponent::Update()
 {
 	auto input = Vishv::Input::InputSystem::Get();
+
+	float deltaTime = Core::Time::Get()->DeltaTime();
 
 	if (input->IsKeyDown(Input::KeyCode::W) && input->IsKeyDown(Input::KeyCode::LSHIFT) || mForward && mBoost)
 	{
@@ -129,6 +131,7 @@ void Vishv::Components::ThirdPersonControllerComponent::Update(float deltaTime)
 
 void Vishv::Components::ThirdPersonControllerComponent::DebugUI()
 {
+	//make it like cinemachine free look cam
 }
 
 

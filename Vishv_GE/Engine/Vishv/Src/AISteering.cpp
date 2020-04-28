@@ -39,9 +39,9 @@ void Vishv::Components::AISteering::Initialize()
 	mSteeringModule.AddBehaviour<Vishv::AI::Steering::Wander>();
 }
 
-void Vishv::Components::AISteering::Update(float deltaTime)
+void Vishv::Components::AISteering::Update()
 {
-	auto vel = mSteeringModule.Calculate() * deltaTime;
+	auto vel = mSteeringModule.Calculate() * Core::Time::Get()->DeltaTime();
 	if (vel != Math::Vector3(0.0f))
 	{
 		mTransformComponent->RotateUp(vel.GetAngle(mTransformComponent->Forward()));

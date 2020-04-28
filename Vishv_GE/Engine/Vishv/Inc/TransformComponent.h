@@ -10,12 +10,8 @@ namespace Vishv::Components
 	public:
 		META_CLASS_DECLARE
 
-		void Initialize() override;
-		void Update(float deltaTime) override;
-		void DebugUI() override;
+		void Update() override;
 		void SimpleDraw() override;
-		void Render() override;
-		void Terminate() override;
 
 
 		bool operator==(const TransformComponent& other)
@@ -30,12 +26,12 @@ namespace Vishv::Components
 		const Math::Vector3& Up() const { return mTransform.Up(); }
 		const Math::Vector3& Forward() const { return mTransform.Forward(); }
 
-		void TranslateX(float value) { mTransform.TranslateX(value); }
-		void TranslateY(float value){ mTransform.TranslateY(value); }
-		void TranslateZ(float value){ mTransform.TranslateZ(value); }
-		void TranslateUp(float value) { mTransform.TranslateUp(value); }
-		void TranslateForward(float value) { mTransform.TranslateForward(value); }
-		void TranslateRight(float value) { mTransform.TranslateRight(value); }
+		void TranslateX(float value) { mTransform.TranslateX(value); changePos = true; }
+		void TranslateY(float value){ mTransform.TranslateY(value); changePos = true; }
+		void TranslateZ(float value){ mTransform.TranslateZ(value); changePos = true;}
+		void TranslateUp(float value) { mTransform.TranslateUp(value); changePos = true;}
+		void TranslateForward(float value) { mTransform.TranslateForward(value); changePos = true;}
+		void TranslateRight(float value) { mTransform.TranslateRight(value); changePos = true;}
 
 		void RotateX(float angleDeg)							{ mRotationWorld.x += angleDeg; }
 		void RotateY(float angleDeg)							{ mRotationWorld.y += angleDeg; }
@@ -44,18 +40,18 @@ namespace Vishv::Components
 		void RotateUp(float angleDeg)							{ mRotationLocal.y += angleDeg; }
 		void RotateForward(float angleDeg)						{ mRotationLocal.z += angleDeg; }
 		void Rotate(const Math::Vector3& axis, float angleDeg)	{ mTransform.Rotate(axis, angleDeg); }
-		void SetRotation(Math::Quaternion&& quat)				{ mTransform.SetRotation(std::move(quat)); }
+		void SetRotation(Math::Quaternion&& quat)				{ mQuaternion = quat; }
 
-		void RotateNowY(float deg) { mTransform.RotateY(deg); }
+		//void RotateNowY(float deg) { mTransform.RotateY(deg); }
 
-		const Math::Quaternion& Rotation() const { return mTransform.Rotation(); }
+		const Math::Quaternion& Rotation() const { return mQuaternion; }
 		const Math::Vector3& Position() const { return mTransform.Position(); }
 
 		Math::Vector3& GetPosition() { return mTransform.mPosition; }
 
 		void SwitchForard() { mTransform.SwitchForward(); }
 
-		const Vishv::Math::Quaternion& Rotation() { return mTransform.Rotation(); }
+		const Vishv::Math::Quaternion& Rotation() { return mQuaternion; }
 
 		const Vishv::Math::Transform& Transform() const { return mTransform; }
 		Vishv::Math::Transform& Transform() { return mTransform; }
@@ -63,7 +59,9 @@ namespace Vishv::Components
 		//Math::Vector3 mPosition;
 		//Math::Vector3 mScale;
 	private:
-		//Math::Quaternion mQuaternion;
+		bool changePos = false;
+
+		Math::Quaternion mQuaternion;
 		//Math::Vector3 mUp;
 		//Math::Vector3 mForward;
 		Vishv::Math::Vector3 mRotationWorld;
@@ -75,6 +73,7 @@ namespace Vishv::Components
 		Math::Transform mTransform;
 
 		Math::Vector3 pos;
+		Math::Vector3 scale;
 	};
 }
 

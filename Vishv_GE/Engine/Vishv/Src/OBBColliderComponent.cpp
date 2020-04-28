@@ -22,7 +22,7 @@ void Vishv::Components::OBBCollider::Initialize()
 	mColliderOBB.myTransform = &mTransformComponent->Transform();
 }
 
-void Vishv::Components::OBBCollider::Update(float deltaTime)
+void Vishv::Components::OBBCollider::Update()
 {
 	if (!firstUpdate)
 		DoFirstUpdate();

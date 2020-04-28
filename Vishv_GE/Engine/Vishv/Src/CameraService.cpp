@@ -1,6 +1,10 @@
 #include "Precompiled.h"
 #include "CameraService.h"
 
+#include "TransformComponent.h"
+#include "CameraComponent.h"
+#include "GameObject.h"
+
 using namespace Vishv;
 
 META_DERIVED_BEGIN(CameraSystem, Service)
@@ -10,85 +14,182 @@ META_CLASS_END
 
 void Vishv::CameraSystem::Initialize()
 {
-	mNames.reserve(10);
 	mCameras.reserve(10);
 }
 
-void Vishv::CameraSystem::Update(float deltaTime)
+void Vishv::CameraSystem::Update()
 {
-	for (auto& cam : mCameras)
+	//update the current camera;
+	mCameras[MainCamera]->Update();
+
+	if (!isTransitioning)
+		return;
+
+	auto t = Core::Time::Get();
+
+	if (t->CurrentTime < transitionEndTime)
 	{
-		cam.ComputeMatricies();
+		//do lerping
+		float percent = t->CurrentTime() / transitionEndTime;
+		mMainCameraTransformation->GetPosition() = Math::Vector3::Lerp(cachePos, TargetCamTransform->Position(), percent);
+		mMainCameraTransformation->SetRotation(Math::Quaternion::Slerp(cacheQuat, TargetCamTransform->Rotation(), percent));
 	}
+	else
+	{
+		//end transition
+		int index = transitionCamIndex;
+		EndTransition();
+		SetMainCamera(index);
+	}
+	
 }
 
-void Vishv::CameraSystem::DebugUI()
+void Vishv::CameraSystem::BindBuffer(const Graphics::EffectType& type)
 {
-	int count = 0;
-	for (auto& name : mNames)
-	{
-		ImGui::CollapsingHeader(name.c_str());
-	}
-
-	if (ImGui::Button("Add Camera"))
-	{
-		AddCamera("New Cam " + count);
-	}
+	mCameras[MainCamera]->BindToBuffer(type);
+}
+Math::Vector2 Vishv::CameraSystem::WorldToScreen(const Math::Vector3& worldCoordinate)
+{
+	return mCameras[MainCamera]->WorldToScreen(worldCoordinate);
+}
+Math::Vector3 Vishv::CameraSystem::ScreenToWorld(const Math::Vector2& screenCoordinate)
+{
+	return mCameras[MainCamera]->ScreenToWorld(screenCoordinate);
 }
 
-Graphics::Camera* Vishv::CameraSystem::GetCamera(std::string& name)
+Math::Vector3 Vishv::CameraSystem::ScreenToWorld(const Math::Vector3& screenCoordinate)
 {
-	int ind = 0;
-	for (auto& n : mNames)
-	{
-		if (n == name)
-			return &mCameras[ind];
-		ind++;
-	}
-
-	return nullptr;
+	return mCameras[MainCamera]->ScreenToWorld(screenCoordinate);
+}
+Physics::Ray Vishv::CameraSystem::MouseToWorldRay()
+{
+	return mCameras[MainCamera]->MouseToWorldRay();
 }
 
-Graphics::Camera* Vishv::CameraSystem::AddCamera(std::string name)
-{
-	if (auto cam = GetCamera(name); cam != nullptr)
-	{
-		return cam;
-	}
-
-	mNames.emplace_back(std::move(name));
-	return &mCameras.emplace_back(Graphics::Camera());
-}
-
-Graphics::Camera* Vishv::CameraSystem::GetMainCamera()
+GameObjectHandle Vishv::CameraSystem::GetMainCamera()
 {
 	if (MainCamera == -1)
-		return nullptr;
+		return GameObjectHandle();
 
-	return &mCameras[MainCamera];
+	return mCameras[MainCamera]->GetOwner().GetHandle();
 }
 
-Graphics::Camera* Vishv::CameraSystem::SetMainCamera(std::string& name)
+void Vishv::CameraSystem::SetMainCamera(const GameObjectHandle& cam)
 {
-	int ind = 0;
-	for (auto& n : mNames)
+	VISHVASSERT(cam.Get()->GetComponent<Components::CameraComponent>(), "[CameraSystem] game object doesnt have a camera");
+
+	int index = 0;
+	bool found = false;
+	for (auto& camera : mCameras)
 	{
-		if (n == name)
+		if (camera->GetOwner().GetHandle() == cam)
 		{
-			MainCamera = ind;
-			return &mCameras[MainCamera];
+			mCameras[MainCamera]->isMainCamera = false;
+			MainCamera = index;
+			mCameras[MainCamera]->isMainCamera = true;
+
+			found = true;
+			break;
 		}
-		ind++;
+		++index;
 	}
 
-	return AddCamera(std::move(name));
+	if (!found)
+	{
+		//add camera
+	}
 }
 
+void Vishv::CameraSystem::TransitionTo(const GameObjectHandle& camHandle, float duration)
+{
+	TransitionTo(GetIndexFromHandle(camHandle), duration);
+}
+
+void Vishv::CameraSystem::TransitionTo(int camIndex, float duration)
+{
+	VISHVASSERT(camIndex >= 0, "[Camera System] invalid index used");
+	VISHVASSERT(MainCamera != camIndex, "[Camera System] invalid transition");
+
+	auto t = Core::Time::Get();
+
+	if (isTransitioning)
+		EndTransition();
+
+	isTransitioning = true;
+	transitionCamIndex = camIndex;
+	transitionDuration = duration;
+	transitionEndTime = t->CurrentTime() + duration;
+	TargetCamTransform = mCameras[transitionCamIndex]->GetOwner().GetComponent<Components::TransformComponent>();
+
+	cachePos = mMainCameraTransformation->GetPosition();
+	cacheQuat = mMainCameraTransformation->Rotation();
+}
+
+GameObjectHandle Vishv::CameraSystem::SetMainCamera(int index)
+{
+	VISHVASSERT(mCameras.size() != 0, "[Camera System] No Cameras added to the system");
+	VISHVASSERT(index < mCameras.size(), "[Camera System] Invalid camera index");
+
+	if (MainCamera >= 0)
+	{
+		mCameras[MainCamera]->isMainCamera = false;
+	}
+	MainCamera = index;
+	mCameras[MainCamera]->isMainCamera = true;
+
+	mMainCameraTransformation = mCameras[MainCamera]->GetOwner().GetComponent<Components::TransformComponent>();
+
+	return mCameras[MainCamera]->GetOwner().GetHandle();
+}
 
 void Vishv::CameraSystem::Terminate()
 {
-	mNames.clear();
 	mCameras.clear();
 }
 
+void Vishv::CameraSystem::Register(Components::CameraComponent& cam)
+{
+	mCameras.emplace_back(&cam);
+	if (MainCamera == -1)
+		SetMainCamera(0);
+}
+
+int Vishv::CameraSystem::GetIndexFromHandle(const GameObjectHandle& handle)
+{
+	VISHVASSERT(handle.Get()->GetComponent<Components::CameraComponent>(), "[CameraSystem] game object doesnt have a camera");
+
+	int index = 0;
+	bool found = false;
+	for (auto& camera : mCameras)
+	{
+		if (camera->GetOwner().GetHandle() == handle)
+		{
+			mCameras[MainCamera]->isMainCamera = false;
+			MainCamera = index;
+			mCameras[MainCamera]->isMainCamera = true;
+
+			found = true;
+			break;
+		}
+		++index;
+	}
+
+	VISHVASSERT(found, "[CameraSystem] the game object does not belong to the system");
+
+	return index;
+}
+
+void Vishv::CameraSystem::EndTransition()
+{
+	isTransitioning = false;
+	transitionDuration = 0.f;
+	transitionEndTime = 0.f;
+	transitionCamIndex = -1;
+	TargetCamTransform = nullptr;
+	mMainCameraTransformation->GetPosition() = cachePos;
+	mMainCameraTransformation->SetRotation(std::move(cacheQuat));
+
+	cachePos = Math::Vector3();
+	cacheQuat = Math::Quaternion::CreateIdentity();
+}
 

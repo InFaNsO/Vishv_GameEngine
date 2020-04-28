@@ -24,7 +24,7 @@ void Vishv::AIWorld::Terminate()
 {
 }
 
-void Vishv::AIWorld::Update(float deltaTime)
+void Vishv::AIWorld::Update()
 {
 }
 

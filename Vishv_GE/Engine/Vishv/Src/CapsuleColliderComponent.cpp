@@ -22,7 +22,7 @@ void Vishv::Components::CapsuleCollider::Initialize()
 	mColliderCapsule.myTransform = &mTransformComponent->Transform();
 }
 
-void Vishv::Components::CapsuleCollider::Update(float deltaTime)
+void Vishv::Components::CapsuleCollider::Update()
 {
 	if (!firstUpdate)
 		DoFirstUpdate();

@@ -156,6 +156,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VishvEditor", "Tools\VishvE
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_PhysicsCollision", "Demo\02_PhysicsCollision\02_PhysicsCollision.vcxproj", "{B8518CBF-2613-45DF-B996-ABFCB3275CF4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_Animation", "Demo\03_Animation\03_Animation.vcxproj", "{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		checked|x64 = checked|x64
@@ -988,6 +990,22 @@ Global
 		{B8518CBF-2613-45DF-B996-ABFCB3275CF4}.Release|x64.Build.0 = Release|x64
 		{B8518CBF-2613-45DF-B996-ABFCB3275CF4}.Release|x86.ActiveCfg = Release|Win32
 		{B8518CBF-2613-45DF-B996-ABFCB3275CF4}.Release|x86.Build.0 = Release|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.checked|x64.ActiveCfg = Release|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.checked|x64.Build.0 = Release|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.checked|x86.ActiveCfg = Release|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.checked|x86.Build.0 = Release|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Debug|x64.ActiveCfg = Debug|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Debug|x64.Build.0 = Debug|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Debug|x86.ActiveCfg = Debug|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Debug|x86.Build.0 = Debug|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.profile|x64.ActiveCfg = Release|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.profile|x64.Build.0 = Release|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.profile|x86.ActiveCfg = Release|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.profile|x86.Build.0 = Release|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Release|x64.ActiveCfg = Release|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Release|x64.Build.0 = Release|x64
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Release|x86.ActiveCfg = Release|Win32
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1050,6 +1068,7 @@ Global
 		{2E0FAE89-3833-4470-A887-BEFEB7F8F378} = {E368F375-64B8-43AC-832C-F350212F4F63}
 		{2B9F8E5A-1610-4238-90D1-31DE57D5A6EA} = {547216F7-4277-4B5D-86F7-90BD1E68BE15}
 		{B8518CBF-2613-45DF-B996-ABFCB3275CF4} = {0FF0A7FB-D9C3-4522-9856-59F59F37C69F}
+		{CD09C664-BCFE-4A70-9CB9-966E5EFB13B1} = {0FF0A7FB-D9C3-4522-9856-59F59F37C69F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {587895C2-3199-4089-9980-F13FF4476EF8}

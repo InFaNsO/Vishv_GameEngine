@@ -1,4 +1,1 @@
-﻿  WinMain.cpp
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(52,22): error C2039: 'SamplerManager': is not a member of 'Vishv::Graphics'
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(11): message : see declaration of 'Vishv::Graphics'
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\Model.h(57): message : see reference to class template instantiation 'Vishv::Graphics::ModelBase<MESH>' being compiled
+﻿

@@ -25,9 +25,9 @@ void Vishv::PhysicsSystem::Terminate()
 }
 
 
-void Vishv::PhysicsSystem::Update(float deltaTime)
+void Vishv::PhysicsSystem::Update()
 {
-	mWorld.Update(deltaTime);
+	mWorld.Update(Core::Time::Get()->DeltaTime());
 }
 
 void Vishv::PhysicsSystem::Render()

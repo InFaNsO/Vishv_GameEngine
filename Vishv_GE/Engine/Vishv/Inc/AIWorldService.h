@@ -26,7 +26,7 @@ namespace Vishv
 		void Initialize() override;
 		void Terminate() override;
 
-		void Update(float deltaTime) override;
+		void Update() override;
 		void Render() override;
 		void DebugUI() override;
 

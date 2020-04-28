@@ -36,7 +36,7 @@ void Vishv::Components::AIPathFinding::Terminate()
 {
 }
 
-void Vishv::Components::AIPathFinding::Update(float deltaTime)
+void Vishv::Components::AIPathFinding::Update()
 {
 }
 

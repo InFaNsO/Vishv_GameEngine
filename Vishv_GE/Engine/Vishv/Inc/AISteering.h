@@ -15,7 +15,7 @@ namespace Vishv::Components
 		META_CLASS_DECLARE
 
 		void Initialize() override;
-		void Update(float deltaTime) override;
+		void Update() override;
 		void DebugUI() override;
 		void Terminate() override;
 

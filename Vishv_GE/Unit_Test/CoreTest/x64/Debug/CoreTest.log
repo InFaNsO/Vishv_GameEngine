@@ -1,12 +1,1 @@
-﻿  stdafx.cpp
-  BlockAllocatorTest.cpp
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Core\Inc\Common.h(34,10): fatal error C1083: Cannot open include file: 'RapidJSON/Inc/document.h': No such file or directory
-  Handle.cpp
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Core\Inc\Common.h(34,10): fatal error C1083: Cannot open include file: 'RapidJSON/Inc/document.h': No such file or directory
-  HandlePool.cpp
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Core\Inc\Common.h(34,10): fatal error C1083: Cannot open include file: 'RapidJSON/Inc/document.h': No such file or directory
-  MetaTest.cpp
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Core\Inc\Common.h(34,10): fatal error C1083: Cannot open include file: 'RapidJSON/Inc/document.h': No such file or directory
-  TypedAllocatorTest.cpp
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Core\Inc\Common.h(34,10): fatal error C1083: Cannot open include file: 'RapidJSON/Inc/document.h': No such file or directory
-  Generating Code...
+﻿

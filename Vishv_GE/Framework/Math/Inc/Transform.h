@@ -56,6 +56,8 @@ public:
 	const Quaternion& Rotation() const{ return mQuaternion; }
 	const Math::Vector3& Position() const{ return mPosition; }
 
+	Quaternion& GetRotationQuaternion() const { return mQuaternion; }
+
 	Vector3 mPosition;
 	Vector3 mScale = Vector3(1.0f);
 private:

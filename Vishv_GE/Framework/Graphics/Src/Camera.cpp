@@ -82,6 +82,24 @@ void Vishv::Graphics::Camera::ComputeMatricies(float aspectRatio)
 	mPerspectiveMatrix = ComputePerspectiveMatrix(mNearPlane, mFarPlane, mFov, aspectRatio);
 }
 
+void Vishv::Graphics::Camera::ComputeMatricies(const Math::Transform& transformation)
+{
+	//mLookAt = { 0.0f };
+	//mLookAt.z += 1.0f;
+	//mLookAt = (Math::Matrix4::RotateMatrix(transform.Rotation()) * Math::Matrix4::TranslateMatrix(transform.mPosition)) * mLookAt;
+
+	const Math::Vector3 look = Vishv::Math::Normalize(transformation.Forward());
+	const Math::Vector3 right = Math::Normalize(Math::Cross(transformation.Up(), look));
+	const Math::Vector3 up = Math::Normalize(transform.Up());
+	mViewMatrix = ComputeViewMatrix(right, up, look, transformation.mPosition);
+
+	auto w = GraphicsSystem::Get()->GetBackBufferWidth();
+	auto h = GraphicsSystem::Get()->GetBackBufferHeight();
+	float aspectRatio = static_cast<float>(w) / static_cast<float>(h);
+	
+	mPerspectiveMatrix = ComputePerspectiveMatrix(mNearPlane, mFarPlane, mFov, aspectRatio);
+}
+
 Math::Vector3 Vishv::Graphics::Camera::GetCameraUp() const
 {
 	return transform.Up();

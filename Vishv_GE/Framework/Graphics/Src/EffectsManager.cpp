@@ -11,7 +11,7 @@ using namespace Vishv::Graphics;
 
 void Vishv::Graphics::EffectsManager::StaticInitialize()
 {
-	VISHVASSERT(sInstance == nullptr, "[SamplerManager] already Initialized");
+	VISHVASSERT(sInstance == nullptr, "[EffectsManager] already Initialized");
 	sInstance = std::make_unique<EffectsManager>();
 	sInstance->Initialize();
 }
@@ -27,7 +27,7 @@ void Vishv::Graphics::EffectsManager::StaticTerminate()
 
 Vishv::Graphics::EffectsManager * Vishv::Graphics::EffectsManager::Get()
 {
-	VISHVASSERT(sInstance != nullptr, "[SamplerManager] not Initialized");
+	VISHVASSERT(sInstance != nullptr, "[EffectsManager] not Initialized");
 
 	return sInstance.get();
 }

@@ -19,9 +19,7 @@ namespace Vishv::Components
 		META_CLASS_DECLARE;
 
 		void Initialize()override;
-		void Update(float deltaTime) override;
-		void DebugUI() override;
-		void SimpleDraw() override;
+		void Update() override;
 
 		void SetTag(int tag) { mTag = tag; }
 		int GetTag() { return mTag; }

@@ -46,6 +46,7 @@ public:
 	Math::Vector3 GetCameraUp() const;
 
 	void ComputeMatricies(float aspectRatio = 0.0f);
+	void ComputeMatricies(const Math::Transform& transformation);
 
 	Math::Transform transform;
 private:

@@ -177,7 +177,7 @@ void Vishv::Math::Quaternion::Rotate(float angleRad, Vector3 & object)
 
 void Vishv::Math::Quaternion::Rotate(Vector3& object)
 {
-	if (r = 0)
+	if (r == 0)
 	{
 		LOG("Angle not set on the quaternion");
 		return;
@@ -210,6 +210,24 @@ void Vishv::Math::Quaternion::MakeUnit()
 		LOG("The quaternion is small.");
 	}
 
+}
+
+float Vishv::Math::Quaternion::GetRotation(const Vector3& vec)
+{
+	//https://stackoverflow.com/questions/3684269/component-of-a-quaternion-rotation-around-an-axis
+
+	auto axis = vec.Normalized();
+	Vector3 orth1 = Vector3(1.0f);
+	Vector3 orth2 = Vector3(1.0f);
+	Vector3::MakeOrthonormal(axis, orth1, orth2);
+
+	Vector3 transformed = orth1;
+	transformed.Rotate(*this);
+
+	Vector3 flatened = transformed - (axis * axis.Dot(transformed));
+	flatened.Normalize();
+
+	return acosf(orth1.Dot(flatened));
 }
 
 

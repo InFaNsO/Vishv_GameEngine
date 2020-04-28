@@ -1,7 +1,42 @@
-﻿  AIAgent.cpp
+﻿  Precompiled.cpp
+  AIAgent.cpp
+  AIPathFinding.cpp
+  AIStatemachine.cpp
+  AISteering.cpp
+  AIWorldService.cpp
+  App.cpp
+  CameraService.cpp
+  CapsuleColliderComponent.cpp
+  ColliderComponent.cpp
+  Component.cpp
+  Editor.cpp
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Src\Editor.cpp(63,43): warning C4302: 'type cast': truncation from 'Vishv::Components::Component *' to 'uint8_t'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Src\Editor.cpp(68,47): warning C4302: 'type cast': truncation from 'Vishv::Components::Component *' to 'uint8_t'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Src\Editor.cpp(73,47): warning C4302: 'type cast': truncation from 'Vishv::Components::Component *' to 'uint8_t'
+C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Src\Editor.cpp(78,69): warning C4302: 'type cast': truncation from 'Vishv::Components::Component *' to 'uint8_t'
+  MeshComponent.cpp
+  OBBColliderComponent.cpp
   PhysicsWorldService.cpp
   RigidBodyComponent.cpp
   Service.cpp
+  SphereColliderComponent.cpp
+  ThirdPersonControllerComponent.cpp
+  GameObject.cpp
+  GameObjectFactory.cpp
+  Generating Code...
+  Compiling...
+  GameWorld.cpp
+  MetaRegistration.cpp
+  ModelAnimation.cpp
+  Steering_Arrive.cpp
+  Steering_Evade.cpp
+  Steering_Flee.cpp
+  Steering_Flocking.cpp
+  Steering_ObstacleAvoidance.cpp
+  Steering_Pursuit.cpp
+  Steering_Seek.cpp
+  Steering_Wander.cpp
+  TransformComponent.cpp
   Vishv.cpp
   Generating Code...
   Vishv.vcxproj -> C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Vishv.lib

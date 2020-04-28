@@ -163,6 +163,7 @@
     <ClInclude Include="Inc\AISteering.h" />
     <ClInclude Include="Inc\App.h" />
     <ClInclude Include="Inc\AppState.h" />
+    <ClInclude Include="Inc\CameraComponent.h" />
     <ClInclude Include="Inc\CameraService.h" />
     <ClInclude Include="Inc\CapsuleColliderComponent.h" />
     <ClInclude Include="Inc\MeshComponent.h" />
@@ -181,7 +182,6 @@
     <ClInclude Include="Inc\imfilebrowser.h" />
     <ClInclude Include="Inc\MetaRegistration.h" />
     <ClInclude Include="Inc\ModelAnimation.h" />
-    <ClInclude Include="Inc\Scene.h" />
     <ClInclude Include="Inc\SteeringBehaviour_Evade.h" />
     <ClInclude Include="Inc\SteeringBehaviour_Flee.h" />
     <ClInclude Include="Inc\SteeringBehaviour_Flocking.h" />
@@ -202,6 +202,8 @@
     <ClCompile Include="Src\AISteering.cpp" />
     <ClCompile Include="Src\AIWorldService.cpp" />
     <ClCompile Include="Src\App.cpp" />
+    <ClCompile Include="Src\AppState.cpp" />
+    <ClCompile Include="Src\CameraComponent.cpp" />
     <ClCompile Include="Src\CameraService.cpp" />
     <ClCompile Include="Src\CapsuleColliderComponent.cpp" />
     <ClCompile Include="Src\ColliderComponent.cpp" />

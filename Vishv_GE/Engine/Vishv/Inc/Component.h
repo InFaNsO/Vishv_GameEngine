@@ -13,7 +13,7 @@ namespace Vishv::Components
 		virtual ~Component() = default;
 
 		virtual void Initialize() {}
-		virtual void Update(float deltaTime) {}
+		virtual void Update() {}
 		virtual void SimpleDraw() {}
 		virtual void DebugUI() {}
 		virtual void Render() {}

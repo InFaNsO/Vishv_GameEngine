@@ -26,13 +26,13 @@ void Vishv::GameObject::Terminate()
 		component->Terminate();
 }
 
-void Vishv::GameObject::Update(float deltaTime)
+void Vishv::GameObject::Update()
 {
 	if (!mIsActive)
 		return;
 
 	for (auto& component : mComponents)
-		component->Update(deltaTime);
+		component->Update();
 }
 
 void Vishv::GameObject::Render()
@@ -49,17 +49,72 @@ void Vishv::GameObject::DebugUI()
 	if (!mIsActive)
 		return;
 
+	ImGui::Checkbox("", &mIsActive);
+	ImGui::SameLine();
+	ImGui::Text(mName.c_str());
 	for (auto& component : mComponents)
 	{
-		if (component->StaticGetMetaClass()->GetName() == Vishv::Components::ModelAnimation::StaticGetMetaClass()->GetName())
+		if (ImGui::CollapsingHeader(component.get()->StaticGetMetaClass()->GetName()))
 		{
-			if (ImGui::CollapsingHeader(component->StaticGetMetaClass()->GetName()))
+			auto mclass = component->GetMetaClass();
+			for (size_t i = 0; i < component->GetMetaClass()->GetFieldCount(); ++i)
 			{
+				void* me = component.get();
+				auto field = mclass->GetField(i);
 
+				if (field->GetMetaType()->GetCategory() == Core::Meta::MetaType::Category::Primitive)
+				{
+					void* data = static_cast<uint8_t*>(me) + field->GetOffset();
+					if (field->GetMetaType()->GetName() == "Number")
+						ImGui::DragFloat(field->GetName(), static_cast<float*>(data));
+					else if (field->GetMetaType()->GetName() == "Integer" || field->GetMetaType()->GetName() == "UInt" || field->GetMetaType()->GetName() == "Size_t")
+						ImGui::DragInt(field->GetName(), static_cast<int*>(data));
+					else if (field->GetMetaType()->GetName() == "Boolean")
+						ImGui::Checkbox(field->GetName(), static_cast<bool*>(data));
+					else if (field->GetMetaType()->GetName() == "String")
+					{
+						auto s = static_cast<std::string*>(data);
+						s->reserve(256);
+						ImGui::InputText(field->GetName(), s->data(), s->max_size());
+					}
+					else if (field->GetMetaType()->GetName() == "Vector2")
+					{
+						ImGui::DragFloat3(field->GetName(), &static_cast<Math::Vector2*>(data)->x);
+					}
+					else if (field->GetMetaType()->GetName() == "Vector3")
+					{
+						ImGui::DragFloat3(field->GetName(), &static_cast<Math::Vector3*>(data)->x);
+					}
+					else if (field->GetMetaType()->GetName() == "Vector4")
+					{
+						ImGui::ColorEdit4(field->GetName(), &static_cast<Math::Vector4*>(data)->r);
+					}
+					else if (field->GetMetaType()->GetName() == "Quaternion")
+					{
+						ImGui::Text(field->GetName());
+						Math::Quaternion* quat = static_cast<Math::Quaternion*>(data);
+
+						Math::Vector3 xyz;
+						xyz.x = quat->GetRotation(Math::Vector3(1.0f, 0.0f, 0.0f)) * Math::Constans::RadToDeg;
+						xyz.y = quat->GetRotation(Math::Vector3(0.0f, 1.0f, 0.0f)) * Math::Constans::RadToDeg;
+						xyz.z = quat->GetRotation(Math::Vector3(0.0f, 0.0f, 1.0f)) * Math::Constans::RadToDeg;
+
+						auto copy = xyz;
+						if (ImGui::DragFloat3(field->GetName, &xyz.x))
+						{
+							if (xyz.x != copy.x)
+								*quat *= Math::Quaternion::RotationQuaternion(xyz.x * Math::Constans::DegToRad, Math::Vector3(1.0f, 0.0f, 0.0f));
+							else if (xyz.y != copy.y)
+								*quat *= Math::Quaternion::RotationQuaternion(xyz.y * Math::Constans::DegToRad, Math::Vector3(0.0f, 1.0f, 0.0f));
+							else if (xyz.z != copy.z)
+								*quat *= Math::Quaternion::RotationQuaternion(xyz.z * Math::Constans::DegToRad, Math::Vector3(0.0f, 0.0f, 1.0f));
+						}
+
+					}
+				}
 			}
-		}
-		else
 			component->DebugUI();
+		}
 	}
 }
 

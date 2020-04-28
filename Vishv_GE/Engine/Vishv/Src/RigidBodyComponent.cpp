@@ -21,18 +21,6 @@ void Vishv::Components::Rigidbody::Initialize()
 
 }
 
-void Vishv::Components::Rigidbody::Update(float deltaTime)
-{
-}
-
-void Vishv::Components::Rigidbody::DebugUI()
-{
-}
-
-void Vishv::Components::Rigidbody::SimpleDraw()
-{
-}
-
 void Vishv::Components::Rigidbody::SetCollider(Physics::Collider* coll)
 {
 	mRigidBody.myCollider = coll;

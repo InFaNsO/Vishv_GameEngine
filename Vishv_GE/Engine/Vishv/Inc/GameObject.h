@@ -25,7 +25,7 @@ namespace Vishv
 		void Initialize();
 		void Terminate();
 		
-		void Update(float deltaTime);
+		void Update();
 		void Render();
 		void DebugUI();
 		void SimpleDraw();
@@ -41,7 +41,7 @@ namespace Vishv
 			return static_cast<T*>(newComponent.get());
 		}
 
-		template <class T>
+		template <class T, class = std::void_t<std::is_base_of<Components::Component, T>>>
 		const T* GetComponent() const
 		{
 			for (auto& component : mComponents)
@@ -50,7 +50,7 @@ namespace Vishv
 			return nullptr;
 		}
 
-		template <class T>
+		template <class T, class = std::void_t<std::is_base_of<Components::Component, T>>>
 		T* GetComponent()
 		{
 			const GameObject* constMe = this;

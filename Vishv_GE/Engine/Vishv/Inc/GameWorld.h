@@ -20,7 +20,7 @@ namespace Vishv
 	public:
 		void Initialize(size_t capacity);
 		void Terminate();
-		void Update(float deltaTime);
+		void Update();
 		void DebugUI();
 		void Render();
 		void SimpleDraw();
@@ -59,7 +59,6 @@ namespace Vishv
 
 		void DestroyInternal(GameObject* gameObject);
 		void ProcessDestroyList();
-
 
 		using GameObjectList = std::vector<GameObject*>;
 

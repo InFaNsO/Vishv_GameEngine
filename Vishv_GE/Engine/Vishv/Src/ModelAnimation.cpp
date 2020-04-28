@@ -4,6 +4,7 @@
 #include "GameWorld.h"
 
 #include "CameraService.h"
+#include "CameraComponent.h"
 
 
 size_t invalidIndexAinm = (size_t)UINT64_MAX;
@@ -36,10 +37,11 @@ void Vishv::Components::ModelAnimation::UpdateAnimationPlayInformation(Graphics:
 		mNextAnimationIndex = 0;
 }
 
-void Vishv::Components::ModelAnimation::Update(float deltaTime)
+void Vishv::Components::ModelAnimation::Update()
 {
 	//take input and then select which update to call
 	//graphic obj update
+	float deltaTime = Core::Time::Get()->DeltaTime();
 	if (!mShouldBlend && mNextAnimationIndex != invalidIndexAinm)
 	{
 		mShouldPlay = true;
@@ -89,8 +91,8 @@ void Vishv::Components::ModelAnimation::Render()
 {
 	//call the other render
 	//make a world class // change scene into world
-	if(mCamSys->GetMainCamera())
-		Render(*mCamSys->GetMainCamera(), Graphics::EffectType::Skinning);
+	if(mCamSys->GetMainCamera().IsValid())
+		Render(mCamSys->GetMainCamera().Get()->GetComponent<CameraComponent>()->GetCamera(), Graphics::EffectType::Skinning);
 }
 
 void Vishv::Components::ModelAnimation::Terminate()

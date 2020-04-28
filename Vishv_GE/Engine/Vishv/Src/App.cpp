@@ -49,7 +49,6 @@ void Vishv::App::Run(AppConfig config)
 	bool done = false;
 	while (!done)
 	{
-		mSceneCamera.ComputeMatricies();
 		done = mWindow.ProcessMessage();
 
 		if (done)
@@ -62,26 +61,20 @@ void Vishv::App::Run(AppConfig config)
 			mCurrentState->Initialize();
 		}
 
+		Core::Time::Get()->Update();
+
 		auto inputSystem = Vishv::Input::InputSystem::Get();
 		inputSystem->Update();
 
-		static auto lastTime = std::chrono::system_clock::now();
-		auto currentTime = std::chrono::system_clock::now();
-		auto deltaTime = std::chrono::duration_cast<std::chrono::milliseconds>(currentTime - lastTime).count() / 1000.0f;
-		lastTime = currentTime;
-
-
-		mCurrentState->Update(1.f/60.f);
+		mCurrentState->scene
+		mCurrentState->Update();
 
 		Vishv::Graphics::GraphicsSystem::Get()->BeginRender();
-
 		mGameSceneRT.BeginRender();
 
 		BasicRendering();
-		if (mIsCustomRender)
-			mCurrentState->Render();
-		else
-			mCurrentState->scene.Render(false);
+		mCurrentState->Render();
+
 		
 		if (mDrawGizmos)
 		{
@@ -172,50 +165,11 @@ void Vishv::App::VishvUI()
 			}
 		}
 	}
-
-	Vishv::Math::Vector3 rotationCamera;
-
-	if (ImGui::CollapsingHeader("CameraTransform##SceneSettings"))
-	{
-		ImGui::DragFloat3("Position##Transform", &mSceneCamera.transform.mPosition.x, 0.1f);
-		if (ImGui::DragFloat3("Rotation##Transform", &rotationCamera.x, 1.f))
-		{
-			if (rotationCamera.x != 0.0f)
-				mSceneCamera.transform.RotateX(rotationCamera.x);
-			if (rotationCamera.y != 0.0f)
-				mSceneCamera.transform.RotateY(rotationCamera.y);
-			if (rotationCamera.z != 0.0f)
-				mSceneCamera.transform.RotateZ(rotationCamera.z);
-		}
-
-		if (ImGui::Button("Top"))
-		{
-			mSceneCamera.transform.mPosition = { 0.0f,25.0f,0.0f };
-			mSceneCamera.transform.SetRotation(Vishv::Math::Quaternion({ 1.0f,0.0f,0.0f }, Vishv::Math::Constans::DegToRad * 90.0f));
-		}
-		if (ImGui::Button("Front"))
-		{
-			mSceneCamera.transform.mPosition = { 0.0f,0.0f,-25.0f };
-			mSceneCamera.transform.SetRotation(Vishv::Math::Quaternion({ 1.0f,0.0f,0.0f }, Vishv::Math::Constans::DegToRad * 0.0f));
-		}
-		if (ImGui::Button("Left"))
-		{
-			mSceneCamera.transform.mPosition = { -25.0f,0.0f,0.0f };
-			mSceneCamera.transform.SetRotation(Vishv::Math::Quaternion({ 0.0f,1.0f,0.0f }, Vishv::Math::Constans::DegToRad * -90.0f));
-		}
-	}
-
-	VishvUI_ModelImporter();
-	VishvUI_ModelLoader();
-
 	ImGui::End();
-	
-	VishvUI_SceneObjects();
 
 	VishvUI_SceneRender();
-	VishvUI_BufferData();
 }
-
+/*
 void Vishv::App::VishvUI_ModelImporter()
 {
 	static std::filesystem::path importFile;
@@ -327,6 +281,7 @@ void Vishv::App::VishvUI_ModelLoader()
 		}
 	}
 }
+*/
 
 void Vishv::App::VishvUI_SceneRender()
 {
@@ -400,7 +355,7 @@ void Vishv::App::VishvUI_SceneRender()
 	//	Vishv::Graphics::RenderTarget::Format::RGBA_U8);
 	ImGui::End();*/
 }
-
+/*
 void Vishv::App::VishvUI_BufferData()
 {
 	ImGui::Begin("Lighting Setings");
@@ -500,16 +455,20 @@ void Vishv::App::VishvUI_SceneObjects()
 
 	ImGui::End();
 }
+*/
 
 void Vishv::App::SetUpEngine(AppConfig config)
 {
 	//hard code for now
-	mSceneCamera.transform.mPosition = { 50.0f, 100.0f,50.0f };
+	//mSceneCamera.transform.mPosition = { 50.0f, 100.0f,50.0f };
 
-	//Initialize the input system
+	LOG("Initializing Core System");
+	Vishv::Core::Time::StaticInitialize();
+
+	LOG("Initializing Input System");
 	Vishv::Input::InputSystem::StaticInitialize(mWindow.GetWindowHandle());
 
-	//initialize graphics system
+	LOG("Initializing Graphics Systems");
 	Vishv::Graphics::GraphicsSystem::StaticInitialize(mWindow.GetWindowHandle(), false);
 	Vishv::Graphics::EffectsManager::StaticInitialize();
 	Vishv::Graphics::TextureManager::StaticInitialize(mAppConfig.assetDirectory / "Images");
@@ -520,7 +479,7 @@ void Vishv::App::SetUpEngine(AppConfig config)
 	Vishv::Graphics::BlendManager::StaticInitialize();
 	Vishv::Graphics::RasterizerManager::StaticInitialize();
 
-	//setup effects
+	LOG("Initializing Shader Effects");
 	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Texturing);
 	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::PostProcessing);
 	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Merge);
@@ -534,41 +493,12 @@ void Vishv::App::SetUpEngine(AppConfig config)
 	mGameSceneRT.Initialize(mSceneWidth, mSceneHeight,
 		Vishv::Graphics::RenderTarget::Format::RGBA_U8);
 
-	//go through all the game states and set the scene camera
-	for (auto it = mAppStates.begin(); it != mAppStates.end(); ++it)
-	{
-		it->second.get()->scene.sceneCamera = &mSceneCamera;
-	}
-
 
 	mBGColor = Vishv::Graphics::Colors::LightGray;
 	Vishv::Graphics::GraphicsSystem::Get()->SetBackGroundColor(mBGColor);
 
 	mDome.Initialize(Vishv::Graphics::Meshbuilder::CreateSphereUV(12, 12, 500.0f));
 	mDomeTex = Vishv::Graphics::TextureManager::Get()->LoadTexture("space.jpg");
-}
-
-void Vishv::App::BasicRendering()
-{
-	Vishv::Graphics::EffectsManager::Get()->BindEffect(Vishv::Graphics::EffectType::Texturing);
-	auto view = mSceneCamera.GetViewMatrix();
-	auto proj = mSceneCamera.GetPerspectiveMatrix();
-
-	if (mDrawDome)
-	{
-		auto transform = Vishv::Math::Matrix4::Transpose(Vishv::Math::Matrix4::TranslateMatrix(mSceneCamera.GetPosition()) * view * proj);
-
-		Vishv::Graphics::EffectsManager::Get()->GetBufferData(Vishv::Graphics::EffectType::Texturing)->GetTextureing()->wvp = transform;
-		Vishv::Graphics::EffectsManager::Get()->Set(Vishv::Graphics::EffectType::Texturing);
-		Vishv::Graphics::EffectsManager::Get()->BindBuffer(Vishv::Graphics::EffectType::Texturing);
-
-		Vishv::Graphics::TextureManager::Get()->GetTexture(mDomeTex)->BindPS(0);
-		Vishv::Graphics::SamplerManager::Get()->GetSampler("LinearWrap")->BindPS();
-
-		Vishv::Graphics::RasterizerManager::Get()->ChangeState("FrontSolid");
-		mDome.Render();
-		Vishv::Graphics::RasterizerManager::Get()->ChangeState("BackSolid");
-	}
 }
 
 void Vishv::App::Terminate()

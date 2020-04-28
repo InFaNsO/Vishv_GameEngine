@@ -57,7 +57,8 @@ void Vishv::Math::Transform::RotateUp(float angleDeg)
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, mUp);
 	mQuaternion *= q;
 	mQuaternion.Normalize();
-	mForward.Rotate(q);
+	mForward = Math::Vector3(0.0f, 0.0f, 1.0f);
+	mForward.Rotate(mQuaternion);
 	mForward.Normalize();
 }
 
@@ -69,7 +70,8 @@ void Vishv::Math::Transform::RotateForward(float angleDeg)
 	auto q = Quaternion::RotationQuaternion(angleDeg * Constans::DegToRad, mForward);
 	mQuaternion *= q;
 	mQuaternion.Normalize();
-	mUp.Rotate(q);
+	mUp = Math::Vector3(0.0f, 1.0f, 0.0f);
+	mUp.Rotate(mQuaternion);
 	mUp.Normalize();
 }
 

@@ -226,6 +226,8 @@ struct Quaternion
 	void Rotate(float angle, Vector3& object);
 	void MakeUnit();
 
+	float GetRotation(const Vector3& axis);
+
 	static Quaternion Slerp(const Quaternion& q0, const Quaternion& q1, float t)
 	{
 		Quaternion qq = q1;

@@ -16,7 +16,7 @@ namespace Vishv
 		virtual void Initialize() {}
 		virtual void Terminate() {}
 
-		virtual void Update(float deltaTime) {}
+		virtual void Update() {}
 		virtual void Render() {}
 		virtual void DebugUI() {}
 
@@ -24,6 +24,7 @@ namespace Vishv
 		const GameWorld& GetWorld() const { return *mWorld; }
 
 		const std::string & GetTypeID() const { return mTypeID; }
+		void DoUI(void* instance, const Core::Meta::MetaClass& mclass);
 
 	private:
 		friend class GameWorld;

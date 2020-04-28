@@ -22,18 +22,10 @@ void Vishv::Components::SphereCollider::Initialize()
 	mColliderSphere.myTransform = &mTransformComponent->Transform();
 }
 
-void Vishv::Components::SphereCollider::Update(float deltaTime)
+void Vishv::Components::SphereCollider::Update()
 {
 	if (!firstUpdate)
 		DoFirstUpdate();
-}
-
-void Vishv::Components::SphereCollider::DebugUI()
-{
-}
-
-void Vishv::Components::SphereCollider::SimpleDraw()
-{
 }
 
 void Vishv::Components::SphereCollider::DoFirstUpdate()

@@ -19,6 +19,7 @@
 #include "AIStateMachine.h"
 #include "AIPathFinding.h"
 //Graphics Components
+#include "CameraComponent.h"
 #include "MeshComponent.h"
 #include "ModelAnimation.h"
 #include "ThirdPersonControllerComponent.h"
