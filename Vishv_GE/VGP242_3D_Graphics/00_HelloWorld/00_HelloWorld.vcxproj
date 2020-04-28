@@ -23,7 +23,7 @@
     <ProjectGuid>{6FA7760C-0BAB-4DE1-AD1E-852503B4CC5F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My00HelloWorld</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <SccProjectName>SAK</SccProjectName>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>

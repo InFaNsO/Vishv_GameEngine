@@ -1,6 +1,5 @@
 #ifndef INCLUDED_VISH_CORE_TIME_H
 #define INCLUDED_VISH_CORE_TIME_H
-#include <chrono>
 
 namespace Vishv::Core
 {
@@ -30,7 +29,6 @@ namespace Vishv::Core
 		const int& FrameCount() { return mFrameCount; }
 
 	private:
-		std::chrono::time_point<std::chrono::system_clock> prvTimePoint;
 		
 		int mFrameCount = 0;
 		float mTime = 0.0f;

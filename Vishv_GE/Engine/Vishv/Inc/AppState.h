@@ -1,13 +1,14 @@
 #ifndef INCLUDED_VISHV_APPSTATE_H
 #define INCLUDED_VISHV_APPSTATE_H
 
+#include "GameWorld.h"
+
 namespace Vishv 
 {
-	class GameWorld;
-
 	class AppState
 	{
 	public:
+		virtual void MetaRegister() {}
 		virtual void Initialize() {}
 		virtual void Update() {}
 		virtual void Render() {}
@@ -16,6 +17,7 @@ namespace Vishv
 		virtual void Terminate() {}
 
 		GameWorld mGameWorld;
+		Graphics::EffectType mCurrentEffect = Graphics::EffectType::Skinning;
 	};
 
 }	

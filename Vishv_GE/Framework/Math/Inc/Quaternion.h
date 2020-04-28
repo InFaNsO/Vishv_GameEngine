@@ -133,11 +133,11 @@ struct Quaternion
 	void operator+= (const Vector4& v);
 	void operator+= (const Vector3& v);
 
-	constexpr bool operator==(const Quaternion& other)
+	constexpr bool operator==(const Quaternion& other) const
 	{
 		return x == other.x && y == other.y && z == other.z && w == other.w;
 	}
-	constexpr bool operator!=(const Quaternion& other)
+	constexpr bool operator!=(const Quaternion& other) const
 	{
 		return !(x == other.x && y == other.y && z == other.z && w == other.w);
 	}

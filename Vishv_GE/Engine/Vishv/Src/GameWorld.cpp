@@ -102,6 +102,13 @@ void Vishv::GameWorld::DebugUI()
 			}
 		}
 	}
+
+	if (ImGui::Button("Add Game Object"))
+	{
+		selectedObject = CreateGameObject();
+		selectedService = nullptr;
+	}
+	
 	ImGui::End();
 
 	ImGui::Begin("Inspector");
@@ -130,7 +137,16 @@ void Vishv::GameWorld::Render()
 }
 
 
+GameObjectHandle Vishv::GameWorld::RegisterGameObject(GameObject&& object)
+{
+	auto pointer = mGameObjectFactory->Add(std::move(object));
+	GameObjectHandle handle = mGameObjectHandlePool->Register(pointer);
+	pointer->mWorld = this;
+	pointer->mHandle = handle;
 
+	mUpdateList.push_back(pointer);
+	return handle;
+}
 
 GameObjectHandle Vishv::GameWorld::Create(const std::filesystem::path& templateFileName, std::string name)
 {
@@ -147,6 +163,11 @@ GameObjectHandle Vishv::GameWorld::Create(const std::filesystem::path& templateF
 
 	mUpdateList.push_back(gameObject);
 	return handle;
+}
+
+void Vishv::GameWorld::LoadGameWorld(const std::filesystem::path& worldFileName)
+{
+	//get all the objects / object file names and load them 
 }
 
 GameObjectHandle Vishv::GameWorld::Find(const std::string& name)
@@ -197,3 +218,11 @@ void Vishv::GameWorld::ProcessDestroyList()
 	mDestroyList.clear();
 }
 
+GameObject* Vishv::GameWorld::CreateGameObject()
+{
+	auto go = mGameObjectFactory->CreateEmpty();
+	go->mWorld = this;
+	go->mHandle = mGameObjectHandlePool->Register(go);
+	mUpdateList.push_back(go);
+	return go;
+}

@@ -4,6 +4,7 @@
 #include "Common.h"
 #include "GlobalHeaders.h"
 #include "MetaRegistration.h"
+#include "GameWorld.h"
 
 //Vishv::Time::DeltaTime = 0.0f;
 
@@ -42,8 +43,13 @@ void Vishv::App::Run(AppConfig config)
 		mCurrentState = mNextState;
 	else	
 		mCurrentState = mAppStates.begin()->second.get();
+	
+	LOG("Registering App Meta.");
+	mCurrentState->MetaRegister();
+	LOG("Initializing Game World.");
+	mCurrentState->mGameWorld.Initialize(1000);
+	
 	mCurrentState->Initialize();
-
 	mNextState = nullptr;
 
 	bool done = false;
@@ -66,18 +72,19 @@ void Vishv::App::Run(AppConfig config)
 		auto inputSystem = Vishv::Input::InputSystem::Get();
 		inputSystem->Update();
 
-		mCurrentState->scene
+		mCurrentState->mGameWorld.Update();
 		mCurrentState->Update();
 
 		Vishv::Graphics::GraphicsSystem::Get()->BeginRender();
 		mGameSceneRT.BeginRender();
 
-		BasicRendering();
+		//BasicRendering();
 		mCurrentState->Render();
 
 		
 		if (mDrawGizmos)
 		{
+			mCurrentState->mGameWorld.SimpleDraw();
 			mCurrentState->RenderSimpleDraw();
 			VishvSimpleDraw();
 		}
@@ -87,6 +94,7 @@ void Vishv::App::Run(AppConfig config)
 		modelImporterFileBrowser->Display();
 		VishvDockSpace();
 		VishvUI();
+		mCurrentState->mGameWorld.DebugUI();
 		mCurrentState->RenderDebugUI();
 		Vishv::Graphics::DebugUI::EndRender();
 

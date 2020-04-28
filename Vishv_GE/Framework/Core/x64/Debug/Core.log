@@ -1,14 +1,25 @@
 ﻿  Precompiled.cpp
-  BlockAllocator.cpp
-  MetaArray.cpp
-  MetaClass.cpp
-  MetaField.cpp
-  MetaPointer.cpp
-  MetaRegistration.cpp
-  MetaRegistry.cpp
-  MetaType.cpp
-  Window.cpp
-  WindowMessageHandler.cpp
-C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Core\Src\WindowMessageHandler.cpp(15,50): warning C4244: 'argument': conversion from 'LONG_PTR' to 'LONG', possible loss of data
-  Generating Code...
-  Core.vcxproj -> C:\Users\bhavi\OneDrive\Desktop\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Core.lib
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(22,13): error C2039: 'clock_t': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(22,1): error C2873: 'clock_t': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(26,13): error C2039: 'asctime': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(26,1): error C2873: 'asctime': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(27,13): error C2039: 'clock': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(27,1): error C2873: 'clock': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(28,13): error C2039: 'ctime': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(28,1): error C2873: 'ctime': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(29,13): error C2039: 'difftime': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(29,1): error C2873: 'difftime': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(30,13): error C2039: 'gmtime': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(30,1): error C2873: 'gmtime': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(31,13): error C2039: 'localtime': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(31,1): error C2873: 'localtime': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(32,13): error C2039: 'mktime': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(32,1): error C2873: 'mktime': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(33,13): error C2039: 'strftime': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(33,1): error C2873: 'strftime': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(34,13): error C2039: 'time': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(34,1): error C2873: 'time': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(36,13): error C2039: 'timespec': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(36,1): error C2873: 'timespec': symbol cannot be used in a using-declaration
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(37,13): error C2039: 'timespec_get': is not a member of '`global namespace''
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\ctime(37,1): error C2873: 'timespec_get': symbol cannot be used in a using-declaration

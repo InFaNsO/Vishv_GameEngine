@@ -35,7 +35,7 @@
     <ProjectGuid>{B8518CBF-2613-45DF-B996-ABFCB3275CF4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My02PhysicsCollision</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

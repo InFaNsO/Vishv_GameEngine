@@ -100,7 +100,7 @@ void Vishv::GameObject::DebugUI()
 						xyz.z = quat->GetRotation(Math::Vector3(0.0f, 0.0f, 1.0f)) * Math::Constans::RadToDeg;
 
 						auto copy = xyz;
-						if (ImGui::DragFloat3(field->GetName, &xyz.x))
+						if (ImGui::DragFloat3(field->GetName(), &xyz.x))
 						{
 							if (xyz.x != copy.x)
 								*quat *= Math::Quaternion::RotationQuaternion(xyz.x * Math::Constans::DegToRad, Math::Vector3(1.0f, 0.0f, 0.0f));
@@ -115,6 +115,16 @@ void Vishv::GameObject::DebugUI()
 			}
 			component->DebugUI();
 		}
+	}
+
+	ImGui::InputText("Component Name", &componentName[0], 256);
+	ImGui::SameLine();
+	if (ImGui::Button("AddComponent"))
+	{
+		auto metaClass = Core::Meta::FindMetaClass(componentName);
+		auto ptr = AddComponent(*metaClass);
+		VISHVASSERT(ptr, "[Game Object] Component not found");
+		ptr->Initialize();
 	}
 }
 

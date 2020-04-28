@@ -1,8 +1,6 @@
 #ifndef INCLUDED_VISHV_APP_H
 #define INCLUDED_VISHV_APP_H
 
-#include "Scene.h"
-
 namespace Vishv {
 
 	class AppState;
@@ -36,11 +34,11 @@ namespace Vishv {
 	private:
 		void VishvDockSpace();
 		void VishvUI();
-		void VishvUI_ModelImporter();
-		void VishvUI_ModelLoader();
+		//void VishvUI_ModelImporter();
+		//void VishvUI_ModelLoader();
 		void VishvUI_SceneRender();
-		void VishvUI_BufferData();
-		void VishvUI_SceneObjects();
+		//void VishvUI_BufferData();
+		//void VishvUI_SceneObjects();
 
 		void VishvSimpleDraw();
 		void Terminate();
@@ -56,7 +54,7 @@ namespace Vishv {
 	private:
 		//variable members for running
 		void SetUpEngine(AppConfig config);
-		void BasicRendering();
+		//void BasicRendering();
 
 		Vishv::Graphics::MeshBuffer mDome;
 		Vishv::Graphics::TextureID mDomeTex;

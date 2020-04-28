@@ -34,7 +34,6 @@ Vishv::Core::Time* Vishv::Core::Time::Get()
 
 void Vishv::Core::Time::Initialize()
 {
-	prvTimePoint = std::chrono::system_clock::now();
 }
 
 void Vishv::Core::Time::Terminate()
@@ -44,6 +43,8 @@ void Vishv::Core::Time::Terminate()
 
 void Vishv::Core::Time::Update()
 {
+	static auto prvTimePoint = std::chrono::system_clock::now();
+
 	std::chrono::duration<float> diff = std::chrono::system_clock::now() - prvTimePoint;
 	mUnscaledDeltaTime = diff.count();
 	mUnscaledTime += mUnscaledDeltaTime;

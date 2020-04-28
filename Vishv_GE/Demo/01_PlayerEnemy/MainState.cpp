@@ -35,7 +35,7 @@ void MainState::InitEnemies()
 		mEnemies[i].Get()->AddComponent<HealthComponent>();
 		mEnemies[i].Get()->AddComponent<WeaponComponent>();
 
-		mGameWorld.Register(*mEnemies[i].Get());
+		mGameWorld.RegisterGameObject(std::move(*mEnemies[i].Get()));
 	}
 }
 
@@ -124,9 +124,10 @@ void MainState::Initialize()
 	testLoader = mGameWorld.Create("..\\..\\Assets\\Templates\\Test.json", "Test");
 }
 
-void MainState::Update(float deltaTime)
+void MainState::Update()
 {
-	mGameWorld.Update(deltaTime);
+	float deltaTime = Core::Time::Get()->DeltaTime();
+	mGameWorld.Update();
 	mPlayerManager.Update(deltaTime);
 }
 

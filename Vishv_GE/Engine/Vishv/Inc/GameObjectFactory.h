@@ -9,7 +9,9 @@ namespace Vishv
 	{
 	public:
 		GameObjectFactory(GameObjectAllocator& allocator);
+		GameObject* Add(GameObject&& gameObj);
 		GameObject* Create(const std::filesystem::path& templateFileName);
+		GameObject* CreateEmpty();
 		void Destroy(GameObject* gameObject);
 	private:
 		GameObjectAllocator& mGameObjectAllocator;

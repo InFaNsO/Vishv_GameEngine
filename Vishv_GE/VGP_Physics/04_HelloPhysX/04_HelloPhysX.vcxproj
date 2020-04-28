@@ -23,7 +23,7 @@
     <ProjectGuid>{6666AAA3-3144-4B89-92EC-9BF5000FDA15}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My04HelloPhysX</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

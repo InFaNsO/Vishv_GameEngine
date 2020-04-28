@@ -23,7 +23,7 @@
     <ProjectGuid>{22C2AF84-8B3A-429E-BBA3-A4214C665622}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My01HelloFireworks</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <ProjectName>02_HelloFireworks</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

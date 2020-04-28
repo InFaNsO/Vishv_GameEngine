@@ -78,6 +78,8 @@ namespace Vishv
 
 		bool mIsActive = true;
 
+		char componentName[256] = "";
+
 		std::vector<std::unique_ptr<Components::Component>> mComponents;
 		std::string mName = "NoName";
 	};

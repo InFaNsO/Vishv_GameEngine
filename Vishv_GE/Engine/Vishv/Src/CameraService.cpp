@@ -27,7 +27,7 @@ void Vishv::CameraSystem::Update()
 
 	auto t = Core::Time::Get();
 
-	if (t->CurrentTime < transitionEndTime)
+	if (t->CurrentTime() < transitionEndTime)
 	{
 		//do lerping
 		float percent = t->CurrentTime() / transitionEndTime;

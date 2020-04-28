@@ -4,6 +4,7 @@
 #include "GameWorld.h"
 
 #include "CameraService.h"
+#include "CameraComponent.h"
 
 #include "imfilebrowser.h"
 
@@ -116,10 +117,11 @@ void MeshComponent::Render()
 
 	auto em = Graphics::EffectsManager::Get();
 
-	if(!mCamSys->GetMainCamera())
+	if(!mCamSys->GetMainCamera().IsValid())
 		return;
-	auto& camera = *mCamSys->GetMainCamera();
-	
+	auto cameraObj = mCamSys->GetMainCamera();
+	auto& camera = cameraObj.Get()->GetComponent<CameraComponent>()->GetCamera();
+
 	auto type = Graphics::EffectType::Standard;
 	
 	auto v = camera.GetViewMatrix();

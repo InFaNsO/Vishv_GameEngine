@@ -7,7 +7,7 @@ class MainState : public Vishv::AppState
 {
 public:
 	void Initialize() override;
-	void Update(float deltaTime) override;
+	void Update() override;
 
 	void Render() override;
 

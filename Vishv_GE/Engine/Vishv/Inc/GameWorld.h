@@ -25,6 +25,7 @@ namespace Vishv
 		void Render();
 		void SimpleDraw();
 
+		GameObjectHandle RegisterGameObject(GameObject&& object);
 		GameObjectHandle Create(const std::filesystem::path& templateFileName, std::string name);
 		GameObjectHandle Find(const std::string& name);
 		void Destroy(GameObjectHandle handle);
@@ -54,9 +55,12 @@ namespace Vishv
 			return const_cast<T*>(constMe->GetService<T>());
 		}
 
+		void LoadGameWorld(const std::filesystem::path& worldFileName);
+
 	private:
 		friend class Editor;
 
+		GameObject* CreateGameObject();
 		void DestroyInternal(GameObject* gameObject);
 		void ProcessDestroyList();
 

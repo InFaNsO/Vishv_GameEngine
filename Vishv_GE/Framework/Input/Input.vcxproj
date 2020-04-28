@@ -23,7 +23,7 @@
     <ProjectGuid>{02DC0CE5-72DF-4F89-8AF2-FF9C0E351A1A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Input</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <SccProjectName>SAK</SccProjectName>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>

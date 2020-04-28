@@ -11,6 +11,14 @@ Vishv::GameObjectFactory::GameObjectFactory(GameObjectAllocator & allocator)
 {
 }
 
+GameObject* Vishv::GameObjectFactory::Add(GameObject&& gameObj)
+{
+	auto go = mGameObjectAllocator.New(std::move(gameObj));
+	if(!go)
+		return nullptr;
+	return go;
+}
+
 GameObject * Vishv::GameObjectFactory::Create(const std::filesystem::path& templateFileName)
 {
 	GameObject* gameObject = mGameObjectAllocator.New();
@@ -53,6 +61,11 @@ GameObject * Vishv::GameObjectFactory::Create(const std::filesystem::path& templ
 	fclose(file);
 
 	return gameObject;
+}
+
+GameObject* Vishv::GameObjectFactory::CreateEmpty()
+{
+	return mGameObjectAllocator.New();
 }
 
 void Vishv::GameObjectFactory::Destroy(GameObject * gameObject)
