@@ -13,14 +13,14 @@ META_DERIVED_BEGIN(Vishv::Components::ModelAnimation, Vishv::Components::Compone
 META_FIELD_BEGIN
 //META_FIELD(mBoneTransforms, "BoneTransforms")
 //META_FIELD(mTPosToParents, "ToParent")
-META_FIELD(mBlendTimeTotal , "BlendTimer")
+//META_FIELD(mBlendTimeTotal , "BlendTimer")
 		//META_FIELD(mModel, "RiggedModel")
 	META_FIELD_END
 META_CLASS_END
 
 using namespace Vishv::Components;
 
-
+/*
 void Vishv::Components::ModelAnimation::Initialize()
 {
 	mCamSys = GetOwner().GetWorld().GetService<CameraSystem>();
@@ -155,7 +155,7 @@ void Vishv::Components::ModelAnimation::Set(std::filesystem::path modelPath, std
 	Vishv::Graphics::SkeletonIO skelIO;
 	skelIO.LoadSkeleton(modelPath / (modelName + ".vskel"), mModel->skeleton);
 
-	mModel->animations = &animation;
+	//mModel->animations = &animation;
 
 	SetUp();
 
@@ -255,7 +255,7 @@ void Vishv::Components::ModelAnimation::Render(const Graphics::Camera & camera, 
 	em->GetBufferData(type)->GetTransform()->wvp = (w * v *p).Transpose();
 
 	for (size_t i = 0; i < mModel->skeleton.GetBoneArray().size() && i < (size_t)mModel->skeleton.MaxBoneCount(); ++i)
-		em->GetBufferData(type)->GetBonetransformData()->boneTransforms[i] = (mModel->skeleton.bones[i]->offsetTransform * mBoneTransforms[i]/* * tPoseToParents[i]*/).Transpose();	//multipy bone transformation aswell
+		em->GetBufferData(type)->GetBonetransformData()->boneTransforms[i] = (mModel->skeleton.bones[i]->offsetTransform * mBoneTransforms[i]/* * tPoseToParents[i]*//*).Transpose();	//multipy bone transformation aswell
 
 	em->Set(type);
 	em->BindBuffer(type);
@@ -305,3 +305,4 @@ void Vishv::Components::ModelAnimation::UpdateBlend(size_t currentAnimationID, s
 	UpdateTransform<true>(mModel->skeleton.root, mBoneTransforms, mTPosToParents);
 }
 
+*/

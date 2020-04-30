@@ -20,6 +20,8 @@
 #include "AIPathFinding.h"
 //Graphics Components
 #include "CameraComponent.h"
+#include "Model3D.h"
+#include "Animation3D.h"
 #include "MeshComponent.h"
 #include "ModelAnimation.h"
 #include "ThirdPersonControllerComponent.h"
@@ -55,6 +57,7 @@
 
 //Editor
 #include "Editor.h"
+#include "GizmoIm.h"
 
 namespace VishvApp
 {

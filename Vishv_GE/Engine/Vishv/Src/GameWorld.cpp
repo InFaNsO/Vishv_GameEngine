@@ -50,6 +50,9 @@ void Vishv::GameWorld::Terminate()
 
 void Vishv::GameWorld::Update()
 {
+	if (!mIsInitialized)
+		return;
+
 	VISHVASSERT(!mIsUpdating, "Already Updateing");
 
 	for (auto& service : mServices)
@@ -71,12 +74,16 @@ void Vishv::GameWorld::Update()
 
 void Vishv::GameWorld::SimpleDraw()
 {
+	if (!mIsInitialized)
+		return;
 	for (auto gameObject : mUpdateList)
 		gameObject->SimpleDraw();
 }
 
 void Vishv::GameWorld::DebugUI()
 {
+	if (!mIsInitialized)
+		return;
 	ImGui::Begin("Heirarchy");
 	static Service* selectedService = nullptr;
 	static GameObject* selectedObject = nullptr;
@@ -129,6 +136,8 @@ void Vishv::GameWorld::DebugUI()
 
 void Vishv::GameWorld::Render()
 {
+	if (!mIsInitialized)
+		return;
 	for (auto& service : mServices)
 		service->Render();
 

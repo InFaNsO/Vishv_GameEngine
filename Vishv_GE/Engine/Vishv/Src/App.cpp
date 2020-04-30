@@ -47,7 +47,7 @@ void Vishv::App::Run(AppConfig config)
 	LOG("Registering App Meta.");
 	mCurrentState->MetaRegister();
 	LOG("Initializing Game World.");
-	mCurrentState->mGameWorld.Initialize(1000);
+	//mCurrentState->mGameWorld.Initialize(1000);
 	
 	mCurrentState->Initialize();
 	mNextState = nullptr;
@@ -317,6 +317,9 @@ void Vishv::App::VishvUI_SceneRender()
 	auto sceneHeight = vMax.y - vMin.y;
 	auto sceneWidth = vMax.x - vMin.x;
 
+	if (sceneHeight <= 0.0f)
+		sceneHeight = 10.0f;
+
 	if (mSceneHeight != sceneHeight || mSceneWidth != sceneWidth)
 	{
 		mSceneHeight = (size_t)sceneHeight;
@@ -326,8 +329,8 @@ void Vishv::App::VishvUI_SceneRender()
 		mGameSceneRT.Initialize(mSceneWidth, mSceneHeight, Vishv::Graphics::RenderTarget::Format::RGBA_U8);
 	}
 
-
-	/*
+	ImGui::Begin("Scene");
+	
 	if (mSceneHeight != ImGui::GetWindowHeight() || mSceneWidth != ImGui::GetWindowWidth())
 	{
 		if (ImGui::GetWindowWidth() > ImGui::GetWindowHeight())
@@ -361,7 +364,7 @@ void Vishv::App::VishvUI_SceneRender()
 	ImGui::Image((void*)mGameSceneRT.GetShaderResourceView(), { static_cast<float>(mSceneWidth), static_cast<float>(mSceneHeight) });
 	//mGameSceneRT.Initialize(Scene_width, Scene_height,
 	//	Vishv::Graphics::RenderTarget::Format::RGBA_U8);
-	ImGui::End();*/
+	ImGui::End();
 }
 /*
 void Vishv::App::VishvUI_BufferData()

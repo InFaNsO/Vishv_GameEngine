@@ -186,6 +186,15 @@
     <ClInclude Include="Inc\CameraComponent.h">
       <Filter>Inc\Components\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\Animation3D.h">
+      <Filter>Inc\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Model3D.h">
+      <Filter>Inc\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\GizmoIm.h">
+      <Filter>Inc\Editor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -295,6 +304,15 @@
     </ClCompile>
     <ClCompile Include="Src\AppState.cpp">
       <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Model3d.cpp">
+      <Filter>Src\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Animation3D.cpp">
+      <Filter>Src\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\GizmoIm.cpp">
+      <Filter>Src\Editor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

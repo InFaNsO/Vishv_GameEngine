@@ -5,7 +5,7 @@
 class MainState : public Vishv::AppState
 {
 public:
-
+	void Initialize() override;
 
 private:
 

@@ -17,7 +17,7 @@ namespace Vishv::Components
 	public:
 		META_CLASS_DECLARE
 
-		void Initialize() override;
+		/*void Initialize() override;
 		void Update() override;
 		void SimpleDraw() override;
 		void DebugUI() override;
@@ -56,7 +56,7 @@ namespace Vishv::Components
 		float mBlendTimer = 0.0f;
 
 		size_t mCurrentAnimationIndex = 0;
-		size_t mNextAnimationIndex = 0;		//invalid index is 1000
+		size_t mNextAnimationIndex = 0;		//invalid index is 1000*/
 	};
 }
 

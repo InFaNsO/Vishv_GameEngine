@@ -177,6 +177,12 @@
     <ClInclude Include="Inc\AnimationPlayInformation.h">
       <Filter>Inc\Animation</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\AnimationStateMachine.h">
+      <Filter>Inc\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AnimationStateMachineState.h">
+      <Filter>Inc\Animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\GraphicsSystem.cpp">
@@ -279,6 +285,9 @@
       <Filter>Src\Mesh</Filter>
     </ClCompile>
     <ClCompile Include="Src\AnimationIO.cpp">
+      <Filter>Src\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AnimationStateMachine.cpp">
       <Filter>Src\Animation</Filter>
     </ClCompile>
   </ItemGroup>

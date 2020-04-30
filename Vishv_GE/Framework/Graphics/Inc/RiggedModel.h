@@ -3,8 +3,6 @@
 
 #include "Model.h"
 #include "Skeleton.h"
-#include "AnimationSet.h"
-#include "AnimationPlayInformation.h"
 
 namespace Vishv::Graphics
 {
@@ -13,9 +11,7 @@ namespace Vishv::Graphics
 		Model model;
 		Skeleton skeleton;
 
-		AnimationSet* animations = nullptr;
-
-		std::vector<AnimationPlayInformation> playAnimations;
+		std::vector<Vishv::Math::Matrix4> mTPosToParent;
 	};
 }
 

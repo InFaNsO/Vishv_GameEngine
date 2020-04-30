@@ -3,13 +3,13 @@
 
 #include "GameWorld.h"
 #include "GameObject.h"
-
-Vishv::Editor::Editor(GameWorld & world)
+/*
+Vishv::EditorManager::EditorManager(GameWorld & world)
 	:mWorld(world)
 {
 }
 
-void Vishv::Editor::ShowWorldView()
+void Vishv::EditorManager::ShowWorldView()
 {
 	ImGui::Begin("World");
 
@@ -36,7 +36,7 @@ void Vishv::Editor::ShowWorldView()
 
 }
 
-void Vishv::Editor::ShowInspectorView()
+void Vishv::EditorManager::ShowInspectorView()
 {
 	ImGui::Begin("Inspector");
 
@@ -83,5 +83,5 @@ void Vishv::Editor::ShowInspectorView()
 
 	ImGui::End();
 	
-}
+}*/
 

@@ -8,10 +8,10 @@ namespace Vishv
 	class GameObject;
 	class GameWorld;
 
-	class Editor
+	/*class EditorManager
 	{
 	public:
-		Editor(GameWorld& world);
+		EditorManager(GameWorld& world);
 
 		void ShowWorldView();
 		void ShowInspectorView();
@@ -20,7 +20,7 @@ namespace Vishv
 		GameWorld& mWorld;
 
 		GameObject* mCurrentGameObject = nullptr;
-	};
+	};*/
 }
 
 #endif 

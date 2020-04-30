@@ -20,6 +20,9 @@ void Vishv::CameraSystem::Initialize()
 void Vishv::CameraSystem::Update()
 {
 	//update the current camera;
+	if (MainCamera < 0)
+		return;
+
 	mCameras[MainCamera]->Update();
 
 	if (!isTransitioning)

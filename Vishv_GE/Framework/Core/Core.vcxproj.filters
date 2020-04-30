@@ -61,7 +61,7 @@
     <ClInclude Include="Inc\OctTree.h">
       <Filter>Inc\DataStructures</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\Time.h">
+    <ClInclude Include="Inc\VishvTime.h">
       <Filter>Inc</Filter>
     </ClInclude>
   </ItemGroup>
@@ -122,7 +122,7 @@
     <ClCompile Include="Src\MetaRegistration.cpp">
       <Filter>Src\Meta</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Time.cpp">
+    <ClCompile Include="Src\VishvTime.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>

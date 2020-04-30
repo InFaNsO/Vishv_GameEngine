@@ -93,7 +93,7 @@ void Vishv::Graphics::Object3D::Set(std::filesystem::path modelPath)
 
 void Vishv::Graphics::Object3D::UpdateBlend(size_t currentAnimationID, size_t finalAnimationID, float ratio)
 {
-	VISHVASSERT(currentAnimationID < mModel.animations->animationClips.size(), "[Object 3D] animation Index out of range");
+	/*VISHVASSERT(currentAnimationID < mModel.animations->animationClips.size(), "[Object 3D] animation Index out of range");
 	VISHVASSERT(finalAnimationID < mModel.animations->animationClips.size(), "[Object 3D] animation Index out of range");
 
 	Vishv::Math::Vector3 posAnim1, posAnim2;
@@ -156,7 +156,7 @@ void Vishv::Graphics::Object3D::Update(size_t animationIndex, bool isPlaying, bo
 	if (isPlaying)
 		UpdateTransform<true>(mModel.skeleton.root, boneTransforms, tPoseToParents);
 	else
-		UpdateTransform<false>(mModel.skeleton.root, boneTransforms, tPoseToParents);
+		UpdateTransform<false>(mModel.skeleton.root, boneTransforms, tPoseToParents);*/
 }
 
 void Vishv::Graphics::Object3D::Render(const Vishv::Graphics::Camera& camera, Vishv::Graphics::EffectType type, bool SceneRender)

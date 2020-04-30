@@ -3,7 +3,7 @@
 
 namespace Vishv
 {
-	class CameraService;
+	class CameraSystem;
 }
 
 namespace Vishv::Components

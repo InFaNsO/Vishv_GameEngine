@@ -161,12 +161,15 @@
     <ClInclude Include="Inc\AIWorldService.h" />
     <ClInclude Include="Inc\AIStateMachine.h" />
     <ClInclude Include="Inc\AISteering.h" />
+    <ClInclude Include="Inc\Animation3D.h" />
     <ClInclude Include="Inc\App.h" />
     <ClInclude Include="Inc\AppState.h" />
     <ClInclude Include="Inc\CameraComponent.h" />
     <ClInclude Include="Inc\CameraService.h" />
     <ClInclude Include="Inc\CapsuleColliderComponent.h" />
+    <ClInclude Include="Inc\GizmoIm.h" />
     <ClInclude Include="Inc\MeshComponent.h" />
+    <ClInclude Include="Inc\Model3D.h" />
     <ClInclude Include="Inc\OBBColliderComponent.h" />
     <ClInclude Include="Inc\PhysicsWorldService.h" />
     <ClInclude Include="Inc\RigidBodyComponent.h" />
@@ -201,6 +204,7 @@
     <ClCompile Include="Src\AIStatemachine.cpp" />
     <ClCompile Include="Src\AISteering.cpp" />
     <ClCompile Include="Src\AIWorldService.cpp" />
+    <ClCompile Include="Src\Animation3D.cpp" />
     <ClCompile Include="Src\App.cpp" />
     <ClCompile Include="Src\AppState.cpp" />
     <ClCompile Include="Src\CameraComponent.cpp" />
@@ -209,7 +213,9 @@
     <ClCompile Include="Src\ColliderComponent.cpp" />
     <ClCompile Include="Src\Component.cpp" />
     <ClCompile Include="Src\Editor.cpp" />
+    <ClCompile Include="Src\GizmoIm.cpp" />
     <ClCompile Include="Src\MeshComponent.cpp" />
+    <ClCompile Include="Src\Model3d.cpp" />
     <ClCompile Include="Src\OBBColliderComponent.cpp" />
     <ClCompile Include="Src\PhysicsWorldService.cpp" />
     <ClCompile Include="Src\RigidBodyComponent.cpp" />

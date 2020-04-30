@@ -75,7 +75,9 @@ Math::Vector3 Vishv::Components::CameraComponent::ScreenToWorld(const Math::Vect
 
 Physics::Ray Vishv::Components::CameraComponent::MouseToWorldRay()
 {
-	Math::Vector3 origin = ScreenToWorld(Math::Vector2(static_cast<float>(Input::InputSystem::Get()->GetMouseScreenX()), static_cast<float>(Input::InputSystem::Get()->GetMouseScreenY())));
+	Math::Vector2 mousePos = { ImGui::GetMousePos().x, ImGui::GetMousePos().y };
+
+	Math::Vector3 origin = ScreenToWorld(Math::Vector2(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y)));
 	return { origin, myTransformation->Forward() };
 }
 

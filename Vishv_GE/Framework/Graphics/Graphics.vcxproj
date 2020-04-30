@@ -162,6 +162,8 @@
     <ClInclude Include="Inc\AnimationIO.h" />
     <ClInclude Include="Inc\AnimationPlayInformation.h" />
     <ClInclude Include="Inc\AnimationSet.h" />
+    <ClInclude Include="Inc\AnimationStateMachine.h" />
+    <ClInclude Include="Inc\AnimationStateMachineState.h" />
     <ClInclude Include="Inc\BlendManager.h" />
     <ClInclude Include="Inc\BlendState.h" />
     <ClInclude Include="Inc\Bone.h" />
@@ -210,6 +212,7 @@
     <ClCompile Include="Src\AnimationClip.cpp" />
     <ClCompile Include="Src\AnimationEasing.cpp" />
     <ClCompile Include="Src\AnimationIO.cpp" />
+    <ClCompile Include="Src\AnimationStateMachine.cpp" />
     <ClCompile Include="Src\BlendManager.cpp" />
     <ClCompile Include="Src\BlendState.cpp" />
     <ClCompile Include="Src\Camera.cpp" />
