@@ -1,26 +1,45 @@
 #pragma once
-
 #ifndef INCLUDED_VISHV_EDITOR
 #define INCLUDED_VISHV_EDITOR
+
+#include "EditorRenderToWindow.h"
 
 namespace Vishv
 {
 	class GameObject;
+	class Service;
 	class GameWorld;
 
-	/*class EditorManager
+	class EditorManager
 	{
 	public:
-		EditorManager(GameWorld& world);
+		static void StaticInitialize();
+		static EditorManager* Get();
+		static void StaticTerminate();
+	public:
+		void Initialize();
+		void Terminate();
 
-		void ShowWorldView();
-		void ShowInspectorView();
+		void DebugUI();
+	private:
+		void MainDockingSpace();
+
+		void HirarchyWindow();
+		void InspectorWindow();
+
+		void SceneWindow();
 
 	private:
-		GameWorld& mWorld;
+		friend class GameWorld;
 
+		GameWorld* mWorld;
+		
 		GameObject* mCurrentGameObject = nullptr;
-	};*/
+		Service* mCurrentService = nullptr;
+
+		Editor::RenderToWindow mSceneRender;
+		//add may be other renderers
+	};
 }
 
 #endif 

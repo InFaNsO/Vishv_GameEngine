@@ -14,6 +14,7 @@ META_CLASS_END
 void Vishv::Components::CameraComponent::Initialize()
 {
 	myTransformation = GetOwner().GetComponent<TransformComponent>();
+	VISHVASSERT(myTransformation, "No Transform component found");
 	Calculate();
 }
 

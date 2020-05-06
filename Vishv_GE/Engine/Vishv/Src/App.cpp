@@ -5,6 +5,7 @@
 #include "GlobalHeaders.h"
 #include "MetaRegistration.h"
 #include "GameWorld.h"
+#include "Editor.h"
 
 //Vishv::Time::DeltaTime = 0.0f;
 
@@ -76,9 +77,9 @@ void Vishv::App::Run(AppConfig config)
 		mCurrentState->Update();
 
 		Vishv::Graphics::GraphicsSystem::Get()->BeginRender();
-		mGameSceneRT.BeginRender();
 
 		//BasicRendering();
+		mCurrentState->mGameWorld.Render();
 		mCurrentState->Render();
 
 		
@@ -88,13 +89,13 @@ void Vishv::App::Run(AppConfig config)
 			mCurrentState->RenderSimpleDraw();
 			VishvSimpleDraw();
 		}
-		mGameSceneRT.EndRender();
 
 		Vishv::Graphics::DebugUI::BeginRender();
-		modelImporterFileBrowser->Display();
-		VishvDockSpace();
-		VishvUI();
-		mCurrentState->mGameWorld.DebugUI();
+		//modelImporterFileBrowser->Display();
+		//VishvDockSpace();
+		//VishvUI();
+		//mCurrentState->mGameWorld.DebugUI();
+		EditorManager::Get()->DebugUI();
 		mCurrentState->RenderDebugUI();
 		Vishv::Graphics::DebugUI::EndRender();
 
@@ -293,78 +294,7 @@ void Vishv::App::VishvUI_ModelLoader()
 
 void Vishv::App::VishvUI_SceneRender()
 {
-	ImGuiWindowFlags flag = 0;
-	flag |= ImGuiWindowFlags_AlwaysAutoResize;
-	bool holder = true;
-	ImGui::Begin("Scene");
-
-	ImVec2 vMin = ImGui::GetWindowContentRegionMin();
-	ImVec2 vMax = ImGui::GetWindowContentRegionMax();
-
-	vMin.x += ImGui::GetWindowPos().x;
-	vMin.y += ImGui::GetWindowPos().y;
-	vMax.x += ImGui::GetWindowPos().x;
-	vMax.y += ImGui::GetWindowPos().y;
-
-	//ImGui::GetForegroundDrawList()->AddRect(vMin, vMax, IM_COL32(255, 255, 0, 255));
-
-	ImGui::Image(mGameSceneRT.GetShaderResourceView(), { vMax.x - vMin.x, vMax.y - vMin.y });
-
-	ImGui::CaptureMouseFromApp(!ImGui::IsItemHovered());
-
-	ImGui::End();
-
-	auto sceneHeight = vMax.y - vMin.y;
-	auto sceneWidth = vMax.x - vMin.x;
-
-	if (sceneHeight <= 0.0f)
-		sceneHeight = 10.0f;
-
-	if (mSceneHeight != sceneHeight || mSceneWidth != sceneWidth)
-	{
-		mSceneHeight = (size_t)sceneHeight;
-		mSceneWidth =  (size_t)sceneWidth;
-
-		mGameSceneRT.Terminate();
-		mGameSceneRT.Initialize(mSceneWidth, mSceneHeight, Vishv::Graphics::RenderTarget::Format::RGBA_U8);
-	}
-
-	ImGui::Begin("Scene");
-	
-	if (mSceneHeight != ImGui::GetWindowHeight() || mSceneWidth != ImGui::GetWindowWidth())
-	{
-		if (ImGui::GetWindowWidth() > ImGui::GetWindowHeight())
-		{
-			float ratio = ImGui::GetWindowWidth() / mSceneWidth;
-			float val = static_cast<float>(mSceneHeight) * ratio;
-			mSceneHeight = static_cast<uint32_t>(val);
-			mSceneWidth = static_cast<uint32_t>(ImGui::GetWindowWidth());
-		}
-		else
-		{
-			float ratio = ImGui::GetWindowHeight() / mSceneHeight;
-			mSceneHeight = static_cast<uint32_t>(ImGui::GetWindowHeight());
-			float val = static_cast<float>(mSceneWidth) * ratio;
-			mSceneWidth = static_cast<uint32_t>(val);
-		}
-		mGameSceneRT.Terminate();
-		mGameSceneRT.Initialize(mSceneWidth, mSceneHeight, Vishv::Graphics::RenderTarget::Format::RGBA_U8);
-		
-		ImGui::SetWindowSize({static_cast<float>(mSceneWidth), static_cast<float>(mSceneHeight) });
-	}
-
-	Vishv::Graphics::EffectsManager::Get()->BindEffect(Vishv::Graphics::EffectType::PostProcessing);
-	Vishv::Graphics::SamplerManager::Get()->GetSampler("PointWrap")->BindPS(0);
-	mGameSceneRT.BindPS();
-	//mSceneNDCQuadBuffer.Render();
-	float Scene_width = Vishv::Graphics::GraphicsSystem::Get()->GetBackBufferWidth() * 0.7f;
-	float Scene_height = Vishv::Graphics::GraphicsSystem::Get()->GetBackBufferHeight() * 0.7f;
-
-	ImTextureID scene = mGameSceneRT.GetShaderResourceView();
-	ImGui::Image((void*)mGameSceneRT.GetShaderResourceView(), { static_cast<float>(mSceneWidth), static_cast<float>(mSceneHeight) });
-	//mGameSceneRT.Initialize(Scene_width, Scene_height,
-	//	Vishv::Graphics::RenderTarget::Format::RGBA_U8);
-	ImGui::End();
+	//moved into editor SceneWindow
 }
 /*
 void Vishv::App::VishvUI_BufferData()
@@ -490,6 +420,9 @@ void Vishv::App::SetUpEngine(AppConfig config)
 	Vishv::Graphics::BlendManager::StaticInitialize();
 	Vishv::Graphics::RasterizerManager::StaticInitialize();
 
+	Vishv::EditorManager::StaticInitialize();
+
+
 	LOG("Initializing Shader Effects");
 	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Texturing);
 	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::PostProcessing);
@@ -525,6 +458,7 @@ void Vishv::App::Terminate()
 	Vishv::Input::InputSystem::StaticTerminate();
 	Vishv::Graphics::DebugUI::StaticTerminate();
 	Vishv::Graphics::EffectsManager::StaticTerminate();
+	Vishv::EditorManager::StaticTerminate();
 
 	mGameSceneRT.Terminate();
 	mDome.Terminate();

@@ -1,4 +1,4 @@
-#pragma once
+ #pragma once
 #ifndef INCLUDED_VISHV_EDITOR_GIZMO_H
 #define INCLUDED_VISHV_EDITOR_GIZMO_H
 
@@ -15,7 +15,7 @@ namespace Vishv
 	}
 }
 
-namespace Vishv
+namespace Vishv::Editor
 {
 	class ScreenGizmo
 	{

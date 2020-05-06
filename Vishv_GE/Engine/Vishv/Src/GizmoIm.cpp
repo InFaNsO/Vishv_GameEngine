@@ -12,32 +12,32 @@ using namespace Vishv;
 
 namespace
 {
-	std::unique_ptr<ScreenGizmo> sInstance = nullptr;
+	std::unique_ptr<Editor::ScreenGizmo> sInstance = nullptr;
 }
 
-void Vishv::ScreenGizmo::StaticInitialize()
+void Vishv::Editor::ScreenGizmo::StaticInitialize()
 {
 	VISHVASSERT(sInstance, "Already initialized");
 
-	sInstance = std::make_unique<ScreenGizmo>();
+	sInstance = std::make_unique<Editor::ScreenGizmo>();
 	sInstance->Initialzie();
 }
 
-ScreenGizmo* Vishv::ScreenGizmo::Get()
+Editor::ScreenGizmo* Vishv::Editor::ScreenGizmo::Get()
 {
 	return sInstance.get();
 
 }
 
-void Vishv::ScreenGizmo::Terminate()
+void Vishv::Editor::ScreenGizmo::Terminate()
 {
 }
 
-void Vishv::ScreenGizmo::Initialzie()
+void Vishv::Editor::ScreenGizmo::Initialzie()
 {
 }
 
-bool Vishv::ScreenGizmo::SetSelectedObject(GameObject* go)
+bool Vishv::Editor::ScreenGizmo::SetSelectedObject(GameObject* go)
 {
 	currentObjectTransform = go->GetComponent<Components::TransformComponent>();
 	return currentObjectTransform;

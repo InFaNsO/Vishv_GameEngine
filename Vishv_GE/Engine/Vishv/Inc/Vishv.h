@@ -57,6 +57,7 @@
 
 //Editor
 #include "Editor.h"
+#include "EditorRenderToWindow.h"
 #include "GizmoIm.h"
 
 namespace VishvApp

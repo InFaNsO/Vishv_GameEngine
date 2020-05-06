@@ -12,7 +12,7 @@ namespace Vishv::Components
 
 namespace Vishv
 {
-	class Editor;
+	class EditorManager;
 	class GameObject;
 
 	class GameWorld
@@ -58,7 +58,7 @@ namespace Vishv
 		void LoadGameWorld(const std::filesystem::path& worldFileName);
 
 	private:
-		friend class Editor;
+		friend class EditorManager;
 
 		GameObject* CreateGameObject();
 		void DestroyInternal(GameObject* gameObject);

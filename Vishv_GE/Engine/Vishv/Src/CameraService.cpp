@@ -4,6 +4,7 @@
 #include "TransformComponent.h"
 #include "CameraComponent.h"
 #include "GameObject.h"
+#include "GameWorld.h"
 
 using namespace Vishv;
 
@@ -15,6 +16,13 @@ META_CLASS_END
 void Vishv::CameraSystem::Initialize()
 {
 	mCameras.reserve(10);
+	GameObject mainCam;
+	mainCam.SetName("MainCamera");
+	mainCam.AddComponent<Components::TransformComponent>();
+	mainCam.AddComponent<Components::CameraComponent>();
+	auto cam = GetWorld().RegisterGameObject(std::move(mainCam));
+	auto added = Register(cam);
+	VISHVASSERT(added, "[Camera System] Unable to add main camera");
 }
 
 void Vishv::CameraSystem::Update()
@@ -149,6 +157,17 @@ void Vishv::CameraSystem::Terminate()
 {
 	mCameras.clear();
 }
+
+bool Vishv::CameraSystem::Register(GameObjectHandle cam)
+{
+	auto comp = cam.Get()->GetComponent<Components::CameraComponent>();
+	if (!comp)
+		return false;
+	
+	Register(*comp);
+	return true;
+}
+
 
 void Vishv::CameraSystem::Register(Components::CameraComponent& cam)
 {

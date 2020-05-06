@@ -77,6 +77,10 @@ void RenderTarget::Initialize(uint32_t width, uint32_t height, Format format)
 	mViewport.MaxDepth = 1.0f;
 }
 
+void Vishv::Graphics::RenderTarget::Resize(uint32_t width, uint32_t height)
+{
+}
+
 void RenderTarget::Terminate()
 {
 	SafeRelease(mShaderResourceView);
@@ -110,4 +114,14 @@ void RenderTarget::UnbindPS(uint32_t index)
 {
 	static ID3D11ShaderResourceView* dummy = nullptr;
 	GetContext()->PSSetShaderResources(index, 1, &dummy);
+}
+
+uint32_t Vishv::Graphics::RenderTarget::GetBackBufferWidth() const
+{
+	return static_cast<uint32_t>(mViewport.Width);
+}
+
+uint32_t Vishv::Graphics::RenderTarget::GetBackBufferHeight() const
+{
+	return static_cast<uint32_t>(mViewport.Height);
 }

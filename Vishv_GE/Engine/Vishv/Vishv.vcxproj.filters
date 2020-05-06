@@ -195,6 +195,9 @@
     <ClInclude Include="Inc\GizmoIm.h">
       <Filter>Inc\Editor</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\EditorRenderToWindow.h">
+      <Filter>Inc\Editor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -312,6 +315,9 @@
       <Filter>Src\Components\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Src\GizmoIm.cpp">
+      <Filter>Src\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\EditorRenderToWindow.cpp">
       <Filter>Src\Editor</Filter>
     </ClCompile>
   </ItemGroup>

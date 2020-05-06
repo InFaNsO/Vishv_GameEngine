@@ -22,6 +22,7 @@ namespace Vishv
 		void Initialize() override;
 		void Update() override;
 
+		bool Register(GameObjectHandle handle);
 		void Register(Components::CameraComponent& cam);
 		GameObjectHandle GetMainCamera();
 

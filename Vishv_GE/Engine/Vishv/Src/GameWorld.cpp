@@ -20,6 +20,8 @@ void Vishv::GameWorld::Initialize(size_t capacity)
 		service->Initialize();
 
 	mIsInitialized = true;
+
+	EditorManager::Get()->mWorld = this;
 }
 
 void Vishv::GameWorld::Terminate()
@@ -82,7 +84,7 @@ void Vishv::GameWorld::SimpleDraw()
 
 void Vishv::GameWorld::DebugUI()
 {
-	if (!mIsInitialized)
+	/*if (!mIsInitialized)
 		return;
 	ImGui::Begin("Heirarchy");
 	static Service* selectedService = nullptr;
@@ -131,18 +133,25 @@ void Vishv::GameWorld::DebugUI()
 		selectedObject->DebugUI();
 	}
 
-	ImGui::End();
+	ImGui::End();*/
 }
 
 void Vishv::GameWorld::Render()
 {
 	if (!mIsInitialized)
 		return;
+
+	auto editor = Vishv::EditorManager::Get();
+
+	editor->mSceneRender.mRenderTarget.BeginRender();
+
 	for (auto& service : mServices)
 		service->Render();
 
 	for (auto gameObject : mUpdateList)
 		gameObject->Render();
+
+	editor->mSceneRender.mRenderTarget.EndRender();
 }
 
 
@@ -152,6 +161,7 @@ GameObjectHandle Vishv::GameWorld::RegisterGameObject(GameObject&& object)
 	GameObjectHandle handle = mGameObjectHandlePool->Register(pointer);
 	pointer->mWorld = this;
 	pointer->mHandle = handle;
+	pointer->Initialize();
 
 	mUpdateList.push_back(pointer);
 	return handle;
