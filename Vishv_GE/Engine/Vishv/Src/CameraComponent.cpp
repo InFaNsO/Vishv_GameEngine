@@ -15,6 +15,7 @@ void Vishv::Components::CameraComponent::Initialize()
 {
 	myTransformation = GetOwner().GetComponent<TransformComponent>();
 	VISHVASSERT(myTransformation, "No Transform component found");
+	mCamera.transform = &myTransformation->Transform();
 	Calculate();
 }
 
@@ -50,10 +51,10 @@ void Vishv::Components::CameraComponent::Calculate()
 	prvTransform.SetRotation(myTransformation->Rotation());
 
 	//Calculate new Matrix
-	mCamera.ComputeMatricies();
-	mWorldMatrix = Math::Matrix4::RotateMatrix(myTransformation->Rotation()) * Math::Matrix4::TranslateMatrix(myTransformation->GetPosition());
-	mWVP = (mWorldMatrix * mCamera.GetViewMatrix() * mCamera.GetPerspectiveMatrix()).Transpose();
-	mWorldMatrix.Transpose();
+	mCamera.ComputeMatricies(aspectRatio);
+	//mWorldMatrix = Math::Matrix4::RotateMatrix(myTransformation->Rotation()) * Math::Matrix4::TranslateMatrix(myTransformation->GetPosition());
+	//mWVP = (mWorldMatrix * mCamera.GetViewMatrix() * mCamera.GetPerspectiveMatrix()).Transpose();
+	//mWorldMatrix.Transpose();
 }
 
 Math::Vector2 Vishv::Components::CameraComponent::WorldToScreen(const Math::Vector3& worldCoordinate)
@@ -82,12 +83,15 @@ Physics::Ray Vishv::Components::CameraComponent::MouseToWorldRay()
 	return { origin, myTransformation->Forward() };
 }
 
-void Vishv::Components::CameraComponent::BindToBuffer(const Graphics::EffectType& type)
+void Vishv::Components::CameraComponent::BindToBuffer(const Graphics::EffectType& type, const Math::Transform& objTransform)
 {
 	auto em = Graphics::EffectsManager::Get();
 	auto transformData = em->GetBufferData(type)->GetTransform();
 
-	em->BindBuffer(type);
+	mWorldMatrix = Math::Matrix4::RotateMatrix(objTransform.Rotation()) * Math::Matrix4::TranslateMatrix(objTransform.Position());
+	mWVP = (mWorldMatrix * mCamera.GetViewMatrix() * mCamera.GetPerspectiveMatrix()).Transpose();
+	mWorldMatrix.Transpose();
+
 	transformData->viewPosition = myTransformation->Position();
 	transformData->world = mWorldMatrix;
 	transformData->wvp = mWVP;

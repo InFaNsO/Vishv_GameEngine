@@ -12,7 +12,7 @@ namespace Vishv::Components
 
 		void Update() override;
 		void SimpleDraw() override;
-
+		void Initialize() override;
 
 		bool operator==(const TransformComponent& other)
 		{

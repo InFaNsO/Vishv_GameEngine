@@ -41,8 +41,18 @@
 		using Class = ClassType;\
 		const char* className = #ClassType;
 
+#define META_DERIVED_BEGIN_INTERNAL(ClassType)\
+	template <> const Vishv::Core::Meta::MetaType* Vishv::Core::Meta::DeduceType<ClassType>()\
+	{\
+		return ClassType::StaticGetMetaClass();\
+	}\
+	const Vishv::Core::Meta::MetaClass* ClassType::StaticGetMetaClass()\
+	{\
+		using Class = ClassType;\
+		const char* className = #ClassType;
+
 #define META_DERIVED_BEGIN(ClassType, ParentType)\
-	META_CLASS_BEGIN_INTERNAL(ClassType)\
+	META_DERIVED_BEGIN_INTERNAL(ClassType)\
 		const Vishv::Core::Meta::MetaClass* parentMetaClass = ParentType::StaticGetMetaClass();
 
 #define META_CLASS_BEGIN(ClassType)\

@@ -72,20 +72,20 @@ void Vishv::Components::ThirdPersonControllerComponent::Update()
 	if (input->IsKeyDown(Input::KeyCode::Q))
 	{
 		mTransformComponent->RotateUp(-60.0f * deltaTime);
-		float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform.Position())), mCamera->transform.Forward());
-		mCamera->transform.RotateY(-angle * Math::Constans::RadToDeg * deltaTime);
+		float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform->Position())), mCamera->transform->Forward());
+		mCamera->transform->RotateY(-angle * Math::Constans::RadToDeg * deltaTime);
 	}
 	else if (input->IsKeyDown(Input::KeyCode::E))
 	{
 		mTransformComponent->RotateUp(60.0f * deltaTime);
-		float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform.Position())), mCamera->transform.Forward());
-		mCamera->transform.RotateY(angle * Math::Constans::RadToDeg * deltaTime);
-		//mCamera->transform.RotateY(-60.0f * deltaTime);
+		float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform->Position())), mCamera->transform->Forward());
+		mCamera->transform->RotateY(angle * Math::Constans::RadToDeg * deltaTime);
+		//mCamera->transform->RotateY(-60.0f * deltaTime);
 	}
 
 	//update position
 	Math::Vector3 upRot = { 0.0f, offsetCamera.y, 0.0f };
-	mCamera->transform.mPosition = mTransformComponent->Position() + upRot + (mTransformComponent->Forward() * offsetCamera.z);
+	mCamera->transform->mPosition = mTransformComponent->Position() + upRot + (mTransformComponent->Forward() * offsetCamera.z);
 
 
 	if (!input->IsKeyDown(Input::KeyCode::TAB))
@@ -102,12 +102,12 @@ void Vishv::Components::ThirdPersonControllerComponent::Update()
 
 	mTransformComponent->Rotate(upP, lr * mLookSencivity);
 
-	float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform.Position())), mCamera->transform.Forward());
+	float angle = Vishv::Math::GetAngle(Math::Normalize((mTransformComponent->Position() - mCamera->transform->Position())), mCamera->transform->Forward());
 
 	auto forwardPlayer = mTransformComponent->Forward();
-	auto forwardCam = mCamera->transform.Forward();
+	auto forwardCam = mCamera->transform->Forward();
 
-	if (angle)//(!customCompare(mCamera->transform.Forward(), mTransformComponent->Forward(), 10))
+	if (angle)//(!customCompare(mCamera->transform->Forward(), mTransformComponent->Forward(), 10))
 	{
 		float deg = angle * Math::Constans::RadToDeg;
 
@@ -123,8 +123,8 @@ void Vishv::Components::ThirdPersonControllerComponent::Update()
 		//else if (forwardPlayer.x > forwardCam.x && forwardPlayer.y < 0.0f)
 		//	deg *= -1.0f;
 
-		mCamera->transform.RotateY(deg * deltaTime);
-		//mCamera->transform.RotateX(-ud);
+		mCamera->transform->RotateY(deg * deltaTime);
+		//mCamera->transform->RotateX(-ud);
 		//mCamera->LookAt(mTransformComponent->Position() + upRot);
 	}
 }

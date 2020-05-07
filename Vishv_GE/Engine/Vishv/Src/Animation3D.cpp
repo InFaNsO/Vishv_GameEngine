@@ -4,6 +4,8 @@
 #include "Model3D.h"
 #include "TransformComponent.h"
 
+#include "imfilebrowser.h"
+
 using namespace Vishv;
 using namespace Components;
 
@@ -14,31 +16,7 @@ META_CLASS_END
 
 namespace
 {
-	using namespace Graphics;
-
-	template <bool UseAnimation>
-	void UpdateTransform(const Bone* bone, std::vector<Vishv::Math::Matrix4>& boneMatrix, const std::vector<Vishv::Math::Matrix4>& animate)
-	{
-		if (bone->parent)
-		{
-			if constexpr (UseAnimation)
-				boneMatrix[bone->index] = ((animate[bone->index])) * boneMatrix[bone->parentId];
-			else
-				boneMatrix[bone->index] = (bone->toParentTransform) * boneMatrix[bone->parentId];
-		}
-		else
-		{
-			if constexpr (UseAnimation)
-				boneMatrix[bone->index] = (animate[bone->index]);// *bone->toParentTransform;
-			else
-				boneMatrix[bone->index] = (bone->toParentTransform);
-		}
-
-		for (auto child : bone->children)
-		{
-			UpdateTransform<UseAnimation>(child, boneMatrix, animate);
-		}
-	}
+	std::unique_ptr<ImGui::FileBrowser> animImporterFileBrowser = nullptr;
 }
 
 
@@ -46,10 +24,21 @@ void Vishv::Components::Animation3D::Initialize()
 {
 	myTransform = GetOwner().GetComponent<TransformComponent>();
 	myModel = GetOwner().GetComponent<Model3D>();
-	VISHVASSERT(!myModel, "[Aniamtion3D] The objects needs a Model 3D component to apply animation first");
+	VISHVASSERT(myModel, "[Aniamtion3D] The objects needs a Model 3D component to apply animation first");
 
 	myModel->myAnimation = this;
 	mBoneTransforms.resize(myModel->mModel->mTPosToParent.size());
+
+	//temp
+	mAnimations = new Graphics::AnimationSet();
+
+	//setup file browser
+	animImporterFileBrowser = std::make_unique<ImGui::FileBrowser>(ImGuiFileBrowserFlags_CreateNewDir | ImGuiFileBrowserFlags_EnterNewFilename);
+	animImporterFileBrowser->SetTitle("Model & Import");
+	animImporterFileBrowser->SetPwd(Graphics::TextureManager::Get()->GetRootPath());
+	animImporterFileBrowser->SetTypeFilters({ ".vanim"});
+
+
 }
 
 void Vishv::Components::Animation3D::Update()
@@ -60,10 +49,19 @@ void Vishv::Components::Animation3D::Update()
 	mAniamtionStateMachine->GetBoneTransforms(mBoneTransforms);
 }
 
+void Vishv::Components::Animation3D::DebugUI()
+{
+	if (ImGui::SliderInt("Index", &currentAnim, 0, static_cast<int>(mAnimations->animationClips.size())))
+	{
+		mAniamtionStateMachine->SetIndex(currentAnim);
+	}
+	ImGui::Text(mAnimations->animationClips[currentAnim]->name.c_str());
+}
+
 void Vishv::Components::Animation3D::SetAnimations(Graphics::AnimationSet& animationSet)
 {
 	mAnimations = &animationSet;
-	mAniamtionStateMachine = std::make_unique<Graphics::AnimationStateMachine>(*mAnimations, *myModel->mModel);
+		mAniamtionStateMachine = std::make_unique<Graphics::AnimationStateMachine>(*mAnimations, *myModel->mModel);
 }
 
 bool Vishv::Components::Animation3D::SetAnimationIndex(int index)

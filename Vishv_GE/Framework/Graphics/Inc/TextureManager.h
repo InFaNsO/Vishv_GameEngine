@@ -23,6 +23,8 @@ public:
 	TextureID LoadTexture(std::filesystem::path fileName, bool usingRootPath = true);
 	Texture* GetTexture(TextureID texureID);
 
+	const std::filesystem::path& GetRootPath() { return mRootPath; }
+
 private:
 	std::filesystem::path mRootPath;
 	std::unordered_map<TextureID, std::unique_ptr<Texture>> mInventory;

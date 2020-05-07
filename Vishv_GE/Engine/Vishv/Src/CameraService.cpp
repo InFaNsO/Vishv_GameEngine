@@ -15,12 +15,16 @@ META_CLASS_END
 
 void Vishv::CameraSystem::Initialize()
 {
+	SetName("Camera System");
+
 	mCameras.reserve(10);
 	GameObject mainCam;
 	mainCam.SetName("MainCamera");
-	mainCam.AddComponent<Components::TransformComponent>();
-	mainCam.AddComponent<Components::CameraComponent>();
 	auto cam = GetWorld().RegisterGameObject(std::move(mainCam));
+	cam.Get()->AddComponent<Components::TransformComponent>();
+	cam.Get()->AddComponent<Components::CameraComponent>();
+	cam.Get()->Initialize();
+
 	auto added = Register(cam);
 	VISHVASSERT(added, "[Camera System] Unable to add main camera");
 }
@@ -32,7 +36,7 @@ void Vishv::CameraSystem::Update()
 		return;
 
 	mCameras[MainCamera]->Update();
-
+	
 	if (!isTransitioning)
 		return;
 
@@ -55,9 +59,14 @@ void Vishv::CameraSystem::Update()
 	
 }
 
-void Vishv::CameraSystem::BindBuffer(const Graphics::EffectType& type)
+void Vishv::CameraSystem::SetWidthNHeight(float width, float height)
+{ 
+	mCameras[MainCamera]->aspectRatio = width / height; 
+}
+
+void Vishv::CameraSystem::BindBuffer(const Graphics::EffectType& type, const Math::Transform& objTransform)
 {
-	mCameras[MainCamera]->BindToBuffer(type);
+	mCameras[MainCamera]->BindToBuffer(type, objTransform);
 }
 Math::Vector2 Vishv::CameraSystem::WorldToScreen(const Math::Vector3& worldCoordinate)
 {

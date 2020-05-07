@@ -1,1 +1,16 @@
-﻿
+﻿  Precompiled.cpp
+  AxisAlignedBoundingBox.cpp
+  CapsuleCollider.cpp
+  Collider.cpp
+  CollisionData.cpp
+  MetaRegistrationPhysics.cpp
+  Octree.cpp
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Physics\Src\Octree.cpp(106,28): warning C4018: '>=': signed/unsigned mismatch
+  OrientedBoundingBox.cpp
+  PhysicsObject.cpp
+  PhysicsWorld.cpp
+  Raycast.cpp
+  RigidBody.cpp
+  SphereCollider.cpp
+  Generating Code...
+  Physics.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Debug\Physics.lib

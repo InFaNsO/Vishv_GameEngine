@@ -68,10 +68,10 @@ void Vishv::Graphics::Camera::ComputeMatricies(float aspectRatio)
 	//mLookAt.z += 1.0f;
 	//mLookAt = (Math::Matrix4::RotateMatrix(transform.Rotation()) * Math::Matrix4::TranslateMatrix(transform.mPosition)) * mLookAt;
 	
-	const Math::Vector3 look = Vishv::Math::Normalize(transform.Forward());
-	const Math::Vector3 right = Math::Normalize(Math::Cross(transform.Up(), look));
-	const Math::Vector3 up = Math::Normalize(transform.Up());
-	mViewMatrix = ComputeViewMatrix(right, up, look, transform.mPosition);
+	const Math::Vector3 look = Vishv::Math::Normalize(transform->Forward());
+	const Math::Vector3 right = Math::Normalize(Math::Cross(transform->Up(), look));
+	const Math::Vector3 up = Math::Normalize(transform->Up());
+	mViewMatrix = ComputeViewMatrix(right, up, look, transform->mPosition);
 
 	if (aspectRatio == 0.0f)
 	{
@@ -90,7 +90,7 @@ void Vishv::Graphics::Camera::ComputeMatricies(const Math::Transform& transforma
 
 	const Math::Vector3 look = Vishv::Math::Normalize(transformation.Forward());
 	const Math::Vector3 right = Math::Normalize(Math::Cross(transformation.Up(), look));
-	const Math::Vector3 up = Math::Normalize(transform.Up());
+	const Math::Vector3 up = Math::Normalize(transform->Up());
 	mViewMatrix = ComputeViewMatrix(right, up, look, transformation.mPosition);
 
 	auto w = GraphicsSystem::Get()->GetBackBufferWidth();
@@ -102,18 +102,18 @@ void Vishv::Graphics::Camera::ComputeMatricies(const Math::Transform& transforma
 
 Math::Vector3 Vishv::Graphics::Camera::GetCameraUp() const
 {
-	return transform.Up();
+	return transform->Up();
 }
 
 void Vishv::Graphics::Camera::LookAt(const Math::Vector3& target)
 {
-	auto dir = target - transform.mPosition;
+	auto dir = target - transform->mPosition;
 	if (dir.MagnitudeSq() == 0.0f)
 		return;
 	dir.Normalize();
-	if (customCompare(dir,transform.Forward()))
+	if (customCompare(dir,transform->Forward()))
 		return;
-	float angle = Vishv::Math::GetAngle(transform.Forward(), dir);
+	float angle = Vishv::Math::GetAngle(transform->Forward(), dir);
 
-	transform.RotateUp(angle * Math::Constans::RadToDeg);
+	transform->RotateUp(angle * Math::Constans::RadToDeg);
 }

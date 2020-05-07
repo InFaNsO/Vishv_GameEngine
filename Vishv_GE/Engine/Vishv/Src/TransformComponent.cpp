@@ -1,8 +1,10 @@
 #include "Precompiled.h"
 #include "TransformComponent.h"
 
+using namespace Vishv::Components;
 
-META_DERIVED_BEGIN(Vishv::Components::TransformComponent, Vishv::Components::Component)
+
+META_DERIVED_BEGIN(TransformComponent, Component)
 	META_FIELD_BEGIN
 		META_FIELD(pos, "Position")
 		META_FIELD(mQuaternion, "Orientation")
@@ -10,8 +12,12 @@ META_DERIVED_BEGIN(Vishv::Components::TransformComponent, Vishv::Components::Com
 	META_FIELD_END
 META_CLASS_END
 
-using namespace Vishv::Components;
 
+
+void Vishv::Components::TransformComponent::Initialize()
+{
+	VISHVASSERT(true, "Entered the transform iniialize");
+}
 
 void Vishv::Components::TransformComponent::Update()
 {

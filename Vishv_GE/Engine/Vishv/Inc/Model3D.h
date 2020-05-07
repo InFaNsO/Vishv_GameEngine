@@ -20,6 +20,8 @@ namespace Vishv::Components
 		META_CLASS_DECLARE
 
 		void Initialize() override;
+		void DebugUI() override;
+
 		void Render() override;
 
 		void Terminate() override;
@@ -31,11 +33,14 @@ namespace Vishv::Components
 	private:
 		friend class Animation3D;
 		void SetUpModel();
+		void LoadModel();
 
 	private: 
 		CameraSystem* mCameraSystem = nullptr;
 		Animation3D* myAnimation = nullptr;
 		TransformComponent* myTransformation = nullptr;
+
+		std::vector<Math::Matrix4> mTpose;
 
 		bool didNew = false;
 		Graphics::RiggedModel* mModel = nullptr;

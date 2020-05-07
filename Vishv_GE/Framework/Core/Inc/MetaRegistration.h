@@ -10,7 +10,7 @@ META_TYPE_DECLARE(bool)
 META_TYPE_DECLARE(std::string)
 
 META_TYPE_DECLARE(uint32_t)
-META_TYPE_DECLARE(size_t)
+META_TYPE_DECLARE(uint64_t)
 
 
 namespace Vishv::Core

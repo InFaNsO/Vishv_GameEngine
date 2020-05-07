@@ -28,13 +28,12 @@ namespace Vishv::Components
 
 		Physics::Ray MouseToWorldRay();
 
-		void BindToBuffer(const Graphics::EffectType& type);
+		void BindToBuffer(const Graphics::EffectType& type, const Math::Transform& objTransform);
 
 		Graphics::Camera& GetCamera() { return mCamera; }
 
 	private:
 		friend class CameraSystem;
-
 		void Calculate();
 
 		bool isMainCamera = false;
@@ -45,6 +44,8 @@ namespace Vishv::Components
 		float mFeildOfView;
 		float mScreenWidth;
 		float mScreenHeight;
+
+		float aspectRatio = 1.77f;
 
 		Math::Matrix4 mWorldMatrix;
 		Math::Matrix4 mWVP;

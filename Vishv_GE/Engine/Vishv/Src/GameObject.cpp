@@ -54,10 +54,11 @@ void Vishv::GameObject::DebugUI()
 	ImGui::Text(mName.c_str());
 	for (auto& component : mComponents)
 	{
-		if (ImGui::CollapsingHeader(component.get()->StaticGetMetaClass()->GetName()))
+		auto comp = component.get()->GetMetaClass();
+		if (ImGui::CollapsingHeader(comp->GetName()))
 		{
-			auto mclass = component->GetMetaClass();
-			for (size_t i = 0; i < component->GetMetaClass()->GetFieldCount(); ++i)
+			auto mclass = comp;
+			for (size_t i = 0; i < comp->GetFieldCount(); ++i)
 			{
 				void* me = component.get();
 				auto field = mclass->GetField(i);
@@ -65,33 +66,32 @@ void Vishv::GameObject::DebugUI()
 				if (field->GetMetaType()->GetCategory() == Core::Meta::MetaType::Category::Primitive)
 				{
 					void* data = static_cast<uint8_t*>(me) + field->GetOffset();
-					if (field->GetMetaType()->GetName() == "Number")
+					if (field->GetMetaType()->GetName() == std::string("Number"))
 						ImGui::DragFloat(field->GetName(), static_cast<float*>(data));
-					else if (field->GetMetaType()->GetName() == "Integer" || field->GetMetaType()->GetName() == "UInt" || field->GetMetaType()->GetName() == "Size_t")
+					else if (field->GetMetaType()->GetName() == std::string("Integer") || field->GetMetaType()->GetName() == std::string("UInt") || field->GetMetaType()->GetName() == std::string("Size_t"))
 						ImGui::DragInt(field->GetName(), static_cast<int*>(data));
-					else if (field->GetMetaType()->GetName() == "Boolean")
+					else if (field->GetMetaType()->GetName() == std::string("Boolean"))
 						ImGui::Checkbox(field->GetName(), static_cast<bool*>(data));
-					else if (field->GetMetaType()->GetName() == "String")
+					else if (field->GetMetaType()->GetName() == std::string("String"))
 					{
 						auto s = static_cast<std::string*>(data);
 						s->reserve(256);
 						ImGui::InputText(field->GetName(), s->data(), s->max_size());
 					}
-					else if (field->GetMetaType()->GetName() == "Vector2")
+					else if (field->GetMetaType()->GetName() == std::string("Vector2"))
 					{
 						ImGui::DragFloat3(field->GetName(), &static_cast<Math::Vector2*>(data)->x);
 					}
-					else if (field->GetMetaType()->GetName() == "Vector3")
+					else if (field->GetMetaType()->GetName() == std::string("Vector3"))
 					{
 						ImGui::DragFloat3(field->GetName(), &static_cast<Math::Vector3*>(data)->x);
 					}
-					else if (field->GetMetaType()->GetName() == "Vector4")
+					else if (field->GetMetaType()->GetName() == std::string("Vector4"))
 					{
 						ImGui::ColorEdit4(field->GetName(), &static_cast<Math::Vector4*>(data)->r);
 					}
-					else if (field->GetMetaType()->GetName() == "Quaternion")
+					else if (field->GetMetaType()->GetName() == std::string("Quaternion"))
 					{
-						ImGui::Text(field->GetName());
 						Math::Quaternion* quat = static_cast<Math::Quaternion*>(data);
 
 						Math::Vector3 xyz;
@@ -118,13 +118,14 @@ void Vishv::GameObject::DebugUI()
 	}
 
 	ImGui::InputText("Component Name", &componentName[0], 256);
-	ImGui::SameLine();
 	if (ImGui::Button("AddComponent"))
 	{
 		auto metaClass = Core::Meta::FindMetaClass(componentName);
 		auto ptr = AddComponent(*metaClass);
 		VISHVASSERT(ptr, "[Game Object] Component not found");
 		ptr->Initialize();
+
+		memset(componentName, 0, 256);
 	}
 }
 
@@ -141,7 +142,7 @@ void Vishv::GameObject::SimpleDraw()
 Vishv::Components::Component* Vishv::GameObject::AddComponent(const Core::Meta::MetaClass& metaClass)
 {
 	Components::Component* comp = static_cast<Components::Component*>(metaClass.Create());
-
+	comp->mOwner = this;
 	mComponents.emplace_back(std::move(comp));
 	return mComponents[mComponents.size() - 1].get();
 }

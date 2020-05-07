@@ -39,6 +39,7 @@
 #include "AIWorldService.h"
 #include "PhysicsWorldService.h"
 #include "CameraService.h"
+#include "ModelService.h"
 
 //template classes completed
 //Steering behaviours

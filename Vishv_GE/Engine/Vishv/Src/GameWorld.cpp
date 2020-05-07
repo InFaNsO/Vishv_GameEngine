@@ -159,11 +159,11 @@ GameObjectHandle Vishv::GameWorld::RegisterGameObject(GameObject&& object)
 {
 	auto pointer = mGameObjectFactory->Add(std::move(object));
 	GameObjectHandle handle = mGameObjectHandlePool->Register(pointer);
-	pointer->mWorld = this;
-	pointer->mHandle = handle;
-	pointer->Initialize();
+	
+	handle.Get()->mWorld = this;
+	handle.Get()->mHandle = handle;
 
-	mUpdateList.push_back(pointer);
+	mUpdateList.push_back(handle.Get());
 	return handle;
 }
 
@@ -207,6 +207,7 @@ void Vishv::GameWorld::Destroy(GameObjectHandle handle)
 
 	GameObject* go = handle.Get();
 	mGameObjectHandlePool->UnRegister(handle);
+	handle.Invalidate();
 
 	if (!mIsUpdating)
 		DestroyInternal(go);

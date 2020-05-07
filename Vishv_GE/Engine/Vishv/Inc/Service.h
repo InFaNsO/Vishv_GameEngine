@@ -26,6 +26,9 @@ namespace Vishv
 		const std::string & GetTypeID() const { return mTypeID; }
 		void DoUI(void* instance, const Core::Meta::MetaClass& mclass);
 
+	protected:
+		void SetName(std::string&& name) { mTypeID = std::move(name); }
+
 	private:
 		friend class GameWorld;
 

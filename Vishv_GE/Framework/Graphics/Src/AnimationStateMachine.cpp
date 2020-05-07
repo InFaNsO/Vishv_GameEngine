@@ -6,6 +6,12 @@ Vishv::Graphics::AnimationStateMachine::AnimationStateMachine(AnimationSet& set,
 	:myAnimations(set)
 	,mModel(model)
 {
+	mTPose.reserve(mModel.mTPosToParent.size());
+	for (auto& pos : mModel.mTPosToParent)
+	{
+		mTPose.emplace_back(pos);
+	}
+
 	mStates.reserve(myAnimations.animationClips.size());
 	for (int i = 0; i < myAnimations.animationClips.size(); ++i)
 		mStates.emplace_back(i);
@@ -44,6 +50,19 @@ bool Vishv::Graphics::AnimationStateMachine::SetInt(std::map<std::string, std::u
 				nextState = val;
 		}
 		else nextState = val;
+
+		if (nextState > -1)
+		{
+			for (auto& intTrans : mCurrentState->mTransitionsOnIndex)
+			{
+				if (intTrans.variableName == iter->first && val == intTrans.indexValue)
+				{
+					nextState = val;
+					mCurrentTransition = &intTrans;
+					break;
+				}
+			}
+		}
 	}
 	else
 	{
@@ -268,18 +287,19 @@ void Vishv::Graphics::AnimationStateMachine::GetBoneTransforms(std::vector<Math:
 void Vishv::Graphics::AnimationStateMachine::UnBlendedBoneTransforms(std::vector<Math::Matrix4>& bTransforms)
 {
 	auto& currentAnimation = myAnimations.animationClips[mCurrentState->AnimationIndex];
+	float duration = (Core::Time::Get()->CurrentTime() - animationStartTime) * currentAnimation->ticksPerSecond;
 	for (size_t i = 0; i < mModel.skeleton.GetBoneArray().size(); ++i)
 	{
 		auto& bone = mModel.skeleton.GetBoneArray()[i];
 
-		if (!currentAnimation->GetTransform(Core::Time::Get()->CurrentTime() - animationStartTime, i, bTransforms[i]))
+		if (!currentAnimation->GetTransform(duration, i, mTPose[i]))
 		{
-			bTransforms[i] = bone->toParentTransform;
+			mTPose[i] = bone->toParentTransform;
 		}
 	}
-	UpdateTransformMatrixFunc(mModel.skeleton.root, bTransforms, mModel.mTPosToParent);
-
-	if (animationStartTime + animationDuration < Core::Time::Get()->CurrentTime())
+	UpdateTransformMatrixFunc(mModel.skeleton.root, bTransforms, mTPose);
+	
+	if (currentAnimation->duration / currentAnimation->ticksPerSecond < Core::Time::Get()->CurrentTime() - animationStartTime)
 	{
 		if(!currentAnimation->isLooping)
 		{
@@ -287,7 +307,6 @@ void Vishv::Graphics::AnimationStateMachine::UnBlendedBoneTransforms(std::vector
 			animationDuration = myAnimations.animationClips[mCurrentState->AnimationIndex]->duration;
 		}
 		animationStartTime = Core::Time::Get()->CurrentTime();
-
 	}
 }
 

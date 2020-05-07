@@ -17,6 +17,8 @@ META_CLASS_END
 void Vishv::PhysicsSystem::Initialize()
 {
 	mWorld.Initialize(mMaxObjectsInWorld, mMaxObjectsProcessedByThread);
+	SetName("Physics System");
+
 	//mWorld.mGravity = mGravity;
 }
 

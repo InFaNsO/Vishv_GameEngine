@@ -171,6 +171,7 @@
     <ClInclude Include="Inc\GizmoIm.h" />
     <ClInclude Include="Inc\MeshComponent.h" />
     <ClInclude Include="Inc\Model3D.h" />
+    <ClInclude Include="Inc\ModelService.h" />
     <ClInclude Include="Inc\OBBColliderComponent.h" />
     <ClInclude Include="Inc\PhysicsWorldService.h" />
     <ClInclude Include="Inc\RigidBodyComponent.h" />
@@ -218,6 +219,7 @@
     <ClCompile Include="Src\GizmoIm.cpp" />
     <ClCompile Include="Src\MeshComponent.cpp" />
     <ClCompile Include="Src\Model3d.cpp" />
+    <ClCompile Include="Src\ModelService.cpp" />
     <ClCompile Include="Src\OBBColliderComponent.cpp" />
     <ClCompile Include="Src\PhysicsWorldService.cpp" />
     <ClCompile Include="Src\RigidBodyComponent.cpp" />

@@ -1,1 +1,66 @@
-﻿
+﻿  AniamtionSet_Guice.cpp
+  GameStateAnimBlending.cpp
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(23,44): error C2039: 'AnimationPlayInformation': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\SpriteRenderer.h(6): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(23,68): error C2061: syntax error: identifier 'AnimationPlayInformation'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(12,7): error C3668: 'GameStateAnimBlending::Update': method with override specifier 'override' did not override any base class methods
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(19,27): error C2039: 'animations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(24,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(34,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(39,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(44,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(49,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(54,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(59,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(64,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(69,30): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(78,2): error C2065: 'scene': undeclared identifier
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(79,2): error C2065: 'scene': undeclared identifier
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(103,49): error C2039: 'animations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(107,66): error C2039: 'AnimationPlayInformation': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\SpriteRenderer.h(6): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(107,91): error C2065: 'AnimationPlayInformation': undeclared identifier
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(107,93): error C2065: 'play': undeclared identifier
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(107,105): error C2062: type 'float' unexpected
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(108,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(108,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(125,32): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(142,51): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(142,88): error C2660: 'GameStateAnimBlending::UpdateAnimationPlay': function does not take 2 arguments
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(23,7): message : see declaration of 'GameStateAnimBlending::UpdateAnimationPlay'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(143,51): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(143,85): error C2660: 'GameStateAnimBlending::UpdateAnimationPlay': function does not take 2 arguments
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(23,7): message : see declaration of 'GameStateAnimBlending::UpdateAnimationPlay'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(145,50): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(149,44): error C2039: 'playAnimations': is not a member of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\RiggedModel.h(9): message : see declaration of 'Vishv::Graphics::RiggedModel'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(149,14): error C2530: 'play': references must be initialized
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(150,27): error C3536: 'play': cannot be used before it is initialized
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(150,38): error C2660: 'GameStateAnimBlending::UpdateAnimationPlay': function does not take 2 arguments
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(23,7): message : see declaration of 'GameStateAnimBlending::UpdateAnimationPlay'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(159,2): error C2065: 'scene': undeclared identifier
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(161,17): error C2065: 'scene': undeclared identifier
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(161,36): error C2065: 'scene': undeclared identifier
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.cpp(161,55): error C2661: 'Vishv::Graphics::Object3D::Render': no overloaded function takes 1 arguments
+  SkeletonUI.cpp
+  WinMain.cpp
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(23,44): error C2039: 'AnimationPlayInformation': is not a member of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Framework\Graphics\Inc\SpriteRenderer.h(6): message : see declaration of 'Vishv::Graphics'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(23,68): error C2061: syntax error: identifier 'AnimationPlayInformation'
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\VGP334_Animation\05_AnimationBlending1\GameStateAnimBlending.h(12,7): error C3668: 'GameStateAnimBlending::Update': method with override specifier 'override' did not override any base class methods
+  Generating Code...

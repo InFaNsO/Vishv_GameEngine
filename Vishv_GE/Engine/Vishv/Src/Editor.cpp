@@ -4,6 +4,9 @@
 #include "GameWorld.h"
 #include "GameObject.h"
 #include "Service.h"
+#include "CameraService.h"
+
+#include "TransformComponent.h"
 
 namespace
 {
@@ -48,6 +51,7 @@ void Vishv::EditorManager::DebugUI()
 {
 	//call all the UI Functions
 	MainDockingSpace();
+	//MenueBar();
 
 	HirarchyWindow();
 	InspectorWindow();
@@ -82,6 +86,18 @@ void Vishv::EditorManager::MainDockingSpace()
 
 	ImGui::PopStyleVar(3);
 }
+void Vishv::EditorManager::MenueBar()
+{
+	if (ImGui::BeginMainMenuBar())
+	{
+		if (ImGui::BeginMenu("File"))
+		{
+			ImGui::EndMenu();
+		}
+		ImGui::EndMenuBar();
+	}
+}
+
 
 void Vishv::EditorManager::HirarchyWindow()
 {
@@ -112,6 +128,7 @@ void Vishv::EditorManager::HirarchyWindow()
 	if (ImGui::Button("Add Game Object"))
 	{
 		mCurrentGameObject = mWorld->CreateGameObject();
+		mCurrentGameObject->AddComponent<Components::TransformComponent>();
 		mCurrentService = nullptr;
 	}
 	ImGui::End();
@@ -134,9 +151,23 @@ void Vishv::EditorManager::InspectorWindow()
 
 void Vishv::EditorManager::SceneWindow()
 {
+	auto gs = Vishv::Graphics::GraphicsSystem::Get();
+
+	ImGui::SetNextWindowSize({gs->GetBackBufferWidth()* 0.6f, gs->GetBackBufferHeight() * 0.6f});
 	ImGui::Begin("Scene");
 	
-	mSceneRender.Resize();
+
+	ImVec2 vMin = ImGui::GetWindowContentRegionMin();
+	ImVec2 vMax = ImGui::GetWindowContentRegionMax();
+
+
+	float windowWidth = vMax.x - vMin.x;
+	float windowHeight = vMax.y - vMin.y;
+
+
+//	mWorld->GetService<CameraSystem>()->SetWidthNHeight(windowWidth, windowHeight);
+
+	//mSceneRender.Resize();
 	mSceneRender.DoUI();
 	
 	ImGui::End();

@@ -53,8 +53,10 @@ namespace Vishv::Graphics
 		AnimationTransition::TransitionBase* mCurrentTransition = nullptr;
 		float mAnimationTransitionStartTime = 0.0f;
 
-		float animationDuration;
-		float animationStartTime;
+		float animationDuration = 1.0f;
+		float animationStartTime = 0.0f;
+
+		std::vector<Math::Matrix4> mTPose;
 
 		std::map<std::string, std::unique_ptr<int>> mIntVariables;
 		std::map<std::string, std::unique_ptr<bool>> mBoolVariables;

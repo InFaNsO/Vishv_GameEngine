@@ -15,7 +15,7 @@ class Camera {
 
 public:
 	Camera() = default;
-	void SetPosition(const Math::Vector3& position) { transform.mPosition = position; }
+	void SetPosition(const Math::Vector3& position) { transform->mPosition = position; }
 	//void SetDirection(const Math::Vector3& direction) { mLookAt = Math::Normalize(direction); }
 	//void SetTarget(const Math::Vector3& target) { VISHVASSERT(target.MagnitudeSq() > 0.0f, "[Camera] direction is wrong"); mDirection = target; }
 
@@ -24,9 +24,9 @@ public:
 	void SetFarPlane(float distance) { mFarPlane = distance; }
 
 	//3 degrees of freedom for translation
-	void Walk(float distance) { transform.mPosition.z += distance; }
-	void Strafe(float distance) { transform.mPosition.x += distance; }
-	void Rise(float distance) { transform.mPosition.y += distance; }
+	void Walk(float distance) {   transform->mPosition.z += distance; }
+	void Strafe(float distance) { transform->mPosition.x += distance; }
+	void Rise(float distance) {   transform->mPosition.y += distance; }
 
 	void LookAt(const Math::Vector3& target);
 
@@ -34,8 +34,8 @@ public:
 	//void Yaw(float rotation) { mDirection.x += rotation; }		//Rotate along global Y axis
 	//void Pitch(float rotation) { mDirection.y += rotation; }	//Rotate along local  X axis
 
-	const Math::Vector3& GetPosition() const { return transform.mPosition; };
-	const Math::Vector3& GetDirection()const { return transform.Forward(); };
+	const Math::Vector3& GetPosition() const { return transform->mPosition; };
+	const Math::Vector3& GetDirection()const { return transform->Forward(); };
 
 	float GetFov()const { return mFov; };
 	float GetNearPlane()const { return mNearPlane; };
@@ -48,7 +48,7 @@ public:
 	void ComputeMatricies(float aspectRatio = 0.0f);
 	void ComputeMatricies(const Math::Transform& transformation);
 
-	Math::Transform transform;
+	Math::Transform* transform;
 private:
 	//Math::Vector3 mPosition{ 0.0f };
 	//Math::Vector3 mLookAt;

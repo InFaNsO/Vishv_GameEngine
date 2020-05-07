@@ -18,6 +18,7 @@ META_CLASS_END
 
 void Vishv::AIWorld::Initialize()
 {
+	SetName("AI World");
 }
 
 void Vishv::AIWorld::Terminate()

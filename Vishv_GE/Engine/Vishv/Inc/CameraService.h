@@ -34,7 +34,9 @@ namespace Vishv
 
 		void Terminate() override;
 
-		void BindBuffer(const Graphics::EffectType& type);
+		void SetWidthNHeight(float width, float height);
+
+		void BindBuffer(const Graphics::EffectType& type, const Math::Transform& objTransform);
 		Math::Vector2 WorldToScreen(const Math::Vector3& worldCoordinate);
 		Math::Vector3 ScreenToWorld(const Math::Vector2& screenCoordinate);
 		Math::Vector3 ScreenToWorld(const Math::Vector3& screenCoordinate);
@@ -52,6 +54,9 @@ namespace Vishv
 		float transitionEndTime = 2.0f;
 		int transitionCamIndex = -1;
 		Components::TransformComponent* TargetCamTransform;
+
+		float mWidth = 16.0f;
+		float mHeight = 9.0f;
 
 		Math::Vector3 cachePos;
 		Math::Quaternion cacheQuat;

@@ -29,9 +29,9 @@ namespace Vishv::Core::Meta
 		*(uint32_t*)(instance) = jsonValue.GetUint();
 	}
 	template<>
-	void Deserialize<size_t>(void* instance, const rapidjson::Value& jsonValue)
+	void Deserialize<uint64_t>(void* instance, const rapidjson::Value& jsonValue)
 	{
-		*(size_t*)(instance) = jsonValue.GetUint();
+		*(uint64_t*)(instance) = jsonValue.GetUint();
 	}
 }
 
@@ -45,7 +45,7 @@ META_TYPE_DEFINE(float, Number)
 META_TYPE_DEFINE(bool, Boolean)
 META_TYPE_DEFINE(std::string, String)
 META_TYPE_DEFINE(uint32_t, UInt)
-META_TYPE_DEFINE(size_t, Size_t)
+META_TYPE_DEFINE(uint64_t, Size_t)
 
 void Vishv::Core::StaticMetaRegister()
 {

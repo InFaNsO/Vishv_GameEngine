@@ -22,6 +22,8 @@ namespace Vishv
 
 		void DebugUI();
 	private:
+		void MenueBar();
+
 		void MainDockingSpace();
 
 		void HirarchyWindow();

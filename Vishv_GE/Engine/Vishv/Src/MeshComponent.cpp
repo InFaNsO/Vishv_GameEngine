@@ -75,6 +75,11 @@ void MeshComponent::Initialize()
 	mColor = Graphics::Colors::Coral;
 
 	mCamSys = GetOwner().GetWorld().GetService<CameraSystem>();
+
+	//setup file browser
+	//modelImporterFileBrowser = std::make_unique<ImGui::FileBrowser>(ImGuiFileBrowserFlags_CreateNewDir | ImGuiFileBrowserFlags_EnterNewFilename | ImGuiFileBrowserFlags_SelectDirectory);
+	//modelImporterFileBrowser->SetTitle("Model Import");
+	//modelImporterFileBrowser->SetPwd(Graphics::TextureManager::Get()->GetRootPath());
 }
 
 void MeshComponent::SimpleDraw()
