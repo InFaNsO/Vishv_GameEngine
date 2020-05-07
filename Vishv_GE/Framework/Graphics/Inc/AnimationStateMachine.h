@@ -45,6 +45,8 @@ namespace Vishv::Graphics
 		bool SetTrig(std::vector<std::string>::iterator iter);
 
 	private:
+		void SetAllStateIndexTransitions();
+
 		AnimationSet& myAnimations;
 		std::vector<AnimationState> mStates;
 		AnimationState* mCurrentState;

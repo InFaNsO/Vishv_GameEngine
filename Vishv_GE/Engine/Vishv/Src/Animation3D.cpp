@@ -51,7 +51,7 @@ void Vishv::Components::Animation3D::Update()
 
 void Vishv::Components::Animation3D::DebugUI()
 {
-	if (ImGui::SliderInt("Index", &currentAnim, 0, static_cast<int>(mAnimations->animationClips.size())))
+	if (ImGui::SliderInt("Index", &currentAnim, 0, static_cast<int>(mAnimations->animationClips.size() - 1)))
 	{
 		mAniamtionStateMachine->SetIndex(currentAnim);
 	}

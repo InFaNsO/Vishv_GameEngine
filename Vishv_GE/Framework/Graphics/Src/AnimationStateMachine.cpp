@@ -18,6 +18,27 @@ Vishv::Graphics::AnimationStateMachine::AnimationStateMachine(AnimationSet& set,
 
 	mCurrentState = &mStates[StartAnimation];
 	auto [iter, success] = mIntVariables.insert({ "Index", std::make_unique<int>(StartAnimation) });
+	SetAllStateIndexTransitions();
+}
+
+void Vishv::Graphics::AnimationStateMachine::SetAllStateIndexTransitions()
+{
+	for (size_t i = 0; i < mStates.size(); ++i)
+	{
+		if (mStates[i].IsConnectedToAnyState)
+		{
+			for (size_t j = 0; j < mStates.size(); ++j)
+			{
+				if (i == j)
+					continue;
+				auto& transition = mStates[i].mTransitionsOnIndex.emplace_back(AnimationTransition::IndexTransition());
+				transition.variableName = "Index";
+				transition.myAnimation = &mStates[i];
+				transition.nextAnimation = &mStates[j];
+				transition.transitionDuration = myAnimations.blendTimer;
+			}
+		}
+	}
 }
 
 bool Vishv::Graphics::AnimationStateMachine::SetIndex(int indexVal)
@@ -39,6 +60,15 @@ bool Vishv::Graphics::AnimationStateMachine::SetInt(std::map<std::string, std::u
 		return false;
 	}
 
+	for (size_t i = 0; i < mCurrentState->mTransitionsOnIndex.size(); ++i)
+	{
+		if (mCurrentState->mTransitionsOnIndex[i].variableName == iter->first)
+		{
+			mCurrentTransition = &mCurrentState->mTransitionsOnIndex[i];
+			break;
+		}
+	}
+
 	int nextState = -1;
 
 	float currentExitVal = animationStartTime + myAnimations.animationClips[mCurrentState->AnimationIndex]->duration / Core::Time::Get()->CurrentTime();
@@ -55,29 +85,7 @@ bool Vishv::Graphics::AnimationStateMachine::SetInt(std::map<std::string, std::u
 		{
 			for (auto& intTrans : mCurrentState->mTransitionsOnIndex)
 			{
-				if (intTrans.variableName == iter->first && val == intTrans.indexValue)
-				{
-					nextState = val;
-					mCurrentTransition = &intTrans;
-					break;
-				}
-			}
-		}
-	}
-	else
-	{
-		bool canChange = false;
-		if (!mCurrentState->canExitAnytime)
-		{
-			if (currentExitVal >= mCurrentState->exitTime)
-				canChange = true;
-		}
-
-		if (canChange)
-		{
-			for (auto& intTrans : mCurrentState->mTransitionsOnIndex)
-			{
-				if (intTrans.variableName == iter->first && val == intTrans.indexValue)
+				if (intTrans.variableName == iter->first)
 				{
 					nextState = val;
 					mCurrentTransition = &intTrans;
@@ -322,6 +330,9 @@ void Vishv::Graphics::AnimationStateMachine::BlendedBoneTransforms(std::vector<M
 
 	float ratio = (Time - mAnimationTransitionStartTime) / mCurrentTransition->transitionDuration;
 
+	ratio = std::min(ratio, 1.0f);
+	ratio = std::max(ratio, 0.0f);
+
 	for (size_t i = 0; i < mModel.skeleton.GetBoneArray().size(); ++i)
 	{
 		auto& bone = mModel.skeleton.GetBoneArray()[i];
@@ -332,6 +343,10 @@ void Vishv::Graphics::AnimationStateMachine::BlendedBoneTransforms(std::vector<M
 		float r1 = EaseCalculation::GetTime(ratio, mCurrentTransition->TransitionAnimation, true);
 		float r2 = EaseCalculation::GetTime(ratio, mCurrentTransition->TransitionAnimation, false);
 
+		if (!isFirst && !isSecond)
+			mTPose[i] = bone->toParentTransform;
+		else
+		{
 			if (!isFirst)
 			{
 				posAnim1 = bone->toParentTransform.GetTranslation();
@@ -343,12 +358,13 @@ void Vishv::Graphics::AnimationStateMachine::BlendedBoneTransforms(std::vector<M
 				rotAnim2 = Math::Quaternion::MatrixToQuaternion(bone->toParentTransform);
 			}
 
-			bTransforms[i] = Vishv::Math::Matrix4::TranslationMatrix(Vishv::Math::Quaternion::Slerp(rotAnim1, rotAnim2, r1), Vishv::Math::Vector3::Lerp(posAnim1, posAnim2, r2));
+			mTPose[i] = Vishv::Math::Matrix4::TranslationMatrix(Vishv::Math::Quaternion::Slerp(rotAnim1, rotAnim2, r1), Vishv::Math::Vector3::Lerp(posAnim1, posAnim2, r2));
+		}
 	}
 
-	UpdateTransformMatrixFunc(mModel.skeleton.root, bTransforms, mModel.mTPosToParent);
+	UpdateTransformMatrixFunc(mModel.skeleton.root, bTransforms, mTPose);
 
-	if (ratio > 1.0f)
+	if (ratio >= 1.0f)
 		EndTransition();
 }
 
