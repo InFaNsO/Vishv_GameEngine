@@ -14,7 +14,7 @@ namespace Vishv::Core::Meta
 	public:
 		using CreateFunc = std::function<void*()>;
 		using DestroyFunc = std::function<void(void*)>;
-		using SerializeFunc = std::function<void(const void* instance, rapidjson::Value& jsonValue)>;
+		using SerializeFunc = std::function<void(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)>;
 		using DeserializeFunc = std::function<void(void* instance, const rapidjson::Value& jsonValue)>;
 
 		enum class Category
@@ -40,7 +40,7 @@ namespace Vishv::Core::Meta
 		void * Create() const;
 		void Destroy(void* data) const;
 
-		virtual void Serialize(const void* instance, rapidjson::Value& jsonValue) const;
+		virtual void Serialize(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc) const;
 		virtual void Deserialize(void* instance, const rapidjson::Value& jsonValue) const;
 
 

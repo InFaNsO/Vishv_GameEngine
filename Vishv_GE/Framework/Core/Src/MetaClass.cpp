@@ -54,8 +54,15 @@ size_t Vishv::Core::Meta::MetaClass::GetFieldCount() const
 }
 
 
-void Vishv::Core::Meta::MetaClass::Serialize(const void * instance, rapidjson::Value & jsonValue) const 
+void Vishv::Core::Meta::MetaClass::Serialize(const void * instance, rapidjson::Value & jsonValue, rapidjson::Document& doc) const
 {
+	for (auto& field : mFields)
+	{
+		auto metaType =field.GetMetaType();
+		auto instanceField = static_cast<const uint8_t*>(instance) + field.GetOffset();
+
+		metaType->Serialize(instanceField, jsonValue, doc);
+	}
 }
 
 void Vishv::Core::Meta::MetaClass::Deserialize(void * instance, const rapidjson::Value & jsonValue) const

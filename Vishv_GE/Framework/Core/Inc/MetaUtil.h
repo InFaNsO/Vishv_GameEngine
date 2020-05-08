@@ -12,6 +12,8 @@ namespace Vishv::Core::Meta
 
 	template <class DataType>
 	void Deserialize(void* instance, const rapidjson::Value& jsonValue);
+	template <class DataType>
+	void Serialize(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc);
 
 	namespace Detail
 	{

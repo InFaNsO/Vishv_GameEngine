@@ -22,7 +22,7 @@ namespace Vishv::Core::Meta
 		const MetaField* GetField(size_t index) const;
 		size_t GetFieldCount() const;
 
-		void Serialize(const void* instance, rapidjson::Value& jsonValue) const override;
+		void Serialize(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc) const override;
 		void Deserialize(void* instance, const rapidjson::Value& jsonValue) const override;
 
 

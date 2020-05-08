@@ -3,35 +3,59 @@
 
 namespace Vishv::Core::Meta
 {
-	template<>
-	void Deserialize<int>(void* instance, const rapidjson::Value& jsonValue)
+	template<> void Deserialize<int>(void* instance, const rapidjson::Value& jsonValue)
 	{
 		*(int*)(instance) = jsonValue.GetInt();
 	}
-	template<>
-	void Deserialize<float>(void* instance, const rapidjson::Value& jsonValue)
+	template<> void Serialize<int>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
+	{
+		jsonValue.SetInt(*(int*)(instance));
+	}
+
+	template<> void Deserialize<float>(void* instance, const rapidjson::Value& jsonValue)
 	{
 		*(float*)(instance) = jsonValue.GetFloat();
 	}
-	template<>
-	void Deserialize<bool>(void* instance, const rapidjson::Value& jsonValue)
+	template<> void Serialize<float>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
+	{
+		jsonValue.SetFloat(*(float*)(instance));
+	}
+
+	template<> void Deserialize<bool>(void* instance, const rapidjson::Value& jsonValue)
 	{
 		*(bool*)(instance) = jsonValue.GetBool();
 	}
-	template<>
-	void Deserialize<std::string>(void* instance, const rapidjson::Value& jsonValue)
+	template<> void Serialize<bool>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
+	{
+		jsonValue.SetBool(*(bool*)(instance));
+	}
+
+	template<> void Deserialize<std::string>(void* instance, const rapidjson::Value& jsonValue)
 	{
 		*(std::string*)(instance) = jsonValue.GetString();
 	}
-	template<>
-	void Deserialize<uint32_t>(void* instance, const rapidjson::Value& jsonValue)
+	template<> void Serialize<std::string>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
+	{
+		//auto s = (std::string*)(instance);
+		//jsonValue.SetString(s->c_str(), s->length());
+	}
+
+	template<> void Deserialize<uint32_t>(void* instance, const rapidjson::Value& jsonValue)
 	{
 		*(uint32_t*)(instance) = jsonValue.GetUint();
 	}
-	template<>
-	void Deserialize<uint64_t>(void* instance, const rapidjson::Value& jsonValue)
+	template<> void Serialize<uint32_t>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
+	{
+		jsonValue.SetUint(*(uint32_t*)(instance));
+	}
+
+	template<> void Deserialize<uint64_t>(void* instance, const rapidjson::Value& jsonValue)
 	{
 		*(uint64_t*)(instance) = jsonValue.GetUint();
+	}
+	template<> void Serialize<uint64_t>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
+	{
+		jsonValue.SetUint64(*(uint64_t*)(instance));
 	}
 }
 

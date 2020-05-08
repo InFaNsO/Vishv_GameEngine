@@ -12,6 +12,14 @@ namespace Vishv::Core::Meta
 		vec->y = object.FindMember("y")->value.GetFloat();
 	}
 	template<>
+	void Serialize<Math::Vector2>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
+	{
+		auto object = jsonValue.GetObjectW();
+		auto vec = (Math::Vector2*)(instance);
+		//vec->x = object.AddMember()
+		//vec->y = object.FindMember("y")->value.GetFloat();
+	}
+	template<>
 	void Deserialize<Math::Vector3>(void* instance, const rapidjson::Value& jsonValue)
 	{
 		auto object = jsonValue.GetObjectW();

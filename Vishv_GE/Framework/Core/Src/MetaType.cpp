@@ -31,10 +31,10 @@ void MetaType::Destroy(void* data) const
 	mDestroy(data);
 }
 
-void Vishv::Core::Meta::MetaType::Serialize(const void * instance, rapidjson::Value & jsonValue) const
+void Vishv::Core::Meta::MetaType::Serialize(const void * instance, rapidjson::Value & jsonValue, rapidjson::Document& doc) const
 {
 	VISHVASSERT(mSerialize, "[MetaType] no serialize available for %s", mName.c_str());
-	mSerialize(instance, jsonValue);
+	mSerialize(instance, jsonValue, doc );
 }
 
 void Vishv::Core::Meta::MetaType::Deserialize(void * instance, const rapidjson::Value & jsonValue) const 
