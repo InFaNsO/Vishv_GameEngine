@@ -52,6 +52,8 @@ private:
 	IDXGISwapChain* mSwapChain{ nullptr };
 	DXGI_SWAP_CHAIN_DESC mSwapChainDesc;
 
+	Format myFormat;
+
 	Vishv::Graphics::Color mBGColor = Vishv::Graphics::Colors::Black;
 };
 

@@ -38,6 +38,10 @@
 
 #include "Object3D.h"
 
+#include "Effect.h"
+#include "EffectsBufferData.h"
+#include "EffectsConstantBuffer.h"
+#include "EffectsManager.h"
 #include "PixelShader.h"
 #include "RasterizerState.h"
 #include "RasterizerStateManager.h"
@@ -45,10 +49,6 @@
 #include "Sampler.h"
 #include "SamplerManager.h"
 #include "SimpleDraw.h"
-#include "Effect.h"
-#include "EffectsBufferData.h"
-#include "EffectsConstantBuffer.h"
-#include "EffectsManager.h"
 #include "SpriteRenderer.h"
 #include "Texture.h"
 #include "TextureManager.h"

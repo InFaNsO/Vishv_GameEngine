@@ -33,6 +33,7 @@ RenderTarget::~RenderTarget()
 
 void RenderTarget::Initialize(uint32_t width, uint32_t height, Format format)
 {
+	myFormat = format;
 	D3D11_TEXTURE2D_DESC desc = {};
 	desc.Width = width;
 	desc.Height = height;
@@ -79,6 +80,8 @@ void RenderTarget::Initialize(uint32_t width, uint32_t height, Format format)
 
 void Vishv::Graphics::RenderTarget::Resize(uint32_t width, uint32_t height)
 {
+	Terminate();
+	Initialize(width, height, myFormat);
 }
 
 void RenderTarget::Terminate()

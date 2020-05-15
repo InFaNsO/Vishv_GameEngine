@@ -11,6 +11,7 @@ using namespace Vishv::Graphics;
 
 namespace
 {
+
 	template <bool UseAnimation>
 	void UpdateTransform(const Bone* bone, std::vector<Vishv::Math::Matrix4>& boneMatrix, const std::vector<Vishv::Math::Matrix4>& animate)
 	{

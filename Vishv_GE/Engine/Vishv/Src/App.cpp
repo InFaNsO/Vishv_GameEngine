@@ -97,6 +97,8 @@ void Vishv::App::Run(AppConfig config)
 		//mCurrentState->mGameWorld.DebugUI();
 		EditorManager::Get()->DebugUI();
 		mCurrentState->RenderDebugUI();
+
+		EditorManager::Get()->DrawSimpleDraw();
 		Vishv::Graphics::DebugUI::EndRender();
 
 		//add other renderers

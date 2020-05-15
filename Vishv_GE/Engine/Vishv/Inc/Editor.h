@@ -19,8 +19,9 @@ namespace Vishv
 	public:
 		void Initialize();
 		void Terminate();
-
+		void ShowExampleMenuFile();
 		void DebugUI();
+		void DrawSimpleDraw();
 	private:
 		void MenueBar();
 

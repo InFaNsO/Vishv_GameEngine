@@ -30,7 +30,7 @@ namespace
 			++index;
 		}
 	
-		LOG("figure out std::thread and how to capture");
+		//LOG("figure out std::thread and how to capture");
 
 //		for (auto obj : node->objects)
 //		{

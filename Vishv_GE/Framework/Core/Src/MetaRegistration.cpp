@@ -9,7 +9,6 @@ namespace Vishv::Core::Meta
 	}
 	template<> void Serialize<int>(const void* instance, rapidjson::Value& jsonValue, rapidjson::Document& doc)
 	{
-		jsonValue.SetInt(*(int*)(instance));
 	}
 
 	template<> void Deserialize<float>(void* instance, const rapidjson::Value& jsonValue)

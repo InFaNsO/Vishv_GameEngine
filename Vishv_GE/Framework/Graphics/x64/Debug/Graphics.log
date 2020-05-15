@@ -1,16 +1,2 @@
 ﻿  Object3D.cpp
-  PixelShader.cpp
-  RasterizerState.cpp
-  RasterizerStateManager.cpp
-  RenderTarget.cpp
-  Sampler.cpp
-  SamplerManager.cpp
-  SimpleDraw.cpp
-  Skeleton.cpp
-  SkeletonIO.cpp
-  SpriteRenderer.cpp
-  Texture.cpp
-  TextureManager.cpp
-  VertexShader.cpp
-  Generating Code...
   Graphics.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Graphics.lib
