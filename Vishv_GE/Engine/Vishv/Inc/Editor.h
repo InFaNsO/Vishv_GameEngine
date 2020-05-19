@@ -32,16 +32,24 @@ namespace Vishv
 
 		void SceneWindow();
 
+		void SceneSettings();
+		void HandleDomeSettings();
+
 	private:
 		friend class GameWorld;
+		void SetStaticMembers();
 
-		GameWorld* mWorld;
+		GameWorld* mWorld = nullptr;
 		
 		GameObject* mCurrentGameObject = nullptr;
 		Service* mCurrentService = nullptr;
 
 		Editor::RenderToWindow mSceneRender;
 		//add may be other renderers
+
+
+		bool mDrawGizmos = true;
+		bool mShowDome = false;
 	};
 }
 

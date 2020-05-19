@@ -82,13 +82,15 @@ void Vishv::App::Run(AppConfig config)
 		mCurrentState->mGameWorld.Render();
 		mCurrentState->Render();
 
-		
-		if (mDrawGizmos)
-		{
-			mCurrentState->mGameWorld.SimpleDraw();
-			mCurrentState->RenderSimpleDraw();
-			VishvSimpleDraw();
-		}
+		mCurrentState->mGameWorld.SimpleDraw();
+		mCurrentState->RenderSimpleDraw();
+		EditorManager::Get()->DrawSimpleDraw();
+
+
+		//if (mDrawGizmos)
+		//{
+		//	VishvSimpleDraw();
+		//}
 
 		Vishv::Graphics::DebugUI::BeginRender();
 		//modelImporterFileBrowser->Display();
@@ -98,7 +100,6 @@ void Vishv::App::Run(AppConfig config)
 		EditorManager::Get()->DebugUI();
 		mCurrentState->RenderDebugUI();
 
-		EditorManager::Get()->DrawSimpleDraw();
 		Vishv::Graphics::DebugUI::EndRender();
 
 		//add other renderers

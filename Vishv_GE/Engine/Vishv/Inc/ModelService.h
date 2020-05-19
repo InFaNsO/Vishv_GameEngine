@@ -14,12 +14,24 @@ namespace Vishv
 	public:
 		META_CLASS_DECLARE
 
+		struct ModelAnimation
+		{
+			char ModelName[256] = "HolderName";
+			Graphics::RiggedModel model;
+			Graphics::AnimationSet mAnimations;
+		};
+	public:
+		
+
 		void Initialize() override;
 		void DebugUI() override;
 
+		std::vector<ModelAnimation>& GetModels() { return mModels; }
+
+
+
 	private:
 		friend class Animation3D;
-		friend class Model3D;
 
 		void FileParser();
 		void SetModel(std::filesystem::path modelPath, std::string modelName);
@@ -27,12 +39,7 @@ namespace Vishv
 
 		void CreateGameObject();
 
-		struct ModelAnimation
-		{
-			char ModelName[256] = "HolderName";
-			Graphics::RiggedModel model;
-			Graphics::AnimationSet mAnimations;
-		};
+		
 
 		std::vector<ModelAnimation> mModels;
 		int selected = 0;

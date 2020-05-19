@@ -194,7 +194,7 @@ void GameStateAnimBlending::RenderSimpleDraw()
 			Vishv::Math::Matrix4 matC;
 			matC = object.boneTransforms[object.mModel.skeleton.bones[i]->childIndicies[j]];
 
-			Vishv::Graphics::SimpleDraw::AddLine(mat.GetTranslation(),  matC.GetTranslation(), object.mModel.skeleton.bones[i]->mDebugColor);
+			Vishv::Graphics::SimpleDraw::AddLine(mat.GetTranslation(), matC.GetTranslation(), object.mModel.skeleton.bones[i]->mDebugColor);
 		}
 	}
 }

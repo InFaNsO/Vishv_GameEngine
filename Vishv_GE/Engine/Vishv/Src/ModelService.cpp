@@ -46,9 +46,9 @@ void Vishv::ModelService::DebugUI()
 		std::string inputLable = "Name##" + std::to_string(i);
 		ImGui::InputText(inputLable.c_str(), &mModels[i].ModelName[0], 256);
 		if (!ImGui::CollapsingHeader(mModels[i].ModelName))
-			return;
+			continue;
 
-		std::string name = "Load##" + i;
+		std::string name = "Load##" + std::to_string(i);
 		if (ImGui::Button(name.c_str()))
 		{
 			modelImporter->Open();
@@ -71,7 +71,7 @@ void Vishv::ModelService::DebugUI()
 			auto clip = mModels[i].mAnimations.animationClips[j].get();
 			if (!ImGui::CollapsingHeader(clip->name.c_str()))
 				continue;
-			std::string loopingText = "Is Looping##" + std::to_string(j);
+			std::string loopingText = "Is Looping##" + std::to_string(i * 100 +j);
 			if (ImGui::Checkbox(loopingText.c_str(), &clip->isLooping))
 			{
 				//for (size_t i = 0; i < clip->boneAnimations.size(); ++i)

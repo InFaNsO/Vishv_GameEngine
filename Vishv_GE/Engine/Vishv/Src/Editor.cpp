@@ -11,7 +11,39 @@
 
 namespace
 {
+	using namespace Vishv;
+
 	std::unique_ptr<Vishv::EditorManager> sInstance = nullptr;
+
+	//for dome
+	static Vishv::Graphics::MeshBuffer mDome;
+	static Vishv::Graphics::TextureID mDomeTex;
+
+	//for camera Service
+	static Vishv::CameraSystem* camSer = nullptr;
+	static Vishv::Components::CameraComponent* cam = nullptr;
+	void NameSpaceInitialize(GameWorld* world)
+	{
+		camSer = world->GetService<CameraSystem>();
+		cam = camSer->GetMainCamera().Get()->GetComponent<Components::CameraComponent>();
+
+		mDome.Initialize(Vishv::Graphics::Meshbuilder::CreateSphereUV(12, 12, cam->GetCamera().GetFarPlane()));
+		mDomeTex = Vishv::Graphics::TextureManager::Get()->LoadTexture("HDRI\\Hanger_Small\\hdr.jpg");
+	}
+	void UpdateMainCam()
+	{
+		static auto cameraGameObject = camSer->GetMainCamera();
+		if (cameraGameObject != camSer->GetMainCamera())
+		{
+			cameraGameObject = camSer->GetMainCamera();
+			cam = cameraGameObject.Get()->GetComponent<Components::CameraComponent>();
+		}
+	}
+
+	void NameSpaceTerminate()
+	{
+		mDome.Terminate();
+	}
 }
 
 void Vishv::EditorManager::StaticInitialize()
@@ -35,6 +67,10 @@ void Vishv::EditorManager::StaticTerminate()
 		sInstance->Terminate();
 	}
 }
+void Vishv::EditorManager::SetStaticMembers()
+{
+	NameSpaceInitialize(mWorld);
+}
 
 
 
@@ -50,15 +86,12 @@ void Vishv::EditorManager::Terminate()
 
 void Vishv::EditorManager::DrawSimpleDraw()
 {
-	static auto camSer = mWorld->GetService<CameraSystem>();
-	static auto goH = camSer->GetMainCamera();
-	static Components::CameraComponent* cam = goH.Get()->GetComponent<Components::CameraComponent>();
+	if (!mDrawGizmos)
+		return;
 
-	if (goH != camSer->GetMainCamera())
-	{
-		goH = camSer->GetMainCamera();
-		cam = goH.Get()->GetComponent<Components::CameraComponent>();
-	}
+	UpdateMainCam();
+
+	Graphics::SimpleDraw::AddSphere({}, 5.0f, Vishv::Graphics::Colors::White);
 
 	Graphics::SimpleDraw::Render(cam->GetCamera());
 }
@@ -73,6 +106,7 @@ void Vishv::EditorManager::DebugUI()
 	InspectorWindow();
 
 	SceneWindow();
+	SceneSettings();
 }
 
 void Vishv::EditorManager::MainDockingSpace()
@@ -277,5 +311,48 @@ void Vishv::EditorManager::SceneWindow()
 	mSceneRender.DoUI();
 	
 	ImGui::End();
+}
+
+void Vishv::EditorManager::SceneSettings()
+{
+	ImGui::Begin("SceneSettings");
+
+	ImGui::Checkbox("Simple Draw", &mDrawGizmos);
+	ImGui::Checkbox("Use Skybox", &mShowDome);
+
+	if (!mShowDome && ImGui::CollapsingHeader("Set Background Color"))
+	{
+		static Vishv::Graphics::Color bgColor = Vishv::Graphics::Colors::Black;
+		if (ImGui::ColorEdit4("BackGround Color", &bgColor.r))
+		{
+			Vishv::Graphics::GraphicsSystem::Get()->SetBackGroundColor(bgColor);
+			mSceneRender.mRenderTarget.SetBackGroundColor(bgColor);
+		}
+	}
+	ImGui::End();
+}
+void Vishv::EditorManager::HandleDomeSettings()
+{
+	if (!mShowDome)
+		return;
+
+	UpdateMainCam();
+
+	Vishv::Graphics::EffectsManager::Get()->BindEffect(Vishv::Graphics::EffectType::Texturing);
+	auto view = cam->GetCamera().GetViewMatrix();
+	auto proj = cam->GetCamera().GetPerspectiveMatrix();
+
+	auto transform = Vishv::Math::Matrix4::Transpose(Vishv::Math::Matrix4::TranslateMatrix(cam->GetCamera().GetPosition()) * view * proj);
+
+	Vishv::Graphics::EffectsManager::Get()->GetBufferData(Vishv::Graphics::EffectType::Texturing)->GetTextureing()->wvp = transform;
+	Vishv::Graphics::EffectsManager::Get()->Set(Vishv::Graphics::EffectType::Texturing);
+	Vishv::Graphics::EffectsManager::Get()->BindBuffer(Vishv::Graphics::EffectType::Texturing);
+
+	Vishv::Graphics::TextureManager::Get()->GetTexture(mDomeTex)->BindPS(0);
+	Vishv::Graphics::SamplerManager::Get()->GetSampler("LinearWrap")->BindPS();
+
+	Vishv::Graphics::RasterizerManager::Get()->ChangeState("FrontSolid");
+	mDome.Render();
+	Vishv::Graphics::RasterizerManager::Get()->ChangeState("BackSolid");
 }
 

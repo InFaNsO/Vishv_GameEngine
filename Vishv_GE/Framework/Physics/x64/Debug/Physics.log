@@ -1,2 +1,14 @@
-﻿  PhysicsWorld.cpp
+﻿  Precompiled.cpp
+  AxisAlignedBoundingBox.cpp
+  CapsuleCollider.cpp
+  Collider.cpp
+  CollisionData.cpp
+  MetaRegistrationPhysics.cpp
+  Octree.cpp
+  PhysicsObject.cpp
+  PhysicsWorld.cpp
+  Raycast.cpp
+  RigidBody.cpp
+  SphereCollider.cpp
+  Generating Code...
   Physics.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Physics.lib

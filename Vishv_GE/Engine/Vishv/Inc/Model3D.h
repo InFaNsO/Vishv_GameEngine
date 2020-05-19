@@ -7,6 +7,7 @@
 namespace Vishv
 {
 	class CameraSystem;
+	class ModelService;
 }
 
 namespace Vishv::Components
@@ -21,7 +22,7 @@ namespace Vishv::Components
 
 		void Initialize() override;
 		void DebugUI() override;
-
+		void SimpleDraw() override;
 		void Render() override;
 
 		void Terminate() override;
@@ -35,6 +36,30 @@ namespace Vishv::Components
 		void SetUpModel();
 		void LoadModel();
 
+		void GetModelUI();
+		void HandleSkeletonUI();
+
+	private:
+		class SkeletonUI
+		{
+		public:
+			uint32_t GetDepth();
+			void SetBoneDebugColour();
+			void ShowBoneHirarchy();
+			void SetSkeleton(Vishv::Graphics::Skeleton& skeleton) { mSkeleton = &skeleton; }
+			Graphics::Color deepC = Graphics::Colors::LimeGreen;
+			Graphics::Color shallowC = Graphics::Colors::OrangeRed;
+
+		private:
+			uint32_t getDepth(Vishv::Graphics::Bone* bone);
+			void setDebugColor(Vishv::Graphics::Bone* bone, uint32_t currentDepth, uint32_t totalDepth);
+
+			void WriteBoneNameAndCallChildren(Vishv::Graphics::Bone* bone);
+
+
+			Vishv::Graphics::Skeleton* mSkeleton;
+		};
+
 	private: 
 		CameraSystem* mCameraSystem = nullptr;
 		Animation3D* myAnimation = nullptr;
@@ -42,7 +67,11 @@ namespace Vishv::Components
 
 		std::vector<Math::Matrix4> mTpose;
 
+		SkeletonUI mSkelUI;
+		ModelService* mModelService = nullptr;
+
 		bool didNew = false;
+		bool mShowSkeleton = false;
 		Graphics::RiggedModel* mModel = nullptr;
 	};
 }

@@ -5,7 +5,6 @@ using namespace Vishv::UI;
 
 uint32_t Vishv::UI::SkeletonUI::GetDepth()
 {
-	return getDepth(mSkeleton->root);
 }
 
 uint32_t Vishv::UI::SkeletonUI::getDepth(Vishv::Graphics::Bone * bone)

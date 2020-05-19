@@ -22,6 +22,7 @@ void Vishv::GameWorld::Initialize(size_t capacity)
 	mIsInitialized = true;
 
 	EditorManager::Get()->mWorld = this;
+	EditorManager::Get()->SetStaticMembers();
 }
 
 void Vishv::GameWorld::Terminate()
@@ -144,6 +145,8 @@ void Vishv::GameWorld::Render()
 	auto editor = Vishv::EditorManager::Get();
 
 	editor->mSceneRender.mRenderTarget.BeginRender();
+
+	editor->HandleDomeSettings();
 
 	for (auto& service : mServices)
 		service->Render();
