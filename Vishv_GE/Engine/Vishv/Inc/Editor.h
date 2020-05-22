@@ -22,6 +22,10 @@ namespace Vishv
 		void ShowExampleMenuFile();
 		void DebugUI();
 		void DrawSimpleDraw();
+
+		void BeginSceneRender();
+		void EndSceneRender();
+
 	private:
 		void MenueBar();
 

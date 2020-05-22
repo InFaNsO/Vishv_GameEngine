@@ -73,6 +73,16 @@ void Vishv::EditorManager::SetStaticMembers()
 }
 
 
+void Vishv::EditorManager::BeginSceneRender()
+{
+	mSceneRender.mRenderTarget.BeginRender();
+}
+
+void Vishv::EditorManager::EndSceneRender()
+{
+	mSceneRender.mRenderTarget.EndRender();
+}
+
 
 void Vishv::EditorManager::Initialize()
 {
@@ -91,7 +101,7 @@ void Vishv::EditorManager::DrawSimpleDraw()
 
 	UpdateMainCam();
 
-	Graphics::SimpleDraw::AddSphere({}, 5.0f, Vishv::Graphics::Colors::White);
+	//Graphics::SimpleDraw::AddSphere({}, 5.0f, Vishv::Graphics::Colors::White);
 
 	Graphics::SimpleDraw::Render(cam->GetCamera());
 }

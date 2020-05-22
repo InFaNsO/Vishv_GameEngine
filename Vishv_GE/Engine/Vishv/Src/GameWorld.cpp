@@ -143,9 +143,6 @@ void Vishv::GameWorld::Render()
 		return;
 
 	auto editor = Vishv::EditorManager::Get();
-
-	editor->mSceneRender.mRenderTarget.BeginRender();
-
 	editor->HandleDomeSettings();
 
 	for (auto& service : mServices)
@@ -153,8 +150,6 @@ void Vishv::GameWorld::Render()
 
 	for (auto gameObject : mUpdateList)
 		gameObject->Render();
-
-	editor->mSceneRender.mRenderTarget.EndRender();
 }
 
 

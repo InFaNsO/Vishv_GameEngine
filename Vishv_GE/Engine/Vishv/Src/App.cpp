@@ -77,6 +77,7 @@ void Vishv::App::Run(AppConfig config)
 		mCurrentState->Update();
 
 		Vishv::Graphics::GraphicsSystem::Get()->BeginRender();
+		EditorManager::Get()->BeginSceneRender();
 
 		//BasicRendering();
 		mCurrentState->mGameWorld.Render();
@@ -85,6 +86,7 @@ void Vishv::App::Run(AppConfig config)
 		mCurrentState->mGameWorld.SimpleDraw();
 		mCurrentState->RenderSimpleDraw();
 		EditorManager::Get()->DrawSimpleDraw();
+		EditorManager::Get()->EndSceneRender();
 
 
 		//if (mDrawGizmos)
