@@ -28,7 +28,8 @@ namespace Vishv
 
 		std::vector<ModelAnimation>& GetModels() { return mModels; }
 
-
+		void Load(std::filesystem::path&& path);
+		void AddNew();
 
 	private:
 		friend class Animation3D;

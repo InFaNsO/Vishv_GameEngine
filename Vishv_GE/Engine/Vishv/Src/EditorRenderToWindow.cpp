@@ -19,12 +19,19 @@ void Vishv::Editor::RenderToWindow::Initialize()
 
 void Vishv::Editor::RenderToWindow::Resize()
 {
+	mRenderTarget.Resize(mWindowWidth, mWindowHeight);
 	ImVec2 vMin = ImGui::GetWindowContentRegionMin();
 	ImVec2 vMax = ImGui::GetWindowContentRegionMax();
 
 
 	mWindowWidth = static_cast<uint32_t>(vMax.x - vMin.x);
 	mWindowHeight = static_cast<uint32_t>(vMax.y - vMin.y);
+}
+
+void Vishv::Editor::RenderToWindow::Resize(Math::Vector2 dimension)
+{
+	mWindowWidth = static_cast<uint32_t>(dimension.x);
+	mWindowHeight = static_cast<uint32_t>(dimension.y);
 
 	mRenderTarget.Resize(mWindowWidth, mWindowHeight);
 }

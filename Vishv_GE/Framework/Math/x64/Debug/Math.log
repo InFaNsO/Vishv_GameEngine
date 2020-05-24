@@ -1,6 +1,2 @@
-﻿  Matrix3.cpp
-  MetaRegistration.cpp
-  Quaternions.cpp
-  Vector3.cpp
-  Generating Code...
+﻿  Transform.cpp
   Math.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Math.lib

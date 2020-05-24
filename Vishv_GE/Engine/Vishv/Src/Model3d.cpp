@@ -3,6 +3,7 @@
 
 #include "Animation3D.h"
 #include "TransformComponent.h"
+#include "PostProcessor.h"
 
 #include "GameWorld.h"
 #include "CameraService.h"
@@ -45,6 +46,9 @@ void Model3D::Initialize()
 	myTransformation = GetOwner().GetComponent<TransformComponent>();
 	mCameraSystem = GetOwner().GetWorld().GetService<CameraSystem>();
 	mModelService = GetOwner().GetWorld().GetService<ModelService>();
+
+	myPostProcessor = GetOwner().AddComponent<PostProcessor>();
+	myPostProcessor->Initialize();
 
 
 	//setup file browser
@@ -256,7 +260,7 @@ void Vishv::Components::Model3D::SetUpModel()
 	mSkelUI.SetSkeleton(mModel->skeleton);
 }
 
-void Vishv::Components::Model3D::Render()
+void Vishv::Components::Model3D::CustomRender()
 {
 	if (!mModel || mShowSkeleton)
 		return;

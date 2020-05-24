@@ -19,11 +19,12 @@
 #include "AIStateMachine.h"
 #include "AIPathFinding.h"
 //Graphics Components
-#include "CameraComponent.h"
-#include "Model3D.h"
 #include "Animation3D.h"
+#include "CameraComponent.h"
 #include "MeshComponent.h"
+#include "Model3D.h"
 #include "ModelAnimation.h"
+#include "PostProcessor.h"
 #include "ThirdPersonControllerComponent.h"
 //Math Components
 #include "TransformComponent.h"
@@ -37,9 +38,10 @@
 //Services
 #include "Service.h"
 #include "AIWorldService.h"
-#include "PhysicsWorldService.h"
 #include "CameraService.h"
 #include "ModelService.h"
+#include "PhysicsWorldService.h"
+#include "PostProcessService.h"
 
 //template classes completed
 //Steering behaviours

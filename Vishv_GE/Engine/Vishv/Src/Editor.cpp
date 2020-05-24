@@ -9,6 +9,8 @@
 #include "CameraComponent.h"
 #include "TransformComponent.h"
 
+#include "GizmoIm.h"
+
 namespace
 {
 	using namespace Vishv;
@@ -51,6 +53,7 @@ void Vishv::EditorManager::StaticInitialize()
 	if (!sInstance)
 	{
 		sInstance = std::make_unique<Vishv::EditorManager>();
+		//Editor::ScreenGizmo::StaticInitialize();
 		sInstance->Initialize();
 	}
 }
@@ -64,12 +67,14 @@ void Vishv::EditorManager::StaticTerminate()
 {
 	if (sInstance)
 	{
+		//Editor::ScreenGizmo::Terminate();
 		sInstance->Terminate();
 	}
 }
 void Vishv::EditorManager::SetStaticMembers()
 {
 	NameSpaceInitialize(mWorld);
+	//Editor::ScreenGizmo::Get()->CamService = camSer;
 }
 
 
@@ -116,7 +121,7 @@ void Vishv::EditorManager::DebugUI()
 	InspectorWindow();
 
 	SceneWindow();
-	SceneSettings();
+	//SceneSettings();
 }
 
 void Vishv::EditorManager::MainDockingSpace()
@@ -294,8 +299,9 @@ void Vishv::EditorManager::InspectorWindow()
 		mCurrentService->DebugUI();
 	}
 	else if (mCurrentGameObject)
+	{
 		mCurrentGameObject->DebugUI();
-	
+	}
 	ImGui::End();
 }
 
@@ -310,6 +316,11 @@ void Vishv::EditorManager::SceneWindow()
 	ImVec2 vMin = ImGui::GetWindowContentRegionMin();
 	ImVec2 vMax = ImGui::GetWindowContentRegionMax();
 
+	if (mCurrentGameObject)
+	{
+		//Editor::ScreenGizmo::Get()->currentObjectTransform = mCurrentGameObject->GetComponent<Vishv::Components::TransformComponent>();
+		//Editor::ScreenGizmo::Get()->Update();
+	}
 
 	float windowWidth = vMax.x - vMin.x;
 	float windowHeight = vMax.y - vMin.y;
@@ -317,10 +328,15 @@ void Vishv::EditorManager::SceneWindow()
 
 //	mWorld->GetService<CameraSystem>()->SetWidthNHeight(windowWidth, windowHeight);
 
-	//mSceneRender.Resize();
+	mSceneRender.Resize();
 	mSceneRender.DoUI();
 	
 	ImGui::End();
+}
+
+Math::Vector2 Vishv::EditorManager::GetRenderSpace()
+{
+	return Math::Vector2(mSceneRender.mWindowWidth, mSceneRender.mWindowWidth);
 }
 
 void Vishv::EditorManager::SceneSettings()

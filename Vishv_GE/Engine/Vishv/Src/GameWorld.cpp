@@ -244,3 +244,13 @@ GameObject* Vishv::GameWorld::CreateGameObject()
 	mUpdateList.push_back(go);
 	return go;
 }
+
+GameObjectHandle Vishv::GameWorld::CreateNewGameObject()
+{
+	auto go = mGameObjectFactory->CreateEmpty();
+	go->mWorld = this;
+	go->mHandle = mGameObjectHandlePool->Register(go);
+	mUpdateList.push_back(go);
+	return go->mHandle;
+}
+

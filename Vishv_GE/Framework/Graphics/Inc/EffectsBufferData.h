@@ -28,9 +28,10 @@ namespace Vishv::Graphics
 		};
 		struct OptionsData
 		{
-			float displacement;
-			float isNormal = 1.0f;
-			float padding[2];
+			float variable1 = 0.0f;
+			float variable2 = 1.0f;
+			float variable3 = 0.0f;
+			float variable4 = 0.0f;
 		};
 		struct BoneTransformData
 		{

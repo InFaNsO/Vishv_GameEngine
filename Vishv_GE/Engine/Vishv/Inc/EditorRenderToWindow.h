@@ -14,8 +14,14 @@ namespace Vishv::Editor
 		void Initialize();
 		void Terminate();
 		void Resize();
+		void Resize(Math::Vector2 dimension);
 
 		void DoUI();
+
+		void BeginRender() { mRenderTarget.BeginRender(); }
+		void EndRender() { mRenderTarget.EndRender(); }
+
+		void BindTexture(uint32_t i = 0) { mRenderTarget.BindPS(i); }
 
 	private:
 		friend class EditorManager;

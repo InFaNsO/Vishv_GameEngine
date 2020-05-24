@@ -1,10 +1,10 @@
-#include "MainState.h"
+#include "TestShaderState.h"
 
-void MainState::Initialize()
+void TestShaderState::Initialize()
 {
 	mGameWorld.AddService<Vishv::PhysicsSystem>();
 	mGameWorld.AddService<Vishv::CameraSystem>();
-	mGameWorld.AddService<Vishv::AIWorld>();
+	mGameWorld.AddService<Vishv::PostProcessService>();
 	auto modelService = mGameWorld.AddService<Vishv::ModelService>();
 	std::filesystem::path path = L"C:\\Users\\bhavi\\OneDrive\\Documents\\GitHub\\Vishv_GameEngine\\Vishv_GE\\Assets\\3D_Models\\VishMesh\\Swat\\Swat.vmesh";
 
@@ -22,9 +22,4 @@ void MainState::Initialize()
 	modelObj.Get()->Initialize();
 }
 
-
-void MainState::RenderDebugUI()
-{
- 
-}
 

@@ -7,12 +7,6 @@
 #include "GameWorld.h"
 #include "Editor.h"
 
-//Vishv::Time::DeltaTime = 0.0f;
-
-namespace
-{
-	std::unique_ptr<ImGui::FileBrowser> modelImporterFileBrowser = nullptr;
-}
 
 void Vishv::App::Run(AppConfig config)
 {
@@ -31,14 +25,12 @@ void Vishv::App::Run(AppConfig config)
 	LOG("Creating Window.");
 	mWindow.Initialize(GetModuleHandle(NULL), config.appName.c_str(), config.windowWidth, config.windowHeight, config.maximize);
 
+	for (auto& state : mAppStates)
+		state.second.get()->MetaRegister();
+
 	//set up engine stuff
 	LOG("Setting Up Engine.");
 	SetUpEngine(config);
-
-	//setup file browser
-	modelImporterFileBrowser = std::make_unique<ImGui::FileBrowser>(ImGuiFileBrowserFlags_CreateNewDir | ImGuiFileBrowserFlags_EnterNewFilename | ImGuiFileBrowserFlags_SelectDirectory);
-	modelImporterFileBrowser->SetTitle("Model Import");
-	modelImporterFileBrowser->SetPwd(config.assetDirectory);
 
 	if (mNextState)
 		mCurrentState = mNextState;
@@ -416,7 +408,6 @@ void Vishv::App::SetUpEngine(AppConfig config)
 
 	LOG("Initializing Graphics Systems");
 	Vishv::Graphics::GraphicsSystem::StaticInitialize(mWindow.GetWindowHandle(), false);
-	Vishv::Graphics::EffectsManager::StaticInitialize();
 	Vishv::Graphics::TextureManager::StaticInitialize(mAppConfig.assetDirectory / "Images");
 	Vishv::Graphics::SamplerManager::StaticInitialize();
 	Vishv::Graphics::SimpleDraw::StaticInitialize(99999);
@@ -429,12 +420,7 @@ void Vishv::App::SetUpEngine(AppConfig config)
 
 
 	LOG("Initializing Shader Effects");
-	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Texturing);
-	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::PostProcessing);
-	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Merge);
-	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Standard);
-	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Skinning);
-	Vishv::Graphics::EffectsManager::Get()->AddEffect(Vishv::Graphics::EffectType::Mixamo);
+	Vishv::Graphics::EffectsManager::StaticInitialize();
 
 	//set up render target for the scene window
 	mSceneHeight = static_cast<uint32_t>(Vishv::Graphics::GraphicsSystem::Get()->GetBackBufferHeight() * 0.7f);

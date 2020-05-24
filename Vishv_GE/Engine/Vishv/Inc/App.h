@@ -14,7 +14,7 @@ namespace Vishv {
 		}
 
 		std::string appName = "Vishv";
-		std::filesystem::path assetDirectory = L"../../Assets";
+		std::filesystem::path assetDirectory = L"..\\..\\Assets";
 		uint32_t windowWidth = 1280;
 		uint32_t windowHeight = 720;
 

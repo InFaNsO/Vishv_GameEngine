@@ -56,6 +56,7 @@ namespace Vishv
 		}
 
 		void LoadGameWorld(const std::filesystem::path& worldFileName);
+		GameObjectHandle CreateNewGameObject();
 
 	private:
 		friend class EditorManager;

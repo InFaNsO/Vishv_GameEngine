@@ -34,7 +34,10 @@ Vishv::Graphics::EffectsManager * Vishv::Graphics::EffectsManager::Get()
 
 void Vishv::Graphics::EffectsManager::Initialize()
 {
-
+	for (int i = 0; i < static_cast<int>(EffectType::Count); ++i)
+	{
+		AddEffect(static_cast<EffectType>(i));
+	}
 }
 
 void Vishv::Graphics::EffectsManager::Terminate()
@@ -121,6 +124,8 @@ std::string Vishv::Graphics::EffectsManager::GetPath(EffectType type)
 {
 	std::string path = "../../Assets/Shaders/";
 
+	return std::move(path + ToString(type) + ".fx");
+
 	switch (type)
 	{
 	case Vishv::Graphics::EffectType::Blur:
@@ -158,6 +163,9 @@ std::string Vishv::Graphics::EffectsManager::GetPath(EffectType type)
 		break;
 	case Vishv::Graphics::EffectType::Mixamo:
 		return std::move(path + "Mixamo.fx");
+		break;
+	case Vishv::Graphics::EffectType::CellShader:
+		return std::move(path + "CellShader.fx");
 		break;
 	default:
 		return "wrong input";
@@ -204,6 +212,9 @@ uint32_t Vishv::Graphics::EffectsManager::GetBufferType(EffectType type)
 		break;
 	case Vishv::Graphics::EffectType::Mixamo:
 		return EffectBufferType::EBTYPE_TRANSFORM | EffectBufferType::EBTYPE_LIGHT | EffectBufferType::EBTYPE_MATERIAL | EffectBufferType::EBTYPE_OPTIONS | EffectBufferType::EBTYPE_BONE;
+		break;
+	case Vishv::Graphics::EffectType::CellShader:
+		return EffectBufferType::EBTYPE_OPTIONS;
 		break;
 	default:
 		return 0;
@@ -260,6 +271,9 @@ uint32_t Vishv::Graphics::EffectsManager::GetVertexType(EffectType type)
 		break;
 	case Vishv::Graphics::EffectType::Mixamo:
 		return BoneVertex::Format;
+		break;
+	case Vishv::Graphics::EffectType::CellShader:
+		return VertexPX::Format;
 		break;
 	default:
 		return 0;

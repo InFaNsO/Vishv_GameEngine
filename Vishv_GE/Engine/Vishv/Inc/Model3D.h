@@ -14,6 +14,7 @@ namespace Vishv::Components
 {
 	class Animation3D;
 	class TransformComponent;
+	class PostProcessor;
 
 	class Model3D : public Component
 	{
@@ -23,8 +24,6 @@ namespace Vishv::Components
 		void Initialize() override;
 		void DebugUI() override;
 		void SimpleDraw() override;
-		void Render() override;
-
 		void Terminate() override;
 		
 		void SetModel(Vishv::Graphics::RiggedModel& model);
@@ -33,11 +32,13 @@ namespace Vishv::Components
 	
 	private:
 		friend class Animation3D;
+		friend class PostProcessor;
 		void SetUpModel();
 		void LoadModel();
 
 		void GetModelUI();
 		void HandleSkeletonUI();
+		void CustomRender();
 
 	private:
 		class SkeletonUI
@@ -64,6 +65,7 @@ namespace Vishv::Components
 		CameraSystem* mCameraSystem = nullptr;
 		Animation3D* myAnimation = nullptr;
 		TransformComponent* myTransformation = nullptr;
+		PostProcessor* myPostProcessor = nullptr;
 
 		std::vector<Math::Matrix4> mTpose;
 

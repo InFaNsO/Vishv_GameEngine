@@ -64,6 +64,9 @@
     <ClInclude Include="Inc\VishvTime.h">
       <Filter>Inc</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\MacroAssistance.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Inc">

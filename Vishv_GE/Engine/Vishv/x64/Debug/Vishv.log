@@ -1,2 +1,43 @@
-﻿  Editor.cpp
+﻿  Precompiled.cpp
+  AIAgent.cpp
+  AIPathFinding.cpp
+  AIStatemachine.cpp
+  AIWorldService.cpp
+  Animation3D.cpp
+  App.cpp
+  AppState.cpp
+  CameraComponent.cpp
+  CameraService.cpp
+  CapsuleColliderComponent.cpp
+  ColliderComponent.cpp
+  Component.cpp
+  Editor.cpp
+  EditorRenderToWindow.cpp
+  GameObject.cpp
+  GameObjectFactory.cpp
+  GameWorld.cpp
+  GizmoIm.cpp
+  MeshComponent.cpp
+  Model3d.cpp
+  Generating Code...
+  Compiling...
+  ModelAnimation.cpp
+  ModelService.cpp
+  OBBColliderComponent.cpp
+  PhysicsWorldService.cpp
+  RigidBodyComponent.cpp
+  Service.cpp
+  SphereColliderComponent.cpp
+  Steering_Arrive.cpp
+  Steering_Evade.cpp
+  Steering_Flee.cpp
+  Steering_Flocking.cpp
+  Steering_ObstacleAvoidance.cpp
+  Steering_Pursuit.cpp
+  Steering_Seek.cpp
+  Steering_Wander.cpp
+  ThirdPersonControllerComponent.cpp
+  TransformComponent.cpp
+  Vishv.cpp
+  Generating Code...
   Vishv.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Vishv.lib

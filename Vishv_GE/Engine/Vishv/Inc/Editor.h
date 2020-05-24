@@ -26,6 +26,7 @@ namespace Vishv
 		void BeginSceneRender();
 		void EndSceneRender();
 
+		Math::Vector2 GetRenderSpace();
 	private:
 		void MenueBar();
 

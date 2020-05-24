@@ -7,6 +7,7 @@ namespace Vishv
 	class GameObject;
 	class GameWorld;
 
+	class EditorManager;
 	class CameraSystem;
 
 	namespace Components
@@ -35,14 +36,16 @@ namespace Vishv::Editor
 	public:
 		void Initialzie();
 
-		bool IsActive();
 		bool SetSelectedObject(GameObject* go);
 
+		void Update();
 
 	private:
 		friend class GameWorld;
+		friend class EditorManager;
 
-		 
+		CameraSystem* CamService = nullptr;
+		GizmoMode mMode = GizmoMode::Translate;
 
 		Components::TransformComponent* currentObjectTransform = nullptr;
 	};

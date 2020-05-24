@@ -70,6 +70,12 @@
     <Filter Include="Src\Components\Physics">
       <UniqueIdentifier>{d35ec185-5cb9-4be3-8a8e-b2b667b5a081}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inc\Editor\External">
+      <UniqueIdentifier>{57620661-68c2-4da2-8e03-f1431e3df7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Editor\External">
+      <UniqueIdentifier>{48046f08-0ad8-4fd0-96e2-16fef2abcb14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inc\Common.h">
@@ -201,6 +207,12 @@
     <ClInclude Include="Inc\ModelService.h">
       <Filter>Inc\Services</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\PostProcessor.h">
+      <Filter>Inc\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\PostProcessService.h">
+      <Filter>Inc\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -325,6 +337,12 @@
     </ClCompile>
     <ClCompile Include="Src\ModelService.cpp">
       <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PostProcessService.cpp">
+      <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\PostProcessor.cpp">
+      <Filter>Src\Components\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -13,6 +13,7 @@ namespace Vishv::Components
 		void Update() override;
 		void SimpleDraw() override;
 		void Initialize() override;
+		void DebugUI() override;
 
 		bool operator==(const TransformComponent& other)
 		{
@@ -44,18 +45,21 @@ namespace Vishv::Components
 
 		//void RotateNowY(float deg) { mTransform.RotateY(deg); }
 
-		const Math::Quaternion& Rotation() const { return mQuaternion; }
+		const Math::Quaternion& Rotation() const { return mTransform.Rotation(); }
 		const Math::Vector3& Position() const { return mTransform.Position(); }
 
 		Math::Vector3& GetPosition() { return mTransform.mPosition; }
 
 		void SwitchForard() { mTransform.SwitchForward(); }
 
-		const Vishv::Math::Quaternion& Rotation() { return mQuaternion; }
+		const Vishv::Math::Quaternion& Rotation() { return mTransform.Rotation(); }
 
 		const Vishv::Math::Transform& Transform() const { return mTransform; }
 		Vishv::Math::Transform& Transform() { return mTransform; }
 
+		const Math::Matrix4 GetTransformMatrix() { return mTransform.GetTransformMatrix(); }
+
+		void SetTransformation(const Math::Matrix4& mat);
 		//Math::Vector3 mPosition;
 		//Math::Vector3 mScale;
 	private:
@@ -72,6 +76,7 @@ namespace Vishv::Components
 
 		Math::Transform mTransform;
 
+		Math::Vector3 mRotation;
 		Math::Vector3 pos;
 		Math::Vector3 scale;
 	};

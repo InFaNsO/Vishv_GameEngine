@@ -113,7 +113,7 @@ namespace Graphics {
 		Color color;
 	};
 
-	struct Vertex			//Position Texture
+	struct Vertex			//Position Normal Tangent Texture 
 	{
 		VERTEX_FORMAT(VE_Position | VE_Normal | VE_Tangent | VE_Texcoord);
 

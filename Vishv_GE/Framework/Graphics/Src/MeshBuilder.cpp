@@ -5,6 +5,7 @@
 using namespace Vishv;
 using namespace Vishv::Graphics;
 
+#pragma region Bone Meshes
 BoneMesh Vishv::Graphics::Meshbuilder::CreateBoneCube(float height, float width, float depth, int boneIndex)
 {
 	float halfHeight = height * 0.5f;
@@ -261,8 +262,11 @@ BoneMesh Vishv::Graphics::Meshbuilder::CreateBoneCylinder(int rows, int col, flo
 
 	return mesh;
 }
+#pragma endregion 
 
-Vishv::Graphics::MeshPC Vishv::Graphics::Meshbuilder::CreateCubePC(float height, float width, float depth)
+#pragma region Color Meshes
+
+MeshPC Vishv::Graphics::Meshbuilder::CreateCubePC(float height, float width, float depth)
 {
 	float halfHeight = height * 0.5f;
 	float halfWidth = width * 0.5f;
@@ -327,7 +331,7 @@ Vishv::Graphics::MeshPC Vishv::Graphics::Meshbuilder::CreateCubePC(float height,
 	return mesh;
 }
 
-MeshPC Meshbuilder::CreatePlanePC(int rows, int col, float thicknessRow, float thicknessCol)
+MeshPC Vishv::Graphics::Meshbuilder::CreatePlanePC(int rows, int col, float thicknessRow, float thicknessCol)
 {
 	//Make Random Numbers for all colors
 	std::random_device rd;
@@ -824,7 +828,9 @@ MeshPC Vishv::Graphics::Meshbuilder::CreateTorusPC(int rows, int col, float inne
 	return mesh;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma endregion
+
+#pragma region Normal Meshes
 
 MeshPN Vishv::Graphics::Meshbuilder::CreateSphereNormal(int rows, int col, float radius)
 {
@@ -1060,7 +1066,9 @@ MeshPN Vishv::Graphics::Meshbuilder::CreateCylinderNormal(int rows, int col, flo
 	return mesh;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma endregion
+
+#pragma region Texture Meshes
 
 MeshPX Vishv::Graphics::Meshbuilder::CreateCubeUV(float height, float width, float depth)
 {
@@ -1726,7 +1734,6 @@ MeshPX Vishv::Graphics::Meshbuilder::CreateTorusUV(int rows, int col, float inne
 	return mesh;
 }
 
-
 MeshPX Vishv::Graphics::Meshbuilder::CreateNDCQuad()
 {
 	MeshPX mesh;
@@ -1753,7 +1760,9 @@ MeshPX Vishv::Graphics::Meshbuilder::CreateNDCQuad()
 	return mesh;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma endregion
+
+#pragma region NTX Mesh
 
 Mesh Vishv::Graphics::Meshbuilder::CreateSphere(int rows, int col, float radius)
 {
@@ -1993,6 +2002,5 @@ Mesh Vishv::Graphics::Meshbuilder::CreateCylinder(int rows, int col, float radiu
 	return mesh;
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma endregion Normal, Tangent, Texture
 

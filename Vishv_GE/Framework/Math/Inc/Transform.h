@@ -3,6 +3,7 @@
 
 #include "Quaternion.h"
 #include "Vector3.h"
+#include "Matrix4.h"
 
 namespace Vishv::Math {
 
@@ -48,8 +49,9 @@ public:
 	void RotateRight(float angleDeg);
 	void Rotate(const Quaternion& rotateQuat);
 	void Rotate(const Vector3& axis, float angleDeg);
-	void SetRotation(Quaternion&& quat) { mQuaternion = std::move(quat); }
-	void SetRotation(const Quaternion& quat) { mQuaternion = quat; }
+	void SetRotation(Quaternion&& quat) { mQuaternion = std::move(quat); RecalculateDirections(); }
+	void SetRotation(const Quaternion& quat) {mQuaternion = quat; RecalculateDirections();
+	}
 
 	void SwitchForward() { mForward = -mForward; }
 
@@ -60,10 +62,17 @@ public:
 
 	Vector3 mPosition;
 	Vector3 mScale = Vector3(1.0f);
+
+	Matrix4 GetTransformMatrix() const;
+	void SetTransformation(const Matrix4& mat);
 private:
+	void RecalculateDirections();
+
 	Quaternion mQuaternion;
 	Vector3 mUp = { 0.0f,1.0f,0.0f };
 	Vector3 mForward = { 0.0f, 0.0f, 1.0f };
+
+	Matrix4 mTransformation;
 };
 
 }

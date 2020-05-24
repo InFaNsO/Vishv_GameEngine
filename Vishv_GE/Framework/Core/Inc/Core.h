@@ -3,6 +3,8 @@
 
 #include "Common.h"
 
+#include "MacroAssistance.h"
+
 #include "Debug.h"
 #include "Window.h"
 #include "WindowMessageHandler.h"

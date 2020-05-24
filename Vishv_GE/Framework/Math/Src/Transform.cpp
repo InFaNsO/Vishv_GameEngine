@@ -151,3 +151,31 @@ void Vishv::Math::Transform::Rotate(const Quaternion& rotateQuat)
 	mUp.Normalize();
 	mForward.Normalize();
 }
+
+
+Vishv::Math::Matrix4 Vishv::Math::Transform::GetTransformMatrix() const
+{
+	return Math::Matrix4::RotateMatrix(mQuaternion)/* * Math::Matrix4::ScaleMatrix(mScale)*/
+		* Math::Matrix4::TranslateMatrix(mPosition);
+}
+
+void Vishv::Math::Transform::RecalculateDirections()
+{
+	mForward = ZAxis;
+	mUp = YAxis;
+	mForward.Rotate(mQuaternion);
+	mUp.Rotate(mQuaternion);
+	mForward.Normalize();
+	mUp.Normalize();
+}
+
+void Vishv::Math::Transform::SetTransformation(const Vishv::Math::Matrix4& mat)
+{
+	mQuaternion = Quaternion::MatrixToQuaternion(mat);
+
+	mPosition = { mat._41, mat._42, mat._43 };
+	mScale = { mat._11, mat._22, mat._33 };
+
+	RecalculateDirections();
+}
+

@@ -32,6 +32,9 @@ namespace Vishv::Components
 
 		Graphics::Camera& GetCamera() { return mCamera; }
 
+		Math::Matrix4 ProjectionMatrix();
+		Math::Matrix4 ViewMatrix();
+
 	private:
 		friend class CameraSystem;
 		void Calculate();

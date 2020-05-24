@@ -97,7 +97,7 @@ void GameState::Initialize()
 	//mMergeVertexShader.Initialize("../../Assets/Shaders/Merge.fx", Vishv::Graphics::VertexPX::Format);
 }
 
-void GameState::Update(float deltaTime)
+void GameState::Update()
 {
 	auto inputSystem = Vishv::Input::InputSystem::Get();
 	inputSystem->Update();
@@ -139,14 +139,14 @@ void GameState::Render()
 	RenderSceneGlow();
 	//render only the glowing objects		in this case the 2 light sabers
 	//Vishv::Graphics::SamplerManager::Get()->GetSampler("PointWrap")->BindPS(0);
-	//MultiGlow();
+	MultiGlow();
 	//mRendertarget1.EndRender();
 	////
 	//mRendertarget.BeginRender();
 	//RenderScene();
 	//mRendertarget.EndRender();
 	//
-	//PostProcess();
+	PostProcess();
 }
 
 void GameState::RenderSceneGlow()

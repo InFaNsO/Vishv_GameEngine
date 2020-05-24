@@ -22,7 +22,7 @@ void Vishv::Components::CameraComponent::Initialize()
 void Vishv::Components::CameraComponent::Update()
 {
 	if (prvTransform.mPosition != myTransformation->GetPosition() ||
-		prvTransform.GetRotationQuaternion() != myTransformation->Rotation())
+		prvTransform.Rotation() != myTransformation->Rotation())
 	{
 		Calculate();
 	}
@@ -57,6 +57,15 @@ void Vishv::Components::CameraComponent::Calculate()
 	//mWorldMatrix.Transpose();
 }
 
+Math::Matrix4 Vishv::Components::CameraComponent::ViewMatrix()
+{
+	return mCamera.GetViewMatrix();
+}
+Math::Matrix4 Vishv::Components::CameraComponent::ProjectionMatrix()
+{
+	return mCamera.GetPerspectiveMatrix();
+}
+
 Math::Vector2 Vishv::Components::CameraComponent::WorldToScreen(const Math::Vector3& worldCoordinate)
 {
 	Math::Vector3 uv = mWVP * worldCoordinate;
@@ -88,7 +97,8 @@ void Vishv::Components::CameraComponent::BindToBuffer(const Graphics::EffectType
 	auto em = Graphics::EffectsManager::Get();
 	auto transformData = em->GetBufferData(type)->GetTransform();
 
-	mWorldMatrix = Math::Matrix4::RotateMatrix(objTransform.Rotation()) * Math::Matrix4::TranslateMatrix(objTransform.Position());
+	auto holder = objTransform.GetTransformMatrix();
+	mWorldMatrix = holder;//Math::Matrix4::RotateMatrix(objTransform.Rotation()) * Math::Matrix4::TranslateMatrix(objTransform.Position()); //objTransform.GetTransformMatrix();
 	mWVP = (mWorldMatrix * mCamera.GetViewMatrix() * mCamera.GetPerspectiveMatrix()).Transpose();
 	mWorldMatrix.Transpose();
 

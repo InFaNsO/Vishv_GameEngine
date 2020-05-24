@@ -37,8 +37,7 @@ void Vishv::ModelService::DebugUI()
 {
 	if (ImGui::Button("Add New"))
 	{
-		mModels.push_back(ModelAnimation());
-		selected =  static_cast<int>(mModels.size()) - 1;
+		AddNew();
 	}
 
 	for (size_t i = 0; i < mModels.size(); ++i)
@@ -85,11 +84,22 @@ void Vishv::ModelService::DebugUI()
 	FileParser();
 }
 
+void Vishv::ModelService::AddNew()
+{
+	mModels.push_back(ModelAnimation());
+	selected = static_cast<int>(mModels.size()) - 1;
+}
+
 void Vishv::ModelService::FileParser()
 {
 	if (!modelImporter->HasSelected())
 		return;
 	auto path = modelImporter->GetSelected();
+	Load(std::move(path));
+}
+
+void Vishv::ModelService::Load(std::filesystem::path&& path)
+{
 	if (!path.has_extension())
 	{
 		modelImporter->ClearSelected();
@@ -104,7 +114,7 @@ void Vishv::ModelService::FileParser()
 		name.erase(pos, path.filename().extension().string().length());
 		SetModel(path.parent_path(), name);
 	}
-	else if(path.extension() == ".vanim")
+	else if (path.extension() == ".vanim")
 	{
 		mModels[selected].mAnimations.animationClips.push_back(std::make_unique<Vishv::Graphics::AnimationClip>());
 		Vishv::Graphics::AnimationIO aio;
@@ -113,6 +123,8 @@ void Vishv::ModelService::FileParser()
 	modelImporter->ClearSelected();
 	modelImporter->Close();
 }
+
+
 
 void Vishv::ModelService::SetModel(std::filesystem::path modelPath, std::string modelName)
 {
