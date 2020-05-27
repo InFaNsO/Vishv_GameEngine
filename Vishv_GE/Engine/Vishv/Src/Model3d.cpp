@@ -47,8 +47,8 @@ void Model3D::Initialize()
 	mCameraSystem = GetOwner().GetWorld().GetService<CameraSystem>();
 	mModelService = GetOwner().GetWorld().GetService<ModelService>();
 
-	myPostProcessor = GetOwner().AddComponent<PostProcessor>();
-	myPostProcessor->Initialize();
+	//myPostProcessor = GetOwner().AddComponent<PostProcessor>();
+	//myPostProcessor->Initialize();
 
 
 	//setup file browser
@@ -260,7 +260,7 @@ void Vishv::Components::Model3D::SetUpModel()
 	mSkelUI.SetSkeleton(mModel->skeleton);
 }
 
-void Vishv::Components::Model3D::CustomRender()
+void Vishv::Components::Model3D::Render()
 {
 	if (!mModel || mShowSkeleton)
 		return;
@@ -268,7 +268,7 @@ void Vishv::Components::Model3D::CustomRender()
 	auto em = Graphics::EffectsManager::Get();
 	auto type = Graphics::EffectType::Skinning;
 
-	em->BindEffect(type);
+	em->BindEffect(type);	//remove this
 	mCameraSystem->BindBuffer(type, myTransformation->Transform());
 
 	if (myAnimation)

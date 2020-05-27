@@ -25,7 +25,7 @@ namespace Vishv
 	private:
 		std::vector<Components::PostProcessor*>  myPostProcessor;
 
-		std::vector<std::unique_ptr<Editor::RenderToWindow>> myEffectsRT;
+		//std::vector<std::unique_ptr<Editor::RenderToWindow>> myEffectsRT;
 		std::unique_ptr<Editor::RenderToWindow> mMainRT = nullptr;
 		Graphics::MeshBuffer mScreenMeshBuffer;
 	};

@@ -3,6 +3,8 @@
 
 #include "PostProcessor.h"
 #include "EditorRenderToWindow.h"
+#include "Editor.h"
+
 
 using namespace Vishv;
 
@@ -21,7 +23,7 @@ void Vishv::PostProcessService::Initialize()
 void Vishv::PostProcessService::RegisterProcessor(Components::PostProcessor& pp)
 {
 	myPostProcessor.push_back(&pp);
-	myEffectsRT.emplace_back(std::move(std::make_unique<Editor::RenderToWindow>()))->Initialize();
+	//myEffectsRT.emplace_back(std::move(std::make_unique<Editor::RenderToWindow>()))->Initialize();
 }
 
 
@@ -32,15 +34,37 @@ void Vishv::PostProcessService::Render()
 	if (myPostProcessor.size() == 0)
 		return;
 
-	auto prvRt = myPostProcessor[0]->GetFinalRenderTarget();
+	auto editor = EditorManager::Get();
+	auto effect = EffectsManager::Get();
+
+	editor->BeginSceneRender();
+
+
+	for (int i = 0; i < static_cast<int>(EffectType::Count); ++i)
+	{
+		int effectNum = 0x1 << i;
+		effect->BindEffect(static_cast<EffectType>(effectNum));
+		for (size_t j = 0; j < myPostProcessor.size(); ++j)
+		{
+			if (myPostProcessor[j]->MyEffects & effectNum)
+				myPostProcessor[j]->GetOwner().Render();
+		}
+	}
+
+	editor->EndSceneRender();
+
+	return;
+	/*auto prvRt = myPostProcessor[0]->GetFinalRenderTarget();
 	auto em = EffectsManager::Get();
 	em->BindBuffer(EffectType::Merge);
 	Vishv::Graphics::SamplerManager::Get()->GetSampler("PointWrap")->BindPS(0);
 
 	for (size_t i = 1; i < myEffectsRT.size(); ++i)
 	{
-		if(i > 1)
+		if (i > 1)
+		{
 
+		}
 
 		auto rt = myPostProcessor[i]->GetFinalRenderTarget();
 
@@ -49,5 +73,5 @@ void Vishv::PostProcessService::Render()
 		rt->BindTexture(1);
 		mScreenMeshBuffer.Render();
 
-	}
+	}*/
 }

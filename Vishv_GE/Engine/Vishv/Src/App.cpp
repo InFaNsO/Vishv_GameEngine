@@ -410,6 +410,7 @@ void Vishv::App::SetUpEngine(AppConfig config)
 	Vishv::Graphics::GraphicsSystem::StaticInitialize(mWindow.GetWindowHandle(), false);
 	Vishv::Graphics::TextureManager::StaticInitialize(mAppConfig.assetDirectory / "Images");
 	Vishv::Graphics::SamplerManager::StaticInitialize();
+	Vishv::Graphics::EffectsManager::StaticInitialize();
 	Vishv::Graphics::SimpleDraw::StaticInitialize(99999);
 	Vishv::Graphics::DebugUI::StaticInitialize(mWindow.GetWindowHandle(), config.docking);
 	Vishv::Graphics::SpriteRenderer::StaticInitialize();
@@ -419,9 +420,8 @@ void Vishv::App::SetUpEngine(AppConfig config)
 	Vishv::EditorManager::StaticInitialize();
 
 
-	LOG("Initializing Shader Effects");
-	Vishv::Graphics::EffectsManager::StaticInitialize();
-
+	//LOG("Initializing Shader Effects");
+	 
 	//set up render target for the scene window
 	mSceneHeight = static_cast<uint32_t>(Vishv::Graphics::GraphicsSystem::Get()->GetBackBufferHeight() * 0.7f);
 	mSceneWidth = static_cast<uint32_t>(Vishv::Graphics::GraphicsSystem::Get()->GetBackBufferWidth() * 0.7f);
@@ -438,6 +438,7 @@ void Vishv::App::SetUpEngine(AppConfig config)
 
 void Vishv::App::Terminate()
 {
+	mCurrentState->mGameWorld.Terminate();
 	mCurrentState->Terminate();
 	Vishv::Graphics::RasterizerManager::StaticTerminate();
 	Vishv::Graphics::BlendManager::StaticTerminate();

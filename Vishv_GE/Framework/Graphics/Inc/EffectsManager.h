@@ -5,24 +5,27 @@
 #include "Effect.h"
 
 namespace Vishv::Graphics {
-	ENUM_MACRO(EffectType,Blur,DoLighting,DoNothing,DoSomething,Merge,Particle,PostProcessing,SimpleDraw,Skinning,Standard,Texturing,Mixamo,CellShader,Count)
-
-	/*enum class EffectType
+	//enum class EffectType
+	//{
+	//	Blur, DoLighting, DoNothing, DoSomething, Merge, Particle, PostProcessing, SimpleDraw, Skinning, Standard, Texturing, Mixamo, CellShader, Count)
+	//}
+	enum class EffectType
 	{
-		Blur, DoLighting,
-		DoNothing,
-		DoSomething,
-		Merge,
-		Particle,
-		PostProcessing,
-		SimpleDraw,
-		Skinning,
-		Standard,
-		Texturing,
-		Mixamo,
-		CellShader,
-		Count
-	};*/
+		Blur			= 0x1 << 0,
+		DoLighting		= 0x1 << 1,
+		DoNothing		= 0x1 << 2,
+		DoSomething		= 0x1 << 3,
+		Merge			= 0x1 << 4,
+		Particle		= 0x1 << 5,
+		PostProcessing	= 0x1 << 6,
+		SimpleDraw		= 0x1 << 7,
+		Skinning		= 0x1 << 8,
+		Standard		= 0x1 << 9,
+		Texturing		= 0x1 << 10,
+		Mixamo			= 0x1 << 11,
+		CellShader		= 0x1 << 12,
+		Count			= 13
+	}; 
 
 	class EffectsManager
 	{

@@ -22,18 +22,26 @@ namespace Vishv::Components
 		void Initialize() override;
 		void DebugUI() override;
 		void Update() override;
-		void Render() override;
+		//void Render() override;
 
 		void AddEffect(Graphics::EffectType effect);
 
 		Editor::RenderToWindow* GetFinalRenderTarget();
 
 	private:
+		void CustomRender(Graphics::EffectType effect);
 		void UpdateCellShader(int index);
 		void UICellShader(int index);
 
+
+	private:
+		void RenderSkinning();
+
 	private:
 		friend class PostProcessService;
+
+		int MyEffects = 0;
+
 		Model3D* myModel = nullptr;
 		PostProcessService* PPservice = nullptr;
 
@@ -44,5 +52,3 @@ namespace Vishv::Components
 		Graphics::MeshBuffer mScreenMeshBuffer;
 	};
 }
-
-

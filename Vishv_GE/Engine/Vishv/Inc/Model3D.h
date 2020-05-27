@@ -25,7 +25,8 @@ namespace Vishv::Components
 		void DebugUI() override;
 		void SimpleDraw() override;
 		void Terminate() override;
-		
+		void Render() override;
+
 		void SetModel(Vishv::Graphics::RiggedModel& model);
 		void SetModel(std::filesystem::path modelPath, std::string modelName);
 		~Model3D();
@@ -38,7 +39,6 @@ namespace Vishv::Components
 
 		void GetModelUI();
 		void HandleSkeletonUI();
-		void CustomRender();
 
 	private:
 		class SkeletonUI

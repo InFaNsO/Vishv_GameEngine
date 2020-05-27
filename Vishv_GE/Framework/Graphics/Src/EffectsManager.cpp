@@ -36,7 +36,7 @@ void Vishv::Graphics::EffectsManager::Initialize()
 {
 	for (int i = 0; i < static_cast<int>(EffectType::Count); ++i)
 	{
-		AddEffect(static_cast<EffectType>(i));
+		AddEffect(static_cast<EffectType>(0x1 << i));
 	}
 }
 
@@ -124,7 +124,7 @@ std::string Vishv::Graphics::EffectsManager::GetPath(EffectType type)
 {
 	std::string path = "../../Assets/Shaders/";
 
-	return std::move(path + ToString(type) + ".fx");
+	//return std::move(path + ToString(type) + ".fx");
 
 	switch (type)
 	{
@@ -135,7 +135,7 @@ std::string Vishv::Graphics::EffectsManager::GetPath(EffectType type)
 		return std::move(path + "DoLighting.fx");
 		break;
 	case Vishv::Graphics::EffectType::DoNothing:
-		return std::move(path + "DoNothing.fx");
+		return "wrong input";// std::move(path + "DoNothing.fx");
 		break;
 	case Vishv::Graphics::EffectType::DoSomething:
 		return std::move(path + "DoSomething.fx");
@@ -144,7 +144,7 @@ std::string Vishv::Graphics::EffectsManager::GetPath(EffectType type)
 		return std::move(path + "Merge.fx");
 		break;
 	case Vishv::Graphics::EffectType::Particle:
-		return std::move(path + "Particle.fx");
+		return "wrong input";//return std::move(path + "Particle.fx");
 		break;
 	case Vishv::Graphics::EffectType::PostProcessing:
 		return std::move(path + "PostProcessing.fx");

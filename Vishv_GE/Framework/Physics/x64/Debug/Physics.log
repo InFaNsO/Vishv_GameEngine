@@ -5,6 +5,7 @@
   CollisionData.cpp
   MetaRegistrationPhysics.cpp
   Octree.cpp
+  OrientedBoundingBox.cpp
   PhysicsObject.cpp
   PhysicsWorld.cpp
   Raycast.cpp

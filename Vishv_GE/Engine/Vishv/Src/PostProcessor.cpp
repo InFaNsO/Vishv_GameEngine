@@ -17,6 +17,59 @@ META_DERIVED_BEGIN(PostProcessor, Component)
 	META_FIELD_END
 META_CLASS_END
 
+namespace
+{
+	using namespace Graphics;
+	std::string EnumToString(EffectType type)
+	{
+		switch (type)
+		{
+		case Vishv::Graphics::EffectType::Blur:
+			return "Blur";
+			break;
+		case Vishv::Graphics::EffectType::DoLighting:
+			return "DoLighting";
+			break;
+		case Vishv::Graphics::EffectType::DoNothing:
+			return  "DoNothing";
+			break;
+		case Vishv::Graphics::EffectType::DoSomething:
+			return  "DoSomething";
+			break;
+		case Vishv::Graphics::EffectType::Merge:
+			return  "Merge";
+			break;
+		case Vishv::Graphics::EffectType::Particle:
+			return  "Particle";
+			break;
+		case Vishv::Graphics::EffectType::PostProcessing:
+			return  "PostProcessing";
+			break;
+		case Vishv::Graphics::EffectType::SimpleDraw:
+			return  "SimpleDrawShader";
+			break;
+		case Vishv::Graphics::EffectType::Skinning:
+			return  "Skining";
+			break;
+		case Vishv::Graphics::EffectType::Standard:
+			return  "Standard";
+			break;
+		case Vishv::Graphics::EffectType::Texturing:
+			return  "Texturing";
+			break;
+		case Vishv::Graphics::EffectType::Mixamo:
+			return  "Mixamo";
+			break;
+		case Vishv::Graphics::EffectType::CellShader:
+			return  "CellShader";
+			break;
+		default:
+			return "wrong input";
+			break;
+		}
+	}
+}
+
 
 void Vishv::Components::PostProcessor::Initialize()
 {
@@ -30,6 +83,8 @@ void Vishv::Components::PostProcessor::Initialize()
 
 void Vishv::Components::PostProcessor::Update()
 {
+	return;
+
 	auto dimension = EditorManager::Get()->GetRenderSpace();
 	for (int i = 0; i < (size_t)myEffects.size(); ++i)
 	{
@@ -63,9 +118,9 @@ void Vishv::Components::PostProcessor::DebugUI()
 		using namespace Graphics;
 		for (size_t i = 0; i < (int)EffectType::Count; ++i)
 		{
-			isSelected = (currentItem == ToString(static_cast<EffectType>(i)));
-			if (ImGui::Selectable(ToString(static_cast<EffectType>(i)).c_str(), isSelected))
-				currentItem = ToString(static_cast<EffectType>(i)).c_str();
+			isSelected = (currentItem == EnumToString(static_cast<EffectType>(i)));
+			if (ImGui::Selectable(EnumToString(static_cast<EffectType>(i)).c_str(), isSelected))
+				currentItem = EnumToString(static_cast<EffectType>(i)).c_str();
 			if (isSelected)
 			{
 				ImGui::SetItemDefaultFocus();
@@ -95,7 +150,7 @@ void Vishv::Components::PostProcessor::DebugUI()
 }
 void Vishv::Components::PostProcessor::UICellShader(int index)
 {
-	if (!ImGui::CollapsingHeader(Graphics::ToString(myEffects[index]).c_str()))
+	if (true)// !ImGui::CollapsingHeader(Graphics::ToString(myEffects[index]).c_str()))
 		return;
 
 	ImGui::DragFloat(": Threshold", &mEffectOptions[index].variable3, 0.01f, 0.0f, 1.0f);
@@ -107,18 +162,71 @@ void Vishv::Components::PostProcessor::AddEffect(Graphics::EffectType effect)
 	if (Graphics::EffectType::Count == effect)
 		return;
 
+
+	MyEffects |= static_cast<int>(effect);
+	
+	/*
 	myEffects.push_back(effect);
 	mEffectOptions.push_back(Graphics::EffectBufferType::OptionsData());
 	myEffectsRT.emplace_back(std::move(std::make_unique<Editor::RenderToWindow>()))->Initialize();
+	*/
 }
 
+void Vishv::Components::PostProcessor::CustomRender(Graphics::EffectType effect)
+{
+	//call the private function for this effect
+	switch (effect)
+	{
+	case Vishv::Graphics::EffectType::Blur:
+		break;
+	case Vishv::Graphics::EffectType::DoLighting:
+		break;
+	case Vishv::Graphics::EffectType::DoNothing:
+		break;
+	case Vishv::Graphics::EffectType::DoSomething:
+		break;
+	case Vishv::Graphics::EffectType::Merge:
+		break;
+	case Vishv::Graphics::EffectType::Particle:
+		break;
+	case Vishv::Graphics::EffectType::PostProcessing:
+		break;
+	case Vishv::Graphics::EffectType::SimpleDraw:
+		break;
+	case Vishv::Graphics::EffectType::Skinning:
+		RenderSkinning();
+		break;
+	case Vishv::Graphics::EffectType::Standard:
+		break;
+	case Vishv::Graphics::EffectType::Texturing:
+		break;
+	case Vishv::Graphics::EffectType::Mixamo:
+		break;
+	case Vishv::Graphics::EffectType::CellShader:
+		break;
+	default:
+		break;
+	}
+
+}
+
+void Vishv::Components::PostProcessor::RenderSkinning()
+{
+	if (!myModel->mModel || myModel->mShowSkeleton)
+		return;
+	myModel->Render();
+}
+
+/*
 void Vishv::Components::PostProcessor::Render()
 {
+	return;
+
 	if (!myModel->mModel || myModel->mShowSkeleton)
 		return;
 
 	myEffectsRT[0]->BeginRender();
-	myModel->CustomRender();
+	myModel->Render();
 	myEffectsRT[0]->EndRender();
 	
 	Vishv::Graphics::SamplerManager::Get()->GetSampler("PointWrap")->BindPS(0);
@@ -135,11 +243,9 @@ void Vishv::Components::PostProcessor::Render()
 		myEffectsRT[i]->EndRender();
 	}
 }
-
+*/
 Editor::RenderToWindow* Vishv::Components::PostProcessor::GetFinalRenderTarget()
 {
 	return myEffectsRT.size() > 0 ? myEffectsRT[myEffectsRT.size() - 1].get() : nullptr;
 }
-
-
 
