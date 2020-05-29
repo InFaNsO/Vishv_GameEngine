@@ -26,7 +26,10 @@ namespace Vishv
 		void BeginSceneRender();
 		void EndSceneRender();
 
+		void SetBackgroundColor(Vishv::Graphics::Color bgCol);
+
 		Math::Vector2 GetRenderSpace();
+		bool IsSimpleDraw() { return mDrawGizmos; }
 	private:
 		void MenueBar();
 

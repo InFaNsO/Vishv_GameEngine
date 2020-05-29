@@ -4,6 +4,9 @@
 
 #include "Editor.h"
 
+#include "PostProcessService.h"
+#include "SimpleDrawService.h"
+
 using namespace Vishv;
 
 ////////////////////////////////////////////////////////////////////////////
@@ -23,6 +26,8 @@ void Vishv::GameWorld::Initialize(size_t capacity)
 
 	EditorManager::Get()->mWorld = this;
 	EditorManager::Get()->SetStaticMembers();
+
+	mRenderer = GetService<PostProcessService>();
 }
 
 void Vishv::GameWorld::Terminate()
@@ -142,14 +147,16 @@ void Vishv::GameWorld::Render()
 	if (!mIsInitialized)
 		return;
 
-	auto editor = Vishv::EditorManager::Get();
-	editor->HandleDomeSettings();
+	mRenderer->Render();
 
-	for (auto& service : mServices)
-		service->Render();
-
-	for (auto gameObject : mUpdateList)
-		gameObject->Render();
+	//auto editor = Vishv::EditorManager::Get();
+	//editor->HandleDomeSettings();
+	//
+	//for (auto& service : mServices)
+	//	service->Render();
+	//
+	//for (auto gameObject : mUpdateList)
+	//	gameObject->Render();
 }
 
 

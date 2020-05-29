@@ -75,10 +75,14 @@ void Vishv::Components::PostProcessor::Initialize()
 {
 	myModel = GetOwner().GetComponent<Model3D>();
 	PPservice = GetOwner().GetWorld().GetService<PostProcessService>();
-
-	AddEffect(Graphics::EffectType::Skinning);
+	PPservice->RegisterProcessor(*this);
 
 	mScreenMeshBuffer.Initialize(Graphics::Meshbuilder::CreateNDCQuad());
+}
+
+Graphics::EffectType Vishv::Components::PostProcessor::GetCurrentEffect()
+{
+	return PPservice->GetCurrentEffect();
 }
 
 void Vishv::Components::PostProcessor::Update()
@@ -97,7 +101,7 @@ void Vishv::Components::PostProcessor::Update()
 		default:
 			break;
 		}
-		myEffectsRT[i]->Resize(dimension);
+		//myEffectsRT[i]->Resize(dimension);
 	}
 }
 
@@ -116,15 +120,15 @@ void Vishv::Components::PostProcessor::DebugUI()
 	if (ImGui::BeginCombo("##EffectCombo", currentItem.c_str()))
 	{
 		using namespace Graphics;
-		for (size_t i = 0; i < (int)EffectType::Count; ++i)
+		for (size_t i = 0; i < (size_t)EffectType::Count; ++i)
 		{
-			isSelected = (currentItem == EnumToString(static_cast<EffectType>(i)));
-			if (ImGui::Selectable(EnumToString(static_cast<EffectType>(i)).c_str(), isSelected))
-				currentItem = EnumToString(static_cast<EffectType>(i)).c_str();
+			isSelected = (currentItem == EnumToString(static_cast<EffectType>(0x1 << i)));
+			if (ImGui::Selectable(EnumToString(static_cast<EffectType>(0x1 << i)).c_str(), isSelected))
+				currentItem = EnumToString(static_cast<EffectType>(0x1 << i)).c_str();
 			if (isSelected)
 			{
 				ImGui::SetItemDefaultFocus();
-				selectedIndex = static_cast<int>(i);
+				selectedIndex = static_cast<int>(0x1 << i);
 			}
 		}
 		ImGui::EndCombo();
@@ -133,6 +137,15 @@ void Vishv::Components::PostProcessor::DebugUI()
 	if (ImGui::Button("Set##PP") && selectedIndex >= 0)
 	{
 		AddEffect(static_cast<Graphics::EffectType>(selectedIndex));
+	}
+
+	for (int i = 0; i < (int)EffectType::Count; ++i)
+	{
+		int num = 0x1 << i;
+		if (MyEffects & num)
+		{
+			ImGui::Text(EnumToString((EffectType)num).c_str());
+		}
 	}
 
 	for (int i = 0; i < (size_t)myEffects.size(); ++i)
@@ -244,8 +257,8 @@ void Vishv::Components::PostProcessor::Render()
 	}
 }
 */
-Editor::RenderToWindow* Vishv::Components::PostProcessor::GetFinalRenderTarget()
-{
-	return myEffectsRT.size() > 0 ? myEffectsRT[myEffectsRT.size() - 1].get() : nullptr;
-}
+//Editor::RenderToWindow* Vishv::Components::PostProcessor::GetFinalRenderTarget()
+//{
+//	return myEffectsRT.size() > 0 ? myEffectsRT[myEffectsRT.size() - 1].get() : nullptr;
+//}
 

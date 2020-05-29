@@ -213,6 +213,15 @@
     <ClInclude Include="Inc\PostProcessService.h">
       <Filter>Inc\Services</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\SkyBoxService.h">
+      <Filter>Inc\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SimpleDrawService.h">
+      <Filter>Inc\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\LightService.h">
+      <Filter>Inc\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -343,6 +352,15 @@
     </ClCompile>
     <ClCompile Include="Src\PostProcessor.cpp">
       <Filter>Src\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SkyBoxService.cpp">
+      <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SimpleDrawService.cpp">
+      <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\LightService.cpp">
+      <Filter>Src\Services</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

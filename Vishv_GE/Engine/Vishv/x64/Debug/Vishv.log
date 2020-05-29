@@ -1,51 +1,5 @@
-﻿  Precompiled.cpp
-  AIAgent.cpp
-  AIPathFinding.cpp
-  AIStatemachine.cpp
-  AISteering.cpp
-  AIWorldService.cpp
-  Animation3D.cpp
-  App.cpp
-  AppState.cpp
-  CameraComponent.cpp
-  CameraService.cpp
-  CapsuleColliderComponent.cpp
-  ColliderComponent.cpp
-  Component.cpp
-  Editor.cpp
-C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Src\Editor.cpp(339,62): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
-C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Src\Editor.cpp(339,35): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
-  EditorRenderToWindow.cpp
-  GameObject.cpp
-  GameObjectFactory.cpp
-  GameWorld.cpp
-  GizmoIm.cpp
-  MeshComponent.cpp
-  Generating Code...
-  Compiling...
-  MetaRegistration.cpp
-  Model3d.cpp
-  ModelAnimation.cpp
-  ModelService.cpp
-  OBBColliderComponent.cpp
-  PhysicsWorldService.cpp
+﻿  LightService.cpp
   PostProcessService.cpp
-  PostProcessor.cpp
-  RigidBodyComponent.cpp
-  Service.cpp
-  SphereColliderComponent.cpp
-  Steering_Arrive.cpp
-  Steering_Evade.cpp
-  Steering_Flee.cpp
-  Steering_Flocking.cpp
-  Steering_ObstacleAvoidance.cpp
-  Steering_Pursuit.cpp
-  Steering_Seek.cpp
-  Steering_Wander.cpp
-  ThirdPersonControllerComponent.cpp
-  Generating Code...
-  Compiling...
-  TransformComponent.cpp
   Vishv.cpp
   Generating Code...
   Vishv.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Vishv.lib

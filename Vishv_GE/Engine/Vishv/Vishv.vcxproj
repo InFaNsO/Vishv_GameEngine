@@ -169,6 +169,7 @@
     <ClInclude Include="Inc\CapsuleColliderComponent.h" />
     <ClInclude Include="Inc\EditorRenderToWindow.h" />
     <ClInclude Include="Inc\GizmoIm.h" />
+    <ClInclude Include="Inc\LightService.h" />
     <ClInclude Include="Inc\MeshComponent.h" />
     <ClInclude Include="Inc\Model3D.h" />
     <ClInclude Include="Inc\ModelService.h" />
@@ -178,6 +179,8 @@
     <ClInclude Include="Inc\PostProcessor.h" />
     <ClInclude Include="Inc\RigidBodyComponent.h" />
     <ClInclude Include="Inc\Service.h" />
+    <ClInclude Include="Inc\SimpleDrawService.h" />
+    <ClInclude Include="Inc\SkyBoxService.h" />
     <ClInclude Include="Inc\SphereColliderComponent.h" />
     <ClInclude Include="Inc\SteeringBehaviour_Arrive.h" />
     <ClInclude Include="Inc\Common.h" />
@@ -228,6 +231,9 @@
     <ClCompile Include="Src\PostProcessService.cpp" />
     <ClCompile Include="Src\RigidBodyComponent.cpp" />
     <ClCompile Include="Src\Service.cpp" />
+    <ClCompile Include="Src\SimpleDrawService.cpp" />
+    <ClCompile Include="Src\SkyBoxService.cpp" />
+    <ClCompile Include="Src\LightService.cpp" />
     <ClCompile Include="Src\SphereColliderComponent.cpp" />
     <ClCompile Include="Src\ThirdPersonControllerComponent.cpp" />
     <ClCompile Include="Src\GameObject.cpp" />

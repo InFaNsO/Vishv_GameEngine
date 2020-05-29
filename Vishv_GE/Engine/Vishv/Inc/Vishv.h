@@ -39,9 +39,12 @@
 #include "Service.h"
 #include "AIWorldService.h"
 #include "CameraService.h"
+#include "LightService.h"
 #include "ModelService.h"
 #include "PhysicsWorldService.h"
 #include "PostProcessService.h"
+#include "SimpleDrawService.h"
+#include "SkyBoxService.h"
 
 //template classes completed
 //Steering behaviours

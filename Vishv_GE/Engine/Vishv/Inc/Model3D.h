@@ -8,6 +8,7 @@ namespace Vishv
 {
 	class CameraSystem;
 	class ModelService;
+	class PostProcessService;
 }
 
 namespace Vishv::Components
@@ -58,7 +59,7 @@ namespace Vishv::Components
 			void WriteBoneNameAndCallChildren(Vishv::Graphics::Bone* bone);
 
 
-			Vishv::Graphics::Skeleton* mSkeleton;
+			Vishv::Graphics::Skeleton* mSkeleton = nullptr;
 		};
 
 	private: 
@@ -66,6 +67,8 @@ namespace Vishv::Components
 		Animation3D* myAnimation = nullptr;
 		TransformComponent* myTransformation = nullptr;
 		PostProcessor* myPostProcessor = nullptr;
+
+		
 
 		std::vector<Math::Matrix4> mTpose;
 

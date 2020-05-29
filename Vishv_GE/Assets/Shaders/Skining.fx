@@ -61,7 +61,7 @@ struct VSInput
 	float3 tangent : TANGENT;
 	float2 texCoord : TEXCOORD;
     int4 blendIndecies : BLENDINDICES;
-    float4 blendWeights : BLENDWEIGHTS;
+    float4 blendWeights : BLENDWEIGHT;
 
 };
 

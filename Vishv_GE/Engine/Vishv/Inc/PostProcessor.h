@@ -4,10 +4,10 @@
 namespace Vishv
 {
 	class PostProcessService;
-	namespace Editor
-	{
-		class RenderToWindow;
-	}
+	//namespace Editor
+	//{
+	//	class RenderToWindow;
+	//}
 }
 
 namespace Vishv::Components
@@ -25,8 +25,9 @@ namespace Vishv::Components
 		//void Render() override;
 
 		void AddEffect(Graphics::EffectType effect);
+		Graphics::EffectType GetCurrentEffect();
 
-		Editor::RenderToWindow* GetFinalRenderTarget();
+		//Editor::RenderToWindow* GetFinalRenderTarget();
 
 	private:
 		void CustomRender(Graphics::EffectType effect);
@@ -47,7 +48,7 @@ namespace Vishv::Components
 
 		std::vector<Graphics::EffectType> myEffects;
 		std::vector<Graphics::EffectBufferType::OptionsData> mEffectOptions;
-		std::vector<std::unique_ptr<Editor::RenderToWindow>> myEffectsRT;
+		//std::vector<std::unique_ptr<Editor::RenderToWindow>> myEffectsRT;
 
 		Graphics::MeshBuffer mScreenMeshBuffer;
 	};

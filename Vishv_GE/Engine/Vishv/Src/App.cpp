@@ -69,28 +69,15 @@ void Vishv::App::Run(AppConfig config)
 		mCurrentState->Update();
 
 		Vishv::Graphics::GraphicsSystem::Get()->BeginRender();
-		EditorManager::Get()->BeginSceneRender();
 
-		//BasicRendering();
 		mCurrentState->mGameWorld.Render();
 		mCurrentState->Render();
 
-		mCurrentState->mGameWorld.SimpleDraw();
-		mCurrentState->RenderSimpleDraw();
-		EditorManager::Get()->DrawSimpleDraw();
-		EditorManager::Get()->EndSceneRender();
-
-
-		//if (mDrawGizmos)
-		//{
-		//	VishvSimpleDraw();
-		//}
+		//SimpleDraw Handeled by PostProcessor
+		//mCurrentState->mGameWorld.SimpleDraw();
+		//mCurrentState->RenderSimpleDraw();
 
 		Vishv::Graphics::DebugUI::BeginRender();
-		//modelImporterFileBrowser->Display();
-		//VishvDockSpace();
-		//VishvUI();
-		//mCurrentState->mGameWorld.DebugUI();
 		EditorManager::Get()->DebugUI();
 		mCurrentState->RenderDebugUI();
 

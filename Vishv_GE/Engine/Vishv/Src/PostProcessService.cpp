@@ -1,6 +1,11 @@
 #include "Precompiled.h"
 #include "PostProcessService.h"
 
+#include "GameWorld.h"
+#include "SkyBoxService.h"
+#include "SimpleDrawService.h"
+#include "LightService.h"
+
 #include "PostProcessor.h"
 #include "EditorRenderToWindow.h"
 #include "Editor.h"
@@ -16,8 +21,14 @@ META_CLASS_END
 
 void Vishv::PostProcessService::Initialize()
 {
+	SetName("Post Processing");
+
 	mScreenMeshBuffer.Initialize(Graphics::Meshbuilder::CreateNDCQuad());
 	mMainRT = std::make_unique<Editor::RenderToWindow>();
+
+	mSkyBox = GetWorld().GetService<SkyBox>();
+	mSimpleDraw = GetWorld().GetService<SimpleDrawer>();
+	mLighting = GetWorld().GetService<Lighting>();
 }
 
 void Vishv::PostProcessService::RegisterProcessor(Components::PostProcessor& pp)
@@ -30,26 +41,30 @@ void Vishv::PostProcessService::RegisterProcessor(Components::PostProcessor& pp)
 void Vishv::PostProcessService::Render()
 {
 	using namespace Graphics;
-
-	if (myPostProcessor.size() == 0)
-		return;
-
+	
 	auto editor = EditorManager::Get();
 	auto effect = EffectsManager::Get();
-
+	
 	editor->BeginSceneRender();
 
-
+	mSkyBox->Render();
+	
 	for (int i = 0; i < static_cast<int>(EffectType::Count); ++i)
 	{
 		int effectNum = 0x1 << i;
-		effect->BindEffect(static_cast<EffectType>(effectNum));
+		mCurrentEffect = static_cast<EffectType>(effectNum);
+		effect->BindEffect(mCurrentEffect);
+		if (mCurrentEffect == EffectType::Skinning || mCurrentEffect == EffectType::CellShader)
+			mLighting->Bind(mCurrentEffect);
 		for (size_t j = 0; j < myPostProcessor.size(); ++j)
 		{
 			if (myPostProcessor[j]->MyEffects & effectNum)
 				myPostProcessor[j]->GetOwner().Render();
 		}
 	}
+
+	GetWorld().SimpleDraw();
+	mSimpleDraw->Render();
 
 	editor->EndSceneRender();
 

@@ -162,7 +162,7 @@ std::string Vishv::Graphics::EffectsManager::GetPath(EffectType type)
 		return std::move(path + "Texturing.fx");
 		break;
 	case Vishv::Graphics::EffectType::Mixamo:
-		return std::move(path + "Mixamo.fx");
+		return "wrong input"; //return std::move(path + "Mixamo.fx");
 		break;
 	case Vishv::Graphics::EffectType::CellShader:
 		return std::move(path + "CellShader.fx");
@@ -214,7 +214,7 @@ uint32_t Vishv::Graphics::EffectsManager::GetBufferType(EffectType type)
 		return EffectBufferType::EBTYPE_TRANSFORM | EffectBufferType::EBTYPE_LIGHT | EffectBufferType::EBTYPE_MATERIAL | EffectBufferType::EBTYPE_OPTIONS | EffectBufferType::EBTYPE_BONE;
 		break;
 	case Vishv::Graphics::EffectType::CellShader:
-		return EffectBufferType::EBTYPE_OPTIONS;
+		return EffectBufferType::EBTYPE_TRANSFORM | EffectBufferType::EBTYPE_LIGHT | EffectBufferType::EBTYPE_MATERIAL | EffectBufferType::EBTYPE_OPTIONS | EffectBufferType::EBTYPE_BONE;
 		break;
 	default:
 		return 0;
@@ -273,7 +273,7 @@ uint32_t Vishv::Graphics::EffectsManager::GetVertexType(EffectType type)
 		return BoneVertex::Format;
 		break;
 	case Vishv::Graphics::EffectType::CellShader:
-		return VertexPX::Format;
+		return BoneVertex::Format;
 		break;
 	default:
 		return 0;

@@ -61,7 +61,7 @@ struct VSInput
 	float3 tangent : TANGENT;
 	float2 texCoord : TEXCOORD;
 	int4 blendIndecies : BLENDINDICES;
-	float4 blendWeights : BLENDWEIGHTS;
+	float4 blendWeights : BLENDWEIGHT;
 
 };
 
@@ -127,7 +127,9 @@ float4 PS(VSOutput input) : SV_Target
 	float4 norColor = (normalMap.Sample(textureSampler, input.texCoord));
 	float3 sampledNormal = float3((2.0f * norColor.xy) - 1.0f, norColor.z);
 
-	float3 normal = mul(normalize(mul(sampledNormal, tbnw)), isNormal) + mul(n, (1.0f - isNormal));
+	//isNormal = 1.0f;
+	float3 normal = normalize(sampledNormal);//	normalize(mul(sampledNormal, tbnw));
+	//float3 normal = mul(normalize(mul(sampledNormal, tbnw)), isNormal) + mul(n, (1.0f - isNormal));
 
 	float3 dirToLight = normalize(input.dirToLight);
 	float3 dirToView = normalize(input.dirToView);
@@ -153,25 +155,24 @@ float4 PS(VSOutput input) : SV_Target
 	
 	float v4 = 0.1f;
 	
-	if (avg > v1)
+	if (abs(d) > v1)
 	{
-		c = (c.r * v1, c.g * v1, c.b * v1, 1.0f);
+		c = float4(c.r * v1, c.g * v1, c.b * v1, 1.0f);
 	}
-	else if (avg > v2)
+	else if (abs(d) > v2)
 	{
-		c = (c.r * v2, c.g * v2, c.b * v2, 1.0f);
+		c = float4(c.r * v2, c.g * v2, c.b * v2, 1.0f);
 	}
-	else if (avg > v3)
+	else if (abs(d) > v3)
 	{
-		c = (c.r * v3, c.g * v3, c.b * v3, 1.0f);
+		c = float4(c.r * v3, c.g * v3, c.b * v3, 1.0f);
 	}
-	else 
+	else
 	{
-		c = (c.r * v4, c.g * v4, c.b * v4, 1.0f);
+		c = float4(c.r * v4, c.g * v4, c.b * v4, 1.0f);
 	}
 	
 	return c;
-	
 	
 	//float4 c = PreProcessorMap.Sample(textureSampler, input.texCoord);
 	
@@ -200,7 +201,6 @@ float4 PS(VSOutput input) : SV_Target
 		return float4(0.f, 0.f, 0.f, 1.0f);
 	}
 	*/
-		return c;
 	}
 
 /*

@@ -4,16 +4,11 @@
 #include "GameObjectFactory.h"
 #include "Service.h"
 
-namespace Vishv::Components
-{
-	class AIAgent;
-	class ColliderComponent;
-}
-
 namespace Vishv
 {
 	class EditorManager;
 	class GameObject;
+	class PostProcessService;
 
 	class GameWorld
 	{
@@ -60,6 +55,7 @@ namespace Vishv
 
 	private:
 		friend class EditorManager;
+		PostProcessService* mRenderer = nullptr;
 
 		GameObject* CreateGameObject();
 		void DestroyInternal(GameObject* gameObject);

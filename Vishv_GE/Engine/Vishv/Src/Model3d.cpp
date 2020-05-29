@@ -47,9 +47,11 @@ void Model3D::Initialize()
 	mCameraSystem = GetOwner().GetWorld().GetService<CameraSystem>();
 	mModelService = GetOwner().GetWorld().GetService<ModelService>();
 
-	//myPostProcessor = GetOwner().AddComponent<PostProcessor>();
-	//myPostProcessor->Initialize();
-
+	myPostProcessor = GetOwner().AddComponent<PostProcessor>();
+	myPostProcessor->Initialize();
+	//myPostProcessor->AddEffect(Graphics::EffectType::Skinning);
+	//to test
+	myPostProcessor->AddEffect(Graphics::EffectType::CellShader);
 
 	//setup file browser
 	modelImporterFileBrowser = std::make_unique<ImGui::FileBrowser>(ImGuiFileBrowserFlags_CreateNewDir | ImGuiFileBrowserFlags_EnterNewFilename);
@@ -266,9 +268,8 @@ void Vishv::Components::Model3D::Render()
 		return;
 
 	auto em = Graphics::EffectsManager::Get();
-	auto type = Graphics::EffectType::Skinning;
+	auto type = myPostProcessor->GetCurrentEffect();
 
-	em->BindEffect(type);	//remove this
 	mCameraSystem->BindBuffer(type, myTransformation->Transform());
 
 	if (myAnimation)

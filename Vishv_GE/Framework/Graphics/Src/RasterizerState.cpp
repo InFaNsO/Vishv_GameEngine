@@ -61,8 +61,7 @@ void Vishv::Graphics::RasterizerState::Initialize(CullMode cMode, FillMode fMode
 
 void Vishv::Graphics::RasterizerState::Terminate()
 {
-	mRasteriserState->Release();
-	SafeRelease<ID3D11RasterizerState>(mRasteriserState);
+	SafeRelease(mRasteriserState);
 }
 
 void Vishv::Graphics::RasterizerState::Set()

@@ -11,6 +11,7 @@
 
 #include "GizmoIm.h"
 
+#pragma region Static Stuff
 namespace
 {
 	using namespace Vishv;
@@ -77,6 +78,8 @@ void Vishv::EditorManager::SetStaticMembers()
 	//Editor::ScreenGizmo::Get()->CamService = camSer;
 }
 
+#pragma endregion
+
 
 void Vishv::EditorManager::BeginSceneRender()
 {
@@ -121,7 +124,7 @@ void Vishv::EditorManager::DebugUI()
 	InspectorWindow();
 
 	SceneWindow();
-	//SceneSettings();
+	SceneSettings();
 }
 
 void Vishv::EditorManager::MainDockingSpace()
@@ -328,7 +331,7 @@ void Vishv::EditorManager::SceneWindow()
 
 //	mWorld->GetService<CameraSystem>()->SetWidthNHeight(windowWidth, windowHeight);
 
-	mSceneRender.Resize();
+	///mSceneRender.Resize();
 	mSceneRender.DoUI();
 	
 	ImGui::End();
@@ -336,27 +339,33 @@ void Vishv::EditorManager::SceneWindow()
 
 Math::Vector2 Vishv::EditorManager::GetRenderSpace()
 {
-	return Math::Vector2(mSceneRender.mWindowWidth, mSceneRender.mWindowWidth);
+	return Math::Vector2(static_cast<float>(mSceneRender.mWindowWidth), static_cast<float>(mSceneRender.mWindowWidth));
 }
 
 void Vishv::EditorManager::SceneSettings()
 {
 	ImGui::Begin("SceneSettings");
 
-	ImGui::Checkbox("Simple Draw", &mDrawGizmos);
-	ImGui::Checkbox("Use Skybox", &mShowDome);
-
-	if (!mShowDome && ImGui::CollapsingHeader("Set Background Color"))
-	{
-		static Vishv::Graphics::Color bgColor = Vishv::Graphics::Colors::Black;
-		if (ImGui::ColorEdit4("BackGround Color", &bgColor.r))
-		{
-			Vishv::Graphics::GraphicsSystem::Get()->SetBackGroundColor(bgColor);
-			mSceneRender.mRenderTarget.SetBackGroundColor(bgColor);
-		}
-	}
+	//ImGui::Checkbox("Simple Draw", &mDrawGizmos);
+	//ImGui::Checkbox("Use Skybox", &mShowDome);
+	//
+	//if (!mShowDome && ImGui::CollapsingHeader("Set Background Color"))
+	//{
+	//	static Vishv::Graphics::Color bgColor = Vishv::Graphics::Colors::Black;
+	//	if (ImGui::ColorEdit4("BackGround Color", &bgColor.r))
+	//	{
+	//		Vishv::Graphics::GraphicsSystem::Get()->SetBackGroundColor(bgColor);
+	//		mSceneRender.mRenderTarget.SetBackGroundColor(bgColor);
+	//	}
+	//}
 	ImGui::End();
 }
+
+void Vishv::EditorManager::SetBackgroundColor(Vishv::Graphics::Color bgCol)
+{
+	mSceneRender.mRenderTarget.SetBackGroundColor(bgCol);
+}
+
 void Vishv::EditorManager::HandleDomeSettings()
 {
 	if (!mShowDome)
