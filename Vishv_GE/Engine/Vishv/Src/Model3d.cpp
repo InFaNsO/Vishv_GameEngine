@@ -51,7 +51,7 @@ void Model3D::Initialize()
 	myPostProcessor->Initialize();
 	//myPostProcessor->AddEffect(Graphics::EffectType::Skinning);
 	//to test
-	myPostProcessor->AddEffect(Graphics::EffectType::CellShader);
+	//myPostProcessor->AddEffect(Graphics::EffectType::CellShader);
 
 	//setup file browser
 	modelImporterFileBrowser = std::make_unique<ImGui::FileBrowser>(ImGuiFileBrowserFlags_CreateNewDir | ImGuiFileBrowserFlags_EnterNewFilename);

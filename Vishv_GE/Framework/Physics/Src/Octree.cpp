@@ -103,7 +103,7 @@ void Vishv::Physics::Octree::AddRecursive(Node* node, RigidBody& data, IntData::
 	if (node->isLeaf)
 	{
 		//if leaf is full
-		if (node->objects.size() >= mMaxObjsInLeaf)
+		if (node->objects.size() >= static_cast<size_t>(mMaxObjsInLeaf))
 		{
 			SplitLeaf(node, bounds);
 			AddRecursive(node, data, bounds);

@@ -15,6 +15,7 @@
 *.so
 *.dylib
 *.dll
+!Vishv_GE/Assets/Tools/*.dll
 
 # Fortran module files
 *.mod
@@ -28,6 +29,7 @@
 
 # Executables
 *.exe
+!Vishv_GE/Assets/Tools/*.exe
 *.out
 *.app
 

@@ -1,4 +1,27 @@
-﻿  Object3D.cpp
+﻿  Precompiled.cpp
+  Animation.cpp
+  AnimationBuilder.cpp
+  AnimationClip.cpp
+  AnimationEasing.cpp
+  AnimationIO.cpp
+  AnimationStateMachine.cpp
+  BlendManager.cpp
+  BlendState.cpp
+  Camera.cpp
+  ConstantBuffer.cpp
+  D3DUtil.cpp
+  DebugUI.cpp
+  EffectBufferData.cpp
+  EffectsConstantBuffer.cpp
+  EffectsManager.cpp
+  GeometryShader.cpp
+  GraphicsSystem.cpp
+  MeshBuffer.cpp
+  MeshBuilder.cpp
+  MeshIO.cpp
+  Generating Code...
+  Compiling...
+  Object3D.cpp
   PixelShader.cpp
   RasterizerState.cpp
   RasterizerStateManager.cpp

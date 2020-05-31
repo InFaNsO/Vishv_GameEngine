@@ -130,6 +130,7 @@ void Vishv::ModelService::SetModel(std::filesystem::path modelPath, std::string 
 {
 	using namespace Graphics;
 
+	*mModels[selected].ModelName = *modelName.c_str();
 	auto& mod = mModels[selected].model;
 
 	//model load and import

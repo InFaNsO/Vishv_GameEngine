@@ -13,8 +13,8 @@ Vishv::Graphics::AnimationStateMachine::AnimationStateMachine(AnimationSet& set,
 	}
 
 	mStates.reserve(myAnimations.animationClips.size());
-	for (int i = 0; i < myAnimations.animationClips.size(); ++i)
-		mStates.emplace_back(i);
+	for (size_t i = 0; i < myAnimations.animationClips.size(); ++i)
+		mStates.emplace_back(static_cast<int>(i));
 
 	mCurrentState = &mStates[StartAnimation];
 	auto [iter, success] = mIntVariables.insert({ "Index", std::make_unique<int>(StartAnimation) });
@@ -235,7 +235,7 @@ bool Vishv::Graphics::AnimationStateMachine::AddTriggerVariable(std::string& nam
 {
 	bool found = false;
 
-	for (int i = 0; i < mTriggerVariables.size(); ++i)
+	for (size_t i = 0; i < mTriggerVariables.size(); ++i)
 	{
 		if (mTriggerVariables[i] == name)
 		{
@@ -253,7 +253,7 @@ bool Vishv::Graphics::AnimationStateMachine::AddTriggerVariable(std::string&& na
 {
 	bool found = false;
 
-	for (int i = 0; i < mTriggerVariables.size(); ++i)
+	for (size_t i = 0; i < mTriggerVariables.size(); ++i)
 	{
 		if (mTriggerVariables[i] == name)
 		{

@@ -222,6 +222,9 @@
     <ClInclude Include="Inc\LightService.h">
       <Filter>Inc\Services</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\ModelConvertorTool.h">
+      <Filter>Inc\Editor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -361,6 +364,9 @@
     </ClCompile>
     <ClCompile Include="Src\LightService.cpp">
       <Filter>Src\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ModelConvertorTool.cpp">
+      <Filter>Src\Editor</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

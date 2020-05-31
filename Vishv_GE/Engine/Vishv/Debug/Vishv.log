@@ -1,4 +1,54 @@
-﻿  Animation3D.cpp
-  MetaRegistration.cpp
+﻿  Precompiled.cpp
+  AIAgent.cpp
+  AIPathFinding.cpp
+  AIStatemachine.cpp
+  AISteering.cpp
+  AIWorldService.cpp
+  Animation3D.cpp
+  App.cpp
+  AppState.cpp
+  CameraComponent.cpp
+  CameraService.cpp
+  CapsuleColliderComponent.cpp
+  ColliderComponent.cpp
+  Component.cpp
+  Editor.cpp
+  EditorRenderToWindow.cpp
+  GizmoIm.cpp
+  MeshComponent.cpp
   Model3d.cpp
+  ModelConvertorTool.cpp
+  ModelService.cpp
+  Generating Code...
+  Compiling...
+  OBBColliderComponent.cpp
+  PhysicsWorldService.cpp
+  PostProcessor.cpp
+C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Engine\Vishv\Src\PostProcessor.cpp(151,20): warning C4018: '<': signed/unsigned mismatch
+  PostProcessService.cpp
+  RigidBodyComponent.cpp
+  Service.cpp
+  SimpleDrawService.cpp
+  SkyBoxService.cpp
+  LightService.cpp
+  SphereColliderComponent.cpp
+  ThirdPersonControllerComponent.cpp
+  GameObject.cpp
+  GameObjectFactory.cpp
+  GameWorld.cpp
+  MetaRegistration.cpp
+  ModelAnimation.cpp
+  Steering_Arrive.cpp
+  Steering_Evade.cpp
+  Steering_Flee.cpp
+  Steering_Flocking.cpp
+  Generating Code...
+  Compiling...
+  Steering_ObstacleAvoidance.cpp
+  Steering_Pursuit.cpp
+  Steering_Seek.cpp
+  Steering_Wander.cpp
+  TransformComponent.cpp
   Vishv.cpp
+  Generating Code...
+  Vishv.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\Debug\Vishv.lib

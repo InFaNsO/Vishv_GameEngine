@@ -8,6 +8,7 @@
 
 #include "CameraComponent.h"
 #include "TransformComponent.h"
+#include "ModelConvertorTool.h"
 
 #include "GizmoIm.h"
 
@@ -95,6 +96,7 @@ void Vishv::EditorManager::EndSceneRender()
 void Vishv::EditorManager::Initialize()
 {
 	mSceneRender.Initialize();
+	Editor::ModelConvertor::StaticInitialize();
 }
 
 void Vishv::EditorManager::Terminate()
@@ -125,6 +127,8 @@ void Vishv::EditorManager::DebugUI()
 
 	SceneWindow();
 	SceneSettings();
+
+	Editor::ModelConvertor::Get()->DoUI();
 }
 
 void Vishv::EditorManager::MainDockingSpace()
@@ -174,6 +178,14 @@ void Vishv::EditorManager::MenueBar()
 			if (ImGui::MenuItem("Cut", "CTRL+X")) {}
 			if (ImGui::MenuItem("Copy", "CTRL+C")) {}
 			if (ImGui::MenuItem("Paste", "CTRL+V")) {}
+			ImGui::EndMenu();
+		}
+		if (ImGui::BeginMenu("Tools"))
+		{
+			if (ImGui::MenuItem("Convert Model"))
+			{
+				Editor::ModelConvertor::Get()->Open();
+			}
 			ImGui::EndMenu();
 		}
 		ImGui::EndMainMenuBar();

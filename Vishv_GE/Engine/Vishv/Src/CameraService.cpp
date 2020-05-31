@@ -148,7 +148,7 @@ void Vishv::CameraSystem::TransitionTo(int camIndex, float duration)
 GameObjectHandle Vishv::CameraSystem::SetMainCamera(int index)
 {
 	VISHVASSERT(mCameras.size() != 0, "[Camera System] No Cameras added to the system");
-	VISHVASSERT(index < mCameras.size(), "[Camera System] Invalid camera index");
+	VISHVASSERT(static_cast<size_t>(index) < mCameras.size(), "[Camera System] Invalid camera index");
 
 	if (MainCamera >= 0)
 	{

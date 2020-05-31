@@ -31,7 +31,7 @@ namespace Vishv::Components
 
 	private:
 		void CustomRender(Graphics::EffectType effect);
-		void UpdateCellShader(int index);
+		void UpdateCellShader(size_t index);
 		void UICellShader(int index);
 
 

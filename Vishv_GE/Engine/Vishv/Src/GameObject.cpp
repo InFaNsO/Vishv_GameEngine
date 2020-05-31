@@ -46,8 +46,8 @@ void Vishv::GameObject::Render()
 
 void Vishv::GameObject::DebugUI()
 {
-	if (!mIsActive)
-		return;
+	//if (!mIsActive)
+	//	return;
 
 	ImGui::Checkbox("", &mIsActive);
 	ImGui::SameLine();

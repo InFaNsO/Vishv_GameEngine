@@ -169,7 +169,7 @@ float4 PS(VSOutput input) : SV_Target
 	}
 	else
 	{
-		c = float4(c.r * v4, c.g * v4, c.b * v4, 1.0f);
+		c = float4(0.0f,0.0f,0.0f, 1.0f);
 	}
 	
 	return c;

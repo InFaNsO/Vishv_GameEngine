@@ -1,15 +1,2 @@
-﻿  Precompiled.cpp
-  AxisAlignedBoundingBox.cpp
-  CapsuleCollider.cpp
-  Collider.cpp
-  CollisionData.cpp
-  MetaRegistrationPhysics.cpp
-  Octree.cpp
-  OrientedBoundingBox.cpp
-  PhysicsObject.cpp
-  PhysicsWorld.cpp
-  Raycast.cpp
-  RigidBody.cpp
-  SphereCollider.cpp
-  Generating Code...
+﻿  Octree.cpp
   Physics.vcxproj -> C:\Users\bhavi\OneDrive\Documents\GitHub\Vishv_GameEngine\Vishv_GE\x64\Debug\Physics.lib

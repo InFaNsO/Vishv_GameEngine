@@ -90,7 +90,7 @@ void Vishv::Components::PostProcessor::Update()
 	return;
 
 	auto dimension = EditorManager::Get()->GetRenderSpace();
-	for (int i = 0; i < (size_t)myEffects.size(); ++i)
+	for (size_t i = 0; i < myEffects.size(); ++i)
 	{
 		using namespace Graphics;
 		switch (myEffects[i])
@@ -105,7 +105,7 @@ void Vishv::Components::PostProcessor::Update()
 	}
 }
 
-void Vishv::Components::PostProcessor::UpdateCellShader(int index)
+void Vishv::Components::PostProcessor::UpdateCellShader(size_t index)
 {
 	auto space = EditorManager::Get()->GetRenderSpace();
 	mEffectOptions[index].variable1 = 1.f /space.x;

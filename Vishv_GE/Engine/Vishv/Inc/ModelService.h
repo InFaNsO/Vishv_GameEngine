@@ -30,6 +30,8 @@ namespace Vishv
 
 		void Load(std::filesystem::path&& path);
 		void AddNew();
+		void SetCurrentModelName(std::string name) 
+		{ *mModels[selected].ModelName = *name.c_str(); }
 
 	private:
 		friend class Animation3D;

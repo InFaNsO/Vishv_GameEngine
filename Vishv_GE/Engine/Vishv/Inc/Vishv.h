@@ -65,6 +65,7 @@
 #include "Editor.h"
 #include "EditorRenderToWindow.h"
 #include "GizmoIm.h"
+#include "ModelConvertorTool.h"
 
 namespace VishvApp
 {
