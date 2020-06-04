@@ -1,0 +1,450 @@
+Name: mixamo.com
+Duration: 1
+TicksPerSec: 30
+BoneNums: 67
+BoneName: mixamorig:LeftArm
+BoneIndex: 0
+PosKeyNum: 1
+13.429087 -3.527300 -0.064739 0 -1
+RotKeyNum: 1
+0.999445 -0.000030 0.001499 -0.033279 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftShoulder
+BoneIndex: 1
+PosKeyNum: 1
+6.233070 12.573135 1.462043 0 -1
+RotKeyNum: 1
+0.999995 0.000000 -0.000000 -0.003275 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightShoulder
+BoneIndex: 2
+PosKeyNum: 1
+-6.199367 12.573135 1.526782 0 -1
+RotKeyNum: 1
+0.999994 0.000000 0.000000 0.003325 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:Spine
+BoneIndex: 4
+PosKeyNum: 1
+0.012384 10.445221 0.996276 0 -1
+RotKeyNum: 1
+1.000000 0.000000 0.000000 0.000008 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:Hips
+BoneIndex: 5
+PosKeyNum: 1
+-0.056767 98.255264 -0.653413 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 -0.000000 -0.000008 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:RightHandPinky3
+BoneIndex: 9
+PosKeyNum: 1
+-1.933878 -0.000014 -0.014318 0 -1
+RotKeyNum: 1
+1.000000 0.000000 0.000008 -0.000000 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandPinky2
+BoneIndex: 10
+PosKeyNum: 1
+-2.248789 -0.000003 -0.016595 0 -1
+RotKeyNum: 1
+1.000000 0.000000 0.000006 0.000000 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandRing3
+BoneIndex: 11
+PosKeyNum: 1
+-2.169979 -0.000006 -0.016033 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 0.000016 0.000000 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandRing2
+BoneIndex: 12
+PosKeyNum: 1
+-2.476290 -0.000014 -0.018314 0 -1
+RotKeyNum: 1
+1.000000 0.000000 -0.000008 -0.000000 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:RightHandMiddle2
+BoneIndex: 14
+PosKeyNum: 1
+-2.688890 -0.000022 -0.019902 0 -1
+RotKeyNum: 1
+1.000000 0.000000 -0.000013 0.000000 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandRing1
+BoneIndex: 15
+PosKeyNum: 1
+-13.356549 -0.019682 2.758700 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 -0.000004 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandMiddle1
+BoneIndex: 16
+PosKeyNum: 1
+-14.016661 -0.000074 -0.103656 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 0.000001 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandIndex3
+BoneIndex: 17
+PosKeyNum: 1
+-2.064446 -0.000017 -0.015282 0 -1
+RotKeyNum: 1
+0.999138 -0.000027 -0.041344 0.003606 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:RightHandPinky1
+BoneIndex: 19
+PosKeyNum: 1
+-11.435807 -0.505924 4.576235 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 -0.000008 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandIndex1
+BoneIndex: 20
+PosKeyNum: 1
+-13.666525 -0.503903 -2.956491 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 0.000005 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandThumb3
+BoneIndex: 21
+PosKeyNum: 1
+-3.128061 -1.799421 -1.780249 0 -1
+RotKeyNum: 1
+1.000000 -0.000006 0.000022 -0.000011 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandThumb2
+BoneIndex: 22
+PosKeyNum: 1
+-3.279944 -1.531868 -1.868988 0 -1
+RotKeyNum: 1
+0.999237 0.019412 -0.000230 -0.033878 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftUpLeg
+BoneIndex: 23
+PosKeyNum: 1
+10.128677 -5.802817 0.582702 0 -1
+RotKeyNum: 1
+0.999933 -0.011605 -0.000001 -0.000072 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:LeftFoot
+BoneIndex: 25
+PosKeyNum: 1
+-0.556792 -37.075901 3.590504 0 -1
+RotKeyNum: 1
+0.999928 0.012033 -0.000180 0.000099 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftLeg
+BoneIndex: 26
+PosKeyNum: 1
+0.569544 -41.034901 -2.803894 0 -1
+RotKeyNum: 1
+1.000000 -0.000428 0.000181 -0.000018 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:LeftHandPinky1
+BoneIndex: 28
+PosKeyNum: 1
+12.466748 -0.771802 5.626903 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 -0.000000 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:LeftHandIndex3
+BoneIndex: 34
+PosKeyNum: 1
+2.028021 0.000009 0.000014 0 -1
+RotKeyNum: 1
+0.999337 -0.000000 0.027169 -0.024227 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftHandRing1
+BoneIndex: 35
+PosKeyNum: 1
+13.038429 0.181526 2.927026 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 -0.000000 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftHandMiddle1
+BoneIndex: 36
+PosKeyNum: 1
+13.767385 0.000053 -0.000019 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 -0.000000 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftForeArm
+BoneIndex: 37
+PosKeyNum: 1
+21.657480 1.586388 0.065145 0 -1
+RotKeyNum: 1
+0.999331 0.000000 -0.001500 0.036551 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftHandIndex1
+BoneIndex: 38
+PosKeyNum: 1
+13.672352 -0.747379 -2.741682 0 -1
+RotKeyNum: 1
+1.000000 -0.000000 -0.000000 0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftHand
+BoneIndex: 39
+PosKeyNum: 1
+26.413307 0.000043 0.000011 0 -1
+RotKeyNum: 1
+1.000000 0.000057 0.000000 -0.000004 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftHandThumb2
+BoneIndex: 40
+PosKeyNum: 1
+3.152324 -1.594359 -1.612171 0 -1
+RotKeyNum: 1
+0.999800 0.009274 0.000423 0.017715 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:LeftHandThumb1
+BoneIndex: 41
+PosKeyNum: 1
+3.940408 -1.992953 -2.015214 0 -1
+RotKeyNum: 1
+0.999531 -0.001036 0.020721 -0.022519 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightUpLeg
+BoneIndex: 42
+PosKeyNum: 1
+-10.014996 -5.802987 0.720662 0 -1
+RotKeyNum: 1
+0.999934 -0.011454 -0.000001 -0.000072 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHandThumb1
+BoneIndex: 43
+PosKeyNum: 1
+-4.099928 -1.914838 -2.336234 0 -1
+RotKeyNum: 1
+0.999219 -0.017443 -0.005413 0.035047 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightArm
+BoneIndex: 44
+PosKeyNum: 1
+-13.436335 -3.525851 0.064734 0 -1
+RotKeyNum: 1
+0.999441 0.000073 0.003686 0.033223 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightHand
+BoneIndex: 45
+PosKeyNum: 1
+-26.378326 -0.000103 -0.195017 0 -1
+RotKeyNum: 1
+1.000000 -0.000194 0.000003 -0.000003 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightForeArm
+BoneIndex: 46
+PosKeyNum: 1
+-21.657492 1.586250 -0.160120 0 -1
+RotKeyNum: 1
+0.999332 0.000270 0.000000 -0.036547 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:RightFoot
+BoneIndex: 48
+PosKeyNum: 1
+0.568848 -37.086433 3.624452 0 -1
+RotKeyNum: 1
+0.999926 0.012202 0.000184 0.000060 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: mixamorig:RightLeg
+BoneIndex: 49
+PosKeyNum: 1
+-0.556537 -41.023548 -2.975887 0 -1
+RotKeyNum: 1
+1.000000 -0.000749 -0.000184 0.000018 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: mixamorig:LeftHandThumb3
+BoneIndex: 53
+PosKeyNum: 1
+3.342281 -1.873479 -1.704972 0 -1
+RotKeyNum: 1
+0.999352 0.004919 0.028400 -0.021563 0 -1
+ScaleKeyNum: 1
+1.000000 1.000000 1.000000 0 -1
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0
+BoneName: null
+BoneIndex: -1
+PosKey: 0
+RotKey: 0
+ScaleKey: 0

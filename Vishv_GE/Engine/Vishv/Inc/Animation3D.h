@@ -32,6 +32,7 @@ namespace Vishv::Components
 	private:
 		friend class Model3D;
 		void BindBonesToBuffer();
+		std::vector<Math::Matrix4>& GetTransforms() { return mBoneTransforms; }
 
 		Model3D* myModel = nullptr;
 		TransformComponent* myTransform = nullptr;

@@ -22,7 +22,7 @@ void Vishv::Service::DoUI(void* instance, const Core::Meta::MetaClass& mclass)
 				ImGui::DragFloat(field->GetName(), static_cast<float*>(data));
 			else if (field->GetMetaType()->GetName() == "Integer" || field->GetMetaType()->GetName() == "UInt" || field->GetMetaType()->GetName() == "Size_t")
 				ImGui::DragInt(field->GetName(), static_cast<int*>(data));
-			else if (field->GetMetaType()->GetName() == "Boolean")
+			else if (std::string(field->GetMetaType()->GetName()) == "Boolean")
 				ImGui::Checkbox(field->GetName(), static_cast<bool*>(data));
 			else if (field->GetMetaType()->GetName() == "String")
 			{

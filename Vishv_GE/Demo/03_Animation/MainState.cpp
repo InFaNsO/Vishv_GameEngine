@@ -14,11 +14,11 @@ void MainState::Initialize()
 
 
 	mGameWorld.Initialize(10000);
-	modelService->AddNew();
-	modelService->Load(path / "Swat.vmesh");
-	modelService->Load(path / "Walking.vanim");
-	modelService->Load(path / "IdleStanding1.vanim");
-	modelService->Load(path / "IdleCrouching1.vanim");
+	//modelService->AddNew();
+	//modelService->Load(path / "Swat.vmesh");
+	//modelService->Load(path / "Walking.vanim");
+	//modelService->Load(path / "IdleStanding1.vanim");
+	//modelService->Load(path / "IdleCrouching1.vanim");
 
 
 	//auto modelObj = mGameWorld.CreateNewGameObject();

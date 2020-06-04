@@ -148,18 +148,18 @@ void Vishv::Components::Model3D::HandleSkeletonUI()
 
 void Vishv::Components::Model3D::SimpleDraw()
 {
-	if (!mShowSkeleton)
+	if (!mShowSkeleton && !myAnimation)
 		return;
 
 	for (size_t i = 0; i < mModel->skeleton.bones.size(); ++i)
 	{
-		Vishv::Math::Matrix4 mat = mModel->mTPosToParent[i];
+		Vishv::Math::Matrix4 mat = myAnimation->mBoneTransforms[i] * myTransformation->GetTransformMatrix();// mModel->mTPosToParent[i] * mModel->skeleton.bones[i].get()->offsetTransform;
 	
-		Vishv::Graphics::SimpleDraw::AddSphere({ mat._41, mat._42, mat._43 }, 10.0f,mModel->skeleton.bones[i]->mDebugColor, 6, 6);
+		Vishv::Graphics::SimpleDraw::AddSphere({ mat._41, mat._42, mat._43 }, 3.0f,mModel->skeleton.bones[i]->mDebugColor, 4, 4);
 		for (size_t j = 0; j < mModel->skeleton.bones[i]->children.size(); ++j)
 		{
 			Vishv::Math::Matrix4 matC;
-			matC = mModel->mTPosToParent[mModel->skeleton.bones[i]->childIndicies[j]];
+			matC = myAnimation->mBoneTransforms[mModel->skeleton.bones[i]->children[j]->index] * myTransformation->GetTransformMatrix(); //mModel->mTPosToParent[mModel->skeleton.bones[i]->childIndicies[j]];
 			Vishv::Graphics::SimpleDraw::AddLine(mat.GetTranslation(), matC.GetTranslation(), mModel->skeleton.bones[i]->mDebugColor);
 		}
 	}

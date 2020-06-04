@@ -14,16 +14,16 @@ void TestShaderState::Initialize()
 
 
 	mGameWorld.Initialize(10000);
-	modelService->AddNew();
-	modelService->Load(std::move(path));
-
-	auto modelObj = mGameWorld.CreateNewGameObject();
-	modelObj.Get()->AddComponent<Vishv::Components::TransformComponent>();
-	modelObj.Get()->SetName("Model");
-	auto model = modelObj.Get()->AddComponent<Vishv::Components::Model3D>();
-
-	model->SetModel(modelService->GetModels()[0].model);
-	modelObj.Get()->Initialize();
+	//modelService->AddNew();
+	//modelService->Load(std::move(path));
+	//
+	//auto modelObj = mGameWorld.CreateNewGameObject();
+	//modelObj.Get()->AddComponent<Vishv::Components::TransformComponent>();
+	//modelObj.Get()->SetName("Model");
+	//auto model = modelObj.Get()->AddComponent<Vishv::Components::Model3D>();
+	//
+	//model->SetModel(modelService->GetModels()[0].model);
+	//modelObj.Get()->Initialize();
 	auto transform = camSys->GetMainCamera().Get()->GetComponent<Vishv::Components::TransformComponent>();
 	auto tMat = Vishv::Math::Matrix4::TranslateMatrix(Vishv::Math::Vector3( 88.f, 25.f, -300.f ));
 	transform->SetTransformation(transform->GetTransformMatrix() * tMat);
