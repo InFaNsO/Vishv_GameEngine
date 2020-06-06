@@ -135,7 +135,7 @@ float4 PS(VSOutput input) : SV_Target
 	float3 dirToView = normalize(input.dirToView);
 
 	float4 ambient = LightAmbient * MaterialAmbient;
-	float d = saturate(dot(dirToLight, normal));
+	float d = saturate(dot(dirToLight, n));
 	float4 diffuse = LightDiffuse * MaterialDiffuse * d;
 
 	float3 r = reflect(LightDirection.xyz, normal);

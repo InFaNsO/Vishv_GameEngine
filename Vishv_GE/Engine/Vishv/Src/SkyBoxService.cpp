@@ -7,6 +7,8 @@
 
 #include "Editor.h"
 
+#include "imfilebrowser.h"
+
 using namespace Vishv;
 
 META_DERIVED_BEGIN(SkyBox, Service)
@@ -16,14 +18,25 @@ META_DERIVED_BEGIN(SkyBox, Service)
 META_CLASS_END
 
 
+namespace
+{
+	std::unique_ptr<ImGui::FileBrowser> SkyboxLoader = nullptr;
+}
+
 void Vishv::SkyBox::Initialize()
 {
 	SetName("Sky Box");
 
+	//setup file browser
+	SkyboxLoader = std::make_unique<ImGui::FileBrowser>(ImGuiFileBrowserFlags_CreateNewDir | ImGuiFileBrowserFlags_EnterNewFilename);
+	SkyboxLoader->SetTitle("Skybox Loader");
+	SkyboxLoader->SetPwd(Graphics::TextureManager::Get()->GetRootPath());
+	SkyboxLoader->SetTypeFilters({ ".jpg", ".png" });
+
 	camSystem = GetWorld().GetService<CameraSystem>();
 
 	mDome.Initialize(Vishv::Graphics::Meshbuilder::CreateSphereUV(12, 12, camSystem->GetMainCamera().Get()->GetComponent<Components::CameraComponent>()->GetCamera().GetFarPlane()));
-	mDomeTex = Vishv::Graphics::TextureManager::Get()->LoadTexture("HDRI\\Hanger_Small\\hdr.jpg");
+	mDomeTex = Vishv::Graphics::TextureManager::Get()->LoadTexture("HDRI\\CasualDay4K.png");//("HDRI\\Hanger_Small\\hdr.jpg");
 }
 
 void Vishv::SkyBox::Update()
@@ -53,6 +66,25 @@ void Vishv::SkyBox::DebugUI()
 			EditorManager::Get()->SetBackgroundColor(bgColor);
 		}
 	}
+
+	if (ImGui::Button("Change Skybox"))
+	{
+		SkyboxLoader->Open();
+	}
+	SkyboxLoader->Display();
+
+	if (SkyboxLoader->HasSelected())
+	{
+		auto path = SkyboxLoader->GetSelected();
+		if(!path.has_extension())
+			SkyboxLoader->ClearSelected();
+
+		mDomeTex = Vishv::Graphics::TextureManager::Get()->LoadTexture(path, false);
+
+		SkyboxLoader->ClearSelected();
+		SkyboxLoader->Close();
+	}
+
 }
 
 void Vishv::SkyBox::Render()
