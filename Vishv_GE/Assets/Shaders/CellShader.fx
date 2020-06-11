@@ -151,7 +151,7 @@ float4 PS(VSOutput input) : SV_Target
 	
 	float v1 = 0.8f;
 	float v2 = 0.6f;
-	float v3 = 0.3f;
+	float v3 = 0.5f;
 	
 	float v4 = 0.1f;
 	
